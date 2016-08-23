@@ -1,0 +1,11 @@
+{
+  "esversion": 6,
+  "globals": {
+  	"testServices": true
+  },
+
+  "proto": true,
+  "browser": true,
+  "mocha": true,
+  "node": true
+}

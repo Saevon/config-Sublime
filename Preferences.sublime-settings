@@ -1,34 +1,100 @@
 {
-	// Highlight the current line
-	"highlight_line": true,
+	///////////////////////////////
+	// Style
+	"color_scheme": "Packages/User/MonokaiCustom.tmTheme",
 
-	// Sidebar folders are now bold
+	// Sidebar folders are bolded
 	"bold_folder_labels": true,
 
-	// Increases line spacing
-	// "line_padding_bottom": 1,
-	// "line_padding_top": 1,
-
-	// Always show code folding arrows
-	"fade_fold_buttons": false,
-
-	// Caret: (Text Insertion cursor) styles
-	// "wide_caret": true,
+	// Cursor Style
 	"caret_style": "blink",
 
+	"fade_fold_buttons": false,
+
+	// Highlight the current line
+	"highlight_line": true,
+	"move_to_limit_on_up_down": true,
+	"scroll_past_end": false,
+	"draw_white_space": "selection",
+	"ensure_newline_at_eof_on_save": true,
+	"trim_trailing_white_space_on_save": true,
+
+
+	///////////////////////////////
+	// Auto-complete
+	"tab_completion": true,
+	"auto_complete_commit_on_tab": true,
+	"auto_complete_cycle": true,
+	"auto_complete_with_fields": true,
+
+	"spell_check": false,
+	"added_words":
+	[
+		"Linting"
+	],
+
+
+	///////////////////////////////////
+	// Style
+
+	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?",
+	"word_wrap": true,
+
+	"auto_indent": true,
+	"auto_match_enabled": false,
+	"smart_indent": true,
+
+
+
+	///////////////////////////////////
+	// Vintage Mode
+	"vintage_start_in_command_mode": true,
+
+
+
+	///////////////////////////////////
+	// Files
+
+	// Keep sublime open even if the last file is closed
+	"close_windows_when_empty": false,
+
+	// FIXME: broken
+	"confirm_before_deleting": true,
+	"default_browser": "chrome",
+
+	"preview_on_click": false,
+
+	"extra_file_exclude_patterns":
+	[
+		".DS_Store",
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db"
+	],
+	"extra_folder_exclude_patterns":
+	[
+		"node_modules",
+		".git"
+	],
+	"ignore_vcs_packages": true,
 
 	"ignored_packages":
 	[
-		
-	],
-
-	// Hidden Files
-	"file_exclude_patterns":
-	[
-		"/Users/work/Projects/bytes.js/.DS_Store"
-	],
-	"folder_exclude_patterns":
-	[
-		"/Users/work/Projects/bytes.js/node_modules"
 	],
 }

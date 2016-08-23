@@ -1,0 +1,190 @@
+[
+    { "keys": ["super+."], "command": "indent" },
+    { "keys": ["super+,"], "command": "unindent" },
+
+    // {"keys": ["super+]"], "command": "next_view"},
+    // {"keys": ["super+["], "command": "prev_view"},
+    { "keys": ["super+9"], "command": "last_view" },
+
+
+    /************ VINTAGE KEYMAPS ************/
+
+    // Vintage shortcuts for moving lines with hjkl
+    { "keys": ["super+ctrl+j"], "command": "swap_line_down"},
+    { "keys": ["super+ctrl+k"], "command": "swap_line_up"},
+    { "keys": ["super+ctrl+h"], "command": "move_text_left"},
+    { "keys": ["super+ctrl+l"], "command": "move_text_right"},
+
+    // Page Scrolling (only viewport)
+    { "keys": ["ctrl+e"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": -1.0 } },
+    { "keys": ["ctrl+q"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": 1.0 } },
+    { "keys": ["ctrl+w"], "command": "show_at_center" },
+    // Scrolling
+    { "keys": ["ctrl+j"], "command": "move", "args": { "by": "pages", "forward": true } },
+    { "keys": ["ctrl+k"], "command": "move", "args": { "by": "pages", "forward": false } },
+
+    // Vintage escape with jj
+    { "keys": ["j", "j"], "command": "exit_insert_mode",
+        "context":
+        [
+            { "key": "setting.command_mode", "operand": false },
+            { "key": "setting.is_widget", "operand": false }
+            // { "key": "selection_empty", "operator": "equal", "operand": false }
+        ]
+    },
+    /*
+    { "keys": [";", ";"], "command": "exit_insert_mode",
+        "context": [
+            { "key": "setting.command_mode", "operand": false },
+            { "key": "setting.is_widget", "operand": false }
+        ]
+    },
+
+    { "keys": [";", ";"], "command": "exit_visual_mode",
+        "context": [
+            { "key": "setting.command_mode"},
+            { "key": "num_selections", "operand": 1},
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
+        ]
+    },
+    */
+
+
+
+    { "keys": ["!", "!"], "command": "vi_colon_input",
+        "args":  {
+            "initial_text": ":.!"
+        },
+        "context":
+        [
+            { "key": "setting.command_mode", "operator": "equal", "operand": true },
+            { "key": "setting.is_widget", "operand": false }
+        ]
+    },
+
+
+    {
+        "keys": ["ctrl+n", "ctrl+n"],
+        "command": "toggle_setting",
+        "args":
+        {
+            "setting": "line_numbers"
+        }
+    },
+    {
+        "keys": ["ctrl+t", "ctrl+t"],
+        "command": "toggle_setting",
+        "args":
+        {
+            "setting": "translate_tabs_to_spaces"
+        }
+    },
+
+
+
+
+    // Inside and Around <   hello>
+    { "keys": ["i", "<"], "command": "set_motion", "args": {
+        "motion": "vi_expand_to_brackets",
+        "motion_args": {"character": "<"}},
+        "context": [{"key": "setting.command_mode"}, {"key": "vi_can_enter_text_object"}]
+    },
+    { "keys": ["a", "<"], "command": "set_motion", "args": {
+        "motion": "vi_expand_to_brackets",
+        "motion_args": {"character": "<", "outer": true}},
+        "context": [{"key": "setting.command_mode"}, {"key": "vi_can_enter_text_object"}]
+    },
+    { "keys": ["i", ">"], "command": "set_motion", "args": {
+        "motion": "vi_expand_to_brackets",
+        "motion_args": {"character": "<"}},
+        "context": [{"key": "setting.command_mode"}, {"key": "vi_can_enter_text_object"}]
+    },
+    { "keys": ["a", ">"], "command": "set_motion", "args": {
+        "motion": "vi_expand_to_brackets",
+        "motion_args": {"character": "<", "outer": true}},
+        "context": [{"key": "setting.command_mode"}, {"key": "vi_can_enter_text_object"}]
+    },
+
+    // Remap space to : in command mode
+    {
+        "keys": [" "], "command": "vi_colon_input",
+        "context": [
+            { "key": "setting.command_mode", "operator": "equal", "operand": true }
+        ]
+    },
+
+    /**************************************/
+
+    // Working with the build menu
+    // Kill the currently running command
+    {
+        "keys": ["super+shift+b"],
+        "command": "exec",
+        "args": {"kill": true}
+    },
+    {
+        "keys": ["super+ctrl+shift+b"],
+        "command": "show_panel",
+        "args": {"panel": "output.exec", "toggle": true}
+    },
+
+
+
+    // Fix Code Wrapping in Vim
+    // { "keys": ["g", "q"], "command": "wrap_lines_plus",
+        // "context":
+        // [
+            // { "key": "setting.command_mode", "operand": false }
+            // { "key": "setting.is_widget", "operand": false }
+        // ]
+    // },
+
+    // Move text left/right
+    // requires: Move Text
+    { "keys": ["super+ctrl+left"], "command": "move_text_left" },
+    { "keys": ["super+ctrl+right"], "command": "move_text_right" },
+
+    // Disable paging with super + arrowKey
+    { "keys": ["super+left"], "command": "set_motion", "args": {
+        "motion": "vi_move_by_characters_in_line",
+        "motion_args": {"forward": false, "extend": true }}
+
+        // Toggle to disable this in insert mode
+        // "context": [{"key": "setting.command_mode"}]
+    },
+    { "keys": ["super+right"], "command": "set_motion", "args": {
+        "motion": "vi_move_by_characters_in_line",
+        "motion_args": {"forward": true, "extend": true, "visual": false }}
+
+        // Toggle to disable this in insert mode
+        // "context": [{"key": "setting.command_mode"}]
+    },
+    { "keys": ["super+up"], "command": "set_motion", "args": {
+        "motion": "move",
+        "motion_args": {"by": "lines", "forward": false, "extend": true }}
+
+        // Toggle to disable this in insert mode
+        // "context": [{"key": "setting.command_mode"}]
+    },
+    { "keys": ["super+down"], "command": "set_motion", "args": {
+        "motion": "move",
+        "motion_args": {"by": "lines", "forward": true, "extend": true }}
+
+        // Toggle to disable this in insert mode
+        // "context": [{"key": "setting.command_mode"}]
+    },
+
+    // Zooming
+    { "keys": ["super+0"], "command": "reset_font_size" },
+
+
+    // Code Intel
+    { "keys": ["ctrl+shift+space"], "command": "code_intel_auto_complete" },
+    // { "keys": ["ctrl+shift+j"], "command": "back_to_python_definition" },
+    // { "keys": ["ctrl+shift+k"], "command": "goto_python_definition" },
+
+
+    // Mark and Move
+    { "keys": ["ctrl+m"], "command": "mark_and_move_do_it_all" },
+    { "keys": ["ctrl+shift+m"], "command": "mark_and_move_clear" }
+]

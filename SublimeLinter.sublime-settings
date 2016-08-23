@@ -1,78 +1,65 @@
 {
-    "pep8_ignore": [
-        "E501",
-        "E302",
-        "E401",
-        "W293",
-        "W391",
-        "E303"
-    ],
-    "rulers": [
-        80
-    ],
-    "sublimelinter_gutter_marks": true,
-    "sublimelinter_popup_errors_on_save": false,
-    "sublimelinter_wrap_find": true,
-    "word_separators": "./\\()\"':,.;<>~!@#$%^&*|+=[]{}`~?",
-    "word_wrap": "true",
-
-
-    "javascript_linter": "jshint",
-    "jshint_options": {
-        "evil": true,
-        "regexdash": true,
-        "browser": true,
-        "wsh": true,
-        "trailing": true,
-        "sub": true,
-        "devel": true
-    },
-
-    "gjslint_ignore": [
-        110, // line too long
-        120 // Operator at the start of a line
-    ],
-    "csslint_options": {
-        "display-property-grouping": true,
-        "duplicate-properties": true,
-        "empty-rules": true,
-
-        "compatible-vendor-prefixes": true,
-        "vendor-prefix": true,
-        "known-properties": true,
-
-        "zero-units": true,
-
-        "adjoining-classes": false,
-        "box-model": false,
-        "box-sizing": false,
-        "duplicate-background-images": false,
-        "errors": false,
-        "fallback-colors": false,
-        "floats": false,
-        "font-faces": false,
-        "font-sizes": false,
-        "gradients": false,
-        "ids": false,
-        "import": false,
-        "important": false,
-        "outline-none": false,
-        "overqualified-elements": false,
-        "qualified-headings": false,
-        "regex-selectors": false,
-        "rules-count": false,
-        "shorthand": false,
-        "text-indent": false,
-        "unique-headings": false,
-        "universal-selector": false
-    },
-    "sublimelinter_executable_map": {
-        "ruby": "rvm-auto-ruby"
-    },
-    "sublimelinter_syntax_map": {
-        "Python Django": "python",
-        "Ruby on Rails": "ruby",
-        "C++": "c",
-        "Javascript Next": "javascript"
+    "user": {
+        "debug": false,
+        "delay": 0.25,
+        "error_color": "D02000",
+        "gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
+        "gutter_theme_excludes": [],
+        "lint_mode": "load/save",
+        "linters": {
+            "csslint": {
+                "@disable": false,
+                "args": [],
+                "errors": "",
+                "excludes": [],
+                "ignore": "adjoining-classes,order-alphabetical",
+                "warnings": ""
+            },
+            "jshint": {
+                "@disable": false,
+                "args": [
+                    "--config",
+                    "/Users/work/Library/Application Support/Sublime Text 3/Packages/User/jshint-config.json"
+                ],
+                "excludes": []
+            },
+            "pep8": {
+                "@disable": false,
+                "args": [],
+                "excludes": [],
+                "ignore": "",
+                "max-line-length": 79,
+                "select": ""
+            }
+        },
+        "mark_style": "outline",
+        "no_column_highlights_line": false,
+        "passive_warnings": false,
+        "paths": {
+            "linux": [],
+            "osx": [],
+            "windows": []
+        },
+        "python_paths": {
+            "linux": [],
+            "osx": [],
+            "windows": []
+        },
+        "rc_search_limit": 3,
+        "shell_timeout": 10,
+        "show_errors_on_save": false,
+        "show_marks_in_minimap": true,
+        "syntax_map": {
+            "html (django)": "html",
+            "html (rails)": "html",
+            "html 5": "html",
+            "javascript (babel)": "javascript",
+            "magicpython": "python",
+            "php": "html",
+            "python django": "python",
+            "pythonimproved": "python"
+        },
+        "warning_color": "DDB700",
+        "wrap_find": true
     }
 }
