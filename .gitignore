@@ -1,2 +1,6 @@
-// Hide sublime cache files
+# Hide sublime cache files
 *.cache
+
+# Package Control
+Package Control.last-run
+Package Control.*-bundle
