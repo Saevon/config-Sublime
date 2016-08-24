@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"Alignment",
+		"ARM Assembly",
 		"BracketHighlighter",
 		"Color Highlighter",
 		"ColorPicker",
@@ -23,6 +24,7 @@
 		"SublimeLinter-pep8",
 		"Table Editor",
 		"Vintage YankStack",
+		"Vintageous",
 		"WordHighlight",
 		"Wrap Plus"
 	],

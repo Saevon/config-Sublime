@@ -5,6 +5,7 @@
 
 	// Sidebar folders are bolded
 	"bold_folder_labels": true,
+	"highlight_modified_tabs": true,
 
 	// Cursor Style
 	"caret_style": "blink",
@@ -96,5 +97,7 @@
 
 	"ignored_packages":
 	[
+		"Vintage",
+		"VintageYankStack",
 	],
 }

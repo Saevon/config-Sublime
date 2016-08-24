@@ -51,6 +51,9 @@
 
 
 
+    ////////////////////////////////////
+    // EX mode mode
+
     { "keys": ["!", "!"], "command": "vi_colon_input",
         "args":  {
             "initial_text": ":.!"
@@ -61,6 +64,47 @@
             { "key": "setting.is_widget", "operand": false }
         ]
     },
+    {
+        "keys": ["/"], "command": "show_panel", "args": {
+            "panel": "find", "reverse": false
+        },
+        "context": [{"key": "vi_command_mode_aware"}]
+    },
+    {
+        "keys": ["?"], "command": "show_panel", "args": {
+            "panel": "find", "reverse": false
+        },
+        "context": [{"key": "vi_command_mode_aware"}]
+    },
+
+
+    /*
+    {
+        "keys": ["@", ":"], "command": "vi_colon_repeat_last",
+        "context":
+        [
+            { "key": "setting.command_mode", "operator": "equal", "operand": true }
+        ]
+    },
+
+    // The following belong rather in Vintage, but let's keep them here for now.
+    { "keys": ["/"], "command": "vi_search", "context": [{ "key": "setting.command_mode" }], "args": {"initial_text": "/"}},
+    { "keys": ["?"], "command": "vi_search", "context": [{ "key": "setting.command_mode" }], "args": {"initial_text": "?"}},
+
+    // Override these ones so that the necessary state is kept in VintageEx.
+    { "keys": ["n"], "command": "vi_repeat_search_forward", "context": [{ "key": "setting.command_mode" }]},
+    { "keys": ["N"], "command": "vi_repeat_search_backward", "context": [{ "key": "setting.command_mode" }]},
+
+    // Override these ones so that the necessary state is kept in VintageEx.
+    { "keys": ["*"], "command": "vi_find_under", "context": [{ "key": "setting.command_mode" }]},
+    { "keys": ["#"], "command": "vi_find_under", "args": {"forward": false}, "context": [{ "key": "setting.command_mode" }]},
+
+        */
+
+
+
+    //////////////////////////////////////
+    // Misc
 
 
     {
@@ -83,7 +127,7 @@
 
 
 
-    // Inside and Around <   hello>
+    // Inside and Around < >
     { "keys": ["i", "<"], "command": "set_motion", "args": {
         "motion": "vi_expand_to_brackets",
         "motion_args": {"character": "<"}},
