@@ -16,22 +16,31 @@
     { "keys": ["super+ctrl+l"], "command": "move_text_right"},
 
     // Page Scrolling (only viewport)
-    { "keys": ["ctrl+e"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": -1.0 } },
-    { "keys": ["ctrl+q"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": 1.0 } },
-    { "keys": ["ctrl+w"], "command": "show_at_center" },
+    { "keys": ["ctrl+u"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": -1.0 } },
+    { "keys": ["ctrl+i"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": 1.0 } },
+    { "keys": ["ctrl+o"], "command": "show_at_center" },
     // Scrolling
     { "keys": ["ctrl+j"], "command": "move", "args": { "by": "pages", "forward": true } },
     { "keys": ["ctrl+k"], "command": "move", "args": { "by": "pages", "forward": false } },
 
     // Vintage escape with jj
-    { "keys": ["j", "j"], "command": "exit_insert_mode",
-        "context":
-        [
-            { "key": "setting.command_mode", "operand": false },
-            { "key": "setting.is_widget", "operand": false }
-            // { "key": "selection_empty", "operator": "equal", "operand": false }
-        ]
+    // { "keys": ["j", "j"], "command": "exit_insert_mode",
+    //     "context":
+    //     [
+    //         { "key": "setting.command_mode", "operand": false },
+    //         { "key": "setting.is_widget", "operand": false }
+    //         // { "key": "selection_empty", "operator": "equal", "operand": false }
+    //     ]
+    // },
+    {
+        "keys": ["j", "j"],
+        "command": "_enter_normal_mode",
+        "args": {
+            "mode": "mode_insert"
+        },
+        "context": [{"key": "vi_insert_mode_aware"}]
     },
+
     /*
     { "keys": [";", ";"], "command": "exit_insert_mode",
         "context": [
@@ -52,8 +61,7 @@
 
 
     ////////////////////////////////////
-    // EX mode mode
-
+    // EX mode
     { "keys": ["!", "!"], "command": "vi_colon_input",
         "args":  {
             "initial_text": ":.!"
@@ -64,18 +72,18 @@
             { "key": "setting.is_widget", "operand": false }
         ]
     },
-    {
-        "keys": ["/"], "command": "show_panel", "args": {
-            "panel": "find", "reverse": false
-        },
-        "context": [{"key": "vi_command_mode_aware"}]
-    },
-    {
-        "keys": ["?"], "command": "show_panel", "args": {
-            "panel": "find", "reverse": false
-        },
-        "context": [{"key": "vi_command_mode_aware"}]
-    },
+    // {
+    //     "keys": ["/"], "command": "show_panel", "args": {
+    //         "panel": "find", "reverse": false
+    //     },
+    //     "context": [{"key": "vi_command_mode_aware"}]
+    // },
+    // {
+    //     "keys": ["?"], "command": "show_panel", "args": {
+    //         "panel": "find", "reverse": false
+    //     },
+    //     "context": [{"key": "vi_command_mode_aware"}]
+    // },
 
 
     /*
