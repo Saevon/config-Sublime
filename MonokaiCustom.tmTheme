@@ -417,7 +417,7 @@
 		<!-- Javascript -->
 		<dict>
 			<key>name</key>
-			<string>Javascript Object Literals</string>
+			<string>Javascript Object Key Literals</string>
 			<key>scope</key>
 			<string>meta.object-literal.key.js, meta.object-literal.key.js string.quoted</string>
 			<key>settings</key>
@@ -426,16 +426,16 @@
 				<string>#E6BB84</string>
 			</dict>
 		</dict>
-
 		<dict>
+			<!-- Fixes Object Keys not consuming quotes too -->
 			<key>name</key>
-			<string>Javascript Object Literals</string>
+			<string>Javascript String Quotes</string>
 			<key>scope</key>
-			<string>meta.object-literal.key.js, meta.object-literal.key.js string.quoted</string>
+			<string>source.js punctuation.definition.string</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#E6BB84</string>
+				<string>#E6DB74</string>
 			</dict>
 		</dict>
 		<dict>
