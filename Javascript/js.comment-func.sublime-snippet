@@ -5,5 +5,5 @@
  */
 ]]></content>
     <tabTrigger>fcom</tabTrigger>
-    <scope>source.javascript</scope>
+    <scope>source.js</scope>
 </snippet>

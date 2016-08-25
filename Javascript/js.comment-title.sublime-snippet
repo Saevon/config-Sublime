@@ -5,6 +5,6 @@
 //------${1/./-/g}------
 ]]></content>
     <tabTrigger>title</tabTrigger>
-    <scope>source.javascript</scope>
+    <scope>source.js</scope>
 </snippet>
 
