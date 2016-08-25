@@ -66,24 +66,27 @@
         "args":  {
             "initial_text": ":.!"
         },
-        "context":
-        [
+        "context":[
             { "key": "setting.command_mode", "operator": "equal", "operand": true },
             { "key": "setting.is_widget", "operand": false }
         ]
     },
-    // {
-    //     "keys": ["/"], "command": "show_panel", "args": {
-    //         "panel": "find", "reverse": false
-    //     },
-    //     "context": [{"key": "vi_command_mode_aware"}]
-    // },
-    // {
-    //     "keys": ["?"], "command": "show_panel", "args": {
-    //         "panel": "find", "reverse": false
-    //     },
-    //     "context": [{"key": "vi_command_mode_aware"}]
-    // },
+    {
+        "keys": ["/"], "command": "highlight_all",
+        "context": [
+            {
+                "key": "vi_mode_normal_or_any_visual",
+            }
+        ],
+    },
+    {
+        "keys": ["?"], "command": "highlight_all",
+        "context": [
+            {
+                "key": "vi_mode_normal_or_any_visual",
+            }
+        ],
+    },
 
 
     /*

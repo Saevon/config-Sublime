@@ -15,4 +15,9 @@
         "command": "wrap_lines_plus",
     },
     { "caption": "Show Syntax Scope", "command": "show_scope_name" },
+
+    // Highlights
+    { "caption": "Highlight: Text", "command": "highlight_all" },
+    { "caption": "Clear Highlight", "command": "clear_all_highlights" },
+
 ]
