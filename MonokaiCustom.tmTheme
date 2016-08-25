@@ -11,25 +11,8 @@
 	<key>settings</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>Cancel Checkbox</string>
-			<key>scope</key>
-			<string>Checkboxes-cancel</string>
 			<key>settings</key>
 			<dict>
-				<key>background</key>
-				<string>#6666FFFF</string>
-				<key>caret</key>
-				<string>#000000FF</string>
-				<key>foreground</key>
-				<string>#000000FF</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>settings</key>
-			<dict>
-				<key>activeGuide</key>
-				<string>#9D550FB0</string>
 				<key>background</key>
 				<string>#272822</string>
 				<key>bracketContentsForeground</key>
@@ -122,8 +105,6 @@
 			<string>variable</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
 			</dict>
 		</dict>
 		<dict>
@@ -298,12 +279,14 @@
 			<string>invalid</string>
 			<key>settings</key>
 			<dict>
+				<!--
 				<key>background</key>
-				<string>#F92672</string>
-				<key>fontStyle</key>
-				<string></string>
+				<string>#F92672E0</string>
+			-->
+ 				<key>fontStyle</key>
+				<string>italic</string>
 				<key>foreground</key>
-				<string>#F8F8F0</string>
+				<string>#FF0000</string>
 			</dict>
 		</dict>
 		<dict>
@@ -330,6 +313,39 @@
 				<string>#CFCFC2</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>name</key>
+			<string>Function Call</string>
+			<key>scope</key>
+			<string>variable.function</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#00000000</string>
+				<key>foreground</key>
+				<!-- <string>#55A85F</string> -->
+				<!-- <string>#55BB55</string> -->
+				<!-- <string>#A8F8A2</string> -->
+				<string>#88D882</string>
+				<!-- #A6E22E -->
+				 <key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+		<!-- Don't like the result of this in terms of JS
+		<dict>
+			<key>scope</key>
+			<string>variable.other</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#c0d0f2</string>
+			</dict>
+		</dict>
+		-->
+
+
+		<!-- Diff -->
 		<dict>
 			<key>name</key>
 			<string>diff.header</string>
@@ -374,6 +390,10 @@
 				<string>#E6DB74</string>
 			</dict>
 		</dict>
+
+
+		<!-- Find In Files -->
+		<!-- Fixme: is this used? -->
 		<dict>
 			<key>scope</key>
 			<string>constant.numeric.line-number.find-in-files - match</string>
@@ -392,15 +412,47 @@
 				<string>#E6DB74</string>
 			</dict>
 		</dict>
+
+
+		<!-- Javascript -->
 		<dict>
+			<key>name</key>
+			<string>Javascript Object Literals</string>
 			<key>scope</key>
-			<string>variable.other</string>
+			<string>meta.object-literal.key.js, meta.object-literal.key.js string.quoted</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#c0d0f2</string>
+				<string>#E6BB84</string>
 			</dict>
 		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Javascript Object Literals</string>
+			<key>scope</key>
+			<string>meta.object-literal.key.js, meta.object-literal.key.js string.quoted</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#E6BB84</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Javascript Anonymous Function</string>
+			<key>scope</key>
+			<string>storage.type.function.arrow.js</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<!-- Should stay the same as keywords -->
+				<string>#F92672</string>
+			</dict>
+		</dict>
+
+
+		<!-- Word Highlight -->
 		<dict>
 			<key>name</key>
 			<string>WordHighlight</string>
@@ -414,6 +466,42 @@
 				<string>#D0D0D0</string>
 			</dict>
 		</dict>
+
+
+		<!-- Sublime Linter Classes -->
+		<dict>
+            <key>name</key>
+            <string>SublimeLinter Warning</string>
+            <key>scope</key>
+            <string>sublimelinter.mark.warning</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#DDB700</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>SublimeLinter Error</string>
+            <key>scope</key>
+            <string>sublimelinter.mark.error</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#D02000</string>
+          	</dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>SublimeLinter Gutter Mark</string>
+            <key>scope</key>
+            <string>sublimelinter.gutter-mark</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FFFFFF</string>
+            </dict>
+        </dict>
 	</array>
 	<key>uuid</key>
 	<string>D8D5E82E-3D5B-46B5-B38E-8C841C21347D</string>
