@@ -63,7 +63,7 @@
 	"confirm_before_deleting": true,
 	"default_browser": "chrome",
 
-	"preview_on_click": false,
+	"preview_on_click": true,
 
 	"extra_file_exclude_patterns":
 	[
