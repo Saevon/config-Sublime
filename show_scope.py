@@ -7,7 +7,16 @@ def copy(view, text):
     view.hide_popup()
     sublime.status_message('Scope name copied to clipboard')
 
-def class
+
+
+class RefreshColorSchemeCommand(sublime_plugin.WindowCommand):
+
+    def run(self):
+        print("Color Scheme Refreshed")
+
+        for window in sublime.windows():
+            for view in window.views():
+                view.settings().erase("color_scheme")
 
 
 class ShowScopeNameCommand(sublime_plugin.TextCommand):

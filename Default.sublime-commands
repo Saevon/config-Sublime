@@ -15,9 +15,16 @@
         "command": "wrap_lines_plus",
     },
     { "caption": "Show Syntax Scope", "command": "show_scope_name" },
+    { "caption": "Refresh ColorScheme", "command": "refresh_color_scheme" },
 
     // Highlights
     { "caption": "Highlight: Text", "command": "highlight_all" },
     { "caption": "Clear Highlight", "command": "clear_all_highlights" },
 
+    // Preference Files
+    { "caption": "Preferences: ColorScheme", "command": "edit_command_palette_open_file",
+        "args": {
+            "file": "${packages}/User/MonokaiCustom.tmTheme",
+        },
+    },
 ]
