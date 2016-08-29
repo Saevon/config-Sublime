@@ -24,8 +24,15 @@
 	///////////////////////////////
 	// Auto-complete
 	"tab_completion": true,
-	"auto_complete_commit_on_tab": true,
+
+	// True: Tab locks the completion
+	// False: Enter locks completion, tab cycles
+	"auto_complete_commit_on_tab": false,
+
+	// up/down cycles through the commits (loops when at the first/last item)
 	"auto_complete_cycle": true,
+
+	// Enables autocomplete when you're editing a snippet
 	"auto_complete_with_fields": true,
 
 	"spell_check": false,
