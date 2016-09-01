@@ -9,7 +9,8 @@
     //     // Optional keyword arguments to provide to command
     //     "args": {"key": "value"}
     // }
-    { "caption": "Alignment: Align at Cursor", "command": "alignment" },
+    { "caption": "Alignment: Align by Cursors", "command": "alignment" },
+    { "caption": "Alignment: Auto-Align around Cursor", "command": "valign" },
     {
         "caption": "Wrap Paragraph",
         "command": "wrap_lines_plus",
