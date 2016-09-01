@@ -49,7 +49,7 @@
 	"word_wrap": true,
 
 	"auto_indent": true,
-	"auto_match_enabled": false,
+	"auto_match_enabled": true,
 	"smart_indent": true,
 
 
