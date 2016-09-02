@@ -20,6 +20,7 @@
 		"SideBarEnhancements",
 		"SSH Config",
 		"SublimeLinter",
+		"SublimeLinter-contrib-eslint_d",
 		"SublimeLinter-csslint",
 		"SublimeLinter-jshint",
 		"SublimeLinter-pep8",

@@ -1,0 +1,71 @@
+{
+	"extends": "eslint:recommended",
+
+	"parserOptions": {
+		"ecmaVersion": 6
+	},
+	"globals": {
+		"testServices": true,
+		"async": true,
+		"sinon": true,
+		"_": true,
+		"should": true,
+		"config": true,
+		"winston": true
+	},
+ 	"env": {
+		"browser": true,
+		"mocha": true,
+		"node": true,
+		"es6": true
+ 	},
+
+ 	"rules": {
+ 		"indent": "off",
+
+		"quotes": ["warn", "single"],
+		"semi": ["warn", "always"],
+		"comma-dangle": ["warn", "always-multiline"],
+
+
+		"no-cond-assign": ["error", "always"],
+		"no-console": "off",
+
+		"no-constant-condition": "warn",
+		"no-inner-declarations": "off",
+
+		"keyword-spacing": ["warn", {
+			"overrides": {
+				"catch": { "after": false }
+			}
+		}],
+
+		"accessor-pairs": "warn",
+		"block-scoped-var": "error",
+
+		"complexity": "warn",
+		"dot-location": ["warn", "property"],
+		"no-floating-decimal": "error",
+		"no-magic-numbers": ["error", {
+			"ignore": [-1, 0, 1]
+		}],
+		"no-return-assign": ["error", "always"],
+		"no-self-compare": "error",
+		"no-throw-literal": "error",
+		"no-sequences": "error",
+
+		"no-unused-expressions": "warn",
+		"no-unused-vars": "warn",
+		"radix": "error",
+		"callback-return": ["warn", ["done", "next", "cb", "callback"]],
+		"block-spacing": "warn",
+		"brace-style": ["warn", "1tbs"],
+		"camelcase": ["warn", {"properties": "never"}],
+		"comma-spacing": "warn",
+		"comma-style": ["warn", "last"],
+		"computed-property-spacing": ["warn", "never"],
+		"eol-last": "warn",
+ 		"linebreak-style": ["warn", "unix"],
+ 		"func-names": ["warn", "always"]
+ 	}
+}

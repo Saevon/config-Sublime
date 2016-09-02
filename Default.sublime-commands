@@ -28,4 +28,9 @@
             "file": "${packages}/User/MonokaiCustom.tmTheme",
         },
     },
+    { "caption": "Preferences: Linter: Eslint", "command": "edit_command_palette_open_file",
+        "args": {
+            "file": "${packages}/User/eslint-config.json",
+        },
+    },
 ]

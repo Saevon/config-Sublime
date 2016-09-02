@@ -15,8 +15,16 @@
                 "ignore": "adjoining-classes,order-alphabetical",
                 "warnings": ""
             },
-            "jshint": {
+            "eslint_d": {
                 "@disable": false,
+                "args": [
+                    "--config",
+                    "/Users/work/Library/Application Support/Sublime Text 3/Packages/User/eslint-config.json"
+                ],
+                "excludes": []
+            },
+            "jshint": {
+                "@disable": true,
                 "args": [
                     "--config",
                     "/Users/work/Library/Application Support/Sublime Text 3/Packages/User/jshint-config.json"
