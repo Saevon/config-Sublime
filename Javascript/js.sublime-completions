@@ -1,0 +1,152 @@
+{
+    "scope": "source.js",
+
+    "completions":
+    [
+        { "trigger": "label", "contents": "$0:" },
+
+
+        // http://www.w3schools.com/js/js_reserved.asp
+
+        // Keywords
+        "abstract",
+        "arguments",
+        "boolean",
+        "break",
+        // "byte",
+        "case",
+        "catch",
+        "char",
+        "continue",
+        "debugger",
+        "default",
+        "delete",
+        "do",
+        // "double",
+        "else",
+        "enum",
+        "eval",
+        "export",
+        "false",
+        "final",
+        "finally",
+        // "float",
+        "for",
+        "function",
+        // "goto",
+        "if",
+        "implements",
+        "in",
+        "instanceof",
+        // "int",
+        // "interface",
+        // "long",
+        // "native",
+        "new",
+        "null",
+        // "package",
+        "private",
+        "protected",
+        "public",
+        "return",
+        // "short",
+        // "static",
+        "super",
+        "switch",
+        // "synchronized",
+        "this",
+        "throw",
+        // "throws",
+        // "transient",
+        "true",
+        "try",
+        "typeof",
+        "var",
+        "void",
+        // "volatile",
+        "while",
+        "with",
+        "yield",
+
+        // ES6
+        "let",
+        "const",
+        "class",
+        "extends",
+        "constructor",
+        "of",
+        "import",
+        "as",
+        "from",
+
+        // ES7
+        "await",
+        "async",
+
+        // Builtins
+        "Array",
+        "Date",
+        "eval",
+        "function",
+        "hasOwnProperty",
+        "isFinite",
+        "isNaN",
+        "isPrototypeOf",
+        "length",
+        "Math",
+        "name",
+        "Number",
+        "Object",
+        "prototype",
+        "String",
+        "toString",
+        "valueOf",
+
+        "Infinity",
+        "NaN",
+        "undefined",
+
+        // ES6
+        "Symbol",
+
+        // Window/Node Builtins
+        "setInterval",
+        "clearInterval",
+        "setTimeout",
+        "clearTimeout",
+
+        "document",
+        "history",
+        "process",
+
+        "parseInt",
+        "parseFloat",
+        "decodeURI",
+        "decodeURICompenent",
+        "escape",
+        "unescape",
+
+        // Custom
+        "require",
+        "__proto__",
+        "get",
+        "set",
+
+        // JSDOC
+        "@param",
+        "@throws",
+        "@returns",
+        "@const",
+        "@constant",
+        "@readonly",
+        "@deprecated",
+
+        "@fires",
+        "@event",
+
+        "@private",
+        "@protected",
+        "@public",
+        "@volatile",
+    ],
+}
