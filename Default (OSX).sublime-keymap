@@ -257,5 +257,46 @@
 
     // Mark and Move
     { "keys": ["ctrl+m"], "command": "mark_and_move_do_it_all" },
-    { "keys": ["ctrl+shift+m"], "command": "mark_and_move_clear" }
+    { "keys": ["ctrl+shift+m"], "command": "mark_and_move_clear" },
+
+
+    /******************  SNIPPETS  ********************/
+    // TODO: in-progres
+
+    // Disable sublime default shortcuts for snippets
+    // { "keys": ["tab"], "command": "noop", "context":
+    //     [
+    //         { "key": "has_next_field", "operator": "equal", "operand": true }
+    //     ],
+    // },
+    // { "keys": ["tab"], "command": "noop", "context":
+    //     [
+    //         { "key": "has_prev_field", "operator": "equal", "operand": true }
+    //     ],
+    // },
+
+    // Now: add my own
+    // { "keys": ["meta+tab"], "command": "next_field", "context":
+    //     [
+    //         { "key": "has_next_field", "operator": "equal", "operand": true }
+    //     ],
+    // },
+    // { "keys": ["meta+tab"], "command": "prev_field", "context":
+    //     [
+    //         { "key": "has_prev_field", "operator": "equal", "operand": true }
+    //     ],
+    // },
+
+    // { "keys": ["escape"], "command": "clear_fields", "context":
+    //     [
+    //         { "key": "has_next_field", "operator": "equal", "operand": true }
+    //     ]
+    // },
+    // { "keys": ["escape"], "command": "clear_fields", "context":
+    //     [
+    //         { "key": "has_prev_field", "operator": "equal", "operand": true }
+    //     ]
+    // },
+
+
 ]
