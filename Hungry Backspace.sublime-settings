@@ -1,0 +1,6 @@
+{
+	"flipped_key_bindings": true,
+	"excluded_filetypes": [
+		"hs",
+	],
+}

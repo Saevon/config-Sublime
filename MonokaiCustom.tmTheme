@@ -74,7 +74,7 @@
 			<key>name</key>
 			<string>String</string>
 			<key>scope</key>
-			<string>string</string>
+			<string>string - meta.template.expression</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -442,10 +442,11 @@
 		</dict>
 		<dict>
 			<!-- Fixes Object Keys not consuming quotes too -->
+			<!-- Also fixes template string ${} puncuation -->
 			<key>name</key>
 			<string>Javascript String Quotes</string>
 			<key>scope</key>
-			<string>source.js punctuation.definition.string</string>
+			<string>source.js punctuation.definition.string, punctuation.definition.template-expression</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -480,6 +481,19 @@
 				<string>#D0D0D0</string>
 			</dict>
 		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Vim Highlight</string>
+			<key>scope</key>
+			<string>vimhighlight</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#00FF5060</string>
+			</dict>
+		</dict>
+
 
 
 		<!-- Sublime Linter Classes -->

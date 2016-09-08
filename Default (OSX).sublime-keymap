@@ -24,22 +24,25 @@
     { "keys": ["ctrl+k"], "command": "move", "args": { "by": "pages", "forward": false } },
 
     // Vintage escape with jj
-    // { "keys": ["j", "j"], "command": "exit_insert_mode",
-    //     "context":
-    //     [
-    //         { "key": "setting.command_mode", "operand": false },
-    //         { "key": "setting.is_widget", "operand": false }
-    //         // { "key": "selection_empty", "operator": "equal", "operand": false }
-    //     ]
-    // },
-    {
-        "keys": ["j", "j"],
-        "command": "_enter_normal_mode",
-        "args": {
-            "mode": "mode_insert"
-        },
-        "context": [{"key": "vi_insert_mode_aware"}]
+    { "keys": ["j", "j"], "command": "exit_insert_mode",
+        "context":
+        [
+            { "key": "setting.command_mode", "operand": false },
+            { "key": "setting.is_widget", "operand": false }
+            // { "key": "selection_empty", "operator": "equal", "operand": false }
+        ]
     },
+    // Vintageous escape
+    // {
+    //     "keys": ["j", "j"],
+    //     "command": "_enter_normal_mode",
+    //     "args": {
+    //         "mode": "mode_insert"
+    //     },
+    //     "context": [
+    //         {"key": "vi_insert_mode_aware"},
+    //     ],
+    // },
 
     /*
     { "keys": [";", ";"], "command": "exit_insert_mode",
@@ -74,19 +77,78 @@
     {
         "keys": ["/"], "command": "highlight_all",
         "context": [
-            {
-                "key": "vi_mode_normal_or_any_visual",
-            }
+            { "key": "setting.command_mode", "operator": "equal", "operand": true, },
+            // { "key": "vi_mode_normal_or_any_visual", },
         ],
+        "args": {
+            "backwards": false,
+        }
     },
     {
         "keys": ["?"], "command": "highlight_all",
         "context": [
-            {
-                "key": "vi_mode_normal_or_any_visual",
-            }
+            { "key": "setting.command_mode", "operator": "equal", "operand": true, },
+            // { "key": "vi_mode_normal_or_any_visual", },
+        ],
+        "args": {
+            "backwards": true,
+        }
+    },
+    {
+        "keys": ["up"], "command": "highlight_all_history",
+        "args": {
+            "backwards": true
+        },
+        "context":[
+            { "key": "setting.vimSearchPanel", "operator": "equal", "operand": true }
+        ]
+    },
+
+    {
+        "keys": ["down"], "command": "highlight_all_history",
+        "context": [
+            { "key": "setting.vimSearchPanel", "operator": "equal", "operand": true }
+        ]
+    },
+    {
+        "keys": ["*"], "command": "highlight_all",
+        "context": [
+            { "key": "setting.command_mode", "operator": "equal", "operand": true, },
+            // { "key": "vi_mode_normal_or_any_visual", },
+        ],
+        "args": {
+            "word": true,
+        }
+    },
+    {
+        "keys": ["#"], "command": "highlight_all",
+        "context": [
+            { "key": "setting.command_mode", "operator": "equal", "operand": true, },
+            // { "key": "vi_mode_normal_or_any_visual", },
+        ],
+        "args": {
+            "backwards": true,
+            "word": true,
+        }
+    },
+    { "keys": ["n"], "command": "highlight_all_next", "context": [{ "key": "setting.command_mode" }]},
+    { "keys": ["N"], "command": "highlight_all_next", "context": [{ "key": "setting.command_mode" }], "args": { "backwards": true}},
+    { "keys": [",", " "], "command": "clear_all_highlights", "context": [{ "key": "setting.command_mode" }]},
+
+    {
+        "keys": [":"], "command": "ex_mode",
+        "context": [
+            { "key": "setting.command_mode", "operator": "equal", "operand": true, },
+            // { "key": "vi_mode_normal_or_any_visual", },
         ],
     },
+    // {
+    //     "keys": ["backspace"], "command": "close_input_field",
+    //     "context": [
+    //         { "key": "setting.vimExPanel", "operator": "equal", "operand": true },
+    //         { "key": "setting.vimExPanelEmpty", "operator": "equal", "operand": true },
+    //     ],
+    // },
 
 
     /*
@@ -144,7 +206,7 @@
         "motion_args": {"character": "<"}},
         "context": [
             {"key": "setting.command_mode"},
-            {"key": "setting.vi_mode_normal_or_any_visual"},
+            // {"key": "setting.vi_mode_normal_or_any_visual"},
             {"key": "vi_can_enter_text_object"},
         ],
     },
@@ -153,7 +215,7 @@
         "motion_args": {"character": "<", "outer": true}},
         "context": [
             {"key": "setting.command_mode"},
-            {"key": "setting.vi_mode_normal_or_any_visual"},
+            // {"key": "setting.vi_mode_normal_or_any_visual"},
             {"key": "vi_can_enter_text_object"},
         ],
     },
@@ -162,7 +224,7 @@
         "motion_args": {"character": "<"}},
         "context": [
             {"key": "setting.command_mode"},
-            {"key": "setting.vi_mode_normal_or_any_visual"},
+            // {"key": "setting.vi_mode_normal_or_any_visual"},
             {"key": "vi_can_enter_text_object"},
         ],
     },
@@ -171,7 +233,7 @@
         "motion_args": {"character": "<", "outer": true}},
         "context": [
             {"key": "setting.command_mode"},
-            {"key": "setting.vi_mode_normal_or_any_visual"},
+            // {"key": "setting.vi_mode_normal_or_any_visual"},
             {"key": "vi_can_enter_text_object"},
         ],
     },
