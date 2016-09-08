@@ -1,8 +1,7 @@
 {
     "scope": "source.js",
 
-    "completions":
-    [
+    "completions": [
         { "trigger": "label", "contents": "$0:" },
 
 
@@ -87,7 +86,6 @@
         "Array",
         "Date",
         "eval",
-        "function",
         "hasOwnProperty",
         "isFinite",
         "isNaN",
@@ -131,22 +129,5 @@
         "__proto__",
         "get",
         "set",
-
-        // JSDOC
-        "@param",
-        "@throws",
-        "@returns",
-        "@const",
-        "@constant",
-        "@readonly",
-        "@deprecated",
-
-        "@fires",
-        "@event",
-
-        "@private",
-        "@protected",
-        "@public",
-        "@volatile",
     ],
 }

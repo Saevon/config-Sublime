@@ -1,0 +1,24 @@
+{
+    "scope": "source.js comment.block.documentation",
+
+    "completions": [
+
+
+        // JSDOC
+        "@param",
+        "@throws",
+        "@returns",
+        "@const",
+        "@constant",
+        "@readonly",
+        "@deprecated",
+
+        "@fires",
+        "@event",
+
+        "@private",
+        "@protected",
+        "@public",
+        "@volatile",
+    ],
+}

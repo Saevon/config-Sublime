@@ -35,6 +35,10 @@
 	// Enables autocomplete when you're editing a snippet
 	"auto_complete_with_fields": true,
 
+	// When autocomplete can be triggered
+	"auto_complete_selector": "meta.tag - punctuation.definition.tag.begin, source - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+
+
 	"spell_check": false,
 	"added_words":
 	[
