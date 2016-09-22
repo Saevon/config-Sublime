@@ -18,11 +18,31 @@
     { "caption": "Show Syntax Scope", "command": "show_scope_name" },
     { "caption": "Refresh ColorScheme", "command": "refresh_color_scheme" },
 
+    // Aliases
+    { "caption": "File: Remove", "command": "side_bar_delete" },
+
+
     // Highlights
     { "caption": "Highlight: Text", "command": "highlight_all" },
     { "caption": "Clear Highlight", "command": "clear_all_highlights" },
 
+    // Debug
+    { "caption": "Debug Sublime: Toggle Commands", "command": "debug_sublime_toggle_commands" },
+
     // Preference Files
+    { "caption": "Preferences: Settings - User", "command": "edit_command_palette_open_file",
+        "args": {
+            "file": "${packages}/User/Preferences.sublime-settings",
+        },
+    },
+    { "caption": "Preferences: Settings - Default", "command": "edit_settings",
+        "args": {
+            "base_file": "${packages}/Default/Preferences.sublime-settings",
+            "default": "// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\t$0\n}\n"
+        },
+    },
+
+
     { "caption": "Preferences: ColorScheme", "command": "edit_command_palette_open_file",
         "args": {
             "file": "${packages}/User/MonokaiCustom.tmTheme",
@@ -31,6 +51,11 @@
     { "caption": "Preferences: Linter: Eslint", "command": "edit_command_palette_open_file",
         "args": {
             "file": "${packages}/User/eslint-config.json",
+        },
+    },
+    { "caption": "Preferences: Edit Ex Mode Plugin", "command": "edit_command_palette_open_file",
+        "args": {
+            "file": "${packages}/User/highlight.py",
         },
     },
 ]

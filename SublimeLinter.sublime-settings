@@ -33,9 +33,12 @@
             },
             "pep8": {
                 "@disable": false,
-                "args": [],
+                "args": [
+                    "--select",
+                    "E123,E226,E241,E242"
+                ],
                 "excludes": [],
-                "ignore": "",
+                "ignore": "W391",
                 "max-line-length": 150,
                 "select": ""
             }

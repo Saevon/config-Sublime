@@ -2,6 +2,17 @@
     { "keys": ["super+."], "command": "indent" },
     { "keys": ["super+,"], "command": "unindent" },
 
+    // Disable auto-completions with Enter
+    {
+        "keys": ["enter"], "command": "insert",
+        "context": [
+            { "key": "auto_complete_visible" },
+            { "key": "setting.auto_complete_commit_on_tab", "operand": false }
+        ],
+        "args": {"characters": "\n"},
+    },
+
+
     // {"keys": ["super+]"], "command": "next_view"},
     // {"keys": ["super+["], "command": "prev_view"},
     { "keys": ["super+9"], "command": "last_view" },
@@ -16,8 +27,8 @@
     { "keys": ["super+ctrl+l"], "command": "move_text_right"},
 
     // Page Scrolling (only viewport)
-    { "keys": ["ctrl+u"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": -1.0 } },
-    { "keys": ["ctrl+i"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": 1.0 } },
+    { "keys": ["ctrl+u"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": -0.5 } },
+    { "keys": ["ctrl+i"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": 0.5 } },
     { "keys": ["ctrl+o"], "command": "show_at_center" },
     // Scrolling
     { "keys": ["ctrl+j"], "command": "move", "args": { "by": "pages", "forward": true } },
@@ -60,6 +71,23 @@
         ]
     },
     */
+
+
+    //////////////////////////////
+    // Command mode
+
+    // Backspace goes back one char in command mode
+    { "keys": ["backspace"], "command": "set_motion",
+        "args":  {
+            "motion": "vi_move_by_characters_in_line",
+            "motion_args": {"extend": true, "forward": false},
+        },
+        "context":[
+            { "key": "setting.command_mode", "operator": "equal", "operand": true },
+            { "key": "setting.is_widget", "operand": false }
+        ]
+    },
+
 
 
 
@@ -361,4 +389,12 @@
     // },
 
 
+
+    /************************* Find in File ******************************/
+    {
+        "keys": ["super+enter"], "command": "open_find_file_at_pos",
+        "context": [
+            {"key": "selector", "operator": "equal", "operand": "text.find-in-files"},
+        ],
+    },
 ]
