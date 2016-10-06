@@ -41,6 +41,16 @@
                 "ignore": "W391",
                 "max-line-length": 150,
                 "select": ""
+            },
+            "pylint": {
+                "@disable": false,
+                "args": [],
+                "disable": "C0111,C0330",
+                "enable": "",
+                "excludes": [],
+                "paths": [],
+                "rcfile": "",
+                "show-codes": false
             }
         },
         "mark_style": "outline",
