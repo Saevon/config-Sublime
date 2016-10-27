@@ -389,14 +389,4 @@
     //         { "key": "has_prev_field", "operator": "equal", "operand": true }
     //     ]
     // },
-
-
-
-    /************************* Find in File ******************************/
-    {
-        "keys": ["super+enter"], "command": "open_find_file_at_pos",
-        "context": [
-            {"key": "selector", "operator": "equal", "operand": "text.find-in-files"},
-        ],
-    },
 ]
