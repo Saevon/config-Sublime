@@ -18,6 +18,35 @@
     { "caption": "Show Syntax Scope", "command": "show_scope_name" },
     { "caption": "Refresh ColorScheme", "command": "refresh_color_scheme" },
 
+
+    // Indentation
+    { "caption": "Convert 4 to 2", "command": "convert_indentation",
+        "args": {
+            "from_size": "4",
+            "to_size": "2",
+        },
+    },
+    { "caption": "Convert 2 to 4", "command": "convert_indentation",
+        "args": {
+            "from_size": "2",
+            "to_size": "4",
+        },
+    },
+
+    { "caption": "Spacing: 4", "command": "set_setting",
+        "args": {
+            "setting": "tab_size",
+            "value": 4,
+        },
+    },
+    { "caption": "Spacing: 2", "command": "set_setting",
+        "args": {
+            "setting": "tab_size",
+            "value": 2,
+        },
+    },
+
+
     // Aliases
     { "caption": "File: Remove", "command": "side_bar_delete" },
 
