@@ -170,13 +170,15 @@
             // { "key": "vi_mode_normal_or_any_visual", },
         ],
     },
-    // {
-    //     "keys": ["backspace"], "command": "close_input_field",
-    //     "context": [
-    //         { "key": "setting.vimExPanel", "operator": "equal", "operand": true },
-    //         { "key": "setting.vimExPanelEmpty", "operator": "equal", "operand": true },
-    //     ],
-    // },
+
+    // Close the Ex Field using backspace if its empty and you press backspace
+    {
+        "keys": ["backspace"], "command": "close_input_field",
+        "context": [
+            { "key": "setting.vimExPanel", "operator": "equal", "operand": true },
+            { "key": "setting.vimExPanelEmpty", "operator": "equal", "operand": true },
+        ],
+    },
 
 
     /*

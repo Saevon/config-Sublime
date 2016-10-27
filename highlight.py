@@ -258,16 +258,32 @@ class CloseInputFieldCommand(sublime_plugin.TextCommand):
 
 class ExModeCommand(sublime_plugin.TextCommand):
 
-    def on_change(self, data):
-        is_empty = data == ''
+    def check_empty(self, text):
+        # This can be called before the panel has been "created"
+        # so we need to cover that case
+        if not self.input_view:
+            return
+
+        is_empty = text == ''
+
         self.input_view.settings().set('vimExPanelEmpty', is_empty)
 
-    def on_done(self, data):
-        self.state = None
+    def clear_input(self):
+        pass
 
-        if LINE_RE.match(data):
+    def on_change(self, text):
+        self.check_empty(text)
+
+    def on_cancel(self):
+        self.clear_input()
+
+    def on_done(self, text):
+        # Ensure the panel is reset
+        self.clear_input()
+
+        if LINE_RE.match(text):
             # cursors in sublime are zero based, but line numbers are 1 based
-            line_num = int(data) - 1
+            line_num = int(text) - 1
 
             cursor = self.view.text_point(line_num, 0)
 
@@ -276,8 +292,8 @@ class ExModeCommand(sublime_plugin.TextCommand):
             self.view.show(cursor)
             return
 
-        while len(data):
-            char, data = data[0], data[1:]
+        while len(text):
+            char, text = text[0], text[1:]
 
             if char == "w" and self.view.is_dirty():
                 self.view.run_command('save')
@@ -288,22 +304,18 @@ class ExModeCommand(sublime_plugin.TextCommand):
                     'highlight_all',
                     args={
                         "backwards": True,
-                        "regex": data,
+                        "regex": text,
                     }
                 )
             elif char == "/":
                 return self.view.run_command(
                     'highlight_all',
                     args={
-                        "regex": data,
+                        "regex": text,
                     }
                 )
 
-    def on_cancel(self):
-        pass
-
     def run(self, edit=None, **kwargs):
-        self.__start = True
         self.input_view = self.view.window().show_input_panel(
             '  : ',
             '',
@@ -312,6 +324,9 @@ class ExModeCommand(sublime_plugin.TextCommand):
             on_cancel=self.on_cancel,
         )
         self.input_view.settings().set('vimExPanel', True)
+        self.input_view.settings().set('vimExPanelEmpty', True)
+
+
 class ConvertIndentationCommand(sublime_plugin.TextCommand):
     TAB_KEY = 'tab'
 
