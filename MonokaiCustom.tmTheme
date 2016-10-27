@@ -442,6 +442,35 @@
 		</dict>
 
 
+		<!-- C++ -->
+		<dict>
+			<key>name</key>
+			<string>C++ Pointers</string>
+			<key>scope</key>
+			<string>address.ccpp, pointer.ccpp</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<!-- Should stay the same as keywords -->
+				<string>#E6BB84</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Javascript Anonymous Function</string>
+			<key>scope</key>
+			<string>period.ccpp</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<!-- Should stay the same as keywords -->
+				<string>#F92672</string>
+			</dict>
+		</dict>
+
+
+
+
 		<!-- Javascript -->
 		<dict>
 			<key>name</key>
