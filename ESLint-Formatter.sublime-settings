@@ -1,0 +1,6 @@
+{
+	"eslint_path": {
+		"osx": "/usr/local/bin/eslint_d",
+	},
+	"config_path": ".eslintrc.json",
+}
