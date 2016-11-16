@@ -442,6 +442,35 @@
 		</dict>
 
 
+		<!-- Makefile -->
+		<dict>
+			<key>name</key>
+			<string>Makefile Variable</string>
+			<key>scope</key>
+			<string>variable.source.makefile</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#E6BB84</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Makefile Library Variable</string>
+			<key>scope</key>
+			<string>support.variable.makefile</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#66D9EF</string>
+			</dict>
+		</dict>
+
+
+
+
 		<!-- C++ -->
 		<dict>
 			<key>name</key>
