@@ -20,13 +20,13 @@
 
 
     // Indentation
-    { "caption": "Convert 4 to 2", "command": "convert_indentation",
+    { "caption": "Spacing: Convert 4 to 2", "command": "convert_indentation",
         "args": {
             "from_size": "4",
             "to_size": "2",
         },
     },
-    { "caption": "Convert 2 to 4", "command": "convert_indentation",
+    { "caption": "Spacing: Convert 2 to 4", "command": "convert_indentation",
         "args": {
             "from_size": "2",
             "to_size": "4",
