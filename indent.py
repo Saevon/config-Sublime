@@ -20,7 +20,7 @@ class ConvertIndentationCommand(sublime_plugin.TextCommand):
                 'set_setting',
                 args={
                     "setting": "tab_size",
-                    "value": from_size,
+                    "value": int(from_size),
                 }
             )
             self.view.run_command(
@@ -36,7 +36,7 @@ class ConvertIndentationCommand(sublime_plugin.TextCommand):
                 'set_setting',
                 args={
                     "setting": "tab_size",
-                    "value": to_size,
+                    "value": int(to_size),
                 }
             )
             self.view.run_command(
