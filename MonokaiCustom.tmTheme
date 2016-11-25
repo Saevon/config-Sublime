@@ -52,6 +52,9 @@
 			<string>comment</string>
 			<key>settings</key>
 			<dict>
+				<!-- Comment Style -->
+				<key>fontStyle</key>
+				<string>italic</string>
 				<key>foreground</key>
 				<string>#75715E</string>
 			</dict>
@@ -60,9 +63,12 @@
 			<key>name</key>
 			<string>Documentation Comment</string>
 			<key>scope</key>
-			<string>comment.block.documentation</string>
+			<string>comment.block.documentation, comment.block</string>
 			<key>settings</key>
 			<dict>
+				<!-- Light Comment Style -->
+				<key>fontStyle</key>
+				<string>italic</string>
 				<key>foreground</key>
 				<string>#80816E</string>
 			</dict>
@@ -77,6 +83,9 @@
 			<string>string - meta.template.expression, string.template string.quoted</string>
 			<key>settings</key>
 			<dict>
+				<!-- String Style -->
+				<key>fontStyle</key>
+				<string>italic</string>
 				<key>foreground</key>
 				<string>#E6DB74</string>
 			</dict>
@@ -88,6 +97,7 @@
 			<string>constant.numeric</string>
 			<key>settings</key>
 			<dict>
+				<!-- Constant Style -->
 				<key>foreground</key>
 				<string>#AE81FF</string>
 			</dict>
@@ -99,6 +109,7 @@
 			<string>constant.language</string>
 			<key>settings</key>
 			<dict>
+				<!-- Constant Style -->
 				<key>foreground</key>
 				<string>#AE81FF</string>
 			</dict>
@@ -110,6 +121,7 @@
 			<string>constant.character, constant.other</string>
 			<key>settings</key>
 			<dict>
+				<!-- Constant Style -->
 				<key>foreground</key>
 				<string>#AE81FF</string>
 			</dict>
@@ -121,11 +133,9 @@
 			<string>constant.character.escape</string>
 			<key>settings</key>
 			<dict>
+				<!-- Escape Style -->
 				<key>foreground</key>
 				<string>#DEA8FF</string>
-				<!--
-				<string>#8E71A0</string>
-				-->
 			</dict>
 		</dict>
 		<dict>
@@ -135,6 +145,7 @@
 			<string>variable.other.constant</string>
 			<key>settings</key>
 			<dict>
+				<!-- ConstVar Style -->
 				<key>foreground</key>
 				<string>#c0d0f2</string>
 			</dict>
@@ -146,6 +157,7 @@
 			<string>variable</string>
 			<key>settings</key>
 			<dict>
+				<!-- NormalVar Style -->
 			</dict>
 		</dict>
 		<dict>
@@ -155,6 +167,23 @@
 			<string>keyword</string>
 			<key>settings</key>
 			<dict>
+				<!-- Keywords Style -->
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#F92672</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Operator</string>
+			<key>scope</key>
+			<string>keyword.operator</string>
+			<key>settings</key>
+			<dict>
+				<!-- Operator Style -->
+				<key>fontStyle</key>
+				<string></string>
 				<key>foreground</key>
 				<string>#F92672</string>
 			</dict>
@@ -166,8 +195,9 @@
 			<string>storage</string>
 			<key>settings</key>
 			<dict>
+				<!-- Keywords Style -->
 				<key>fontStyle</key>
-				<string></string>
+				<string>italic</string>
 				<key>foreground</key>
 				<string>#F92672</string>
 			</dict>
@@ -179,6 +209,7 @@
 			<string>storage.type</string>
 			<key>settings</key>
 			<dict>
+				<!-- Library Style -->
 				<key>fontStyle</key>
 				<string>italic</string>
 				<key>foreground</key>
@@ -192,6 +223,7 @@
 			<string>entity.name.class</string>
 			<key>settings</key>
 			<dict>
+				<!-- Function Style -->
 				<key>fontStyle</key>
 				<string>underline</string>
 				<key>foreground</key>
@@ -205,8 +237,7 @@
 			<string>entity.other.inherited-class</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string>italic underline</string>
+				<!-- Function Style -->
 				<key>foreground</key>
 				<string>#A6E22E</string>
 			</dict>
@@ -218,8 +249,7 @@
 			<string>entity.name.function</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
+				<!-- Function Style -->
 				<key>foreground</key>
 				<string>#A6E22E</string>
 			</dict>
@@ -231,12 +261,14 @@
 			<string>variable.parameter</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string>italic</string>
+				<!-- Argument Style -->
 				<key>foreground</key>
 				<string>#FD971F</string>
 			</dict>
 		</dict>
+
+
+		<!-- HTML/XML -->
 		<dict>
 			<key>name</key>
 			<string>Tag name</string>
@@ -244,8 +276,9 @@
 			<string>entity.name.tag</string>
 			<key>settings</key>
 			<dict>
+				<!-- Keywords Style -->
 				<key>fontStyle</key>
-				<string></string>
+				<string>italic</string>
 				<key>foreground</key>
 				<string>#F92672</string>
 			</dict>
@@ -257,12 +290,15 @@
 			<string>entity.other.attribute-name</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
+				<!-- Function Style -->
 				<key>foreground</key>
 				<string>#A6E22E</string>
 			</dict>
 		</dict>
+		<!-- END HTML/XML -->
+
+
+
 		<dict>
 			<key>name</key>
 			<string>Library function</string>
@@ -270,8 +306,9 @@
 			<string>support.function</string>
 			<key>settings</key>
 			<dict>
+				<!-- Library Style -->
 				<key>fontStyle</key>
-				<string></string>
+				<string>italic</string>
 				<key>foreground</key>
 				<string>#66D9EF</string>
 			</dict>
@@ -283,19 +320,21 @@
 			<string>support.constant</string>
 			<key>settings</key>
 			<dict>
+				<!-- Library Style -->
 				<key>fontStyle</key>
-				<string></string>
+				<string>italic</string>
 				<key>foreground</key>
 				<string>#66D9EF</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Library class&#x2f;type</string>
+			<string>Class &amp; Type</string>
 			<key>scope</key>
 			<string>support.type, support.class, variable.type</string>
 			<key>settings</key>
 			<dict>
+				<!-- Library Style -->
 				<key>fontStyle</key>
 				<string>italic</string>
 				<key>foreground</key>
@@ -309,6 +348,7 @@
 			<string>support.other.variable</string>
 			<key>settings</key>
 			<dict>
+				<!-- Variable Style -->
 				<key>fontStyle</key>
 				<string></string>
 			</dict>
@@ -320,6 +360,7 @@
 			<string>invalid</string>
 			<key>settings</key>
 			<dict>
+				<!-- Invalid Style -->
 				<key>background</key>
 				<string>#8F2032C0</string>
  				<key>fontStyle</key>
@@ -330,26 +371,16 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Invalid deprecated</string>
+			<string>Invalid Deprecated</string>
 			<key>scope</key>
 			<string>invalid.deprecated</string>
 			<key>settings</key>
 			<dict>
+				<!-- Deprecated Style -->
 				<key>background</key>
 				<string>#AE81FF</string>
 				<key>foreground</key>
 				<string>#F8F8F0</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>JSON String</string>
-			<key>scope</key>
-			<string>meta.structure.dictionary.json string.quoted.double.json</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#CFCFC2</string>
 			</dict>
 		</dict>
 		<dict>
@@ -359,18 +390,17 @@
 			<string>variable.function</string>
 			<key>settings</key>
 			<dict>
-				<key>background</key>
-				<string>#00000000</string>
+				<!-- Function Call Style -->
 				<key>foreground</key>
-				<!-- <string>#55A85F</string> -->
-				<!-- <string>#55BB55</string> -->
-				<!-- <string>#A8F8A2</string> -->
 				<string>#88D882</string>
-				<!-- #A6E22E -->
-				 <key>fontStyle</key>
-				<string>italic</string>
 			</dict>
 		</dict>
+
+
+
+
+
+
 
 
 		<!-- Diff -->
@@ -392,6 +422,7 @@
 			<string>markup.deleted</string>
 			<key>settings</key>
 			<dict>
+				<!-- Added Style -->
 				<key>foreground</key>
 				<string>#F92672</string>
 			</dict>
@@ -403,6 +434,7 @@
 			<string>markup.inserted</string>
 			<key>settings</key>
 			<dict>
+				<!-- Removed Style -->
 				<key>foreground</key>
 				<string>#A6E22E</string>
 			</dict>
@@ -414,19 +446,33 @@
 			<string>markup.changed</string>
 			<key>settings</key>
 			<dict>
+				<!-- Changed Style -->
 				<key>foreground</key>
 				<string>#E6DB74</string>
 			</dict>
 		</dict>
 
 
+
 		<!-- Find In Files -->
-		<!-- Fixme: is this used? -->
+		<dict>
+			<key>scope</key>
+			<string>constant.numeric.line-number.match.find-in-files</string>
+			<key>settings</key>
+			<dict>
+				<!-- Constant Style -->
+				<key>foreground</key>
+				<string>#AE81FF</string>
+			</dict>
+		</dict>
+
 		<dict>
 			<key>scope</key>
 			<string>constant.numeric.line-number.find-in-files - match</string>
 			<key>settings</key>
 			<dict>
+				<!-- This ensures only the important line has the original bright color -->
+				<!-- Pale Constant Style -->
 				<key>foreground</key>
 				<string>#AE81FFA0</string>
 			</dict>
@@ -442,7 +488,39 @@
 		</dict>
 
 
+
+		<!-- Bash -->
+		<dict>
+			<key>name</key>
+			<string>shell Variable</string>
+			<key>scope</key>
+			<string>source.shell variable</string>
+			<key>settings</key>
+			<dict>
+				<!-- DictKey Style -->
+				<key>foreground</key>
+				<string>#E6BB84</string>
+			</dict>
+		</dict>
+
+
+
 		<!-- Makefile -->
+		<dict>
+			<key>name</key>
+			<string>Makefile Special Targets</string>
+			<key>scope</key>
+			<string>constant.other.target.makefile</string>
+			<key>settings</key>
+			<dict>
+				<!-- Constant Style: with Italics -->
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#AE81FF</string>
+			</dict>
+		</dict>
+
 		<dict>
 			<key>name</key>
 			<string>Makefile Variable</string>
@@ -450,6 +528,7 @@
 			<string>variable.source.makefile</string>
 			<key>settings</key>
 			<dict>
+				<!-- DictKey Style -->
 				<key>foreground</key>
 				<string>#E6BB84</string>
 			</dict>
@@ -461,6 +540,7 @@
 			<string>support.variable.makefile</string>
 			<key>settings</key>
 			<dict>
+				<!-- Library Style -->
 				<key>fontStyle</key>
 				<string>italic</string>
 				<key>foreground</key>
@@ -479,23 +559,40 @@
 			<string>address.ccpp, pointer.ccpp</string>
 			<key>settings</key>
 			<dict>
+				<!-- DictKey Style -->
 				<key>foreground</key>
-				<!-- Should stay the same as keywords -->
 				<string>#E6BB84</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Javascript Anonymous Function</string>
+			<string>C++ Extra Operators</string>
 			<key>scope</key>
 			<string>period.ccpp</string>
 			<key>settings</key>
 			<dict>
+				<!-- Operator Style -->
+				<key>fontStyle</key>
+				<string></string>
 				<key>foreground</key>
-				<!-- Should stay the same as keywords -->
 				<string>#F92672</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>name</key>
+			<string>C++ Includes</string>
+			<key>scope</key>
+			<string>meta.preprocessor.c.include string.quoted.other.lt-gt.include</string>
+			<key>settings</key>
+			<dict>
+				<!-- Library Style -->
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#66D9EF</string>
+			</dict>
+		</dict>
+
 
 
 
@@ -503,11 +600,12 @@
 		<!-- Javascript -->
 		<dict>
 			<key>name</key>
-			<string>Javascript Object Key Literals</string>
+			<string>Javascript Dict Key Literals</string>
 			<key>scope</key>
 			<string>meta.object-literal.key.js, meta.object-literal.key.js string.quoted</string>
 			<key>settings</key>
 			<dict>
+				<!-- DictKey Style -->
 				<key>foreground</key>
 				<string>#E6BB84</string>
 			</dict>
@@ -521,6 +619,7 @@
 			<string>source.js punctuation.definition.string, punctuation.definition.template-expression</string>
 			<key>settings</key>
 			<dict>
+				<!-- DictKey Syntax -->
 				<key>foreground</key>
 				<string>#E6DB74</string>
 			</dict>
@@ -532,14 +631,73 @@
 			<string>storage.type.function.arrow.js</string>
 			<key>settings</key>
 			<dict>
+				<!-- Operator Style -->
 				<key>foreground</key>
-				<!-- Should stay the same as keywords -->
 				<string>#F92672</string>
 			</dict>
 		</dict>
 
 
-		<!-- Word Highlight -->
+
+		<!-- JSON -->
+		<dict>
+			<key>name</key>
+			<string>JSON String</string>
+			<key>scope</key>
+			<string>string.quoted.double.json</string>
+			<key>settings</key>
+			<dict>
+				<!-- String Style -->
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#E6DB74</string>
+ 			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JSON String</string>
+			<key>scope</key>
+			<string>meta.object-literal.key.json</string>
+			<key>settings</key>
+			<dict>
+				<!-- DictKey Style -->
+				<key>foreground</key>
+				<string>#E6BB84</string>
+			</dict>
+		</dict>
+
+
+
+		<!-- YAML -->
+		<dict>
+			<key>name</key>
+			<string>Yaml Key Literals (Tags)</string>
+			<key>scope</key>
+			<string>entity.name.tag.yaml</string>
+			<key>settings</key>
+			<dict>
+				<!-- DictKey Style -->
+				<key>foreground</key>
+				<string>#E6BB84</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Yaml Key Literals (Tags)</string>
+			<key>scope</key>
+			<string>source.yaml meta.directive, entity.other, source.yaml punctuation.definition.block, source.yaml support.other.chomping-indicator</string>
+			<key>settings</key>
+			<dict>
+				<!-- Operator Style -->
+				<key>foreground</key>
+				<string>#F92672</string>
+			</dict>
+		</dict>
+
+
+
+		<!-- In-Sublime SYntax: Word Highlight, VIM -->
 		<dict>
 			<key>name</key>
 			<string>WordHighlight</string>
@@ -553,10 +711,9 @@
 				<string>#D0D0D0</string>
 			</dict>
 		</dict>
-
 		<dict>
 			<key>name</key>
-			<string>Vim Highlight</string>
+			<string>Vim Highlight (Search)</string>
 			<key>scope</key>
 			<string>vimhighlight</string>
 			<key>settings</key>
@@ -565,9 +722,6 @@
 				<string>#00FF5060</string>
 			</dict>
 		</dict>
-
-
-
 		<!-- Sublime Linter Classes -->
 		<dict>
             <key>name</key>
@@ -603,6 +757,10 @@
                 <string>#FFFFFF</string>
             </dict>
         </dict>
+
+
+
+
 	</array>
 	<key>uuid</key>
 	<string>D8D5E82E-3D5B-46B5-B38E-8C841C21347D</string>
