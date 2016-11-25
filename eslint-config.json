@@ -6,11 +6,8 @@
     },
     "globals": {
         "testServices": true,
-        "async": true,
         "sinon": true,
-        "_": true,
         "should": true,
-        "config": true,
         "winston": true
     },
     "env": {
