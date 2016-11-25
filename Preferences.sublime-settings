@@ -3,6 +3,9 @@
 	// Style
 	"color_scheme": "Packages/User/MonokaiCustom.tmTheme",
 
+	// Font
+    "font_face": "Operator Mono",
+
 	// Sidebar folders are bolded
 	"bold_folder_labels": true,
 	"highlight_modified_tabs": true,
