@@ -3,8 +3,19 @@
 	// Style
 	"color_scheme": "Packages/User/MonokaiCustom.tmTheme",
 
-	// Font
-    "font_face": "Operator Mono",
+	// Highly Cursive Font
+	"font_face": "Operator Mono",
+	// Default OSX Sublime Font
+	// "font_face": "Menlo",
+	// Windows Style Font
+	// "font_face": "Consolas",
+	// Basic Mono-Spaced Font
+	// "font_face": "Courier New",
+
+	// Turns on windows hardware accelerated rendering
+	"font_options": [
+		"directwrite",
+	],
 
 	// Sidebar folders are bolded
 	"bold_folder_labels": true,
