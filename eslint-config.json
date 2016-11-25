@@ -44,7 +44,7 @@
         // "no-unused-expressions": "warn",
         "no-unused-vars": "warn",
         "radix": "error",
-        "no-magic-numbers": ["error", {
+        "no-magic-numbers": ["warn", {
             "ignore": [-1, 0, 1, 100]
         }],
         "eqeqeq": ["warn", "smart"],
