@@ -2,23 +2,29 @@
     "scope": "source.js comment.block.documentation",
 
     "completions": [
-
-
-        // JSDOC
+        // Function Info
         "@param",
         "@throws",
         "@returns",
+
+        // Modifiers
         "@const",
         "@constant",
         "@readonly",
         "@deprecated",
 
+        // Callbacks
         "@fires",
         "@event",
 
+        // Permissions
         "@private",
         "@protected",
         "@public",
         "@volatile",
+
+        // Types
+        "@typedef"
+        "@property",
     ],
 }
