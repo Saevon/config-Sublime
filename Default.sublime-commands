@@ -17,6 +17,7 @@
     },
     { "caption": "Show Syntax Scope", "command": "show_scope_name" },
     { "caption": "Refresh ColorScheme", "command": "refresh_color_scheme" },
+    { "caption": "Center on Visible", "command": "center_on_visible" },
 
 
     // Indentation
@@ -45,6 +46,11 @@
             "value": 2,
         },
     },
+    // Missing Sublime Commands
+    { "caption": "Reveal Current File in Finder", "command": "open_dir", "args": {
+        "dir": "$file_path",
+        "file": "$file_name"
+    } },
 
 
     // Aliases
@@ -54,37 +60,38 @@
     // Highlights
     { "caption": "Highlight: Text", "command": "highlight_all" },
     { "caption": "Clear Highlight", "command": "clear_all_highlights" },
+    { "caption": "Show Bookmarks", "command": "vi_show_all_bookmarks" },
 
     // Debug
     { "caption": "Debug Sublime: Toggle Commands", "command": "debug_sublime_toggle_commands" },
 
     // Preference Files
     { "caption": "Preferences: Settings - User", "command": "edit_command_palette_open_file",
-        "args": {
-            "file": "${packages}/User/Preferences.sublime-settings",
-        },
+        "args": { "file": "${packages}/User/Preferences.sublime-settings" },
     },
     { "caption": "Preferences: Settings - Default", "command": "edit_settings",
         "args": {
+            // Shows a comparison view
             "base_file": "${packages}/Default/Preferences.sublime-settings",
             "default": "// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\t$0\n}\n"
         },
     },
 
-
     { "caption": "Preferences: ColorScheme", "command": "edit_command_palette_open_file",
-        "args": {
-            "file": "${packages}/User/MonokaiCustom.tmTheme",
-        },
+        "args": { "file": "${packages}/User/MonokaiCustom.tmTheme" },
     },
+
+    // Plugins
     { "caption": "Preferences: Linter: Eslint", "command": "edit_command_palette_open_file",
-        "args": {
-            "file": "${packages}/User/eslint-config.json",
-        },
+        "args": { "file": "${packages}/User/eslint-config.json" },
     },
     { "caption": "Preferences: Edit Ex Mode Plugin", "command": "edit_command_palette_open_file",
-        "args": {
-            "file": "${packages}/User/highlight.py",
-        },
+        "args": { "file": "${packages}/User/highlight.py" },
+    },
+    { "caption": "Preferences: Edit Viewport Plugin", "command": "edit_command_palette_open_file",
+        "args": { "file": "${packages}/User/viewport.py" },
+    },
+    { "caption": "Preferences: Edit Indent Plugin", "command": "edit_command_palette_open_file",
+        "args": { "file": "${packages}/User/indent.py" },
     },
 ]
