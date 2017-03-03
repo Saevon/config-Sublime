@@ -29,6 +29,7 @@
     // Page Scrolling (only viewport)
     { "keys": ["ctrl+u"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": -0.5 } },
     { "keys": ["ctrl+i"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": 0.5 } },
+    // Re-Center on cursor
     { "keys": ["ctrl+o"], "command": "show_at_center" },
     // Scrolling
     { "keys": ["ctrl+j"], "command": "move", "args": { "by": "pages", "forward": true } },
@@ -278,6 +279,9 @@
 
     /**************************************/
 
+
+
+
     // Working with the build menu
     // Kill the currently running command
     {
@@ -389,4 +393,13 @@
     //         { "key": "has_prev_field", "operator": "equal", "operand": true }
     //     ]
     // },
+
+    /*******************  Disabled Shortcuts  ********************/
+    // Minimize is such a pain...
+    { "keys": ["super+m"], "command": "noop" },
+
+
+
+    /*******************  Changed Sublime Defaults  ********************/
+    { "keys": ["super+y"], "command": "redo" },
 ]
