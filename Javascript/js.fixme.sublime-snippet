@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[// FIXME(${1:Saevon}): $2]]></content>
+    <tabTrigger>fixme</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+
