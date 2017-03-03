@@ -34,18 +34,6 @@
         },
     },
 
-    { "caption": "Spacing: 4", "command": "set_setting",
-        "args": {
-            "setting": "tab_size",
-            "value": 4,
-        },
-    },
-    { "caption": "Spacing: 2", "command": "set_setting",
-        "args": {
-            "setting": "tab_size",
-            "value": 2,
-        },
-    },
     // Missing Sublime Commands
     { "caption": "Reveal Current File in Finder", "command": "open_dir", "args": {
         "dir": "$file_path",
