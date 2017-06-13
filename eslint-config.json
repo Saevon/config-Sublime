@@ -23,6 +23,8 @@
         "no-trailing-spaces": "warn",
         "eol-last": "warn",
         "linebreak-style": ["warn", "unix"],
+        "no-mixed-spaces-and-tabs": "warn",
+
 
         // Spacing
         "keyword-spacing": "warn",
