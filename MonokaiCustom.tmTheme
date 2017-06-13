@@ -600,6 +600,21 @@
 		</dict>
 
 
+		<!-- LOGO -->
+		<dict>
+			<key>name</key>
+			<string>Logo Variable</string>
+			<key>scope</key>
+			<string>variable.source.logo</string>
+			<key>settings</key>
+			<dict>
+				<!-- DictKey Style -->
+				<key>foreground</key>
+				<string>#E6BB84</string>
+			</dict>
+		</dict>
+
+
 
 
 		<!-- C++ -->

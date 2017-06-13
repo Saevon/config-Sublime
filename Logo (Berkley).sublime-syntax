@@ -1,0 +1,88 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+# https://people.eecs.berkeley.edu/~bh/usermanual
+
+name: Logo (Berkley)
+file_extensions:
+  - logo
+scope: source.logo
+contexts:
+  main:
+    # Control operators
+    - match: \b(if|ifelse|while|foreach|repeat|for)\b
+      scope: keyword.control.flow.logo
+
+    # Numerics
+    - match: \b(\d+)(\.\d+)?
+      scope: constant.numeric.logo
+
+
+    # Booleans
+    - match: \b([tT]rue|[Ff]alse|TRUE|FALSE)\b
+      scope: constant.language.logo
+
+    # Predefined colours
+    - match: \b(black|white|red|yellow|green|cyan|blue|magenta)\b
+      scope: constant.other.logo
+
+    # Rare Colors (Not always defined)
+    - match: \b(brown|tan|forest|aqua|salmon|purple|orange|grey)\b
+      scope: constant.other.logo
+
+
+    # One line comments
+    - match: ;(.*)
+      scope: comment.line.character.logo
+
+    # Variables
+    - match: ':([a-z]|[A-Z])+'
+      scope: variable.source.logo
+
+
+    # Double quoted strings
+    - match: '"'
+      push: string
+
+
+    # Movement Methods
+    - match: \b(right|rt|left|lt|forward|fd|back|bk)\b
+      scope: variable.function.logo
+
+    # Turtle visibility Methods
+    - match: \b(hideturtle|showturtle)\b
+      scope: variable.function.logo
+
+    # Drawing Methods
+    - match: \b(penup|pendown|clearscreen)\b
+      scope: variable.function.logo
+
+    # Drawing Methods
+    - match: \b(make)\b
+      scope: storage.type.logo
+
+    # Math operators
+    - match: ([\+\*\-\/]|mod|abs|a?(cos|tan|sin))
+      scope: keyword.operator.logo
+
+    # Comparisons
+    - match: ([><=]|<>)
+      scope: keyword.operator.logo
+
+    # Logical operators
+    - match: \s(and|or|xor|of|not|with|at-points|in-radius|in-cone)\s(not)?
+      scope: keyword.operator.logo
+
+
+
+
+  #---------------------------
+  # APPROVED
+
+  # String specification
+  string:
+    - meta_scope: string.quoted.double.logo
+    - match: \\.
+      scope: constant.character.escape.logo
+    - match: ' '
+      pop: true
