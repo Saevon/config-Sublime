@@ -43,7 +43,7 @@
                     "E123,E226,E241,E242"
                 ],
                 "excludes": [],
-                "ignore": "W391",
+                "ignore": "W391,E303",
                 "max-line-length": 150,
                 "select": ""
             },
