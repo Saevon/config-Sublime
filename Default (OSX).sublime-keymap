@@ -294,6 +294,14 @@
         "command": "show_panel",
         "args": {"panel": "output.exec", "toggle": true}
     },
+    // Hide the errors
+    {
+        "keys": ["ctrl+l"],
+        "command": "exec",
+        "args": {
+            "hide_phantoms_only": true
+        }
+    },
 
 
 
