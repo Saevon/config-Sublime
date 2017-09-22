@@ -47,6 +47,7 @@
 
     // Aliases
     { "caption": "File: Remove", "command": "side_bar_delete" },
+    { "caption": "Package Control: Uninstall Package", "command": "remove_package" },
 
 
     // Highlights
