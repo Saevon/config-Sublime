@@ -16,7 +16,29 @@
         "command": "wrap_lines_plus",
     },
     { "caption": "Show Syntax Scope", "command": "show_scope_name" },
-    { "caption": "Refresh ColorScheme", "command": "refresh_color_scheme" },
+    { "caption": "Color Scheme: Refresh", "command": "refresh_color_scheme" },
+    {
+        "caption": "Color Scheme: Saevon (Dark)",
+        "command": "set_user_setting",
+        "args": {
+            "file": "Preferences.sublime-settings",
+            "setting": "color_scheme",
+            "value": "Packages/User/MonokaiCustom.tmTheme"
+        }
+    },
+    {
+        "caption": "Color Scheme: Saevon (Light)",
+        "command": "set_user_setting",
+        "args": {
+            "file": "Preferences.sublime-settings",
+            "setting": "color_scheme",
+            "value": "Packages/Color Scheme - Default/Dawn.tmTheme",
+            // "value": "Packages/Color Scheme - Default/IDLE.tmTheme"
+            // "value": "Packages/Color Scheme - Default/iPlastic.tmTheme"
+            // "value": "Packages/Color Scheme - Default/Solarized (Light).tmTheme"
+        }
+    },
+
     { "caption": "Center on Visible", "command": "center_on_visible" },
 
 
