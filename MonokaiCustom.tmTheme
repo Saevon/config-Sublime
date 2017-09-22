@@ -228,7 +228,7 @@
 			<key>name</key>
 			<string>Operator</string>
 			<key>scope</key>
-			<string>keyword.operator</string>
+			<string>keyword.operator - keyword.operator.accessor</string>
 			<key>settings</key>
 			<dict>
 				<!-- Operator Style -->
