@@ -31,6 +31,9 @@
     { "keys": ["ctrl+i"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": 0.5 } },
     // Re-Center on cursor
     { "keys": ["ctrl+o"], "command": "show_at_center" },
+    // Center on viewport
+    { "keys": ["ctrl+shift+o"], "command": "center_on_visible" },
+
     // Scrolling
     { "keys": ["ctrl+j"], "command": "move", "args": { "by": "pages", "forward": true } },
     { "keys": ["ctrl+k"], "command": "move", "args": { "by": "pages", "forward": false } },
