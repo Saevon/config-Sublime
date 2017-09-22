@@ -34,6 +34,10 @@
         },
     },
 
+    // Code Folding
+    { "caption": "Fold JavaScript", "command": "fold_special" },
+    { "caption": "Fold JavaScript: Setup", "command": "fold_setup" },
+
     // Missing Sublime Commands
     { "caption": "Reveal Current File in Finder", "command": "open_dir", "args": {
         "dir": "$file_path",
