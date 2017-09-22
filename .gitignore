@@ -4,3 +4,12 @@
 # Package Control
 Package Control.last-run
 Package Control.*-bundle
+
+.DS_Store
+
+# Generated files
+SublimeLinter/*
+Color Highlighter/ColorPicker/*
+Color Highlighter/themes/*
+Color Highlighter/icons/*
+SideBarEnhancements/Open With/*
