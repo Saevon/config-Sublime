@@ -120,7 +120,7 @@
         "parseInt",
         "parseFloat",
         "decodeURI",
-        "decodeURICompenent",
+        "decodeURIComponent",
         "escape",
         "unescape",
 
@@ -129,5 +129,20 @@
         "__proto__",
         "get",
         "set",
+
+        // Helper Functions
+        "JSON",
+        "JSON.stringify",
+        "JSON.parse",
+
+
+        "console",
+        "console.log",
+        "console.error",
+        "console.warn",
+
+        // Node
+        "process.exit",
+        "process.title",
     ],
 }
