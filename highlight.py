@@ -49,20 +49,20 @@ class Selections(object):
     _ALL = {}
 
     @classmethod
-    def create(_class, id):
-        obj = _class._ALL.get(id)
+    def create(cls, uniq_id):
+        obj = cls._ALL.get(uniq_id)
         if obj is None:
-            obj = _class(id)
+            obj = cls(uniq_id)
 
         return obj
 
-    def __init__(self, id):
-        self.id = id
+    def __init__(self, uniq_id):
+        self.uniq_id = uniq_id
 
         self.clear()
         self.inverted = False
 
-        self._ALL[id] = self
+        self._ALL[uniq_id] = self
 
     def to_valid_index(self, index):
         if len(self.selections) == 0:
@@ -72,8 +72,6 @@ class Selections(object):
         return index % len(self.selections)
 
     def get(self, index=None, default=None):
-        obj = None
-
         if index is None:
             index = self.index
         index = self.to_valid_index(index)
@@ -139,10 +137,10 @@ def sublime_show_region(view, region):
 class HighlightAllNextCommand(sublime_plugin.TextCommand):
     def run(self, edit=None, **kwargs):
         selections = Selections.create(self.view.id())
-        next = selections.prev() if kwargs.get('backwards', False) else selections.next()
+        next_sel = selections.prev() if kwargs.get('backwards', False) else selections.next()
 
-        if next is not None:
-            return sublime_select(self.view, next)
+        if next_sel is not None:
+            return sublime_select(self.view, next_sel)
 
         # See if instead there was a previous search
         history = SearchHistory.create(self.view.id())
