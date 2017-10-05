@@ -54,10 +54,13 @@ contexts:
 
   register:
     # Special registers
-    - match: '([@"][@"_]|"[-.%:/=*+~])'
+    - match: '([@"][@_]|"[-.%:/=*+~])'
       scope: variable.language.vimrc
     # Normal registers
     - match: '(@")[0-9a-zA-Z]'
+      scope: variable.language.vimrc
+    # Register that steals comments
+    - match: '""(?!")'
       scope: variable.language.vimrc
 
   set-cmd:
