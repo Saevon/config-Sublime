@@ -300,7 +300,7 @@ class ExModeCommand(sublime_plugin.TextCommand):
             if char == "w" and self.view.is_dirty():
                 self.view.run_command('save')
             elif char == "q":
-                self.view.run_command('close')
+                self.view.window().run_command('close')
             elif char == "?":
                 return self.view.run_command(
                     'highlight_all',
