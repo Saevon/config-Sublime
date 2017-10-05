@@ -6,7 +6,7 @@ import re
 #     to the new word position
 # TODO: find nearest word, rather than starting at the top
 # TODO: if you edit the file, then do 'nN' you go to the wrong positions
-# TODO: move the screen as you search, returning to original location if not found
+# DONE: move the screen as you search, returning to original location if not found
 
 # NOTES:
 #  *# both update history
@@ -20,17 +20,28 @@ import re
 #  :!
 
 
+def valid_regex(string):
+    try:
+        re.compile(string)
+    except re.error:
+        return False
+
+    return True
+
+
 # Name of the region group when highlighting
 HIGHLIGHT_GROUP = 'Saevon-HighlightAllPlugin'
 
-# Flags for RE that need to be put at the beginning of the RE
-# Used when you can't provide RE flags from the sublime package
-# TODO: see if re.DOTALL, re.IGNORECASE etc work instead
-RE_FLAGS = {
-    'DOTALL': r'(?s)',
-    'IGNORECASE': r'(?i)',
-    'MULTILINE': r'(?m)',
-}
+
+def find_relevant_selection(selection, visible_region=None):
+    # See if we can find the first region which is fully visible
+    if visible_region is not None:
+        for region in selection:
+            if visible_region.contains(region):
+                return region
+
+    # Default is the first selection we find
+    return selection[0]
 
 
 class Selections(object):
@@ -49,6 +60,7 @@ class Selections(object):
         self.id = id
 
         self.clear()
+        self.inverted = False
 
         self._ALL[id] = self
 
@@ -100,7 +112,6 @@ class Selections(object):
         self.selections += args
 
     def clear(self):
-        self.inverted = False
         self.selections = []
         self.index = 0
 
@@ -117,8 +128,12 @@ def sublime_select(view, region):
     view.sel().clear()
     view.sel().add(cursor)
 
+    sublime_show_region(view, region)
+
+
+def sublime_show_region(view, region):
     if not view.visible_region().intersects(region):
-        view.show_at_center(cursor)
+        view.show_at_center(region)
 
 
 class HighlightAllNextCommand(sublime_plugin.TextCommand):
@@ -127,7 +142,25 @@ class HighlightAllNextCommand(sublime_plugin.TextCommand):
         next = selections.prev() if kwargs.get('backwards', False) else selections.next()
 
         if next is not None:
-            sublime_select(self.view, next)
+            return sublime_select(self.view, next)
+
+        # See if instead there was a previous search
+        history = SearchHistory.create(self.view.id())
+        regex = history.cur()
+        if regex is not None:
+            # TODO: do previous search
+            return
+
+        # See if theres an old set of regions
+        # So we can recover any old highlights
+        regions = self.view.get_regions(HIGHLIGHT_GROUP)
+        if len(regions) == 0:
+            return
+
+
+        # Recover old regions
+        # TODO:
+
 
 
 class HighlightAllHistoryCommand(sublime_plugin.TextCommand):
@@ -143,45 +176,143 @@ class HighlightAllHistoryCommand(sublime_plugin.TextCommand):
 class HighlightAllCommand(sublime_plugin.TextCommand):
 
     CAPS_RE = re.compile(r'[A-Z]')
+    LEFT_BRACKET_RE = re.compile(r'(?<!\\)\(')
+    RIGHT_BRACKET_RE = re.compile(r'(?<!\\)\)')
 
     def on_change(self, data):
-        pass
+        if not self.autoupdate:
+            return
+
+        self.view.run_command('clear_all_highlights')
+        found = self.search(data)
+        if len(found) == 0:
+            self.restore()
+        else:
+            self.highlight(found)
+            self.view.show_at_center(found[0])
 
     def on_done(self, data):
         self.view.settings().set('vimSearchPanel', False)
-        self.search(data)
+        self.full_search(data)
 
-    def search(self, data):
-        flags = ''
-        flags += RE_FLAGS['DOTALL']
+    def on_cancel(self):
+        self.view.settings().set('vimSearchPanel', False)
+
+        if self.autoupdate:
+            self.restore()
+            self.view.run_command('clear_all_highlights')
+
+    def full_search(self, regex):
+        # Use the previous search if there was one
+        if not regex:
+            history = SearchHistory.create(self.view.id())
+            regex = history.cur()
+            print(regex)
+
+        # If there isn't a search... abort
+        if not regex:
+            return
+
+        found = self.search(regex)
+
+        self.highlight(found)
+        self.select(found)
+
+        # Save any actual searches
+        self.save_search(regex)
+
+    def search(self, regex):
+        # Validate and try to autocorrect regex
+        regex = self.correct_regex(regex)
+
+        # Regex Flags
+        flags = 0
+        flags |= re.DOTALL
 
         # Ignore case unless there are capitals
-        if HighlightAllCommand.CAPS_RE.match(data) is None:
+        match = HighlightAllCommand.CAPS_RE.search(regex)
+        if match is None:
             # TODO this fails I think...
-            flags += RE_FLAGS['IGNORECASE']
+            flags |= re.IGNORECASE
 
-        selection = self.view.sel()
+        selected = self.view.sel()
 
-        regions = self.view.find_all(data, sublime.IGNORECASE)
+        matched_regions = self.view.find_all(regex, flags)
+
+        # Filter out empty matches
+        matched_regions = list(filter(lambda region: region.end() != region.begin(), matched_regions))
+
+        # TODO: highlight only selected text should be an option passed in
+        #   Since '*' should not care about selection
 
         # Filter out things that haven't been selected
-        if len(selection) >= 2 or selection[0].size() >= 1:
-            regions = list(filter(lambda region: selection.contains(region), regions))
+        # Only do this if we have selected multiple characters
+        if len(selected) >= 2 or (len(selected) == 1 and selected[0].size() >= 1):
+            matched_regions = list(filter(lambda region: selected.contains(region), matched_regions))
 
+        return matched_regions
+
+    def correct_regex(self, regex):
+        left_brackets = len(HighlightAllCommand.LEFT_BRACKET_RE.findall(regex))
+        right_brackets = len(HighlightAllCommand.RIGHT_BRACKET_RE.findall(regex))
+
+        while not valid_regex(regex) and left_brackets > right_brackets:
+            right_brackets += 1
+            regex += ')'
+
+        # Now correct trailing escape chars
+        escapes = len(regex) - len(regex.rstrip('\\'))
+        if escapes % 2 == 1:
+            regex += '\\'
+
+        return regex
+
+    def highlight(self, matched_regions):
         # Keep any old highlights
-        regions += self.view.get_regions(HIGHLIGHT_GROUP)
+        matched_regions += self.view.get_regions(HIGHLIGHT_GROUP)
 
-        self.view.add_regions(HIGHLIGHT_GROUP, regions, 'vimhighlight')
+        self.view.add_regions(HIGHLIGHT_GROUP, matched_regions, 'vimhighlight', '', sublime.DRAW_NO_OUTLINE)
 
-        # TODO: merge already searched regions
+    def update_jump_points(self, matched_regions):
         selections = Selections.create(self.view.id())
-        selections.push(*regions)
+        # TODO: merge already searched regions
+        selections.clear()
+        selections.push(*matched_regions)
+
+    def select(self, matched_regions):
+        selections = Selections.create(self.view.id())
+        self.update_jump_points(matched_regions)
 
         if selections.cur() is not None:
             sublime_select(self.view, selections.cur())
 
-    def on_cancel(self):
-        self.view.settings().set('vimSearchPanel', False)
+    def clear(self):
+        self.view.erase_regions(HIGHLIGHT_GROUP)
+
+    def run_previous(self):
+        history = SearchHistory.create(self.view.id())
+        regex = history.cur()
+
+        if regex is not None:
+            found = self.search(regex)
+            self.clear()
+            self.highlight(found)
+            self.update_jump_points(found)
+
+    def save_search(self, data):
+        history = SearchHistory.create(self.view.id())
+        history.clear()
+        history.push(data)
+
+    def restore(self):
+        '''
+        Restores the original cursor and state to the one right before the search
+        '''
+        selections = Selections.create(self.view.id())
+        selections.clear()
+
+        # Restore the Viewpoint
+        self.view.set_viewport_position(self.original_view)
 
     def run(self, edit=None, **kwargs):
         if kwargs is None:
@@ -194,7 +325,17 @@ class HighlightAllCommand(sublime_plugin.TextCommand):
         # You can also specify exactly what to search
         regex = kwargs.get('regex', False)
         if regex is not False:
-            return self.search(regex)
+            return self.full_search(regex)
+
+        # Update as you type
+        self.autoupdate = kwargs.get('autoupdate', True)
+        if self.autoupdate:
+            selections.clear()
+            self.original_view = self.view.viewport_position()
+
+        # We could also be trying to rerun a search
+        if kwargs.get('runPrevious', False):
+            return self.run_previous()
 
         # Don't show a menu if we're trying to just find the word under the cursor
         if kwargs.get('word', False):
@@ -209,7 +350,7 @@ class HighlightAllCommand(sublime_plugin.TextCommand):
             word = word.lower()
 
             # Make the search only match exact words
-            return self.search('\<{0}\>'.format(word))
+            return self.full_search('\<{0}\>'.format(word))
 
         # This defines the input menu symbol, showing the direction
         direction_key = '?' if selections.inverted else '/'
@@ -229,6 +370,9 @@ class ClearAllHighlightsCommand(sublime_plugin.TextCommand):
     def run(self, edit=None):
         selections = Selections.create(self.view.id())
         selections.clear()
+
+        history = SearchHistory.create(self.view.id())
+        history.clear()
 
         self.view.erase_regions(HIGHLIGHT_GROUP)
 
