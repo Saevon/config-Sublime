@@ -899,6 +899,23 @@
 
 
 
+
+		<!--  Vimscrpt -->
+		<dict>
+			<key>name</key>
+			<string>shell Variable</string>
+			<key>scope</key>
+			<string>config.vimrc variable</string>
+			<key>settings</key>
+			<dict>
+				<!-- DictKey Style -->
+				<key>foreground</key>
+				<string>#E6BB84</string>
+			</dict>
+		</dict>
+
+
+
 	</array>
 	<key>uuid</key>
 	<string>D8D5E82E-3D5B-46B5-B38E-8C841C21347D</string>

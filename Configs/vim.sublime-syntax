@@ -1,0 +1,177 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Vimrc Syntax
+scope: config.vimrc
+file_extensions: [vimrc]
+contexts:
+  main:
+    - include: register
+
+    - include: set-cmd
+    - match: '&(l:)?\b\w+\b'
+      scope: variable.other.vimrc
+
+
+    - match: ':\b\w+\b'
+      scope: meta.function-call.vimrc variable.function
+
+    # Comments
+    - match: ^ *(\".*)$\n?
+      scope: comment.line.vimrc
+
+    # Bash
+    - match: "%!"
+      push: Packages/ShellScript/Shell-Unix-Generic.sublime-syntax
+      scope: keyword.vimrc
+      with_prototype:
+        - match: "%"
+          scope: constant.language.vimrc
+        - match: (?=$\n)
+          pop: true
+
+    # Keywords
+    - match: \b((n|c|i|v)?(nore)?map)\b\s*
+      scope: support.function.misc.vimrc
+      captures:
+        2: support.flag.vimrc
+      push:
+        - meta_scope: string.quoted.double.example-c
+        - match: ' '
+          pop: true
+        - include: keycode
+
+        # 4: string.unquoted.vimrc
+    - match: \b(let|syntax|call|au(tocmd)?|snor|colorscheme|has)\b
+      scope: support.function.misc.vimrc
+
+
+
+    # Others
+    - include: block
+    - include: string
+    - include: keycode
+
+  register:
+    # Special registers
+    - match: '([@"][@"_]|"[-.%:/=*+~])'
+      scope: variable.language.vimrc
+    # Normal registers
+    - match: '(@")[0-9a-zA-Z]'
+      scope: variable.language.vimrc
+
+  set-cmd:
+    # Set:
+    - match: (:)?\b(set)\b
+      scope: meta.function-call.vimrc support.function.misc.vimrc
+      push:
+        - match: \b((no|inv)?({{options}}))\b([&!?])?
+          scope: constant.language.vimrc
+          captures:
+            2: support.flag.vimrc
+            4: support.flag.vimrc
+
+        # assignments:
+        - match: ':'
+          scope: keyword.operator.assignment.vimrc
+        - match: '[+^-]='
+          scope: keyword.operator.assignment.augmented.vimrc
+        - match: '=(?!=)'
+          scope: keyword.operator.assignment.vimrc
+        # Others
+        - include: main
+        - match: '$'
+          pop: true
+
+  keycode:
+    # Keys
+    - match: "(?i)<(esc|tab|space|leader|return|enter|CR|del|help|undo|insert|home|end|pageUp|pageDown|)>"
+      scope: constant.character.escape.vimrc
+    # Keypad
+    - match: "(?i)<k(home|end|pageUp|pageDown|plus|minus|multiply|divide|enter|point|[0-9])>"
+      scope: constant.character.escape.vimrc
+    # Strange Characters
+    - match: "(?i)<(NUL|BS|NL|FF|EOL|CSI|xCSI)>"
+      scope: constant.character.escape.vimrc
+    # Escaped Characters
+    - match: "(?i)<(lt|Bslash|bar)>"
+      scope: constant.character.escape.vimrc
+    # Key-Combinations
+    - match: "(?i)<((C|S|M|A|D)-)?(F(1[12]|[1-9])|Left|Right|Up|Down)>"
+      scope: constant.character.escape.vimrc
+      # TODO: Include all keyboard characters
+    - match: "(?i)<(C|S|M|A|D)-[a-z0-9]>"
+      scope: constant.character.escape.vimrc
+
+  # Strings
+  string:
+    - match: '"'
+      scope: punctuation.definition.string.begin.vimrc
+      push: double_quoted_string
+    - match: "'"
+      scope: punctuation.definition.string.begin.vimrc
+      push: single_quoted_string
+
+  double_quoted_string:
+    - meta_scope: string.quoted.double.vimrc
+    - include: keycode
+    - match: '"'
+      scope: punctuation.definition.string.end.vimrc
+      pop: true
+  single_quoted_string:
+    - meta_scope: string.quoted.double.vimrc
+    - include: keycode
+    - match: "'"
+      scope: punctuation.definition.string.end.vimrc
+      pop: true
+
+
+
+  # Language Blocks
+  block:
+    - match: \bif\b
+      scope: keyword.control.conditional.vimrc
+      push: if
+    - match: \btry\b
+      scope: keyword.control.vimrc
+      push: try
+    - include: function
+
+
+  # TODO: properly match with params and such
+  function:
+    - meta_scope: meta.function.vimrc
+    - match: \b(fu(nction)?)\b
+      captures:
+        1: keyword.control.vimrc
+      push:
+      - meta_scope: meta.function.vimrc
+      - match: ([A-Z][a-zA-Z0-9_]*)\s*(!)?
+        captures:
+          1: entity.name.function.vimrc
+          2: support.flag.vimrc
+      - match: endfunction
+        scope: keyword.control.vimrc
+        pop: true
+      - include: main
+
+
+  if:
+    - match: else
+      scope: keyword.control.conditional.vimrc
+    - match: endif
+      scope: keyword.control.conditional.vimrc
+      pop: true
+    - include: main
+
+  try:
+    - match: catch
+      scope: keyword.control.vimrc
+    - match: endtry
+      scope: keyword.control.vimrc
+      pop: true
+    - include: main
+
+
+variables:
+  options: "al|aleph|ari|allowrevins|akm|altkeymap|ambw|ambiwidth|anti|antialias|acd|autochdir|arab|arabic|arshape|arabicshape|ai|autoindent|ar|autoread|aw|autowrite|awa|autowriteall|bg|background|bs|backspace|bk|backup|bkc|backupcopy|bdir|backupdir|bex|backupext|bsk|backupskip|bdlay|balloondelay|beval|ballooneval|bexpr|balloonexpr|bin|binary|biosk|bioskey|bomb|brk|breakat|bsdir|browsedir|bh|bufhidden|bl|buflisted|bt|buftype|cmp|casemap|cd|cdpath|cedit|ccv|charconvert|cin|cindent|cink|cinkeys|cino|cinoptions|cinw|cinwords|cb|clipboard|ch|cmdheight|cwh|cmdwinheight|cc|colorcolumn|co|columns|com|comments|cms|commentstring|cp|compatible|cpt|complete|cfu|completefunc|cot|completeopt|cocu|concealcursor|cole|conceallevel|cf|confirm|consk|conskey|ci|copyindent|cpo|cpoptions|cm|cryptmethod|cspc|cscopepathcomp|csprg|cscopeprg|csqf|cscopequickfix|cst|cscopetag|csto|cscopetagorder|csverb|cscopeverbose|crb|cursorbind|cuc|cursorcolumn|cul|cursorline|debug|def|define|deco|delcombine|dict|dictionary|diff|dex|diffexpr|dip|diffopt|dg|digraph|dir|directory|dy|display|ead|eadirection|ed|edcompatible|enc|encoding|eol|endofline|ea|equalalways|ep|equalprg|eb|errorbells|ef|errorfile|efm|errorformat|ek|esckeys|ei|eventignore|et|expandtab|ex|exrc|fenc|fileencoding|fencs|fileencodings|ff|fileformat|ffs|fileformats|ft|filetype|fcs|fillchars|fk|fkmap|fcl|foldclose|fdc|foldcolumn|fen|foldenable|fde|foldexpr|fdi|foldignore|fdl|foldlevel|fdls|foldlevelstart|fmr|foldmarker|fdm|foldmethod|fml|foldminlines|fdn|foldnestmax|fdo|foldopen|fdt|foldtext|flp|formatlistpat|fo|formatoptions|fp|formatprg|fex|formatexpr|fs|fsync|gd|gdefault|gfm|grepformat|gp|grepprg|gcr|guicursor|gfn|guifont|gfs|guifontset|gfw|guifontwide|ghr|guiheadroom|go|guioptions|guipty|gtl|guitablabel|gtt|guitabtooltip|hf|helpfile|hh|helpheight|hlg|helplang|hid|hidden|hl|highlight|hls|hlsearch|hi|history|hk|hkmap|hkp|hkmapp|icon|iconstring|ic|ignorecase|imak|imactivatekey|imc|imcmdline|imd|imdisable|imi|iminsert|ims|imsearch|inc|include|inex|includeexpr|is|incsearch|inde|indentexpr|indk|indentkeys|inf|infercase|im|insertmode|isf|isfname|isi|isident|isk|iskeyword|isp|isprint|js|joinspaces|key|kmp|keymap|km|keymodel|kp|keywordprg|lmap|langmap|lm|langmenu|ls|laststatus|lz|lazyredraw|lbr|linebreak|lines|lsp|linespace|lisp|lw|lispwords|list|lcs|listchars|lpl|loadplugins|macatsui|magic|mef|makeef|mp|makeprg|mps|matchpairs|mat|matchtime|mco|maxcombine|mfd|maxfuncdepth|mmd|maxmapdepth|mm|maxmem|mmp|maxmempattern|mmt|maxmemtot|mis|menuitems|msm|mkspellmem|ml|modeline|mls|modelines|ma|modifiable|mod|modified|more|mouse|mousef|mousefocus|mh|mousehide|mousem|mousemodel|mouses|mouseshape|mouset|mousetime|mzq|mzquantum|nf|nrformats|nu|number|nuw|numberwidth|ofu|omnifunc|odev|opendevice|opfunc|operatorfunc|oft|osfiletype|para|paragraphs|paste|pt|pastetoggle|pex|patchexpr|pm|patchmode|pa|path|pi|preserveindent|pvh|previewheight|pvw|previewwindow|pdev|printdevice|penc|printencoding|pexpr|printexpr|pfn|printfont|pheader|printheader|pmbcs|printmbcharset|pmbfn|printmbfont|popt|printoptions|ph|pumheight|qe|quoteescape|ro|readonly|rdt|redrawtime|rnu|relativenumber|remap|report|rs|restorescreen|ri|revins|rl|rightleft|rlc|rightleftcmd|ru|ruler|ruf|rulerformat|rtp|runtimepath|scr|scroll|scb|scrollbind|sj|scrolljump|so|scrolloff|sbo|scrollopt|sect|sections|secure|sel|selection|slm|selectmode|ssop|sessionoptions|sh|shell|shcf|shellcmdflag|sp|shellpipe|shq|shellquote|srr|shellredir|ssl|shellslash|stmp|shelltemp|st|shelltype|sxq|shellxquote|sr|shiftround|sw|shiftwidth|shm|shortmess|sn|shortname|sbr|showbreak|sc|showcmd|sft|showfulltag|sm|showmatch|smd|showmode|stal|showtabline|ss|sidescroll|siso|sidescrolloff|scs|smartcase|si|smartindent|sta|smarttab|sts|softtabstop|spell|spc|spellcapcheck|spf|spellfile|spl|spelllang|sps|spellsuggest|sb|splitbelow|spr|splitright|sol|startofline|stl|statusline|su|suffixes|sua|suffixesadd|swf|swapfile|sws|swapsync|swb|switchbuf|smc|synmaxcol|syn|syntax|ts|tabstop|tal|tabline|tpm|tabpagemax|tbs|tagbsearch|tl|taglength|tr|tagrelative|tag|tags|tgst|tagstack|term|tbidi|termbidi|tenc|termencoding|terse|ta|textauto|tx|textmode|tw|textwidth|tsr|thesaurus|top|tildeop|to|timeout|tm|timeoutlen|title|titlelen|titleold|titlestring|tb|toolbar|tbis|toolbariconsize|ttimeout|ttm|ttimeoutlen|tbi|ttybuiltin|tf|ttyfast|ttym|ttymouse|tsl|ttyscroll|tty|ttytype|udir|undodir|udf|undofile|ul|undolevels|ur|undoreload|uc|updatecount|ut|updatetime|vbs|verbose|vfile|verbosefile|vdir|viewdir|vop|viewoptions|vi|viminfo|ve|virtualedit|vb|visualbell|warn|wiv|weirdinvert|ww|whichwrap|wc|wildchar|wcm|wildcharm|wig|wildignore|wic|wildignorecase|wmnu|wildmenu|wim|wildmode|wop|wildoptions|wak|winaltkeys|wi|window|wh|winheight|wfh|winfixheight|wfw|winfixwidth|wmh|winminheight|wmw|winminwidth|wiw|winwidth|wrap|wm|wrapmargin|ws|wrapscan|write|wa|writeany|wb|writebackup|wd|writedelay"
