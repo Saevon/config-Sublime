@@ -12,7 +12,7 @@ import re
 #  *# both update history
 
 # TODO: VIM:
-#  :91 go to line
+#  :91 go to line/col
 #  :wq
 #  :%s
 #  :'<,'>:s
@@ -246,7 +246,7 @@ class HighlightListener(sublime_plugin.EventListener):
 import re
 
 
-LINE_RE = re.compile(r'[0-9]+')
+LINE_RE = re.compile(r'(?P<row>[0-9]+)(:(?P<col>[0-9]+))?')
 
 
 class CloseInputFieldCommand(sublime_plugin.TextCommand):
@@ -283,15 +283,27 @@ class ExModeCommand(sublime_plugin.TextCommand):
         # Ensure the panel is reset
         self.clear_input()
 
-        if LINE_RE.match(text):
+        # ':row:column' command
+        match = LINE_RE.match(text)
+        if match:
             # cursors in sublime are zero based, but line numbers are 1 based
-            line_num = int(text) - 1
+            line_num = int(match.group('row')) - 1
+            col = int(match.group('col')) - 1
 
             cursor = self.view.text_point(line_num, 0)
 
+            # set the Column
+            line = self.view.line(cursor)
+            cursor = cursor + col
+            if cursor > line.end():
+                # Vintage mode needs this -1 or else it would be past the end
+                cursor = line.end() - 1
+
             self.view.sel().clear()
             self.view.sel().add(sublime.Region(cursor))
-            self.view.show(cursor)
+
+            self.view.show_at_center(cursor)
+
             return
 
         while len(text):
