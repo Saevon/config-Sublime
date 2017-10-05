@@ -473,7 +473,7 @@
 			<string>markup.deleted</string>
 			<key>settings</key>
 			<dict>
-				<!-- Added Style -->
+				<!-- Removed Style -->
 				<key>foreground</key>
 				<string>#F92672</string>
 			</dict>
@@ -485,7 +485,7 @@
 			<string>markup.inserted</string>
 			<key>settings</key>
 			<dict>
-				<!-- Removed Style -->
+				<!-- Added Style -->
 				<key>foreground</key>
 				<string>#A6E22E</string>
 			</dict>
