@@ -448,7 +448,22 @@
 		</dict>
 
 
+		<!-- Custom Global Styles -->
+		<dict>
+			<key>name</key>
+			<string>Flags</string>
+			<key>scope</key>
+			<string>support.flag</string>
+			<key>settings</key>
+			<dict>
+				<!-- Function Style: non italic -->
+				<key>foreground</key>
+				<string>#A6E22E</string>
+			</dict>
+		</dict>
 
+
+		<!-- END: Custom Global Styles -->
 
 
 
