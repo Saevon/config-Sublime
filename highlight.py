@@ -35,11 +35,11 @@ RE_FLAGS = {
 
 class Selections(object):
 
-    __ALL = {}
+    _ALL = {}
 
     @classmethod
     def create(_class, id):
-        obj = _class.__ALL.get(id)
+        obj = _class._ALL.get(id)
         if obj is None:
             obj = _class(id)
 
@@ -50,7 +50,7 @@ class Selections(object):
 
         self.clear()
 
-        self.__ALL[id] = self
+        self._ALL[id] = self
 
     def to_valid_index(self, index):
         if len(self.selections) == 0:
@@ -107,7 +107,7 @@ class Selections(object):
 
 class SearchHistory(Selections):
 
-    __ALL = {}
+    _ALL = {}
 
 
 def sublime_select(view, region):
