@@ -1,0 +1,95 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+
+name: Git Interactive Rebase
+fileTypes: ['git-rebase-todo']
+file_extensions:
+  - git-rebase-todo
+scope: source.git-rebase
+contexts:
+  main:
+    - include: comment
+    - include: command
+
+
+  command:
+    - match: ^
+      push: cmd_action
+
+  cmd_end:
+    - match: \s*
+    - match: .*
+      scope: invalid.illegal
+    - match: $
+      pop: true
+
+  cmd_action:
+    - meta_scope: meta.command.git-rebase
+    - match: \bp(ick)?\b
+      scope: entity.name.function.pick
+      push: cmd_hash
+    - match: \bf(ixup)?\b
+      scope: entity.name.function.fixup
+      push: cmd_hash
+    - match: (?<!')\bs(quash)?\b
+      scope: entity.name.function.squash
+      push: cmd_hash
+    - match: \br(eword)?\b
+      scope: entity.name.function.reword
+      push: cmd_hash
+    - match: \be(dit)?\b
+      scope: entity.name.function.edit
+      push: cmd_hash
+    - match: \b(x|exec)\b
+      scope: entity.name.function.exec
+      push: cmd_hash
+    - include: cmd_end
+
+  cmd_hash:
+    - match: \b[0-9a-f]{4,40}\b
+      scope: constant.numeric.hex
+      set: cmd_description
+    - include: cmd_end
+
+  cmd_description:
+    - match: '.*'
+      scope: string.unquoted
+      pop: true
+    - include: cmd_end
+
+
+
+  comment:
+    - match: ^#
+      scope: comment.line
+      push:
+        - meta_scope: comment.line
+        - match: $
+          pop: true
+        - include: comment_hash
+        - include: comment_action
+  comment_hash:
+    - match: \b[0-9a-f]{4,40}\b
+      scope: constant.numeric.hex
+  comment_action:
+    - match: \bp(ick)?\b
+      scope: entity.name.function.pick
+    - match: \bf(ixup)?\b
+      scope: entity.name.function.fixup
+    - match: (?<!')\bs(quash)?\b
+      scope: entity.name.function.squash
+    - match: \br(eword)?\b
+      scope: entity.name.function.reword
+    - match: \be(dit)?\b
+      scope: entity.name.function.edit
+    - match: \b(x|exec)\b
+      scope: entity.name.function.exec
+
+
+
+
+
+
+
+

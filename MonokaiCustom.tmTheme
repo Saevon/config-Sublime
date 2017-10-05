@@ -898,6 +898,46 @@
 
 
 
+		<!-- Git Rebase -->
+		<dict>
+			<key>name</key>
+			<string>Git Rebase: Pick</string>
+			<key>scope</key>
+			<string>entity.name.function.pick, entity.name.function.reword, entity.name.function.edit</string>
+			<key>settings</key>
+			<dict>
+				<!-- Library Style -->
+				<key>foreground</key>
+				<string>#66D9EF</string>
+ 			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Git Rebase: Squash</string>
+			<key>scope</key>
+			<string>entity.name.function.squash, entity.name.function.fixup</string>
+			<key>settings</key>
+			<dict>
+				<!-- Operator Style -->
+				<key>foreground</key>
+				<string>#F94672</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Git Rebase: Exec</string>
+			<key>scope</key>
+			<string>entity.name.function.exec</string>
+			<key>settings</key>
+			<dict>
+				<!-- Function Style -->
+				<key>fontStyle</key>
+				<string>underline</string>
+				<key>foreground</key>
+				<string>#A6E22E</string>
+			</dict>
+		</dict>
+
 
 
 		<!--  Vimscrpt -->
