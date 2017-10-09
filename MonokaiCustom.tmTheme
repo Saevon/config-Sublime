@@ -469,6 +469,41 @@
 
 
 
+
+		<!-- Python: TODO extend this colorscheme to other language decorators -->
+		<dict>
+			<key>name</key>
+			<string>Decorator Function</string>
+			<key>scope</key>
+			<string>meta.annotation meta.qualified-name</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#88D882</string>
+
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Decorator Symbol (@)</string>
+			<key>scope</key>
+			<string>punctuation.definition.annotation</string>
+			<key>settings</key>
+			<dict>
+				<!-- Operator Style -->
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#88D882</string>
+			</dict>
+		</dict>
+
+
+
+
+
+
+
 		<!-- Diff -->
 		<dict>
 			<key>name</key>
