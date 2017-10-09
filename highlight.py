@@ -398,12 +398,12 @@ class ClearAllHighlightsCommand(sublime_plugin.TextCommand):
         self.view.erase_regions(HIGHLIGHT_GROUP)
 
 
-class HighlightListener(sublime_plugin.EventListener):
+# class HighlightListener(sublime_plugin.EventListener):
 
-    def on_modified(self, view):
-        view.run_command('highlight_all', args={
-            'runPrevious': True,
-        })
+#     def on_modified(self, view):
+#         view.run_command('highlight_all', args={
+#             'runPrevious': True,
+#         })
 
 
 
