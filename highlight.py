@@ -177,6 +177,7 @@ class HighlightAllCommand(sublime_plugin.TextCommand):
     LEFT_BRACKET_RE = re.compile(r'(?<!\\)\(')
     RIGHT_BRACKET_RE = re.compile(r'(?<!\\)\)')
 
+
     def on_change(self, data):
         if not self.autoupdate:
             return
