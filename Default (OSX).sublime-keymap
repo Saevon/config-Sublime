@@ -18,6 +18,31 @@
     { "keys": ["super+9"], "command": "last_view" },
 
 
+    /*******************  Viewport & Scrolling  ********************/
+
+
+    // Page Scrolling (only viewport)
+    { "keys": ["ctrl+u"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": -0.5 } },
+    { "keys": ["ctrl+i"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": 0.5 } },
+
+    // Re-Center on cursor
+    { "keys": ["ctrl+o"], "command": "show_at_center" },
+    // Center on viewport
+    { "keys": ["ctrl+shift+o"], "command": "center_on_visible" },
+
+    // Scrolling
+    {
+        "keys": ["ctrl+j"],
+        "command": "move",
+        "args": { "by": "pages", "forward": true },
+    },
+    {
+        "keys": ["ctrl+k"],
+        "command": "move",
+        "args": { "by": "pages", "forward": false },
+    },
+
+
     /************ VINTAGE KEYMAPS ************/
 
     // Vintage shortcuts for moving lines with hjkl
@@ -25,18 +50,6 @@
     { "keys": ["super+ctrl+k"], "command": "swap_line_up"},
     { "keys": ["super+ctrl+h"], "command": "move_text_left"},
     { "keys": ["super+ctrl+l"], "command": "move_text_right"},
-
-    // Page Scrolling (only viewport)
-    { "keys": ["ctrl+u"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": -0.5 } },
-    { "keys": ["ctrl+i"], "command": "scroll_lines_fixed", "args" : {"by": "pages", "amount": 0.5 } },
-    // Re-Center on cursor
-    { "keys": ["ctrl+o"], "command": "show_at_center" },
-    // Center on viewport
-    { "keys": ["ctrl+shift+o"], "command": "center_on_visible" },
-
-    // Scrolling
-    { "keys": ["ctrl+j"], "command": "move", "args": { "by": "pages", "forward": true } },
-    { "keys": ["ctrl+k"], "command": "move", "args": { "by": "pages", "forward": false } },
 
     // Vintage escape with jj
     { "keys": ["j", "j"], "command": "exit_insert_mode",
@@ -405,6 +418,8 @@
     //     ]
     // },
 
+
+
     /*******************  Disabled Shortcuts  ********************/
     // Minimize is such a pain...
     { "keys": ["super+m"], "command": "noop" },
@@ -413,4 +428,6 @@
 
     /*******************  Changed Sublime Defaults  ********************/
     { "keys": ["super+y"], "command": "redo" },
+
+
 ]
