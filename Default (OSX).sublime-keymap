@@ -42,6 +42,21 @@
         "args": { "by": "pages", "forward": false },
     },
 
+    // Overlay Scrolling (MUST BE after Page Scrolling)
+    { "keys": ["ctrl+j"],
+        "command": "move",
+        "args": {"by": "lines", "forward": true},
+        "context": [
+            {"key": "overlay_visible", "operand": true},
+        ]
+    },
+    { "keys": ["ctrl+k"],
+        "command": "move",
+        "args": {"by": "lines", "forward": false},
+        "context": [
+            {"key": "overlay_visible", "operand": true},
+        ]
+    },
 
     /************ VINTAGE KEYMAPS ************/
 
