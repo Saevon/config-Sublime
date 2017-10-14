@@ -308,6 +308,31 @@
     //     ]
     // },
 
+
+
+    // Surround with: in visual mode (Surround selected text)
+    {
+        "keys": ["ctrl+s", "<character>"],
+        "command": "surround_with",
+        "context": [
+            {"key": "setting.command_mode"},
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
+        ],
+    },
+    // Surround with: in command mode (Select words then surround them)
+    {
+        "keys": ["ctrl+s", "<character>"],
+        "command": "surround_with",
+        "context": [
+            {"key": "setting.command_mode"},
+            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false }
+        ],
+        "args": {
+            "expand": true
+        }
+    },
+
+
     /**************************************/
 
 
