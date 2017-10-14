@@ -42,7 +42,9 @@ contexts:
         - include: keycode
 
         # 4: string.unquoted.vimrc
-    - match: \b(let|syntax|call|au(tocmd)?|snor|colorscheme|has)\b
+    - match: \b(augroup) (END)$
+      scope: support.function.misc.vimrc
+    - match: \b(let|syntax|call|au(tocmd)?|aug(roup)?|snor|colorscheme|has)\b
       scope: support.function.misc.vimrc
 
 
@@ -55,6 +57,9 @@ contexts:
   register:
     # Special registers
     - match: '([@"][@_]|"[-.%:/=*+~])'
+      scope: variable.language.vimrc
+    # Quote register ruins highlighting of comments
+    - match: '(?<!^)""'
       scope: variable.language.vimrc
     # Normal registers
     - match: '(@")[0-9a-zA-Z]'
