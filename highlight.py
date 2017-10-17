@@ -190,12 +190,9 @@ class HighlightAllCommand(sublime_plugin.TextCommand):
             self.view.show_at_center(found[0])
 
     def on_done(self, data):
-        self.view.settings().set('vimSearchPanel', False)
         self.full_search(data)
 
     def on_cancel(self):
-        self.view.settings().set('vimSearchPanel', False)
-
         if self.autoupdate:
             self.restore()
             self.view.run_command('clear_all_highlights')
@@ -230,7 +227,6 @@ class HighlightAllCommand(sublime_plugin.TextCommand):
         # Ignore case unless there are capitals
         match = HighlightAllCommand.CAPS_RE.search(regex)
         if match is None:
-            # TODO this fails I think...
             flags |= re.IGNORECASE
 
         selected = self.view.sel()
@@ -354,14 +350,14 @@ class HighlightAllCommand(sublime_plugin.TextCommand):
         direction_key = '?' if selections.inverted else '/'
 
         # Show a menu to type the search into
-        self.view.settings().set('vimSearchPanel', True)
-        self.view.window().show_input_panel(
+        view = self.view.window().show_input_panel(
             '  {0} '.format(direction_key),
             '',
             on_done=self.on_done,
             on_change=self.on_change,
             on_cancel=self.on_cancel,
         )
+        view.settings().set('vimSearchPanel', True)
 
 
 class ClearAllHighlightsCommand(sublime_plugin.TextCommand):
