@@ -333,18 +333,44 @@ class HighlightAllCommand(sublime_plugin.TextCommand):
 
         # Don't show a menu if we're trying to just find the word under the cursor
         if kwargs.get('word', False):
-            # Always reset to continue the search properly
+            # VIM CHANGE: If the user is in visual mode, then we want to search for that instead
+            is_visual = False
+            for cursor in self.view.sel():
+                if len(cursor) >= 1:
+                    is_visual = True
+                    break
+
+            # TODO: figure out where the cursor is to go to closest position?
             # TODO: Cache results? in case the word is the same
             selections.clear()
 
-            cursor_end = self.view.sel()[0].end()
-            word = self.view.substr(self.view.word(cursor_end))
+            words = []
+            for cursor in self.view.sel():
+                if is_visual:
+                    # In visual mode we just take what the user selected
+                    word_region = cursor
+                else:
+                    # Otherwise we grab the word under the cursor
+                    word_region = self.view.word(cursor.end())
 
-            # Make sure to ignorecase
-            word = word.lower()
+
+                word = self.view.substr(word_region)
+                words.append(word)
+
+            # TODO: for now we take just the wo
+            word = words[0]
+
+            if is_visual:
+                # TODO: escape special chars
+                regex = '|'.join([r'\<{0}\>'.format(word) for word in words])
+            else:
+                regex = '|'.join([r'\<{0}\>'.format(word) for word in words])
+
+            # Also reset the selections or else we'll only search within them
+            self.view.sel().clear()
 
             # Make the search only match exact words
-            return self.full_search('\<{0}\>'.format(word))
+            return self.full_search(regex)
 
         # This defines the input menu symbol, showing the direction
         direction_key = '?' if selections.inverted else '/'
