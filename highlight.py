@@ -451,9 +451,14 @@ class ExModeCommand(sublime_plugin.TextCommand):
         # ':row:column' command
         match = LINE_RE.match(text)
         if match:
+            col = match.group('col')
+            if col is None:
+                col = 0
+            else:
+                col = int(col) - 1
             # cursors in sublime are zero based, but line numbers are 1 based
             line_num = int(match.group('row')) - 1
-            col = int(match.group('col')) - 1
+
 
             cursor = self.view.text_point(line_num, 0)
 

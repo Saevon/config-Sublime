@@ -193,7 +193,10 @@
     },
     { "keys": ["n"], "command": "highlight_all_next", "context": [{ "key": "setting.command_mode" }]},
     { "keys": ["N"], "command": "highlight_all_next", "context": [{ "key": "setting.command_mode" }], "args": { "backwards": true}},
+
+    // Clear highlights: Leader+
     { "keys": [",", " "], "command": "clear_all_highlights", "context": [{ "key": "setting.command_mode" }]},
+
 
     {
         "keys": [":"], "command": "ex_mode",

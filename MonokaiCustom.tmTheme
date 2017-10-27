@@ -438,7 +438,7 @@
 			<key>name</key>
 			<string>Function Call</string>
 			<key>scope</key>
-			<string>variable.function, meta.function-call support.function</string>
+			<string>variable.function</string>
 			<key>settings</key>
 			<dict>
 				<!-- Function Call Style -->
