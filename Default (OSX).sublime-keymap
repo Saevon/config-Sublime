@@ -215,6 +215,26 @@
         ],
     },
 
+    // Show Bookmarks list shortcut: Leader+m
+    {
+        "keys": [",", "m"],
+        "command": "vie_show_all_bookmarks",
+        "context": [{ "key": "setting.command_mode" }]
+    },
+    { "keys": ["ctrl+d"], "command": "vie_delete_bookmark" },
+    {
+        "keys": ["`", "<character>"],
+        "command": "vie_select_bookmark",
+        "context": [{"key": "setting.command_mode"}]
+    },
+    {
+        "keys": ["m", "<character>"],
+        "command": "vie_create_bookmark",
+        "context": [{"key": "setting.command_mode"}]
+    },
+
+
+
 
     /*
     {

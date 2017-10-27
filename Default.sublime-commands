@@ -75,7 +75,8 @@
     // Highlights
     { "caption": "Highlight: Text", "command": "highlight_all" },
     { "caption": "Clear Highlight", "command": "clear_all_highlights" },
-    { "caption": "Show Bookmarks", "command": "vi_show_all_bookmarks" },
+    { "caption": "ViMarks: Clear All", "command": "vie_clear_bookmarks" },
+    { "caption": "ViMarks: Show", "command": "vie_show_all_bookmarks" },
 
     // Debug
     { "caption": "Debug Sublime: Toggle Commands", "command": "debug_sublime_toggle_commands" },
