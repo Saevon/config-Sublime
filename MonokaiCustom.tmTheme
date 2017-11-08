@@ -461,6 +461,19 @@
 				<string>#A6E22E</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>name</key>
+			<string>Preprocessor Command</string>
+			<key>scope</key>
+			<string>meta.preprocessor.perl</string>
+			<key>settings</key>
+			<dict>
+				<!-- Preprocessor Style -->
+				<!-- (Based on Function Def Style) -->
+				<key>foreground</key>
+				<string>#A6E22E</string>
+			</dict>
+		</dict>
 
 
 		<!-- END: Custom Global Styles -->
