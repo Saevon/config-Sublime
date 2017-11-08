@@ -58,6 +58,11 @@
         ]
     },
 
+    // Pane Travel
+    { "keys": ["ctrl+shift+j"], "command": "travel_to_pane", "args": {"direction": "down"} },
+    { "keys": ["ctrl+shift+k"], "command": "travel_to_pane", "args": {"direction": "up"} },
+    { "keys": ["ctrl+shift+l"], "command": "travel_to_pane", "args": {"direction": "right"} },
+    { "keys": ["ctrl+shift+h"], "command": "travel_to_pane", "args": {"direction": "left"} },
     /************ VINTAGE KEYMAPS ************/
 
     // Vintage shortcuts for moving lines with hjkl
