@@ -1157,6 +1157,35 @@
 		</dict>
 
 
+		<!-- Regex -->
+		<dict>
+			<key>name</key>
+			<string>Regex Groupname</string>
+			<key>scope</key>
+			<string>punctuation.definition.group.capture.regexp, entity.name.section.group.regexp</string>
+			<key>settings</key>
+			<dict>
+				<!-- DictKey Style -->
+				<key>foreground</key>
+				<string>#E6BB84</string>
+			</dict>
+		</dict>
+
+
+		<!-- Perl -->
+		<dict>
+			<key>name</key>
+			<string>shell Variable</string>
+			<key>scope</key>
+			<string>source.perl variable.other</string>
+			<key>settings</key>
+			<dict>
+				<!-- DictKey Style -->
+				<key>foreground</key>
+				<string>#E6BB84</string>
+			</dict>
+		</dict>
+
 
 	</array>
 	<key>uuid</key>
