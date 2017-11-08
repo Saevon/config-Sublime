@@ -1,0 +1,43 @@
+{
+    "scope": "source.python",
+
+    "completions": [
+        {"trigger":"assertTrue\tassert", "contents": "assertTrue(${1:actual})"},
+        {"trigger":"assertFalse\tassert", "contents": "assertFalse(${1:actual})"},
+        {"trigger":"assertIs\tassert", "contents": "assertIs(${1:actual}, ${2:expected})"},
+        {"trigger":"assertIsNot\tassert", "contents": "assertIsNot(${1:actual}, ${2:expected})"},
+        {"trigger":"assertIsNone\tassert", "contents": "assertIsNone(${1:actual})"},
+        {"trigger":"assertIsNotNone\tassert", "contents": "assertIsNotNone(${1:actual})"},
+        {"trigger":"assertIsInstance\tassert", "contents": "assertIsInstance(${1:actual}, ${2:cls})"},
+        {"trigger":"assertIsNotInstance\tassert", "contents": "assertIsNotInstance(${1:actual}, ${2:cls})"},
+
+        {"trigger":"assertEqual\tassert", "contents": "assertEqual(${1:actual}, ${2:expected})"},
+        {"trigger":"assertNotEqual\tassert", "contents": "assertNotEqual(${1:actual}, ${2:expected})"},
+        {"trigger":"assertAlmostEqual\tassert", "contents": "assertAlmostEqual(${1:actual}, ${2:expected})"},
+        {"trigger":"assertNotAlmostEqual\tassert", "contents": "assertNotAlmostEqual(${1:actual}, ${2:expected})"},
+        {"trigger":"assertGreater\tassert", "contents": "assertGreater(${1:actual}, ${2:expected})"},
+        {"trigger":"assertGreaterEqual\tassert", "contents": "assertGreaterEqual(${1:actual}, ${2:expected})"},
+        {"trigger":"assertLess\tassert", "contents": "assertLess(${1:actual}, ${2:expected})"},
+        {"trigger":"assertLessEqual\tassert", "contents": "assertLessEqual(${1:actual}, ${2:expected})"},
+
+        // Lists
+        {"trigger":"assertIn\tassert", "contents": "assertIn(${1:actual}, ${2:expected})"},
+        {"trigger":"assertNotIn\tassert", "contents": "assertNotIn(${1:actual}, ${2:expected})"},
+        {"trigger":"assertItemsEqual\tassert", "contents": "assertItemsEqual(${1:actual}, ${2:expected})"},
+        {"trigger":"assertDictContainsSubset\tassert", "contents": "assertDictContainsSubset(${1:expected_subset}, ${2:actual})"},
+        {"trigger":"assertSequenceEqual\tassert", "contents": "assertSequenceEqual(${1:actual}, ${2:expected})"},
+        {"trigger":"assertListEqual\tassert", "contents": "assertListEqual(${1:actual}, ${2:expected})"},
+        {"trigger":"assertTupleEqual\tassert", "contents": "assertTupleEqual(${1:actual}, ${2:expected})"},
+        {"trigger":"assertSetEqual\tassert", "contents": "assertSetEqual(${1:actual}, ${2:expected})"},
+        {"trigger":"assertDictEqual\tassert", "contents": "assertDictEqual(${1:actual}, ${2:expected})"},
+
+        // Strings
+        {"trigger":"assertMultiLineEqual\tassert", "contents": "assertMultiLineEqual(${1:actual}, ${2:expected})"},
+        {"trigger":"assertRegexpMatches\tassert", "contents": "assertRegexpMatches(${1:actual}, ${2:regex})"},
+        {"trigger":"assertNotRegexpMatches\tassert", "contents": "assertNotRegexpMatches(${1:actual}, ${2:regex})"},
+
+        // Errors
+        {"trigger":"assertRaises\tassert", "contents": "with assertRaises(${1:ExpectedException})${2: as error}):\n    ${3:pass}"},
+        {"trigger":"assertRaisesRegexp\tassert", "contents": "with assertRaisesRegexp(${1:ExpectedException}, r'${2:regex}')${2: as error}):\n    ${3:pass}"},
+    ],
+}
