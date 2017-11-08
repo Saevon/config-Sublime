@@ -43,14 +43,19 @@
                     "E123,E226,E241,E242"
                 ],
                 "excludes": [],
-                "ignore": "W391,E303",
+                "ignore": "W391,E303,E265,R1705",
+                // E265: Space after #
+                // R1705: Unnecessary else after return
                 "max-line-length": 150,
                 "select": ""
             },
             "pylint": {
                 "@disable": false,
+                "@python": 3.4,
                 "args": [],
-                "disable": "C0111,C0330",
+                "disable": "C0111,C0330,C1801,C0305",
+                // C1801: len() in bool
+                // C0305: trailing spaces in file
                 "enable": "",
                 "excludes": [],
                 "paths": [],
