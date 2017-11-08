@@ -60,7 +60,7 @@
                 "excludes": [],
                 "paths": [],
                 "rcfile": "",
-                "show-codes": false
+                "show-codes": true
             }
         },
         "mark_style": "outline",
