@@ -488,7 +488,7 @@
 			<key>name</key>
 			<string>Decorator Function</string>
 			<key>scope</key>
-			<string>meta.annotation meta.qualified-name</string>
+			<string>meta.annotation meta.qualified-name - meta.annotation.arguments</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
