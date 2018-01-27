@@ -63,9 +63,9 @@
                 "@disable": false,
                 "@python": 3.4,
                 "args": [],
-                "disable": "C0111,C0330,C1801,C0305",
                 // C1801: len() in bool
                 // C0305: trailing spaces in file
+                "disable": "C0111,C0330,C1801,C0305,R0903,E1205,W1202",
                 "enable": "",
                 "excludes": [],
                 "paths": [],
