@@ -456,16 +456,16 @@
 			<string>support.flag</string>
 			<key>settings</key>
 			<dict>
-				<!-- Function Style: non italic -->
+				<!-- Flag Style -->
 				<key>foreground</key>
-				<string>#A6E22E</string>
+				<string>#A6DB64</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Preprocessor Command</string>
 			<key>scope</key>
-			<string>meta.preprocessor.perl</string>
+			<string>meta.preprocessor</string>
 			<key>settings</key>
 			<dict>
 				<!-- Preprocessor Style -->
@@ -474,7 +474,6 @@
 				<string>#A6E22E</string>
 			</dict>
 		</dict>
-
 
 		<!-- END: Custom Global Styles -->
 
@@ -608,7 +607,9 @@
 			<key>name</key>
 			<string>shell Variable</string>
 			<key>scope</key>
-			<string>source.shell variable</string>
+			<!-- to support when the syntax is included in another one -->
+			<!-- we need to specify specific variable types too... -->
+			<string>source.shell variable, variable.other.bracket.shell</string>
 			<key>settings</key>
 			<dict>
 				<!-- DictKey Style -->
@@ -616,6 +617,10 @@
 				<string>#E6BB84</string>
 			</dict>
 		</dict>
+
+
+
+
 
 
 
@@ -991,7 +996,7 @@
 		<!--  Vimscrpt -->
 		<dict>
 			<key>name</key>
-			<string>shell Variable</string>
+			<string>Vimrc Variables</string>
 			<key>scope</key>
 			<string>config.vimrc variable</string>
 			<key>settings</key>
@@ -1170,12 +1175,24 @@
 				<string>#E6BB84</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>name</key>
+			<string>Regex Flags</string>
+			<key>scope</key>
+			<string>punctuation.definition.group.no-capture</string>
+			<key>settings</key>
+			<dict>
+				<!-- Flag Style -->
+				<key>foreground</key>
+				<string>#A6DB64</string>
+			</dict>
+		</dict>
 
 
 		<!-- Perl -->
 		<dict>
 			<key>name</key>
-			<string>shell Variable</string>
+			<string>Perl Variable</string>
 			<key>scope</key>
 			<string>source.perl variable.other</string>
 			<key>settings</key>
@@ -1185,6 +1202,34 @@
 				<string>#E6BB84</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>name</key>
+			<string>Perl Regex String</string>
+			<key>scope</key>
+			<string>source.perl meta.regexp punctuation.definition.string</string>
+			<key>settings</key>
+			<dict>
+				<!-- Function Style -->
+				<key>fontStyle</key>
+				<string>underline</string>
+				<key>foreground</key>
+				<string>#A6E22E</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Variable Prefixes</string>
+			<key>scope</key>
+			<string>source.perl punctuation.definition.variable</string>
+			<key>settings</key>
+			<dict>
+				<!-- Flag Style -->
+				<key>foreground</key>
+				<string>#A6DB64</string>
+
+			</dict>
+		</dict>
+
 
 
 		<!-- INI files -->
