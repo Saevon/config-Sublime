@@ -36,15 +36,21 @@ contexts:
       captures:
         2: support.flag.vimrc
       push:
-        - meta_scope: string.quoted.double.example-c
+        - meta_scope: string.quoted.double.vimrc
         - match: ' '
           pop: true
         - include: keycode
 
         # 4: string.unquoted.vimrc
-    - match: \b(augroup) (END)$
-      scope: support.function.misc.vimrc
-    - match: \b(let|syntax|call|au(tocmd)?|aug(roup)?|snor|colorscheme|has)\b
+    - match: \b(aug(roup))? (END)$
+      captures:
+        1: support.function.misc.vimrc
+        3: constant.language.vimrc
+    - match: \b(aug(roup)?) (.*?)$
+      captures:
+        1: support.function.misc.vimrc
+        3: variable.other.vimrc
+    - match: \b(let|syntax|call|au(tocmd)?|snor|colorscheme|has)\b
       scope: support.function.misc.vimrc
 
 
@@ -53,6 +59,7 @@ contexts:
     - include: block
     - include: string
     - include: keycode
+    - include: constant
 
   register:
     # Special registers
@@ -133,6 +140,11 @@ contexts:
       scope: punctuation.definition.string.end.vimrc
       pop: true
 
+
+  # Constants
+  constant:
+    - match: '\b[0-9]+\b'
+      scope: constant.numeric.vimrc
 
 
   # Language Blocks
