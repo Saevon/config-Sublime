@@ -23,6 +23,16 @@
                 ],
                 "excludes": []
             },
+            "ghc": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
+            },
+            "hlint": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
+            },
             "jshint": {
                 "@disable": true,
                 "args": [
@@ -69,7 +79,8 @@
         "paths": {
             "linux": [],
             "osx": [
-                "/usr/local/bin"
+                "/usr/local/bin",
+                "/Library/Haskell/ghc-8.2.1-x86_64/bin"
             ],
             "windows": []
         },

@@ -35,6 +35,7 @@
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint_d",
 		"SublimeLinter-csslint",
+		"SublimeLinter-ghc",
 		"SublimeLinter-hlint",
 		"SublimeLinter-jshint",
 		"SublimeLinter-luacheck",
@@ -49,5 +50,6 @@
 	],
 	"repositories":
 	[
+		"https://github.com/SublimeLinter/SublimeLinter-hlint"
 	]
 }
