@@ -12,14 +12,18 @@
 #
 # TODO: This is broken for split screen
 #   (You can't seem to preview across panes)
+# TODO: This should work as a motion command, so you could do:
+#       d`m to delete to a mark
+#       v`m to delete to select to a mark
 
-
-import sublime
-import sublime_plugin
 
 import itertools
 import functools
 import string
+
+import sublime
+import sublime_plugin
+
 
 
 class MetaWindowFactory(type):
@@ -28,8 +32,8 @@ class MetaWindowFactory(type):
     '''
 
     def __init__(cls, name, bases, attrs, **kwargs):
-        cls._factory_instances = {}
-        return super().__init__(name, bases, attrs, **kwargs)
+        cls._instances = {}
+        super().__init__(name, bases, attrs, **kwargs)
 
     def __call__(cls, *args, **kwargs):
         if len(args) >= 1:
@@ -42,10 +46,13 @@ class MetaWindowFactory(type):
         kwargs['window'] = window
 
         factory_id = window.id()
-        if not cls._factory_instances.get(factory_id, False):
-            cls._factory_instances[factory_id] = type.__call__(cls, *args, **kwargs)
+        if not cls._instances.get(factory_id, False):
+            cls._instances[factory_id] = type.__call__(cls, *args, **kwargs)
 
-        return cls._factory_instances[factory_id]
+        return cls._instances[factory_id]
+
+
+
 
 
 
@@ -98,11 +105,13 @@ class VieCreateBookmark(sublime_plugin.TextCommand):
             regions=selection_regions,
         )
 
+
 class VieSelectBookmark(sublime_plugin.TextCommand):
     def run(self, edit=None, character=None, select=True):
         bookmarker = ViBookmarker(view=self.view)
 
         bookmarker.go_to_mark(character=character, select=select, previewable=False)
+
 
 class VieClearBookmarks(sublime_plugin.TextCommand):
     def run(self, edit=None):
@@ -110,9 +119,10 @@ class VieClearBookmarks(sublime_plugin.TextCommand):
         bookmarker.delete_all_marks()
 
 
-
-
-
+#
+# ---------------------------------------------------------
+#
+#
 
 
 class ViBookmarker(object, metaclass=MetaWindowFactory):
