@@ -117,6 +117,7 @@
         "UserKnownHostsFile",
         "VerifyHostKeyDNS",
         "VisualHostKey",
+        "RequestTTY",
 
         "Hostname",
         "Match",
