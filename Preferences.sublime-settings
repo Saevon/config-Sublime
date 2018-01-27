@@ -76,7 +76,13 @@
 	"auto_indent": true,
 	"auto_match_enabled": true,
 	"smart_indent": true,
+	"use_tab_stops": true,
 
+	// Spacing style
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	// Word wrapped lines indent to the same level
+	"indent_subsequent_lines": true,
 
 
 	///////////////////////////////////
