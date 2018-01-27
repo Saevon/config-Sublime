@@ -1,0 +1,5 @@
+{
+	"cmd": ["/Users/saevon/.environments/ci/bin/pytest", "-s", "-v", "--tb=short", "$file"],
+	"selector": "source.python",
+	"file_regex": "^[ ]*([a-zA-Z_]+\\.py):([0-9]+):()"
+}
