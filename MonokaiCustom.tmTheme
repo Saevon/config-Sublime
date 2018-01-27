@@ -1237,7 +1237,7 @@
 			<key>name</key>
 			<string>INI section title</string>
 			<key>scope</key>
-			<string>entity.section.ini</string>
+			<string>meta.tag.section.ini</string>
 			<key>settings</key>
 			<dict>
 				<!-- Function Style -->
@@ -1269,18 +1269,6 @@
 				<!-- DictKey Style -->
 				<key>foreground</key>
 				<string>#E6BB84</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>INI assignment</string>
-			<key>scope</key>
-			<string>source.ini keyword.operator.assignment</string>
-			<key>settings</key>
-			<dict>
-				<!-- Foreground Style -->
-				<key>foreground</key>
-				<string>#F8F8F2</string>
 			</dict>
 		</dict>
 
