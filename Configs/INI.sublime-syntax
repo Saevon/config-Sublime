@@ -1,0 +1,99 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: INI
+file_extensions:
+  - ini
+  - INI
+  - inf
+  - INF
+  - reg
+  - REG
+  - lng
+  - cfg
+  - CFG
+  - url
+  - URL
+  - .editorconfig
+scope: source.ini
+contexts:
+  main:
+    - include: comments
+    - include: constants
+    - include: assignment
+    - include: strings
+
+    - match: '^\s*(\[)(.*?)(\])'
+      scope: meta.tag.section.ini
+      captures:
+        1: punctuation.definition.section.ini
+        2: entity.section.ini
+        3: punctuation.definition.section.ini
+
+  assignment:
+    - match: '^((["'']?)([^\s]+?)(\2)\s*([=:]))'
+      captures:
+        1: meta.property.ini
+        2: punctuation.definition.string.begin.ini
+        3: variable.other.ini
+        4: punctuation.definition.string.end.ini
+        5: keyword.operator.assignment
+      push:
+        - match: '$'
+          pop: true
+        - meta_scope: meta.value.ini
+        - include: constants
+        - include: strings
+        - include: string_unquoted
+    # Dict-keys
+    - match: '^\s+((["'']?)([^\s]+?)(\2)\s*([=:]))'
+      captures:
+        1: meta.property.ini
+        2: punctuation.definition.string.begin.ini
+        3: variable.other.dict-key
+        4: punctuation.definition.string.end.ini
+        5: keyword.operator.assignment
+      push:
+        - match: '$'
+          pop: true
+        - meta_scope: meta.value.ini
+        - include: strings
+        - include: string_unquoted
+  constants:
+    - match: '[0-9]+'
+      scope: constant.numeric.ini
+    - match: 'true|false'
+      scope: constant.language.ini
+  comments:
+    - match: (;|#).*$\n?
+      scope: comment.line.semicolon.ini
+      captures:
+        1: punctuation.definition.comment.ini
+
+  strings:
+    - match: '(")'
+      scope: punctuation.definition.string.begin.ini
+      push:
+        - meta_scope: string.quoted.double.ini
+        - include: string_internals
+        - match: '"'
+          scope: punctuation.definition.string.end.ini
+          pop: true
+    - match: "'"
+      scope: punctuation.definition.string.begin.ini
+      push:
+        - meta_scope: string.quoted.double.ini
+        - include: string_internals
+        - match: "'"
+          scope: punctuation.definition.string.end.ini
+          pop: true
+        - match: '.*'
+  string_unquoted:
+    - match: ''
+      push:
+      - meta_scope: string.unquoted.ini
+      - match: '$'
+        pop: true
+      - include: string_internals
+  string_internals:
+    - include: constants
