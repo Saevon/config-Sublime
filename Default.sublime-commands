@@ -116,4 +116,7 @@
     { "caption": "Preferences: Edit Surround Plugin", "command": "edit_command_palette_open_file",
         "args": { "file": "${packages}/User/surround_with.py" },
     },
+    { "caption": "Preferences: Edit Shebang Plugin", "command": "edit_command_palette_open_file",
+        "args": { "file": "${packages}/User/shebang.py" },
+    },
 ]
