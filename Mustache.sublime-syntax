@@ -1,0 +1,125 @@
+%YAML 1.2
+---
+name: HTML (Mustache)
+file_extensions:
+  - mustache
+first_line_match: (?i)<(!DOCTYPE\s*)?html
+scope: embedding.mustache
+variables:
+  identifier: '[a-zA-Z][a-zA-Z0-9_-]*[?]?'
+  var: '{{identifier}}(?:\.{{identifier}})*'
+contexts:
+  main:
+    - match: ""
+      push: "Packages/HTML/HTML.sublime-syntax"
+      with_prototype:
+        - include: tags
+  tags:
+    # Change Delimiters
+    - match: '(\{\{)(=<% %>=)(\}\})'
+      captures:
+        1: keyword.operator.mustache
+        2: constant.language.mustache
+        3: keyword.operator.mustache
+
+    #---------------------------------------------------------------------------
+    # Mustache: Erb
+
+    # Comment
+    - match: '(<%)\s*(!)'
+      scope: meta.function-call.mustache
+      captures:
+        1: keyword.control.mustache
+        2: constant.other.mustache
+      push:
+        - meta_scope: comment.block.mustache
+        - match: '%>'
+          scope: keyword.control.mustache
+          pop: true
+    # Partial
+    - match: '(<%)\s*(>)\s*(?:({{var}})\s*(%>)?)?'
+      scope: meta.function-call.mustache
+      captures:
+        1: keyword.control.mustache
+        2: constant.other.mustache
+        3: variable.other.mustache
+        4: keyword.control.mustache
+
+    # Boolean & Unescaped Section
+    - match: '(<%)\s*([#^&])\s*(?:({{var}})\s*(%>)?)?'
+      scope: meta.function-call.mustache
+      captures:
+        1: keyword.control.mustache
+        2: constant.other.mustache
+        3: variable.other.mustache
+        4: keyword.control.mustache
+
+    # Closing Section
+    - match: '(<%)\s*(/)\s*(?:({{var}})\s*(%>)?)?'
+      scope: meta.function-call.mustache
+      captures:
+        1: keyword.control.mustache
+        2: constant.other.mustache
+        3: variable.other.mustache
+        4: keyword.control.mustache
+
+    # Variable
+    - match: '(<%)\s*(?:({{var}})\s*(%>)?)?'
+      scope: meta.function-call.mustache
+      captures:
+        1: keyword.control.mustache
+        2: variable.other.mustache
+        3: keyword.control.mustache
+
+
+    #---------------------------------------------------------------------------
+    # Mustache: Normal
+
+    # Comment
+    - match: "{{\\s*!"
+      push:
+        - meta_scope: comment.block.mustache
+        - match: "}}"
+          pop: true
+    # Partial
+    - match: "{{(?=\\s*>)"
+      scope: storage.type.other.mustache
+      push:
+        - meta_content_scope: variable.parameter.mustache
+        - match: "}}"
+          scope: storage.type.other.mustache
+          pop: true
+        - match: ">"
+          scope: keyword.control.import.mustache
+    # (Inverted) Section && Unescaped Variable
+    - match: "{{(?=\\s*[#^/=&])"
+      scope: storage.type.function.mustache
+      push:
+        - meta_content_scope: variable.parameter.mustache
+        - match: "}}"
+          scope: storage.type.function.mustache
+          pop: true
+        - match: "[#^=/&]"
+          scope: entity.name.function.mustache
+        - match: "\\."
+          scope: keyword.operator.accessor.mustache
+    # Unescaped Variable
+    - match: "{{{"
+      scope: variable.function.mustache
+      push:
+        - meta_content_scope: variable.parameter.mustache
+        - match: "}}}"
+          scope: variable.function.mustache
+          pop: true
+        - match: \.
+          scope: keyword.operator.accessor.mustache
+    # Escaped Variable
+    - match: "{{"
+      scope: variable.function.mustache
+      push:
+        - meta_content_scope: variable.parameter.mustache
+        - match: "}}"
+          scope: variable.function.mustache
+          pop: true
+        - match: \.
+          scope: keyword.operator.accessor.mustache

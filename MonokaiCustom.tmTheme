@@ -463,6 +463,18 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Dangerous Flags</string>
+			<key>scope</key>
+			<string>support.flag.hazard</string>
+			<key>settings</key>
+			<dict>
+				<!-- Hazard Flag Style -->
+				<key>foreground</key>
+				<string>#88D882</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Preprocessor Command</string>
 			<key>scope</key>
 			<string>meta.preprocessor</string>
@@ -490,6 +502,7 @@
 			<string>meta.annotation meta.qualified-name - meta.annotation.arguments</string>
 			<key>settings</key>
 			<dict>
+				<!-- Annotation Style (Function Def) -->
 				<key>foreground</key>
 				<string>#88D882</string>
 
@@ -502,9 +515,7 @@
 			<string>punctuation.definition.annotation</string>
 			<key>settings</key>
 			<dict>
-				<!-- Operator Style -->
-				<key>fontStyle</key>
-				<string></string>
+				<!-- Annotation Style (Function Def) -->
 				<key>foreground</key>
 				<string>#88D882</string>
 			</dict>
@@ -780,6 +791,18 @@
 				<!-- Operator Style -->
 				<key>foreground</key>
 				<string>#F92672</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Javascript Special Variables</string>
+			<key>scope</key>
+			<string>variable.other.dollar.js, variable.other.dollar.only.js, variable.other.object.dollar.js</string>
+			<key>settings</key>
+			<dict>
+				<!-- DictKey Style -->
+				<key>foreground</key>
+				<string>#E6BB84</string>
 			</dict>
 		</dict>
 
@@ -1177,6 +1200,18 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Regex Sets</string>
+			<key>scope</key>
+			<string>meta.set.regexp</string>
+			<key>settings</key>
+			<dict>
+				<!-- Flag Style -->
+				<key>foreground</key>
+				<string>#A6DB64</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Regex Flags</string>
 			<key>scope</key>
 			<string>punctuation.definition.group.no-capture</string>
@@ -1273,6 +1308,58 @@
 		</dict>
 
 
+		<!-- Templates (JS) -->
+		<dict>
+			<key>name</key>
+			<string>Mustache Variables</string>
+			<key>scope</key>
+			<string>variable.other.mustache</string>
+			<key>settings</key>
+			<dict>
+				<!-- DictKey Style -->
+				<key>foreground</key>
+				<string>#E6BB84</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Underscore Base</string>
+			<key>scope</key>
+			<string>embedding.underscore source.js</string>
+			<key>settings</key>
+			<dict>
+				<!-- Embedded Language Style -->
+				<key>foreground</key>
+				<string>#6495ed</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Underscore Braces</string>
+			<key>scope</key>
+			<string>keyword.control.underscore</string>
+			<key>settings</key>
+			<dict>
+				<!-- Embedded Language Keyword Style -->
+				<key>foreground</key>
+				<string>#C495ED</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Underscore Braces</string>
+			<key>scope</key>
+			<string>embedding.underscore source.js invalid.illegal</string>
+			<key>settings</key>
+			<dict>
+				<!-- Embedded Language Style -->
+				<key>foreground</key>
+				<string>#6495ed</string>
+				<!-- Normal Background -->
+				<key>background</key>
+				<string>#272822</string>
+			</dict>
+		</dict>
 
 	</array>
 	<key>uuid</key>

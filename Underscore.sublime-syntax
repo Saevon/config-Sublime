@@ -1,0 +1,26 @@
+%YAML 1.2
+---
+name: HTML (Underscore)
+file_extensions:
+  - tmpl
+first_line_match: (?i)<(!DOCTYPE\s*)?html
+scope: embedding.underscore
+contexts:
+  main:
+    - match: ""
+      push: "Packages/HTML/HTML.sublime-syntax"
+      with_prototype:
+        - include: tags
+  tags:
+    - match: '(<%)\s*([=-])?'
+      captures:
+        1: keyword.control.underscore
+        2: support.flag.underscore
+      push: 'Packages/JavaScript/JavaScript.sublime-syntax'
+      meta_scope:
+      with_prototype:
+        - match: '(?=%>)'
+          pop: true
+    - match: '(%>)'
+      scope: keyword.control.underscore
+
