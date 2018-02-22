@@ -1361,6 +1361,37 @@
 			</dict>
 		</dict>
 
+
+		<!-- SQL -->
+		<dict>
+			<key>name</key>
+			<string>SQL Table/Field</string>
+			<key>scope</key>
+			<!-- to support when the syntax is included in another one -->
+			<!-- we need to specify specific variable types too... -->
+			<string>source.sql variable.table-name</string>
+			<key>settings</key>
+			<dict>
+				<!-- DictKey Style -->
+				<key>foreground</key>
+				<string>#E6BB84</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Embedded SQL Base</string>
+			<key>scope</key>
+			<string>source.sql</string>
+			<key>settings</key>
+			<dict>
+				<!-- Embedded Language Style -->
+				<key>foreground</key>
+				<string>#6495ed</string>
+			</dict>
+		</dict>
+
+
+
 	</array>
 	<key>uuid</key>
 	<string>D8D5E82E-3D5B-46B5-B38E-8C841C21347D</string>
