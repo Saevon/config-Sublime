@@ -178,6 +178,18 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Constant Escape Slash</string>
+			<key>scope</key>
+			<string>constant.character.escape-sign</string>
+			<key>settings</key>
+			<dict>
+				<!-- Escape Style -->
+				<key>foreground</key>
+				<string>#DEA8FF70</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Constant Escape Characters</string>
 			<key>scope</key>
 			<string>constant.character.escape</string>
