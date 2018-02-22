@@ -1144,9 +1144,9 @@
 
 		<dict>
 			<key>name</key>
-			<string>Markdown Operatorss</string>
+			<string>Markdown Operators</string>
 			<key>scope</key>
-			<string>punctuation.definition.link-metadata, punctuation.definition.fenced, punctuation.definition.href</string>
+			<string>punctuation.definition.link-metadata, punctuation.definition.fenced, punctuation.definition.href, punctuation.definition.list_item, meta.separator.markdown</string>
 			<key>settings</key>
 			<dict>
 				<!-- Operator Style -->
