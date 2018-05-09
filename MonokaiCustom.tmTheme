@@ -1338,9 +1338,9 @@
 		<!-- Templates (JS) -->
 		<dict>
 			<key>name</key>
-			<string>Mustache Variables</string>
+			<string>Template Variables</string>
 			<key>scope</key>
-			<string>variable.other.mustache</string>
+			<string>variable.other.mustache, text.html.django storage.type.variable string.unquoted.tag-string.django</string>
 			<key>settings</key>
 			<dict>
 				<!-- DictKey Style -->
@@ -1352,7 +1352,7 @@
 			<key>name</key>
 			<string>Underscore Base</string>
 			<key>scope</key>
-			<string>embedding.underscore source.js</string>
+			<string>embedding.underscore source.js, storage.type.templatetag.django, storage.type.variable.django</string>
 			<key>settings</key>
 			<dict>
 				<!-- Embedded Language Style -->
@@ -1362,9 +1362,22 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Underscore Braces</string>
+			<string>Template Attr</string>
 			<key>scope</key>
-			<string>keyword.control.underscore</string>
+			<string>storage.type.attr.django</string>
+			<key>settings</key>
+			<dict>
+				<!-- Argument Style -->
+				<key>foreground</key>
+				<string>#FD971F</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>Template Keywords</string>
+			<key>scope</key>
+			<string>keyword.control.underscore, text.html.django keyword.control</string>
 			<key>settings</key>
 			<dict>
 				<!-- Embedded Language Keyword Style -->
