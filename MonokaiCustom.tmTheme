@@ -328,6 +328,21 @@
 				<string>#FD971F</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>name</key>
+			<string>Class special argument</string>
+			<key>scope</key>
+			<string>variable.parameter.class-inheritance</string>
+			<key>settings</key>
+			<dict>
+				<!-- Argument Style -->
+				<key>foreground</key>
+				<string>#FF703F</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+
 
 
 		<!-- HTML/XML -->
@@ -393,7 +408,7 @@
 			<key>name</key>
 			<string>Class &amp; Type</string>
 			<key>scope</key>
-			<string>support.type, support.class, variable.type, variable.language.super</string>
+			<string>support.type, support.class, variable.type, variable.language.super, support.module</string>
 			<key>settings</key>
 			<dict>
 				<!-- Library Style -->
@@ -912,7 +927,7 @@
 			<key>name</key>
 			<string>Yaml Key Literals (Tags)</string>
 			<key>scope</key>
-			<string>source.yaml meta.directive, entity.other, source.yaml punctuation.definition.block, source.yaml support.other.chomping-indicator</string>
+			<string>source.yaml meta.directive, source.yaml entity.other, source.yaml punctuation.definition.block, source.yaml support.other.chomping-indicator</string>
 			<key>settings</key>
 			<dict>
 				<!-- Operator Style -->
@@ -1359,7 +1374,7 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Underscore Braces</string>
+			<string>Underscore Error</string>
 			<key>scope</key>
 			<string>embedding.underscore source.js invalid.illegal</string>
 			<key>settings</key>
