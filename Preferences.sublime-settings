@@ -97,13 +97,9 @@
 	// Keep sublime open even if the last file is closed
 	"close_windows_when_empty": false,
 
-	// FIXME: broken
-	"confirm_before_deleting": true,
-	"default_browser": "chrome",
-
 	"preview_on_click": true,
 
-	"extra_file_exclude_patterns":
+	"file_exclude_patterns":
 	[
 		".DS_Store",
 		"*.pyc",
@@ -125,12 +121,14 @@
 		"*.psd",
 		"*.db"
 	],
-	"extra_folder_exclude_patterns":
+	"folder_exclude_patterns":
 	[
 		"node_modules",
-		".git"
+		".git",
+		".svn",
+		".hg",
+		"CVS"
 	],
-	"ignore_vcs_packages": true,
 
 	"ignored_packages":
 	[
@@ -138,5 +136,6 @@
 		// "VintageYankStack",
 		"Vintageous",
 		"C++",
+		"Markdown",
 	],
 }
