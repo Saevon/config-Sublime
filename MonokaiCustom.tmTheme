@@ -788,14 +788,14 @@
 
 
 
-		<!-- Bash -->
+		<!-- Coloured Variables -->
 		<dict>
 			<key>name</key>
-			<string>shell Variable</string>
+			<string>Coloured Variable</string>
 			<key>scope</key>
 			<!-- to support when the syntax is included in another one -->
 			<!-- we need to specify specific variable types too... -->
-			<string>source.shell variable, variable.other.bracket.shell</string>
+			<string>source.shell variable, variable.other.bracket.shell, variable.other.nginx</string>
 			<key>settings</key>
 			<dict>
 				<!-- DictKey Style -->
