@@ -974,7 +974,7 @@
 			<string>constant.iso8601.iso8601-1</string>
 			<key>settings</key>
 			<dict>
-				<!-- String Style -->
+				<!-- String Style 1 -->
 				<key>fontStyle</key>
 				<string>italic</string>
 				<key>foreground</key>
@@ -988,7 +988,7 @@
 			<string>constant.iso8601.iso8601-2</string>
 			<key>settings</key>
 			<dict>
-				<!-- String Style -->
+				<!-- String Style 2 -->
 				<key>fontStyle</key>
 				<string>italic</string>
 				<key>foreground</key>
@@ -1002,7 +1002,7 @@
 			<string>constant.iso8601.iso8601-3</string>
 			<key>settings</key>
 			<dict>
-				<!-- String Style -->
+				<!-- String Style 3 -->
 				<key>fontStyle</key>
 				<string>italic</string>
 				<key>foreground</key>
@@ -1369,7 +1369,7 @@
 			<key>name</key>
 			<string>Regex Flags</string>
 			<key>scope</key>
-			<string>punctuation.definition.group.no-capture</string>
+			<string>punctuation.definition.group.no-capture, storage.modifier.mode</string>
 			<key>settings</key>
 			<dict>
 				<!-- Flag Style -->
@@ -1542,6 +1542,18 @@
 				<!-- DictKey Style -->
 				<key>foreground</key>
 				<string>#E6BB84</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Embedded SQL Base</string>
+			<key>scope</key>
+			<string>source.python source.sql</string>
+			<key>settings</key>
+			<dict>
+				<!-- Embedded Language Style -->
+				<key>foreground</key>
+				<string>#6495ed</string>
 			</dict>
 		</dict>
 
