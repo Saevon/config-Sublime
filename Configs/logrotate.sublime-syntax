@@ -1,0 +1,174 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+name: Logrotate
+file_extensions:
+  - logrotate
+scope: source.logrotate
+
+variables:
+  name_chars: '[a-zA-Z0-9. _-]+'
+  filename: '(\.|\.\.|{{name_chars}}+)'
+  path_sep: '[/]'
+  path: '({{filename}}|{{path_sep}})+'
+  wildcard: '\*'
+
+contexts:
+  # The prototype context is prepended to all contexts but those setting
+  # meta_include_prototype: false.
+  prototype:
+    - include: comments
+
+  main:
+    # The main context is the initial starting point of our syntax.
+    # Include other contexts from here (or specify them directly).
+    - include: block
+    - include: options
+    - include: numbers
+    - include: strings
+
+  block:
+    - match: '(?=^.*\s*\{)'
+      scope: meta.function.logrotate
+      set: block_name
+
+  # The file being Rotated
+  block_name:
+    - match: '(?={)'
+      set: block_body
+    - match: '\*'
+      scope: keyword.operator.logrotate
+    - match: '{{path}}'
+      scope: entity.name.function
+    - include: strings
+    - match: '[^{]*'
+      scope: invalid.illegal.logrotate
+
+  block_body:
+    - match: "{"
+      set:
+        - meta_scope: meta.block.logrotate
+        - match: "}"
+          pop: true
+        - include: options
+        - include: numbers
+
+
+  options:
+    # Groups
+    - match: '\b((?:un)?compress)(cmd)\b'
+      captures:
+        1: support.function.logrotate
+        2: support.flag.logrotate
+      embed: scope:source.shell
+      escape: '$'
+    - match: '\b((?:un)?compress)(ext|options)\b'
+      captures:
+        1: support.function.logrotate
+        2: support.flag.logrotate
+    - match: '\b(no)?(delay)?(compress)\b'
+      captures:
+        1: support.flag.logrotate
+        2: support.flag.logrotate
+        3: support.function.logrotate
+
+    # File Handling
+    - match: '\b(no)?(copy)(truncate)?\b'
+      captures:
+        1: support.flag.logrotate
+        2: support.function.logrotate
+        3: support.flag.logrotate
+    - match: '\b(no)?(create)?\b'
+      # TODO: create mode format group
+      captures:
+        1: support.flag.logrotate
+        2: support.function.logrotate
+    - match: '\b(extension)?\b'
+      scope: support.function.logrotate
+    - match: '\b(no)?(olddir)?\b'
+      captures:
+        1: support.flag.logrotate
+        2: support.function.logrotate
+
+    # Misc
+    - match: '\b(include|maxage|size|rotate|shredcycles|start)\b'
+      scope: support.function.logrotate
+    - match: '\b(min|max)?(size)\b'
+      captures:
+        1: support.flag.logrotate
+        2: support.function.logrotate
+    - match: '\b(not)?(ifempty)\b'
+      captures:
+        1: support.flag.logrotate
+        2: support.function.logrotate
+    - match: '\b(no)?(missingok|mail|sharedscripts|shred)\b'
+      captures:
+        1: support.flag.logrotate
+        2: support.function.logrotate
+    - match: '\b(mail)(first|last)?\b'
+      captures:
+        1: support.function.logrotate
+        2: support.flag.logrotate
+    - match: '\b(tabooext)\b(?:\s*(\+))?'
+      captures:
+        1: support.function.logrotate
+        2: keyword.operator.other.logrotate
+
+    # File Naming
+    - match: '\b(no)?(dateext)\b'
+      captures:
+        1: support.flag.logrotate
+        2: support.function.logrotate
+    - match: '\b(dateformat)\s+(?:(%[Ymd])|.)*$'
+      captures:
+        1: support.function.logrotate
+        2: constant.language.logrotate
+
+    # Rotation time
+    - match: '\b(daily|weekly|monthly|yearly)?\b'
+      scope: constant.language.logrotate
+      # scope: support.function.logrotate
+
+    # Scripts
+    - match: '\b((post|pre)(rotate)|(last|first)(action))\b'
+      scope: keyword.control.flow.logrotate
+      # meta_content_scope: meta.me
+      embed: scope:source.shell
+      escape: '\b(endscript)\b'
+      escape_captures:
+        1: keyword.control.flow.logrotate
+
+
+
+  comments:
+    # MUST Be the first non-space to be a comment
+    - match: '^\s*#'
+      scope: punctuation.definition.comment.logrotate
+      push:
+        # This is an anonymous context push for brevity.
+        - meta_scope: comment.line.number-sign.logrotate
+        - match: $\n?
+          pop: true
+
+  numbers:
+    - match: '([0-9]+)([kMG])?'
+      scope: constant.numeric.integer.logrotate
+
+  strings:
+    # Strings begin and end with quotes, and use backslashes as an escape
+    # character.
+    - match: '(")'
+      scope: punctuation.definition.string.begin.logrotate
+      push: inside_string
+    - match: "(')"
+      scope: punctuation.definition.string.begin.logrotate
+      push: inside_string
+
+  inside_string:
+    - meta_include_prototype: false
+    - meta_scope: string.quoted.double.logrotate
+    - match: '\.'
+      scope: constant.character.escape.logrotate
+    - match: '\1'
+      scope: punctuation.definition.string.end.logrotate
+      pop: true
