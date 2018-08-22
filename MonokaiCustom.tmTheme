@@ -795,7 +795,7 @@
 			<key>scope</key>
 			<!-- to support when the syntax is included in another one -->
 			<!-- we need to specify specific variable types too... -->
-			<string>source.shell variable, variable.other.bracket.shell, variable.other.nginx</string>
+			<string>source.shell variable, variable.other.bracket.shell, variable.other.nginx, variable.source.makefile, variable.source.logo, config.vimrc variable, source.yaml.sublime.syntax punctuation.definition.variable, variable.other.sublime-syntax</string>
 			<key>settings</key>
 			<dict>
 				<!-- DictKey Style -->
@@ -803,7 +803,6 @@
 				<string>#E6BB84</string>
 			</dict>
 		</dict>
-
 
 
 
@@ -823,19 +822,6 @@
 				<string>italic</string>
 				<key>foreground</key>
 				<string>#AE81FF</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Makefile Variable</string>
-			<key>scope</key>
-			<string>variable.source.makefile</string>
-			<key>settings</key>
-			<dict>
-				<!-- DictKey Style -->
-				<key>foreground</key>
-				<string>#E6BB84</string>
 			</dict>
 		</dict>
 		<dict>
@@ -866,22 +852,6 @@
 				<string>#F8F8F2</string>
 			</dict>
 		</dict>
-
-
-		<!-- LOGO -->
-		<dict>
-			<key>name</key>
-			<string>Logo Variable</string>
-			<key>scope</key>
-			<string>variable.source.logo</string>
-			<key>settings</key>
-			<dict>
-				<!-- DictKey Style -->
-				<key>foreground</key>
-				<string>#E6BB84</string>
-			</dict>
-		</dict>
-
 
 
 
@@ -1212,22 +1182,6 @@
 				<string>underline</string>
 				<key>foreground</key>
 				<string>#A6E22E</string>
-			</dict>
-		</dict>
-
-
-
-		<!--  Vimscrpt -->
-		<dict>
-			<key>name</key>
-			<string>Vimrc Variables</string>
-			<key>scope</key>
-			<string>config.vimrc variable</string>
-			<key>settings</key>
-			<dict>
-				<!-- DictKey Style -->
-				<key>foreground</key>
-				<string>#E6BB84</string>
 			</dict>
 		</dict>
 
