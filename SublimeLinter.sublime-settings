@@ -6,7 +6,7 @@
 
         "pylint": {
             "args": [
-                "--disable", "logging-too-many-args,superfluous-parens,len-as-condition,line-too-long",
+                "--disable", "logging-too-many-args,superfluous-parens,len-as-condition,line-too-long,trailing-newlines,too-few-public-methods",
                 // Line-length is handled by flake8
                 // "disable": "C0111,C0330,C1801,C0305,R0903,E1205,W1202"
             ]
@@ -21,9 +21,18 @@
         },
         "flake8": {
             "args": [
+                // Use the config in the project folder (if there is one)
+                "--config", "${folder}/.flake8",
+                "--ignore=W391",
+                // W391  trailing-newlines
+
                 "--max-complexity=10",
                 "--max-line-length=122",
-                // "--ignore", "E501",
+
+                // Radon Plugin
+                "--radon-no-assert",
+                "--radon-show-closures",
+                "--radon-max-cc=10",
             ],
         },
 
@@ -41,7 +50,7 @@
         // Lua
 
         "luacheck": {
-            "@disable": true,
+            "disable": true,
         },
 
 
