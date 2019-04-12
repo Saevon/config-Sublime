@@ -3,11 +3,13 @@ Highlights searched text, allowing commands to
 
 Commands:
 
- * highlight_all:           Highlights the word under the cursor
- * highlight_all_next:      Moves cursor to the next found word (If you have an active search)
+ * highlight_word:          Highlights the word under the cursor
+ * highlight_next:          Moves cursor to the next found word (If you have an active search)
      * backwards (bool)     Whether to go down (false) or up (true)
- * highlight_all_history    ?
- * ex_mode                  ?
+ * clear_highlight          Removes a highlight under the cursor (or a partial highlight in visual mode)
+ * clear_all_highlight      Clears all highlights
+
+ * ex_mode
 
 Settings:
 
@@ -26,20 +28,25 @@ Keybindings:
  '*'        (Visual) Search selected text
  'g*'       Search word (no word boundaries)
 
+ '/'        Search Panel
+ '?'        Search Panel (backwards)
+ 'g/'       Search Panel +highlight
+ 'g?'       Search Panel +highlight (backwards)
+
 Vim Ex Commands
    Note: Some commands auto-end parsing, so trailing text is ignored
 
  :w     Save file
  :q     Close File
- :99    (END)  Go to line
- :?     Search
- :/     Search
+ :99    Go to line
 '''
 import functools
 import re
 
 import sublime
 import sublime_plugin
+
+from User.sublime_helpers import sublime_is_multiselect, sublime_is_visual, cursor_to_matches, closest_visible, LoopLimit
 
 # TODO: Highlight
 #    Autoupdate the search as you edit the file
@@ -381,55 +388,8 @@ class ViewBaseStoreMeta(type):
         return obj
 
 
-def sublime_select(view, region):
-    ''' Selects the given region within the view '''
-    cursor_start = region.begin()
-    cursor = sublime.Region(cursor_start, cursor_start)
-
-    view.sel().clear()
-    view.sel().add(cursor)
-
-    sublime_show_region(view, region)
-
-
-def sublime_show_region(view, region):
-    ''' Shows the region in the view (not moving if its already visible) '''
-    if not view.visible_region().intersects(region):
-        view.show_at_center(region)
-
-
-def closest_visible(selection, visible_region=None, inverted=False):
-    ''' Returns the first region which is fully visible.
-    If nothing is visible, a random selection is returned
-    '''
-    if len(selection) == 0:
-        # Nothing to choose from...
-        return None
-
-    if visible_region is None or len(selection) == 1:
-        # Since nothing seems visible, then the very first selection
-        # is our default 'closest'
-        return selection[0]
-
-    # Find the first region which is withing our viewport
-    for region in selection:
-        if visible_region.contains(region):
-            # We found one inside the viewport!
-            return region
-        elif not inverted and visible_region.begin() <= region.begin():
-            # We've Gone past the viewport, just take the next one
-            return region
-        elif inverted and visible_region.end() <= region.end():
-            # We've gone past the viewport, just take the next one
-            return region
-
-    # We've hit the end... loop back to the first one
-    return selection[0]
-
-
 # -----------------------------------------------------------------------------
 # Helper Commands
-
 
 class CloseInputFieldCommand(sublime_plugin.TextCommand):
     ''' Closes any open Input Field '''
@@ -450,15 +410,6 @@ HIGHLIGHT_SCOPE = 'vimhighlight'
 HIGHLIGHT_GROUP = 'Saevon-HighlightAllPlugin'
 
 HIGHLIGHT_GROUP_TEMP = HIGHLIGHT_GROUP + 'Temp'
-
-
-class VisibleMatch(object):
-    ''' Subclass used to show that this region is special (is the one the viewport should jump to '''
-    # pylint: disable=too-few-public-methods
-
-    def __init__(self, region):
-        ''' Stores a region '''
-        self.region = region
 
 
 class Search(object):
@@ -592,7 +543,6 @@ class Search(object):
 
         return self.find(regex, in_selection=in_selection)
 
-
     def find(self, regex, autocorrect=False, in_selection=False):
         ''' Finds the given regex
 
@@ -621,24 +571,31 @@ class Search(object):
             search_zone=search_zone,
         )
 
-    def forwards(self, viewport=None, update_cursors=True):
+    def forwards(self, **kwargs):
         ''' Jumps to the subsequent match (based on inversion preferences) '''
-        return self.next(inverted=self.inverted, viewport=viewport, update_cursors=update_cursors)
+        return self.next(inverted=self.inverted, **kwargs)
 
-    def backwards(self, viewport=None, update_cursors=True):
+    def backwards(self, **kwargs):
         ''' Jumps to the antecedent match (based on inversion preferences) '''
-        return self.next(inverted=not self.inverted, viewport=viewport, update_cursors=update_cursors)
+        return self.next(inverted=not self.inverted, **kwargs)
 
-    def prev(self, viewport=None, update_cursors=True):
+    def prev(self, **kwargs):
         ''' Jumps to the prev (left and up) match after the cursor '''
-        return self.next(inverted=True, viewport=viewport, update_cursors=update_cursors)
+        return self.next(inverted=True, **kwargs)
 
-    def next(self, inverted=False, viewport=None, update_cursors=True):
-        ''' Jumps to the next (right and down) match after the cursor '''
+    def next(self, inverted=False, viewport=None, update_cursors=True, extend_cursor=False, next_only=False):
+        '''
+        Jumps to the next (right and down) match after the cursor
+
+        update_cursors   True: actually changes the selections to their new location
+                         False: tries to scroll at least one new cursor on screen
+        next_only        Only returns matches that a cursor would go to
+        extend_cursor    Actually stretches each cursor forwards/backwards including the original to new
+        '''
         current_matches = self.current_matches()
         if len(current_matches) == 0:
             # If we don't have anywhere to jump to...
-            return
+            return []
 
         # Allow the user to have a custom viewport
         # But use the sublime default otherwise
@@ -647,22 +604,40 @@ class Search(object):
 
         # Warning! this is a generator, it won't run the code until the for loop (later)
         #   is finished... don't mutate any of its state/args
-        new_cursor_gen = self._next(
+        new_cursor_gen = cursor_to_matches(
+            cursors=list(self.__view.sel()),
             matches=current_matches,
             inverted=inverted,
             viewport=viewport,
-            find_visible_only=not update_cursors,
+            find_visible_only=not update_cursors and not next_only,
         )
+
+        # Where cursors would jump to
+        cursor_jumps = []
 
         # Locate the visible cursor
         new_cursors = []
         new_visible = None
-        for cursor in new_cursor_gen:
-            if isinstance(cursor, VisibleMatch):
-                new_visible = cursor.region
-                cursor = cursor.region
+        for cursor_match in new_cursor_gen:
+            cursor = cursor_match.region
 
-            new_cursors.append(sublime.Region(cursor.begin(), cursor.begin()))
+            # Was this the "closest visible" cursor
+            if cursor_match.is_visible:
+                new_visible = cursor
+
+            # Store matches that are useful for the cursor
+            cursor_jumps.append(cursor)
+
+            if extend_cursor and cursor_match.orig:
+                # We're trying to stretch each cursor to the next match
+                #   to select until a specific point
+                new_cursors.append(sublime.Region(
+                    min(cursor.begin(), cursor_match.orig.begin()),
+                    max(cursor.end(), cursor_match.orig.end()),
+                ))
+            else:
+                # Otherwise the cursors are just jumping
+                new_cursors.append(sublime.Region(cursor.begin(), cursor.begin()))
 
         if update_cursors:
             # Now swap the cursors to the new ones
@@ -674,99 +649,10 @@ class Search(object):
         if new_visible is not None:
             self.__view.show(new_visible)
 
-    def _next(self, *, matches, inverted, viewport, find_visible_only):
-        ''' Loops through and generates a new set of cursors to jump to
-        a VisibleMatch() is yielded if that is the best region to show the user
-        '''
-        matches = list(matches)
-        if len(matches) == 0:
-            # There is no such thing as 'next'
-            return
-
-        # We'll be messing with the list, duplicate it
-        cursors = list(self.__view.sel())
-
-        # Invert our jump
-        if inverted:
-            # Sublime merges adjacent regions, so they cannot overlap
-            # THUS inverting it results in a sorted (backwards) list
-            cursors = [cursor for cursor in cursors[::-1]]
-            matches = matches[::-1]
-
-        # Find the closest cursor to the visible regions
-        if len(cursors) == 0:
-            # There is no cursor to jump from?
-            # Just go to a visible match
-            new_visible = closest_visible(matches, viewport, inverted=inverted)
-
-            # And theres no cursors to 'jump'... finish off
-            yield VisibleMatch(new_visible)
-            return
-
-        # Find the first cursor that is visible
-        visible_cursor = closest_visible(cursors, viewport, inverted=inverted)
-
-        # If we just want the visible cursor only (aka only the new viewport focus)
-        # Then pretend we only have one cursor... the closest visible one
-        if find_visible_only:
-            cursors = [visible_cursor]
-
-        # Used when cursors no longer see a match after them
-        # They all loop around to the first one
-        loop_match = matches[0]
-
-        # The search has Multiple Stages, this ensures we keep circling through them
-        # until we're done
-
-        limit = 10000
-        while len(matches) and len(cursors) and limit:
-            limit -= 1
-
-            # Stage 1: Drop matches that are before ANY Cursors
-            while len(matches) and (
-                    # Normal means we're going forwards (compare the starts)
-                    (not inverted and cursors[0].begin() >= matches[0].begin())
-                    # Inverted means we're going backwards (compare the ends)
-                    or (inverted and cursors[0].end() <= matches[0].end())
-            ):
-                # Drop elements before the cursor
-                matches.pop(0)
-
-            # Stage 2: Early Abort (no Matches left!)
-            if len(matches) == 0:
-                # We've exhausted the search
-                # Replace all remaining cursors with the looped match
-
-                if visible_cursor in cursors:
-                    yield VisibleMatch(loop_match)
-                else:
-                    yield loop_match
-                return
-
-            # Stage 3: Jump cursors that are before the next match (with that match)
-            was_visible = False
-            while len(cursors) and (
-                    (not inverted and cursors[0].begin() <= matches[0].begin())
-                    or (inverted and cursors[0].end() >= matches[0].end())
-            ):
-                # We found the 'visible cursor' note that down
-                if cursors[0] == visible_cursor:
-                    was_visible = True
-
-                # Replace cursors before the cursor
-                cursors.pop(0)
-
-            # All the cursors we just dropped go to this match
-            if was_visible:
-                yield VisibleMatch(matches[0])
-            else:
-                yield matches[0]
-
-        # Check for bugs
-        assert limit != 0, (
-            'Overflowed the search, either there were too many items (over 10000), '
-            'or there is an infinite loop bug'
-        )
+        if next_only:
+            return cursor_jumps
+        else:
+            return current_matches
 
 
 class ViewSearch(Search, metaclass=ViewBaseStoreMeta):
@@ -818,7 +704,6 @@ class HighlightSelectionCommand(sublime_plugin.TextCommand):
         for cursor in cursors:
             text = self.view.substr(cursor)
             escaped = re.escape(text)
-            print(escaped)
 
             # See if we want to do a 'word-based' search
             if auto_boundary:
@@ -866,8 +751,8 @@ class HighlightWordCommand(sublime_plugin.TextCommand):
 
         words = []
         for cursor in cursors:
-            word_boundary = self.view.word(cursor)
-            word = self.view.substr(word_boundary)
+            word_region = self.view.word(cursor)
+            word = self.view.substr(word_region)
             words.append(word)
 
         # Find the words
@@ -912,7 +797,22 @@ class ClearHighlightCommand(sublime_plugin.TextCommand):
 
 
 class HighlightPanelCommand(sublime_plugin.TextCommand, InputPanelMixin):
-    ''' Creates the Search Input Panel '''
+    ''' Creates the Search Input Panel
+
+    VisualMode:  This would stretch each cursor to the matched word
+        Doesn't perform highlighting
+    MultiSelect: This shows only the relevant words (ones cursors could go to)
+        Doesn't perform highlighting
+
+    = args
+    append:      reset highlights first? or add to them
+    jump_only:   doesn't mess with highlighting
+    autocorrect  auto-closes regex as best it can
+
+    backwards:   reverses direction of search
+
+    autoupdate:  shows realtime search preview
+    '''
 
     def _on_change(self, text):
         ''' Event: User typing '''
@@ -929,11 +829,20 @@ class HighlightPanelCommand(sublime_plugin.TextCommand, InputPanelMixin):
 
         # Now perform the new search
         matches = self.search.find(text, self.autocorrect)
-
         self.search.add_matches(matches)
 
         # Jump to the found data
-        self.search.forwards(update_cursors=False, viewport=self.visible_region)
+        relevant_matches = self.search.forwards(
+            update_cursors=False,
+            viewport=self.visible_region,
+            next_only=self.jump_only,
+        )
+
+        # Now reset it just to the useful ones
+        #   showing where the cursor will jump to
+        if self.jump_only:
+            self.search.reset()
+            self.search.add_matches(relevant_matches)
 
     def _on_done(self, text):
         ''' Event: user Input'''
@@ -959,7 +868,11 @@ class HighlightPanelCommand(sublime_plugin.TextCommand, InputPanelMixin):
 
         # Jump to the found data
         # Note: use the saved visible region, since our temporary search moves the viewport around
-        search.forwards(viewport=self.visible_region)
+        search.forwards(viewport=self.visible_region, extend_cursor=True)
+
+        # We likely jump wanted to jump our cursor, no highlights
+        if self.jump_only:
+            search.reset()
 
     def _on_cancel(self):
         ''' Event: user abort'''
@@ -976,17 +889,23 @@ class HighlightPanelCommand(sublime_plugin.TextCommand, InputPanelMixin):
         self.view.set_viewport_position(self.viewport)
 
     # pylint: disable=too-few-public-methods,unused-argument, too-many-arguments
-    def run(self, edit=None, backwards=False, autoupdate=True, autocorrect=True, append=True):
+    def run(self, edit=None, backwards=False, autoupdate=True, autocorrect=True, append=True, jump_only=False):
         ''' The actual command for sublime to run '''
 
         # pylint: disable=attribute-defined-outside-init
 
         # This defines the input menu symbol, showing the direction
-        direction_key = '?' if backwards else '/'
+        direction_key = '<<' if backwards else '>>'
+        if not jump_only:
+            direction_key = 'Highlight ' + direction_key
 
         self.backwards = backwards
         self.append = append
         self.autocorrect = autocorrect
+
+        self.was_visual = sublime_is_visual(self.view)
+        self.was_multi = sublime_is_multiselect(self.view)
+        self.jump_only = jump_only or self.was_visual or self.was_multi
 
         # Store the original state
         self.viewport = self.view.viewport_position()
@@ -1084,3 +1003,5 @@ class ExModeCommand(sublime_plugin.TextCommand, InputPanelMixin):
             window=self.view.window(),
             prompt=':',
         )
+
+

@@ -177,8 +177,9 @@
             { "key": "setting.is_widget", "operand": false }
         ]
     },
+    // Highlight Panel
     {
-        "keys": ["/"], "command": "highlight_panel",
+        "keys": ["g", "/"], "command": "highlight_panel",
         "context": [
             { "key": "setting.command_mode" },
         ],
@@ -187,7 +188,7 @@
         }
     },
     {
-        "keys": ["?"], "command": "highlight_panel",
+        "keys": ["g", "?"], "command": "highlight_panel",
         "context": [
             { "key": "setting.command_mode" },
         ],
@@ -195,6 +196,30 @@
             "backwards": true,
         }
     },
+    {
+        // Swapped to not mess with global highlights, unlike vim
+        "keys": ["/"], "command": "highlight_panel",
+        "context": [
+            { "key": "setting.command_mode" },
+        ],
+        "args": {
+            "backwards": false,
+            "jump_only": true,
+        }
+    },
+    {
+        // Swapped to not mess with global highlights, unlike vim
+        "keys": ["?"], "command": "highlight_panel",
+        "context": [
+            { "key": "setting.command_mode" },
+        ],
+        "args": {
+            "backwards": true,
+            "jump_only": true,
+        }
+    },
+    // End Highlight Panel
+
     {
         "keys": ["up"], "command": "highlight_all_history",
         "args": {
@@ -346,6 +371,38 @@
         "command": "vie_create_bookmark",
         "context": [{"key": "setting.command_mode"}]
     },
+    {
+        "keys": [",", "v"],
+        "command": "vie_show_visual_stack",
+        "context": [{ "key": "setting.command_mode" }]
+    },
+    { "keys": ["g", "v"], "command": "vie_reuse_visual",
+        "context": [
+            {"key": "setting.command_mode"},
+        ]
+    },
+    { "keys": [",", "j"], "command": "vie_push_bookmark",
+        "context": [
+            {"key": "setting.command_mode"},
+        ]
+    },
+    { "keys": [",", "l"], "command": "vie_push_definition",
+        "context": [
+            {"key": "setting.command_mode"},
+        ]
+    },
+    { "keys": [",", "k"], "command": "vie_pop_bookmark",
+        "context": [
+            {"key": "setting.command_mode"},
+        ]
+    },
+    { "keys": [",", "h"], "command": "vie_show_user_stack",
+        "context": [
+            {"key": "setting.command_mode"},
+        ]
+    },
+
+
 
 
 
