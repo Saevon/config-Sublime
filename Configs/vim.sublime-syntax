@@ -60,6 +60,15 @@ contexts:
         3: variable.other.vimrc
     - match: \b(let|syntax|call|au(tocmd)?|snor|colorscheme|has)\b
       scope: support.function.misc.vimrc
+    - match: \b(com(?:mand)?(!)?)(?!\w)\s*
+      scope: support.function.misc.vimrc
+      captures:
+        2: support.flag.vimrc
+      push:
+        - meta_scope: string.quoted.double.vimrc
+        - match: ' '
+          pop: true
+        - include: keycode
 
 
 
