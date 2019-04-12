@@ -1,6 +1,8 @@
 {
 	"extensions":
 	[
-		"md"
-	]
+		"md",
+        "markdown",
+	],
+    "spell_check": true,
 }
