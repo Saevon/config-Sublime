@@ -77,6 +77,14 @@
     { "keys": ["ctrl+shift+k"], "command": "travel_to_pane", "args": {"direction": "up"} },
     { "keys": ["ctrl+shift+l"], "command": "travel_to_pane", "args": {"direction": "right"} },
     { "keys": ["ctrl+shift+h"], "command": "travel_to_pane", "args": {"direction": "left"} },
+
+
+    // Moving Tabs around
+    { "keys": ["super+shift+["], "command": "move_tab", "args": {"position": "-1"} },
+    { "keys": ["super+shift+]"], "command": "move_tab", "args": {"position": "+1"} },
+
+
+
     /************ VINTAGE KEYMAPS ************/
 
     // Vintage shortcuts for moving lines with hjkl
