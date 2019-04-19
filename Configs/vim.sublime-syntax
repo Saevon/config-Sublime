@@ -21,14 +21,22 @@ contexts:
       scope: comment.line.vimrc
 
     # Bash
-    - match: "%!"
-      push: Packages/ShellScript/Shell-Unix-Generic.sublime-syntax
-      scope: keyword.vimrc
-      with_prototype:
-        - match: "%"
+    # - match: "%!"
+    #   push: Packages/ShellScript/Shell-Unix-Generic.sublime-syntax
+    #   scope: keyword.vimrc
+    #   with_prototype:
+    #     - match: "%"
+    #       scope: constant.language.vimrc
+    #     - match: (?=$\n)
+    #       pop: true
+    - match: '%!'
+      push:
+        - meta_scope: source.shell
+        - match: '%'
           scope: constant.language.vimrc
         - match: (?=$\n)
           pop: true
+        - include: scope:source.shell
 
     # Keywords
     - match: \b((n|c|i|v)?(nore)?map)\b\s*
