@@ -867,20 +867,6 @@
 				<string>#66D9EF</string>
 			</dict>
 		</dict>
-		<dict>
-			<key>name</key>
-			<string>Makefile target colon</string>
-			<key>scope</key>
-			<string>keyword.operator.assignment.makefile</string>
-			<key>settings</key>
-			<dict>
-				<!-- Normal Style -->
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#F8F8F2</string>
-			</dict>
-		</dict>
 
 
 
