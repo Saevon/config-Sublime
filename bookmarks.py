@@ -15,6 +15,22 @@
 # TODO: This should work as a motion command, so you could do:
 #       d`m to delete to a mark
 #       v`m to delete to select to a mark
+#       c`m    y`m
+#       :marks
+# TODO: add ' which is linewise marks
+#       'a   go to line of the mark 'a'
+#       d'a   go to line of the mark 'a'
+# TODO: go to next/prev mark
+#       ]'  Next
+#       ['  Prev
+# TODO: If you're "at" a mark then showing the list pre-selects the current mark
+# TODO:
+#      `` Jump Back to last mark (charwise)
+#      '' Jump Back to last mark (linewise)
+# TODO: Delete mark in the input panel (using backspace, or ctrl-x?)
+# TODO: This should work with visual mode
+#       If you had a visual selection and mark it, then it saves that... loading it re-selects the area
+#       ? But what if the area changes? specifically if its partially deleted?
 
 
 import itertools
@@ -125,6 +141,27 @@ class VieClearBookmarks(sublime_plugin.TextCommand):
 #
 
 
+def mark_or_character(func):
+    '''
+    Allows a method to accept either a character, or an internal mark
+    '''
+    @functools.wraps(func)
+    def wrapper(self, *args, **kwargs):
+        previewable = kwargs.pop('previewable', True)
+
+        mark = kwargs.get('mark', None)
+        if not mark:
+            try:
+                character = kwargs.pop('character')
+            except KeyError:
+                raise ValueError("You need either a 'mark' or 'character' kwarg")
+            kwargs['mark'] = self.get_mark(character, previewable=previewable)
+
+        return func(self, *args, **kwargs)
+
+    return wrapper
+
+
 class ViBookmarker(object, metaclass=MetaWindowFactory):
     '''
     Bookmarks API:
@@ -136,26 +173,6 @@ class ViBookmarker(object, metaclass=MetaWindowFactory):
         self.current_selection = None
         self.saved_view = None
         self.saved_viewport = None
-
-    def mark_or_character(func):
-        '''
-        Allows a method to accept either a character, or an internal mark
-        '''
-        @functools.wraps(func)
-        def wrapper(self, *args, **kwargs):
-            previewable = kwargs.pop('previewable', True)
-
-            mark = kwargs.get('mark', None)
-            if not mark:
-                try:
-                    character = kwargs.pop('character')
-                except KeyError:
-                    raise ValueError("You need either a 'mark' or 'character' kwarg")
-                kwargs['mark'] = self.get_mark(character, previewable=previewable)
-
-            return func(self, *args, **kwargs)
-
-        return wrapper
 
 
     #------------------------------------

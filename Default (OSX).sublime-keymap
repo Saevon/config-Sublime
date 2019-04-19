@@ -72,12 +72,13 @@
     { "keys": ["super+ctrl+l"], "command": "move_text_right"},
 
     // Vintage escape with jj
+    // To exit visual mode just use "v"
     { "keys": ["j", "j"], "command": "exit_insert_mode",
         "context":
         [
             { "key": "setting.command_mode", "operand": false },
-            { "key": "setting.is_widget", "operand": false }
-            // { "key": "selection_empty", "operator": "equal", "operand": false }
+            { "key": "setting.is_widget", "operand": false },
+            { "key": "selection_empty", "operator": "equal", "operand": true }
         ]
     },
     // Vintageous escape
@@ -135,25 +136,23 @@
             "initial_text": ":.!"
         },
         "context":[
-            { "key": "setting.command_mode", "operator": "equal", "operand": true },
+            { "key": "setting.command_mode" },
             { "key": "setting.is_widget", "operand": false }
         ]
     },
     {
-        "keys": ["/"], "command": "highlight_all",
+        "keys": ["/"], "command": "highlight_panel",
         "context": [
-            { "key": "setting.command_mode", "operator": "equal", "operand": true, },
-            // { "key": "vi_mode_normal_or_any_visual", },
+            { "key": "setting.command_mode" },
         ],
         "args": {
             "backwards": false,
         }
     },
     {
-        "keys": ["?"], "command": "highlight_all",
+        "keys": ["?"], "command": "highlight_panel",
         "context": [
-            { "key": "setting.command_mode", "operator": "equal", "operand": true, },
-            // { "key": "vi_mode_normal_or_any_visual", },
+            { "key": "setting.command_mode" },
         ],
         "args": {
             "backwards": true,
@@ -165,42 +164,108 @@
             "backwards": true
         },
         "context":[
-            { "key": "setting.vimSearchPanel", "operator": "equal", "operand": true }
+            { "key": "setting.vimSearchPanel" }
         ]
     },
 
     {
         "keys": ["down"], "command": "highlight_all_history",
         "context": [
-            { "key": "setting.vimSearchPanel", "operator": "equal", "operand": true }
+            { "key": "setting.vimSearchPanel" }
         ]
     },
     {
-        "keys": ["*"], "command": "highlight_all",
+        "keys": ["g", "*"], "command": "highlight_word",
         "context": [
-            { "key": "setting.command_mode", "operator": "equal", "operand": true, },
-            // { "key": "vi_mode_normal_or_any_visual", },
+            { "key": "setting.command_mode"  },
         ],
         "args": {
-            "word": true,
+            "append": true,
+            "word_boundary": false
         }
     },
     {
-        "keys": ["#"], "command": "highlight_all",
+        "keys": ["g", "#"], "command": "highlight_word",
         "context": [
-            { "key": "setting.command_mode", "operator": "equal", "operand": true, },
-            // { "key": "vi_mode_normal_or_any_visual", },
+            { "key": "setting.command_mode" },
         ],
         "args": {
+            "append": true,
             "backwards": true,
-            "word": true,
+            "word_boundary": false,
         }
     },
-    { "keys": ["n"], "command": "highlight_all_next", "context": [{ "key": "setting.command_mode" }]},
-    { "keys": ["N"], "command": "highlight_all_next", "context": [{ "key": "setting.command_mode" }], "args": { "backwards": true}},
+    {
+        "keys": ["g", "*"], "command": "highlight_selection",
+        "context": [
+            { "key": "setting.command_mode" },
+            { "key": "selection_empty", "operand": false, "match_all": false },
+        ],
+        "args": {
+            "append": true,
+            "auto_boundary": true,
+        }
+    },
+    {
+        "keys": ["g", "#"], "command": "highlight_selection",
+        "context": [
+            { "key": "setting.command_mode" },
+            { "key": "selection_empty", "operand": false, "match_all": false }
+        ],
+        "args": {
+            "append": true,
+            "backwards": true,
+            "auto_boundary": true,
+        }
+    },
+    {
+        "keys": ["*"], "command": "highlight_word",
+        "context": [
+            { "key": "setting.command_mode" },
+        ],
+        "args": {
+            "append": true,
+        }
+    },
+    {
+        "keys": ["#"], "command": "highlight_word",
+        "context": [
+            { "key": "setting.command_mode" },
+        ],
+        "args": {
+            "append": true,
+            "backwards": true,
+        }
+    },
+    {
+        "keys": ["*"], "command": "highlight_selection",
+        "context": [
+            { "key": "setting.command_mode" },
+            { "key": "selection_empty", "operand": false, "match_all": false }
+        ],
+        "args": {
+            "append": true,
+            "auto_boundary": false,
+        }
+    },
+    {
+        "keys": ["#"], "command": "highlight_selection",
+        "context": [
+            { "key": "setting.command_mode" },
+            { "key": "selection_empty", "operand": false, "match_all": false }
+        ],
+        "args": {
+            "append": true,
+            "backwards": true,
+            "auto_boundary": false,
+        }
+    },
+    { "keys": ["n"], "command": "highlight_next", "context": [{ "key": "setting.command_mode" }]},
+    { "keys": ["N"], "command": "highlight_next", "context": [{ "key": "setting.command_mode" }], "args": { "backwards": true}},
 
     // Clear highlights: Leader+
-    { "keys": [",", " "], "command": "clear_all_highlights", "context": [{ "key": "setting.command_mode" }]},
+    { "keys": [",", "w"], "command": "clear_highlight", "context": [{ "key": "setting.command_mode" }]},
+    { "keys": [",", " "], "command": "clear_all_highlight", "context": [{ "key": "setting.command_mode" }]},
 
 
     {
@@ -217,6 +282,13 @@
         "context": [
             { "key": "setting.vimExPanel", "operator": "equal", "operand": true },
             { "key": "setting.vimExPanelEmpty", "operator": "equal", "operand": true },
+        ],
+    },
+    {
+        "keys": ["backspace"], "command": "close_input_field",
+        "context": [
+            { "key": "setting.vimSearchPanel", "operator": "equal", "operand": true },
+            { "key": "setting.vimSearchPanelEmpty", "operator": "equal", "operand": true },
         ],
     },
 
