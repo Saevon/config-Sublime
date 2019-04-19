@@ -504,13 +504,25 @@
 			<key>name</key>
 			<string>Preprocessor Command</string>
 			<key>scope</key>
-			<string>meta.preprocessor</string>
+			<string>meta.preprocessor entity.name.function</string>
 			<key>settings</key>
 			<dict>
 				<!-- Preprocessor Style -->
 				<!-- (Based on Function Def Style) -->
 				<key>foreground</key>
 				<string>#A6E22E</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Preprocessor Command</string>
+			<key>scope</key>
+			<string>meta.preprocessor</string>
+			<key>settings</key>
+			<dict>
+				<!-- Embedded Language Style -->
+				<key>foreground</key>
+				<string>#6495ed</string>
 			</dict>
 		</dict>
 
