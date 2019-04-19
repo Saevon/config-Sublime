@@ -1,0 +1,16 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+file_extensions:
+  - Procfile
+  - Procfile.dev
+name: Bash (Procfile)
+scope: source.procfile.shell
+contexts:
+  main:
+    - match: '([a-zA-Z0-9_-]*)(:)'
+      captures:
+        1: entity.name.class.procfile
+        2: keyword.operator.procfile
+      embed: scope:source.shell #'Packages/ShellScript/Shell-Unix-Generic.sublime-syntax'
+      escape: '$'
