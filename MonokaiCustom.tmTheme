@@ -695,6 +695,8 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<!-- This is for non-language variables, but things that are usually used (community style) -->
+			<!-- E.g. self, other, cls -->
 			<string>Common Variable</string>
 			<key>scope</key>
 			<string>variable.language.python</string>
@@ -822,7 +824,7 @@
 			<key>scope</key>
 			<!-- to support when the syntax is included in another one -->
 			<!-- we need to specify specific variable types too... -->
-			<string>source.shell variable, variable.other.bracket.shell, variable.other.nginx, variable.source.makefile, variable.source.logo, config.vimrc variable, source.yaml.sublime.syntax punctuation.definition.variable, variable.other.sublime-syntax</string>
+			<string>source.shell variable, variable.other.bracket.shell, variable.other.nginx, variable.other.makefile, variable.source.makefile, variable.source.logo, config.vimrc variable, source.yaml.sublime.syntax punctuation.definition.variable, variable.other.sublime-syntax</string>
 			<key>settings</key>
 			<dict>
 				<!-- DictKey Style -->
