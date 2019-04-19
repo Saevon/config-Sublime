@@ -57,6 +57,20 @@
             {"key": "overlay_visible", "operand": true},
         ]
     },
+    { "keys": ["ctrl+j"],
+        "command": "move",
+        "args": {"by": "lines", "forward": true},
+        "context": [
+            {"key": "auto_complete_visible", "operand": true},
+        ]
+    },
+    { "keys": ["ctrl+k"],
+        "command": "move",
+        "args": {"by": "lines", "forward": false},
+        "context": [
+            {"key": "auto_complete_visible", "operand": true},
+        ]
+    },
 
     // Pane Travel
     { "keys": ["ctrl+shift+j"], "command": "travel_to_pane", "args": {"direction": "down"} },
@@ -584,6 +598,8 @@
     /*******************  Disabled Shortcuts  ********************/
     // Minimize is such a pain...
     { "keys": ["super+m"], "command": "noop" },
+    // Select to top is such a pain...
+    { "keys": ["super+shift+up"], "command": "noop" },
 
 
 
