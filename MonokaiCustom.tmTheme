@@ -417,7 +417,6 @@
 				<string>#3690C0</string>
 			</dict>
 		</dict>
-
 		<dict>
 			<key>name</key>
 			<string>Library variable</string>
@@ -1365,6 +1364,18 @@
 				<!-- DictKey Style -->
 				<key>foreground</key>
 				<string>#E6BB84</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Regex Groups</string>
+			<key>scope</key>
+			<string>punctuation.definition.group</string>
+			<key>settings</key>
+			<dict>
+				<!-- Operator Style -->
+				<key>foreground</key>
+				<string>#F92672</string>
 			</dict>
 		</dict>
 		<dict>
