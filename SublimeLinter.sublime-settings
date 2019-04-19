@@ -6,25 +6,25 @@
 
         "pylint": {
             "args": [
-                "--disable", "logging-too-many-args,superfluous-parens,len-as-condition",
-                // "disable": "C0111,C0330,C1801,C0305,R0903,E1205,W1202",
-                "--max-line-length=120"
+                "--disable", "logging-too-many-args,superfluous-parens,len-as-condition,line-too-long",
+                // Line-length is handled by flake8
+                // "disable": "C0111,C0330,C1801,C0305,R0903,E1205,W1202"
             ]
         },
         "pycodestyle": {
-             "args": [
-                 "--select",
-                 "E123,E226,E241,E242"
-             ],
-             "ignore": "W391,E303,E265,R1705",
-             "max-line-length": 120,
+            "args": [
+                "--select",
+                "E123,E226,E241,E242"
+            ],
+            "ignore": "W391,E303,E265,R1705,E501",
+            // E501: Line too long
         },
         "flake8": {
-             "args": [
-                "--max-line-length=120",
-                "--max-complexity=10"
-             ],
-             "ignore": "",
+            "args": [
+                "--max-complexity=10",
+                "--max-line-length=122",
+                // "--ignore", "E501",
+            ],
         },
 
 
