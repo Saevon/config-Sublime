@@ -1396,7 +1396,7 @@
 			<key>name</key>
 			<string>Template Variables</string>
 			<key>scope</key>
-			<string>variable.other.mustache, text.html.django storage.type.variable string.unquoted.tag-string.django</string>
+			<string>variable.other.mustache, text.html.django storage.type.variable string.unquoted.tag-string.django, variable.other.jinja2</string>
 			<key>settings</key>
 			<dict>
 				<!-- DictKey Style -->
@@ -1408,7 +1408,7 @@
 			<key>name</key>
 			<string>Underscore Base</string>
 			<key>scope</key>
-			<string>embedding.underscore source.js, storage.type.templatetag.django, storage.type.variable.django</string>
+			<string>embedding.underscore source.js, storage.type.templatetag.django, storage.type.variable.django, meta.scope.jinja2.tag, meta.scope.jinja2.variable, entity.other.jinja2.delimiter.variable</string>
 			<key>settings</key>
 			<dict>
 				<!-- Embedded Language Style -->
@@ -1433,7 +1433,7 @@
 			<key>name</key>
 			<string>Template Keywords</string>
 			<key>scope</key>
-			<string>keyword.control.underscore, text.html.django keyword.control</string>
+			<string>keyword.control.underscore, text.html.django keyword.control, keyword.control.jinja2</string>
 			<key>settings</key>
 			<dict>
 				<!-- Embedded Language Keyword Style -->
