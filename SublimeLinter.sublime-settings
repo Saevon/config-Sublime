@@ -48,18 +48,18 @@
         // -------------------------------------------
         // Web
         "csslint": {
-            "ignore": "adjoining-classes,order-alphabetical",
+            "ignore": "adjoining-classes,order-alphabetical,fallback-colors,box-sizing",
         },
         "eslint_d": {
             "args": [
                 "--config",
-                "/Users/saevon/Library/Application Support/Sublime Text 3/Packages/User/eslint-config.json",
+                "${packages}/User/eslint-config.json",
             ],
         },
         "jshint": {
             "args": [
                 "--config",
-                "/Users/saevon/Library/Application Support/Sublime Text 3/Packages/User/jshint-config.json",
+                "${packages}/User/jshint-config.json",
             ],
         },
 
