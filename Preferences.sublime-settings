@@ -84,6 +84,13 @@
 	// Word wrapped lines indent to the same level
 	"indent_subsequent_lines": true,
 
+	// Line length rulers
+	"rulers": [
+		"80",
+		"100",
+		"120",
+	],
+
 
 	///////////////////////////////////
 	// Vintage Mode
