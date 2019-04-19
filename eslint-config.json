@@ -41,10 +41,10 @@
         // Analysis
         "complexity": "warn",
         // "no-unused-expressions": "warn",
-        "no-unused-vars": "warn",
+        "no-unused-vars": ["warn", {"varsIgnorePattern": "^_$"}],
         "radix": "error",
         "no-magic-numbers": ["warn", {
-            "ignore": [-1, 0, 1, 100]
+            "ignore": [-1, 0, 1, 100, 1000, 0xdeadbeef]
         }],
         "eqeqeq": ["warn", "smart"],
         "accessor-pairs": "warn",
