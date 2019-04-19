@@ -1,109 +1,91 @@
 {
-    "user": {
-        "debug": false,
-        "delay": 0.25,
-        "error_color": "D02000",
-        "gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
-        "gutter_theme_excludes": [],
-        "lint_mode": "load/save",
-        "linters": {
-            "csslint": {
-                "@disable": false,
-                "args": [],
-                "errors": "",
-                "excludes": [],
-                "ignore": "adjoining-classes,order-alphabetical",
-                "warnings": ""
-            },
-            "eslint_d": {
-                "@disable": false,
-                "args": [
-                    "--config",
-                    "/Users/work/Library/Application Support/Sublime Text 3/Packages/User/eslint-config.json"
-                ],
-                "excludes": []
-            },
-            "ghc": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "hlint": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "jshint": {
-                "@disable": true,
-                "args": [
-                    "--config",
-                    "/Users/work/Library/Application Support/Sublime Text 3/Packages/User/jshint-config.json"
-                ],
-                "excludes": []
-            },
-            "luacheck": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "pep8": {
-                "@disable": false,
-                "args": [
-                    "--select",
-                    "E123,E226,E241,E242"
-                ],
-                "excludes": [],
-                "ignore": "W391,E303,E265,R1705",
-                // E265: Space after #
-                // R1705: Unnecessary else after return
-                "max-line-length": 150,
-                "select": ""
-            },
-            "pylint": {
-                "@disable": false,
-                "@python": 3.4,
-                "args": [],
-                // C1801: len() in bool
-                // C0305: trailing spaces in file
-                "disable": "C0111,C0330,C1801,C0305,R0903,E1205,W1202",
-                "enable": "",
-                "excludes": [],
-                "paths": [],
-                "rcfile": "",
-                "show-codes": true
-            }
+    "debug": false,
+    "linters": {
+        // -------------------------------------------
+        // Python
+
+        "pylint": {
+            "args": [
+                "--disable", "logging-too-many-args,superfluous-parens,len-as-condition",
+                // "disable": "C0111,C0330,C1801,C0305,R0903,E1205,W1202",
+                "--max-line-length=120"
+            ]
         },
-        "mark_style": "outline",
-        "no_column_highlights_line": false,
-        "passive_warnings": false,
-        "paths": {
-            "linux": [],
-            "osx": [
-                "/usr/local/bin",
-                "/Library/Haskell/ghc-8.2.1-x86_64/bin"
+        "pycodestyle": {
+             "args": [
+                 "--select",
+                 "E123,E226,E241,E242"
+             ],
+             "ignore": "W391,E303,E265,R1705",
+             "max-line-length": 120,
+        },
+        "flake8": {
+             "args": [
+                "--max-line-length=120",
+                "--max-complexity=10"
+             ],
+             "ignore": "",
+        },
+
+
+        // -------------------------------------------
+        // Haskell
+
+        "ghc": {
+        },
+        "hlint": {
+        },
+
+
+        // -------------------------------------------
+        // Lua
+
+        "luacheck": {
+            "@disable": true,
+        },
+
+
+        // -------------------------------------------
+        // Web
+        "csslint": {
+            "ignore": "adjoining-classes,order-alphabetical",
+        },
+        "eslint_d": {
+            "args": [
+                "--config",
+                "/Users/saevon/Library/Application Support/Sublime Text 3/Packages/User/eslint-config.json",
             ],
-            "windows": []
         },
-        "python_paths": {
-            "linux": [],
-            "osx": [],
-            "windows": []
+        "jshint": {
+            "args": [
+                "--config",
+                "/Users/saevon/Library/Application Support/Sublime Text 3/Packages/User/jshint-config.json",
+            ],
         },
-        "rc_search_limit": 3,
-        "shell_timeout": 10,
-        "show_errors_on_save": false,
-        "show_marks_in_minimap": true,
-        "syntax_map": {
-            "html (django)": "html",
-            "html (rails)": "html",
-            "html 5": "html",
-            "javascript (babel)": "javascript",
-            "magicpython": "python",
-            "php": "html",
-            "python django": "python",
-            "pythonimproved": "python"
+
+    },
+    "paths": {
+        "linux": [],
+        "osx": [
+        ],
+        "windows": []
+    },
+
+    // -------------------------------------------------
+    "styles": [
+        {
+            "icon": "dot",
+            "mark_style": "squiggly_underline",
+            "priority": 1,
+            "scope": "region.yellowish markup.changed.sublime_linter markup.warning.sublime_linter",
+            "types": ["warning"]
         },
-        "warning_color": "DDB700",
-        "wrap_find": true
-    }
+        {
+            "icon": "dot",
+            "mark_style": "squiggly_underline",
+            "priority": 1,
+            "scope": "region.redish markup.deleted.sublime_linter markup.error.sublime_linter",
+            "types": ["error"]
+        }
+]
 }
