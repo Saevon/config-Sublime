@@ -17,6 +17,7 @@ file_extensions:
   - .editorconfig
   - gitconfig
   - .gitconfig
+  - .flake8
 scope: source.ini
 contexts:
   main:
