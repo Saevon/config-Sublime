@@ -1477,9 +1477,9 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Underscore Base</string>
+			<string>Template Base</string>
 			<key>scope</key>
-			<string>embedding.underscore source.js, storage.type.templatetag.django, storage.type.variable.django, meta.scope.jinja2.tag, meta.scope.jinja2.variable, entity.other.jinja2.delimiter.variable</string>
+			<string>embedding.underscore source.js, storage.type.templatetag.django, storage.type.variable.django, meta.scope.jinja2.tag, meta.scope.jinja2.variable, entity.other.jinja2.delimiter.variable, source.python source.sql</string>
 			<key>settings</key>
 			<dict>
 				<!-- Embedded Language Style -->
@@ -1487,6 +1487,19 @@
 				<string>#6495ed</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>name</key>
+			<string>Template String</string>
+			<key>scope</key>
+			<string>embedding.underscore string.quoted, meta.scope.jinja2.tag string.quoted, meta.scope.jinja2.variable.string.quoted, source.python source.sql string.quoted</string>
+			<key>settings</key>
+			<dict>
+				<!-- String Style -->
+				<key>foreground</key>
+				<string>#E6DB74</string>
+			</dict>
+		</dict>
+
 		<dict>
 			<key>name</key>
 			<string>Template Attr</string>
@@ -1542,18 +1555,6 @@
 				<!-- DictKey Style -->
 				<key>foreground</key>
 				<string>#E6BB84</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Embedded SQL Base</string>
-			<key>scope</key>
-			<string>source.python source.sql</string>
-			<key>settings</key>
-			<dict>
-				<!-- Embedded Language Style -->
-				<key>foreground</key>
-				<string>#6495ed</string>
 			</dict>
 		</dict>
 
