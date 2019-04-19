@@ -96,6 +96,11 @@
     { "caption": "Preferences: ColorScheme", "command": "edit_command_palette_open_file",
         "args": { "file": "${packages}/User/MonokaiCustom.tmTheme" },
     },
+    { "caption": "Preferences: Vim Keybindings (Vintage)", "command": "edit_command_palette_open_file",
+        "args": {
+            "file": "${packages}/Vintage/Default.sublime-keymap",
+        },
+    },
 
     // Plugins
     { "caption": "Preferences: Linter: Eslint", "command": "edit_command_palette_open_file",
