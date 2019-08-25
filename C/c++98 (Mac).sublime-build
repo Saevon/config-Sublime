@@ -1,0 +1,9 @@
+{
+    // "cmd" : ["g++ -fsanitize=address -std=c++98 -Wall ${file_name} -o ${file_base_name} && ASAN_OPTIONS=detect_leaks=1 ./${file_base_name}"],
+    "cmd" : [
+        "g++ -std=c++98 -Wall ${file_name} -o ${file_base_name} && leaks -q --atExit -- ./${file_base_name}"
+    ],
+    "selector" : "source.c++",
+    "shell": true,
+    "working_dir" : "$file_path"
+}
