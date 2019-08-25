@@ -71,9 +71,15 @@
 			<key>name</key>
 			<string>keyword.control.c</string>
 		</dict>
+				<dict>
+			<key>match</key>
+			<string>\b(typedef)\b</string>
+			<key>name</key>
+			<string>keyword.type.c</string>
+		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|struct|typedef|union|unsigned|void)\b</string>
+			<string>\b(asm|__asm__|auto|bool|_Bool|char|_Complex|double|enum|float|_Imaginary|int|long|short|signed|struct|union|unsigned|void)\b</string>
 			<key>name</key>
 			<string>storage.type.c</string>
 		</dict>
