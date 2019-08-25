@@ -126,7 +126,11 @@
 		"*.idb",
 		"*.class",
 		"*.psd",
-		"*.db"
+		"*.db",
+
+		// Images
+		"*.dmg",
+		"*.iso",
 	],
 	"folder_exclude_patterns":
 	[
