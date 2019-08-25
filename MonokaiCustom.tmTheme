@@ -227,7 +227,7 @@
 			<key>name</key>
 			<string>Keyword</string>
 			<key>scope</key>
-			<string>keyword</string>
+			<string>keyword - keyword.operator.accessor - punctuation.list</string>
 			<key>settings</key>
 			<dict>
 				<!-- Keywords Style -->
@@ -241,7 +241,7 @@
 			<key>name</key>
 			<string>Operator</string>
 			<key>scope</key>
-			<string>keyword.operator - keyword.operator.accessor</string>
+			<string>keyword.operator - keyword.operator.accessor - punctuation.list</string>
 			<key>settings</key>
 			<dict>
 				<!-- Operator Style -->
@@ -516,7 +516,7 @@
 			<key>name</key>
 			<string>Preprocessor Command</string>
 			<key>scope</key>
-			<string>meta.preprocessor</string>
+			<string>meta.preprocessor keyword.control.import, meta.preprocessor keyword.operator.preprocessor</string>
 			<key>settings</key>
 			<dict>
 				<!-- Embedded Language Style -->
@@ -698,7 +698,7 @@
 			<!-- E.g. self, other, cls -->
 			<string>Common Variable</string>
 			<key>scope</key>
-			<string>variable.language.python</string>
+			<string>variable.language</string>
 			<key>settings</key>
 			<dict>
  				<!-- DictKey Style -->
@@ -823,7 +823,15 @@
 			<key>scope</key>
 			<!-- to support when the syntax is included in another one -->
 			<!-- we need to specify specific variable types too... -->
-			<string>source.shell variable, variable.other.bracket.shell, variable.other.nginx, variable.other.makefile, variable.source.makefile, variable.source.logo, config.vimrc variable, source.yaml.sublime.syntax punctuation.definition.variable, variable.other.sublime-syntax</string>
+			<string>
+				source.shell variable, variable.other.bracket.shell,
+				variable.other.nginx,
+				variable.source.makefile, variable.other.makefile,
+				variable.source.logo, config.vimrc variable,
+				source.yaml.sublime.syntax punctuation.definition.variable,
+				variable.other.sublime-syntax,
+				meta.identifier.applescript, variable.other.readwrite.set.applescript, variable.other.property.applescript, variable.other.readwrite.global.applescript
+			</string>
 			<key>settings</key>
 			<dict>
 				<!-- DictKey Style -->
@@ -874,7 +882,7 @@
 			<key>name</key>
 			<string>C++ Pointers</string>
 			<key>scope</key>
-			<string>address.ccpp, pointer.ccpp</string>
+			<string>address.ccpp, pointer.ccpp, variable.other.pointer</string>
 			<key>settings</key>
 			<dict>
 				<!-- DictKey Style -->
@@ -1200,6 +1208,20 @@
 		</dict>
 
 
+		<!-- Haskell -->
+		<dict>
+			<key>name</key>
+			<string>Markdown Bold</string>
+			<key>scope</key>
+			<string>pragma.support.language</string>
+			<key>settings</key>
+			<dict>
+				<!-- Argument Style -->
+				<key>foreground</key>
+				<string>#FD971F</string>
+			</dict>
+		</dict>
+
 
 		<!-- Markdown -->
 		<dict>
@@ -1447,6 +1469,24 @@
 		</dict>
 
 
+		<!-- C / C++ -->
+		<dict>
+			<key>name</key>
+			<string>Member Variables</string>
+			<key>scope</key>
+			<string>variable.other.member</string>
+			<key>settings</key>
+			<dict>
+ 				<!-- DictKey Style -->
+				<key>foreground</key>
+				<string>#E6BB84</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+
+			</dict>
+		</dict>
+
+
 		<!-- INI files -->
 		<dict>
 			<key>name</key>
@@ -1583,6 +1623,54 @@
 				<string>#E6BB84</string>
 			</dict>
 		</dict>
+
+
+		<!-- Applescript -->
+		<dict>
+			<key>name</key>
+			<string>Useless keywords</string>
+			<key>scope</key>
+			<string>keyword.useless</string>
+			<key>settings</key>
+			<dict>
+				<!-- Useless Keywords Style -->
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#F9267250</string>
+			</dict>
+		</dict>
+
+		<!-- LUA -->
+		<dict>
+			<key>name</key>
+			<string>Lua Key Literals</string>
+			<key>scope</key>
+			<string>meta.key.lua string</string>
+			<key>settings</key>
+			<dict>
+				<!-- DictKey Style -->
+				<key>foreground</key>
+				<string>#E6BB84</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Common Variable</string>
+			<key>scope</key>
+			<string>source.lua variable.language</string>
+			<key>settings</key>
+			<dict>
+ 				<!-- DictKey Style -->
+				<key>foreground</key>
+				<string>#E6BB84</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+
+			</dict>
+		</dict>
+
+
 
 
 
