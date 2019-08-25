@@ -41,6 +41,25 @@
         // Haskell
 
         "ghc": {
+            "args": [
+                "-fwarn-tabs",
+                "-fwarn-unused-imports",
+                "-fwarn-name-shadowing",
+                "-fwarn-incomplete-uni-patterns",
+                "-fwarn-incomplete-patterns",
+                "-fwarn-overlapping-patterns",
+                "-fwarn-incomplete-record-updates",
+                "-fdefer-type-errors",
+                "-fwarn-missing-signatures",
+                "-fwarn-monomorphism-restriction",
+                "-fwarn-orphans",
+
+                // Force Recompile
+                "-fforce-recomp",
+                // Check Only (don't compile/run)
+                "-fno-code",
+                "-fobject-code",
+            ],
         },
         "hlint": {
         },
