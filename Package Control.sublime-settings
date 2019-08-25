@@ -36,6 +36,7 @@
 		"StringEncode",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint_d",
+		"SublimeLinter-cppcheck",
 		"SublimeLinter-csslint",
 		"SublimeLinter-flake8",
 		"SublimeLinter-ghc",

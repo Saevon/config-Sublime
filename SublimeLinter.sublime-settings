@@ -71,7 +71,10 @@
                 "${packages}/User/jshint-config.json",
             ],
         },
-
+        // -------------------------------------------
+        // C++
+        "cppcheck": {
+        },
     },
     "paths": {
         "linux": [],
