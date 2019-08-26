@@ -185,6 +185,7 @@
         ],
         "args": {
             "backwards": false,
+            "jump_only": true,
         }
     },
     {
@@ -194,6 +195,7 @@
         ],
         "args": {
             "backwards": true,
+            "jump_only": true,
         }
     },
     {
@@ -204,7 +206,6 @@
         ],
         "args": {
             "backwards": false,
-            "jump_only": true,
         }
     },
     {
@@ -215,7 +216,6 @@
         ],
         "args": {
             "backwards": true,
-            "jump_only": true,
         }
     },
     // End Highlight Panel
