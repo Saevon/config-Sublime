@@ -190,8 +190,9 @@
     {"trigger":"__import__\tfunction", "contents": "__import__(${1:name}${2:, ${3:globals}${4:, ${5:locals}${6:, ${7:fromlist}${8:, ${9:level}}}}})"},
 
     // Special Functions
-    {"trigger":"super\tspecial", "contents": "super(${1:type}${2:, ${3:object-or-type}})"},
+    {"trigger":"super\tspecial", "contents": "super(${1:type}, ${2:object-or-type})"},
     {"trigger":"breakpoint\tspecial", "contents": "breakpoint()"},
+    {"trigger":"trace\tspecial", "contents": "import pdb; pdb.set_trace()"},
 
     // Types
     {"trigger":"namedtuple\ttype", "contents": "${1:TypeName} = namedtuple('$1', ['${2:field}', ${3:...}])"},
