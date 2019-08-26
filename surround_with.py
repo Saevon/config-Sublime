@@ -27,7 +27,7 @@ class SurroundWith(sublime_plugin.TextCommand):
             end = ">"
         elif character in "'\"`":
             start = end = character
-        elif character in "*-+_%$|/\\":
+        elif character in "*-+_%$|/\\ ":
             # Also allow weird characters
             start = end = character
         else:
