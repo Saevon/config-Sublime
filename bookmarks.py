@@ -410,9 +410,12 @@ class VieStack(VieBookmarker):
             self.ALLOWED_MARKS[-1 if inverted else 0]
         ))
 
-    def pop(self, view):
+    def pop(self):
         ''' Grabs the top item '''
         result = self.peek()
+        if result is None:
+            # Empty Stack
+            return None
 
         self._shift_stack(inverted=True)
         # The mark is gone after the stack shift, so technically it isn't named anymore
@@ -421,7 +424,7 @@ class VieStack(VieBookmarker):
         # Now find the last item in the stack
         # Since we shifted everything down by one
         # That item is the duplicated (copy)
-        for cur_char, next_char in pairwise(reversed(self.ALLOWED_MARKS), tail=None):
+        for cur_char, next_char in pairwise(reversed(self.ALLOWED_MARKS), include_tail=True):
             mark = self.get_mark(character=cur_char)
 
             if mark is not None:
@@ -562,12 +565,20 @@ class ViePushDefinition(sublime_plugin.TextCommand):
     def run(self, edit=None):
         ''' Runs the command '''
         window = self.view.window()
+        bookmarker = VieUserStack(view=self.view)
 
         selection = list(self.view.sel())
         if len(selection) > 1:
             return
 
+        # Save the current cursor for later comparison
         cursor = selection[0]
+
+        # Save the current position
+        bookmarker.push(
+            view=self.view,
+            regions=[cursor],
+        )
 
         window.run_command('goto_definition')
 
@@ -578,21 +589,17 @@ class ViePushDefinition(sublime_plugin.TextCommand):
             return
 
         # Push the new context on to the stack
-        bookmarker = VieUserStack(view=self.view)
         bookmarker.push(
             view=self.view,
             regions=[new_cursor],
         )
-
 
 class ViePopBookmark(sublime_plugin.TextCommand):
     ''' Goes up one mark on the context stack '''
     def run(self, edit=None):
         ''' Runs the command '''
         bookmarker = VieUserStack(view=self.view)
-        mark = bookmarker.pop(
-            view=self.view,
-        )
+        mark = bookmarker.pop()
         if mark is not None:
             bookmarker.go_to_mark(mark=mark, select=True)
 

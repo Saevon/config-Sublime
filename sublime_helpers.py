@@ -135,6 +135,14 @@ class QuickPanelListener(sublime_plugin.EventListener):
     ''' Listener for a quickpanel '''
     def on_activated(self, view):
         ''' This method is called whenever a view (tab, quick panel, etc.) gains focus '''
+        if view is None:
+            return
+
+        window = view.window()
+        if window is None:
+            # This is some subpanel, Not relevant
+            return
+
         QuickPanelFinder(view=view).on_open(view)
 
 
@@ -320,20 +328,16 @@ class Sentinel:
         return self.__class__.__name__
 
 
-class PairwiseTailSentinel(Sentinel):
-    ''' Means you don't want a tail '''
-
-
-def pairwise(iterable, tail=PairwiseTailSentinel):
+def pairwise(iterable, include_tail=False):
     """
     s -> (s0,s1), (s1,s2), (s2, s3), ...
-    s, None -> (s0, s1) ... (sn-1, sn), (sn, None)
+    s, True -> (s0, s1) ... (sn-1, sn), (sn, None)
 
     """
     left, right = itertools.tee(iterable)
     next(right, None)
-    if tail is not PairwiseTailSentinel:
-        right = itertools.chain(right, [tail])
+    if include_tail:
+        right = itertools.chain(right, [None])
 
     return zip(left, right)
 
