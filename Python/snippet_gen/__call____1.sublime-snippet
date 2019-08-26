@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__call__]]></content>
+    <tabTrigger>__call__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__call__</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__irshift__]]></content>
+    <tabTrigger>__irshift__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__irshift__</description>
+</snippet>

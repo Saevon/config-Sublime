@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[groupby(${1:iterable}, ${2:key_func})]]></content>
+    <tabTrigger>groupby</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>itertools:groupby</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[explicit]]></content>
+    <tabTrigger>explicit</tabTrigger>
+
+    <scope>source.c++</scope>
+    <description>attribute:explicit</description>
+</snippet>

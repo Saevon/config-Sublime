@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[oct(${1:x})]]></content>
+    <tabTrigger>oct</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>type:oct</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__iter__]]></content>
+    <tabTrigger>__iter__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__iter__</description>
+</snippet>

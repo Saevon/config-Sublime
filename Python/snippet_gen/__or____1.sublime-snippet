@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__or__]]></content>
+    <tabTrigger>__or__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__or__</description>
+</snippet>

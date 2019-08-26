@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[regex]]></content>
+    <tabTrigger>regex</tabTrigger>
+
+    <scope>source.c++</scope>
+    <description>type:regex</description>
+</snippet>

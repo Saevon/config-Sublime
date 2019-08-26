@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[dis]]></content>
+    <tabTrigger>dis</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:dis</description>
+</snippet>

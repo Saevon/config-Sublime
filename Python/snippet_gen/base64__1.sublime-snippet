@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[base64]]></content>
+    <tabTrigger>base64</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:base64</description>
+</snippet>

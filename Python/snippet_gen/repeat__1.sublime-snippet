@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[repeat(${1:elem}${2:, ${3:n}})]]></content>
+    <tabTrigger>repeat</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>itertools:repeat</description>
+</snippet>

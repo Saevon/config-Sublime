@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[importlib]]></content>
+    <tabTrigger>importlib</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:importlib</description>
+</snippet>

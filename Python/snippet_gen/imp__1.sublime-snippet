@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[imp]]></content>
+    <tabTrigger>imp</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:imp</description>
+</snippet>

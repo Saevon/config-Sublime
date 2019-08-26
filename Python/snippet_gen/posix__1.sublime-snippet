@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[posix]]></content>
+    <tabTrigger>posix</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:posix</description>
+</snippet>

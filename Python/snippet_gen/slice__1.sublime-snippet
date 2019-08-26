@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[slice(${1:start}${2:, ${3:stop}}${4:, ${5:step}})]]></content>
+    <tabTrigger>slice</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>functional:slice</description>
+</snippet>

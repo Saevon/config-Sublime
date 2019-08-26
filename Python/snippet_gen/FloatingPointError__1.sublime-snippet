@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[FloatingPointError${1:(\"${2:error}\")}]]></content>
+    <tabTrigger>FloatingPointError</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>error:FloatingPointError</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[str(${1:object=''})]]></content>
+    <tabTrigger>str</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>type:str</description>
+</snippet>

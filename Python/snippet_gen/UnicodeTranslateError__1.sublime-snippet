@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[UnicodeTranslateError${1:(\"${2:error}\")}]]></content>
+    <tabTrigger>UnicodeTranslateError</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>error:UnicodeTranslateError</description>
+</snippet>

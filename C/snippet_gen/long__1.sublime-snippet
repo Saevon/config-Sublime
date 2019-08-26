@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[long]]></content>
+    <tabTrigger>long</tabTrigger>
+
+    <scope>source.c++</scope>
+    <description>type:long</description>
+</snippet>

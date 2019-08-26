@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[id(${1:object})]]></content>
+    <tabTrigger>id</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>builtin:id</description>
+</snippet>

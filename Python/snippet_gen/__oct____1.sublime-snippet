@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__oct__]]></content>
+    <tabTrigger>__oct__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__oct__</description>
+</snippet>

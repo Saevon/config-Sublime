@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[isinstance(${1:object}, ${2:classinfo})]]></content>
+    <tabTrigger>isinstance</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>builtin:isinstance</description>
+</snippet>

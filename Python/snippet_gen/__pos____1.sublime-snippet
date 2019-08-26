@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__pos__]]></content>
+    <tabTrigger>__pos__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__pos__</description>
+</snippet>

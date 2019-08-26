@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[dummy_threading]]></content>
+    <tabTrigger>dummy_threading</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:dummy_threading</description>
+</snippet>

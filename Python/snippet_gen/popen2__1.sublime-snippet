@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[popen2]]></content>
+    <tabTrigger>popen2</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:popen2</description>
+</snippet>

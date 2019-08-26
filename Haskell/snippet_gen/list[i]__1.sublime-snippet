@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[${1:list} !! ${2:i}]]></content>
+    <tabTrigger>list[i]</tabTrigger>
+
+    <scope>source.haskell</scope>
+    <description>synonym:index:list[i]</description>
+</snippet>

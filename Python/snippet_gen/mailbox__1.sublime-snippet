@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[mailbox]]></content>
+    <tabTrigger>mailbox</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:mailbox</description>
+</snippet>

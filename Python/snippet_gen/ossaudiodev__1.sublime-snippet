@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[ossaudiodev]]></content>
+    <tabTrigger>ossaudiodev</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:ossaudiodev</description>
+</snippet>

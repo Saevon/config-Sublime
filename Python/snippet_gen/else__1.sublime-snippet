@@ -1,0 +1,11 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[else:
+	${1:pass}
+]]></content>
+    <tabTrigger>else</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>block:else</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__lshift__]]></content>
+    <tabTrigger>__lshift__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__lshift__</description>
+</snippet>

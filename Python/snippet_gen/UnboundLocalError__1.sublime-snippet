@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[UnboundLocalError${1:(\"${2:error}\")}]]></content>
+    <tabTrigger>UnboundLocalError</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>error:UnboundLocalError</description>
+</snippet>

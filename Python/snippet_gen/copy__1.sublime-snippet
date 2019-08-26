@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[copy]]></content>
+    <tabTrigger>copy</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:copy</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[_thread]]></content>
+    <tabTrigger>_thread</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:_thread</description>
+</snippet>

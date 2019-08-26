@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[round(${1:number}${2:, ${3:ndigits}})]]></content>
+    <tabTrigger>round</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>functional:round</description>
+</snippet>

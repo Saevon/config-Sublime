@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__iand__]]></content>
+    <tabTrigger>__iand__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__iand__</description>
+</snippet>

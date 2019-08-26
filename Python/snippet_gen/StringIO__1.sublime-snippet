@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[StringIO]]></content>
+    <tabTrigger>StringIO</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:StringIO</description>
+</snippet>

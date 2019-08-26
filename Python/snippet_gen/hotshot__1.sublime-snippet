@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[hotshot]]></content>
+    <tabTrigger>hotshot</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:hotshot</description>
+</snippet>

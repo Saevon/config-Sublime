@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[#include <${1}>]]></content>
+    <tabTrigger>include&lt;</tabTrigger>
+
+    <scope>source.c++</scope>
+    <description>block:include&lt;</description>
+</snippet>

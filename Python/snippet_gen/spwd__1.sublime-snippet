@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[spwd]]></content>
+    <tabTrigger>spwd</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:spwd</description>
+</snippet>

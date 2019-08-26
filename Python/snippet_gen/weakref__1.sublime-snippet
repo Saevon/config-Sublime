@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[weakref]]></content>
+    <tabTrigger>weakref</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:weakref</description>
+</snippet>

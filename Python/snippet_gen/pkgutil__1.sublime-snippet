@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[pkgutil]]></content>
+    <tabTrigger>pkgutil</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:pkgutil</description>
+</snippet>

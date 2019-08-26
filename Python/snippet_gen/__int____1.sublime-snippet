@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__int__]]></content>
+    <tabTrigger>__int__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__int__</description>
+</snippet>

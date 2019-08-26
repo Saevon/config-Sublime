@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[shared_ptr<${1:ptr_val_t}>]]></content>
+    <tabTrigger>shared_ptr</tabTrigger>
+
+    <scope>source.c++</scope>
+    <description>pointer:shared_ptr</description>
+</snippet>

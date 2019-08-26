@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[minidom]]></content>
+    <tabTrigger>minidom</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:minidom</description>
+</snippet>

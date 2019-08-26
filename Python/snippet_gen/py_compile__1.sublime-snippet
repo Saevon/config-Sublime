@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[py_compile]]></content>
+    <tabTrigger>py_compile</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:py_compile</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[cmp(${1:x}, ${2:y})]]></content>
+    <tabTrigger>cmp</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>builtin:cmp</description>
+</snippet>

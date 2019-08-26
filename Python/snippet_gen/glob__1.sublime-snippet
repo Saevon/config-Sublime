@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[glob]]></content>
+    <tabTrigger>glob</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:glob</description>
+</snippet>

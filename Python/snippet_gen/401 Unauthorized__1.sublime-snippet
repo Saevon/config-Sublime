@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[Unauthorized(${1:''})]]></content>
+    <tabTrigger>401 Unauthorized</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http:401 Unauthorized</description>
+</snippet>

@@ -1,0 +1,92 @@
+scope: source.c++
+snippets:
+    synonym:
+      - trigger: print
+        snippet: std::cout << ${1:string_or_variable} << std::endl;
+
+    keyword:
+      - assert
+      - print
+
+    access:
+      - private
+      - public
+      - protected
+      - friend
+    attribute:
+        # Misc
+      - noexcept
+      - explicit
+      - virtual
+        # Type Attribute
+
+
+    type:
+        # Attributes
+      - const
+      - volatile
+      - static
+
+        # Basic Types
+      - int
+      - long
+      - unsigned
+      - char
+
+      - bool
+      - void
+      - nullptr_t
+
+      - struct
+      - union
+
+      - string
+      - regex
+      - smatch
+
+    container:
+      - trigger: map
+        snippet: map<${1:key_t, val_t}>
+      - trigger: set
+        snippet: set<${1:val_t}>
+      - trigger: vector
+        snippet: vector<${1:val_t}>
+      - trigger: array
+        snippet: array<${1:val_t}>
+      - trigger: list
+        snippet: list<${1:val_t}>
+      - trigger: deque
+        snippet: deque<${1:val_t}>
+      - trigger: queue
+        snippet: queue<${1:val_t}>
+      - trigger: stack
+        snippet: stack<${1:val_t}>
+
+    pointer:
+      - trigger: unique_ptr
+        snippet: unique_ptr<${1:ptr_val_t}>
+      - trigger: shared_ptr
+        snippet: shared_ptr<${1:ptr_val_t}>
+      - trigger: weak_ptr
+        snippet: weak_ptr<${1:ptr_val_t}>
+      - nullptr
+
+    block:
+        # Language Features
+      - trigger: template
+        snippet: template <typename ${1:T}>
+      - trigger: header
+        snippet: |
+            #pragma once
+            #ifndef ${1:__HEADER_CPP__}
+            #define ${1}
+
+            ${2}
+
+            #endif  /* !${1} */
+      - trigger: include<
+        snippet: "#include <${1}>"
+      - trigger: include-h
+        snippet: "#include \"${1}.h\""
+      - trigger: include-hpp
+        snippet: "#include \"${1}.hpp\""

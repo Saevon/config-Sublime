@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[mailcap]]></content>
+    <tabTrigger>mailcap</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:mailcap</description>
+</snippet>

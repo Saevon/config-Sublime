@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__enter__]]></content>
+    <tabTrigger>__enter__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__enter__</description>
+</snippet>

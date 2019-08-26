@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[Bastion]]></content>
+    <tabTrigger>Bastion</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:Bastion</description>
+</snippet>

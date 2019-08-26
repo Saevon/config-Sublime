@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[builtins]]></content>
+    <tabTrigger>builtins</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:builtins</description>
+</snippet>

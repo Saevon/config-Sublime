@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[getopt]]></content>
+    <tabTrigger>getopt</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:getopt</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[defaultdict(${1:constructor})]]></content>
+    <tabTrigger>defaultdict</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>type:defaultdict</description>
+</snippet>

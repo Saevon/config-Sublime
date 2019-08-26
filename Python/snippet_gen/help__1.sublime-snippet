@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[help(${1:object})]]></content>
+    <tabTrigger>help</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>builtin:help</description>
+</snippet>

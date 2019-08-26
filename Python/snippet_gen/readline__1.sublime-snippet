@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[readline]]></content>
+    <tabTrigger>readline</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:readline</description>
+</snippet>

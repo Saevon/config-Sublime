@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[bisect]]></content>
+    <tabTrigger>bisect</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:bisect</description>
+</snippet>

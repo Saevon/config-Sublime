@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[divmod(${1:a}, ${2:b})]]></content>
+    <tabTrigger>divmod</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>builtin:divmod</description>
+</snippet>

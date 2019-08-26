@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[is]]></content>
+    <tabTrigger>is</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>keyword:is</description>
+</snippet>

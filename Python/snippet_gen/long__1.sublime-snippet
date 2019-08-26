@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[long(${1:x})]]></content>
+    <tabTrigger>long</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>type:long</description>
+</snippet>

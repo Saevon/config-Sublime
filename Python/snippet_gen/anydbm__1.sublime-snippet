@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[anydbm]]></content>
+    <tabTrigger>anydbm</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:anydbm</description>
+</snippet>

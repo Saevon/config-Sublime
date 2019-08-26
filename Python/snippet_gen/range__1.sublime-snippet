@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[range(${1:stop})]]></content>
+    <tabTrigger>range</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>functional:range</description>
+</snippet>

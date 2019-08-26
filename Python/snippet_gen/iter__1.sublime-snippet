@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[iter(${1:o}${2:, ${3:sentinel}})]]></content>
+    <tabTrigger>iter</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>functional:iter</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__rsub__]]></content>
+    <tabTrigger>__rsub__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__rsub__</description>
+</snippet>

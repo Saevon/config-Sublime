@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[os]]></content>
+    <tabTrigger>os</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:os</description>
+</snippet>

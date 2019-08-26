@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__xor__]]></content>
+    <tabTrigger>__xor__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__xor__</description>
+</snippet>

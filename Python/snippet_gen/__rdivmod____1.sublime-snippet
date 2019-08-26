@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__rdivmod__]]></content>
+    <tabTrigger>__rdivmod__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__rdivmod__</description>
+</snippet>

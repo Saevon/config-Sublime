@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[private]]></content>
+    <tabTrigger>private</tabTrigger>
+
+    <scope>source.c++</scope>
+    <description>access:private</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[not]]></content>
+    <tabTrigger>not</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>keyword:not</description>
+</snippet>

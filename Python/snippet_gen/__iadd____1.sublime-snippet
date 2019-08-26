@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__iadd__]]></content>
+    <tabTrigger>__iadd__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__iadd__</description>
+</snippet>

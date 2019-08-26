@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[contextlib]]></content>
+    <tabTrigger>contextlib</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:contextlib</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[gc]]></content>
+    <tabTrigger>gc</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:gc</description>
+</snippet>

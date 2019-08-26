@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__gt__]]></content>
+    <tabTrigger>__gt__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__gt__</description>
+</snippet>

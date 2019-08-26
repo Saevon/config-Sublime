@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[ast]]></content>
+    <tabTrigger>ast</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:ast</description>
+</snippet>

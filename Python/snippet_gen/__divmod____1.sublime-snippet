@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__divmod__]]></content>
+    <tabTrigger>__divmod__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__divmod__</description>
+</snippet>

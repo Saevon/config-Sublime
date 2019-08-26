@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[basestring()]]></content>
+    <tabTrigger>basestring</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>type:basestring</description>
+</snippet>

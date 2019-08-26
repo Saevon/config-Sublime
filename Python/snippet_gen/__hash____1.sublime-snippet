@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__hash__]]></content>
+    <tabTrigger>__hash__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__hash__</description>
+</snippet>

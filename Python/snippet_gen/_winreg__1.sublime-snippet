@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[_winreg]]></content>
+    <tabTrigger>_winreg</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:_winreg</description>
+</snippet>

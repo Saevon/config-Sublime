@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[SyntaxError${1:(\"${2:error}\")}]]></content>
+    <tabTrigger>SyntaxError</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>error:SyntaxError</description>
+</snippet>

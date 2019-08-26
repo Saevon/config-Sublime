@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[memoryview(${1:obj})]]></content>
+    <tabTrigger>memoryview</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>type:memoryview</description>
+</snippet>

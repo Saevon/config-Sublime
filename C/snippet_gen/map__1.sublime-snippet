@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[map<${1:key_t, val_t}>]]></content>
+    <tabTrigger>map</tabTrigger>
+
+    <scope>source.c++</scope>
+    <description>container:map</description>
+</snippet>

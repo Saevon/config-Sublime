@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[inspect]]></content>
+    <tabTrigger>inspect</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:inspect</description>
+</snippet>

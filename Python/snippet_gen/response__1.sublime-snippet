@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[response]]></content>
+    <tabTrigger>response</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:response</description>
+</snippet>

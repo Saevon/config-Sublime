@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__slots__]]></content>
+    <tabTrigger>__slots__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__slots__</description>
+</snippet>

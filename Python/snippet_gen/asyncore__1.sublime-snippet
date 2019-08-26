@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[asyncore]]></content>
+    <tabTrigger>asyncore</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:asyncore</description>
+</snippet>

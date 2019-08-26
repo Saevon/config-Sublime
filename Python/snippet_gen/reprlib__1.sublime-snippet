@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[reprlib]]></content>
+    <tabTrigger>reprlib</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:reprlib</description>
+</snippet>

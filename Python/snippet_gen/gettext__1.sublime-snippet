@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[gettext]]></content>
+    <tabTrigger>gettext</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:gettext</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[format(${1:value}${2:, ${3:format_spec}})]]></content>
+    <tabTrigger>format</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>functional:format</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[handler]]></content>
+    <tabTrigger>handler</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:handler</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[gzip]]></content>
+    <tabTrigger>gzip</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:gzip</description>
+</snippet>

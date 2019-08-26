@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[gensuitemodule]]></content>
+    <tabTrigger>gensuitemodule</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:gensuitemodule</description>
+</snippet>

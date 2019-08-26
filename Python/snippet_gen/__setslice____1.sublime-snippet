@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__setslice__]]></content>
+    <tabTrigger>__setslice__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__setslice__</description>
+</snippet>

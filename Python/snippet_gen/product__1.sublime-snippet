@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[product(${1:*iterables})]]></content>
+    <tabTrigger>product</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>itertools:product</description>
+</snippet>

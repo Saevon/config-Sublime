@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[queue<${1:val_t}>]]></content>
+    <tabTrigger>queue</tabTrigger>
+
+    <scope>source.c++</scope>
+    <description>container:queue</description>
+</snippet>

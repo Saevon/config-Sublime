@@ -1,0 +1,16 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[#pragma once
+#ifndef ${1:__HEADER_CPP__}
+#define ${1}
+
+${2}
+
+#endif  /* !${1} */
+]]></content>
+    <tabTrigger>header</tabTrigger>
+
+    <scope>source.c++</scope>
+    <description>block:header</description>
+</snippet>

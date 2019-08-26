@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[socketserver]]></content>
+    <tabTrigger>socketserver</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:socketserver</description>
+</snippet>

@@ -1,0 +1,11 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[if ${1:True}:
+	${2:pass}
+]]></content>
+    <tabTrigger>if</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>block:if</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[unichr(${1:i})]]></content>
+    <tabTrigger>unichr</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>type:unichr</description>
+</snippet>

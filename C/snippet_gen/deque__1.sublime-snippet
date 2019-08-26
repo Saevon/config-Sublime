@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[deque<${1:val_t}>]]></content>
+    <tabTrigger>deque</tabTrigger>
+
+    <scope>source.c++</scope>
+    <description>container:deque</description>
+</snippet>

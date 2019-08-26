@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[whichdb]]></content>
+    <tabTrigger>whichdb</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:whichdb</description>
+</snippet>

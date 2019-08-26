@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__file__]]></content>
+    <tabTrigger>__file__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__file__</description>
+</snippet>

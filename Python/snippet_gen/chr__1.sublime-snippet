@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[chr(${1:i})]]></content>
+    <tabTrigger>chr</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>builtin:chr</description>
+</snippet>

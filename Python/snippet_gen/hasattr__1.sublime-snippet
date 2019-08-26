@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[hasattr(${1:object}, ${2:name})]]></content>
+    <tabTrigger>hasattr</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>builtin:hasattr</description>
+</snippet>

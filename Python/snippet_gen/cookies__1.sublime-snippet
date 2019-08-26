@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[cookies]]></content>
+    <tabTrigger>cookies</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:cookies</description>
+</snippet>

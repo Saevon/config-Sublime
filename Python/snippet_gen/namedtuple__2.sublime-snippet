@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[${1:TypeName} = namedtuple('$1', ['${2:field}', ${3:...}])]]></content>
+    <tabTrigger>namedtuple</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>type:namedtuple</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[distutils]]></content>
+    <tabTrigger>distutils</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:distutils</description>
+</snippet>

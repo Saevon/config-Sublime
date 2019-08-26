@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[reload(${1:module})]]></content>
+    <tabTrigger>reload</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>builtin:reload</description>
+</snippet>

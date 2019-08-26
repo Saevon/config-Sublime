@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[getattr(${1:object}, ${2: name}${3:, ${4:default}})]]></content>
+    <tabTrigger>getattr</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>functional:getattr</description>
+</snippet>

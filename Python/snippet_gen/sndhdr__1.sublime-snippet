@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[sndhdr]]></content>
+    <tabTrigger>sndhdr</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:sndhdr</description>
+</snippet>

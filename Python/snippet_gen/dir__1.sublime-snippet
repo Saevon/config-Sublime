@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[dir(${1:object})]]></content>
+    <tabTrigger>dir</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>builtin:dir</description>
+</snippet>

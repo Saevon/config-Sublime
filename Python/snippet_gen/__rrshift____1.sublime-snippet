@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__rrshift__]]></content>
+    <tabTrigger>__rrshift__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__rrshift__</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[faulthandler]]></content>
+    <tabTrigger>faulthandler</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:faulthandler</description>
+</snippet>

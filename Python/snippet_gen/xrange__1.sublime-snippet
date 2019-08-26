@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[xrange(${1:start}${2:, ${3:stop}}${4:, ${5:step}})]]></content>
+    <tabTrigger>xrange</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>functional:xrange</description>
+</snippet>

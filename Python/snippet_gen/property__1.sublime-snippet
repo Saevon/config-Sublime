@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[property]]></content>
+    <tabTrigger>property</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>decorator:keyword:property</description>
+</snippet>

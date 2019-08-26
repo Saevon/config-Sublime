@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[print]]></content>
+    <tabTrigger>print</tabTrigger>
+
+    <scope>source.c++</scope>
+    <description>keyword:print</description>
+</snippet>

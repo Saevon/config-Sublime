@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[types]]></content>
+    <tabTrigger>types</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:types</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[enumerate(${1:sequence}, start=0)]]></content>
+    <tabTrigger>enumerate</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>functional:enumerate</description>
+</snippet>

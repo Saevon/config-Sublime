@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[set(${1:iterable})]]></content>
+    <tabTrigger>set</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>type:set</description>
+</snippet>

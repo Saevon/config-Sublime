@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[sched]]></content>
+    <tabTrigger>sched</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:sched</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__rcmp__]]></content>
+    <tabTrigger>__rcmp__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__rcmp__</description>
+</snippet>

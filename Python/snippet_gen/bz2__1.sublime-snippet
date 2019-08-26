@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[bz2]]></content>
+    <tabTrigger>bz2</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:bz2</description>
+</snippet>

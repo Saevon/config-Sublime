@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[bsddb]]></content>
+    <tabTrigger>bsddb</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:bsddb</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[tee(${1:*iterables})]]></content>
+    <tabTrigger>tee</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>itertools:tee</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[zipfile]]></content>
+    <tabTrigger>zipfile</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:zipfile</description>
+</snippet>

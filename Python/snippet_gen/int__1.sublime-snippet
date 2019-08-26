@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[int(${1:x=0})]]></content>
+    <tabTrigger>int</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>type:int</description>
+</snippet>

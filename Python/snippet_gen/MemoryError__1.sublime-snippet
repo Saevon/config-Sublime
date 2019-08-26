@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[MemoryError${1:(\"${2:error}\")}]]></content>
+    <tabTrigger>MemoryError</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>error:MemoryError</description>
+</snippet>

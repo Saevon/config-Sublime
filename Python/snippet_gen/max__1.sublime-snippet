@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[max(${1:iterable}${2:, ${3:key}})]]></content>
+    <tabTrigger>max</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>functional:max</description>
+</snippet>

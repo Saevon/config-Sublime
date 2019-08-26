@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[raw_input(${1:prompt})]]></content>
+    <tabTrigger>raw_input</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>builtin:raw_input</description>
+</snippet>

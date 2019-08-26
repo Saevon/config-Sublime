@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[#include "${1}.h"]]></content>
+    <tabTrigger>include-h</tabTrigger>
+
+    <scope>source.c++</scope>
+    <description>block:include-h</description>
+</snippet>

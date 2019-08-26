@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[[${1:val} ++ 1 | ${1} <- ${2:[0..20]} ]]]></content>
+    <tabTrigger>list_comprehension</tabTrigger>
+
+    <scope>source.haskell</scope>
+    <description>synonym:list_comprehension</description>
+</snippet>

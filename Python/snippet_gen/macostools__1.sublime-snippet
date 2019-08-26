@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[macostools]]></content>
+    <tabTrigger>macostools</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:macostools</description>
+</snippet>

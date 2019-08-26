@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__rfloordiv__]]></content>
+    <tabTrigger>__rfloordiv__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__rfloordiv__</description>
+</snippet>

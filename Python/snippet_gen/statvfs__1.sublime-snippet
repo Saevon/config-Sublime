@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[statvfs]]></content>
+    <tabTrigger>statvfs</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:statvfs</description>
+</snippet>

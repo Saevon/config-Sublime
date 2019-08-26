@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[turtle]]></content>
+    <tabTrigger>turtle</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:turtle</description>
+</snippet>

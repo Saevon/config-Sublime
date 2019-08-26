@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__metaclass__]]></content>
+    <tabTrigger>__metaclass__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__metaclass__</description>
+</snippet>

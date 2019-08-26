@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[issubclass(${1:class}, ${2:classinfo})]]></content>
+    <tabTrigger>issubclass</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>builtin:issubclass</description>
+</snippet>

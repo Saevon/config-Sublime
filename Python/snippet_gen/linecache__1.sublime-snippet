@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[linecache]]></content>
+    <tabTrigger>linecache</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:linecache</description>
+</snippet>

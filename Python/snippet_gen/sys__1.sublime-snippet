@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[sys]]></content>
+    <tabTrigger>sys</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:sys</description>
+</snippet>

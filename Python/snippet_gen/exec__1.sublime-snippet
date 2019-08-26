@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[exec]]></content>
+    <tabTrigger>exec</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>keyword:exec</description>
+</snippet>

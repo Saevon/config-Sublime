@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[int]]></content>
+    <tabTrigger>int</tabTrigger>
+
+    <scope>source.c++</scope>
+    <description>type:int</description>
+</snippet>

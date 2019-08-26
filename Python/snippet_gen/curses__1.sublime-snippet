@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[curses]]></content>
+    <tabTrigger>curses</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:curses</description>
+</snippet>

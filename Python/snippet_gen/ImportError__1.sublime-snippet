@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[ImportError${1:(\"${2:error}\")}]]></content>
+    <tabTrigger>ImportError</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>error:ImportError</description>
+</snippet>

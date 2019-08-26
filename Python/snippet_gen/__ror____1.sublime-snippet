@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__ror__]]></content>
+    <tabTrigger>__ror__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__ror__</description>
+</snippet>

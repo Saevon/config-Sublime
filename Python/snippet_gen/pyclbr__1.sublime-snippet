@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[pyclbr]]></content>
+    <tabTrigger>pyclbr</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:pyclbr</description>
+</snippet>

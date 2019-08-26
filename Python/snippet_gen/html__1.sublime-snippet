@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[html]]></content>
+    <tabTrigger>html</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:html</description>
+</snippet>

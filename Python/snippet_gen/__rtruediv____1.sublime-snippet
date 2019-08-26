@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__rtruediv__]]></content>
+    <tabTrigger>__rtruediv__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__rtruediv__</description>
+</snippet>

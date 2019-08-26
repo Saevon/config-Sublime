@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__setitem__]]></content>
+    <tabTrigger>__setitem__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__setitem__</description>
+</snippet>

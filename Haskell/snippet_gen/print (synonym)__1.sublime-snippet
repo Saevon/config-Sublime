@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[putStrLn ${1:"string" ++ "other"}]]></content>
+    <tabTrigger>print (synonym)</tabTrigger>
+
+    <scope>source.haskell</scope>
+    <description>synonym:print (synonym)</description>
+</snippet>

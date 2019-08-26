@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[aetools]]></content>
+    <tabTrigger>aetools</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:aetools</description>
+</snippet>

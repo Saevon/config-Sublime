@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[ArithmeticError${1:(\"${2:error}\")}]]></content>
+    <tabTrigger>ArithmeticError</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>error:ArithmeticError</description>
+</snippet>

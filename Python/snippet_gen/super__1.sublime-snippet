@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[super(${1:type}, ${2:object-or-type})]]></content>
+    <tabTrigger>super</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>functional:super</description>
+</snippet>

@@ -1,0 +1,11 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[if __name__ == '__main__':
+	${1:pass}
+]]></content>
+    <tabTrigger>__main__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>block:__main__</description>
+</snippet>

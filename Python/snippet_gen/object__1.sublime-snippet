@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[object()]]></content>
+    <tabTrigger>object</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>type:object</description>
+</snippet>

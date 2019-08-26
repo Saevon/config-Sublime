@@ -1,0 +1,853 @@
+scope: source.python
+snippets:
+    keyword:
+      - and
+      - or
+      - not
+
+      - as
+      - break
+      - continue
+      - except
+      - finally
+      - for
+      - in
+      - is
+      - pass
+      - raise
+      - return
+      - try
+      - while
+      - with
+      - yield
+
+      - assert
+      - del
+      - print
+      - exec
+
+      - None
+      - "False"
+      - "True"
+
+      - python
+
+    block:
+      # Language features
+      - trigger: if
+        snippet: |
+            if ${1:True}:
+            	${2:pass}
+      - trigger: elif
+        snippet: |
+            elif ${1:True}:
+            	${2:pass}
+      - trigger: else
+        snippet: |
+            else:
+            	${1:pass}
+      - trigger: __main__
+        snippet: |
+            if __name__ == '__main__':
+            	${1:pass}
+      - trigger: __name__
+        snippet: |
+          	if __name__ == '__main__':
+          	${1:pass}
+
+    error:
+      - trigger: ArithmeticError
+        snippet: ArithmeticError${1:(\"${2:error}\")}
+      - trigger: AssertionError
+        snippet: AssertionError${1:(\"${2:error}\")}
+      - trigger: AttributeError
+        snippet: AttributeError${1:(\"${2:error}\")}
+      - trigger: BaseException
+        snippet: BaseException${1:(\"${2:error}\")}
+      - trigger: BufferError
+        snippet: BufferError${1:(\"${2:error}\")}
+      - trigger: BytesWarning
+        snippet: BytesWarning${1:(\"${2:error}\")}
+      - trigger: DeprecationWarning
+        snippet: DeprecationWarning${1:(\"${2:error}\")}
+      - trigger: EnvironmentError
+        snippet: EnvironmentError${1:(\"${2:error}\")}
+      - trigger: EOFError
+        snippet: EOFError${1:(\"${2:error}\")}
+      - trigger: Exception
+        snippet: Exception${1:(\"${2:error}\")}
+      - trigger: FloatingPointError
+        snippet: FloatingPointError${1:(\"${2:error}\")}
+      - trigger: FutureWarning
+        snippet: FutureWarning${1:(\"${2:error}\")}
+      - trigger: GeneratorExit
+        snippet: GeneratorExit${1:(\"${2:error}\")}
+      - trigger: ImportError
+        snippet: ImportError${1:(\"${2:error}\")}
+      - trigger: ImportWarning
+        snippet: ImportWarning${1:(\"${2:error}\")}
+      - trigger: IndentationError
+        snippet: IndentationError${1:(\"${2:error}\")}
+      - trigger: IndexError
+        snippet: IndexError${1:(\"${2:error}\")}
+      - trigger: IOError
+        snippet: IOError${1:(\"${2:error}\")}
+      - trigger: KeyboardInterrupt
+        snippet: KeyboardInterrupt${1:(\"${2:error}\")}
+      - trigger: KeyError
+        snippet: KeyError${1:(\"${2:error}\")}
+      - trigger: LookupError
+        snippet: LookupError${1:(\"${2:error}\")}
+      - trigger: MemoryError
+        snippet: MemoryError${1:(\"${2:error}\")}
+      - trigger: NameError
+        snippet: NameError${1:(\"${2:error}\")}
+      - trigger: NotImplemented
+        snippet: NotImplemented${1:(\"${2:error}\")}
+      - trigger: NotImplementedError
+        snippet: NotImplementedError${1:(\"${2:error}\")}
+      - trigger: OSError
+        snippet: OSError${1:(\"${2:error}\")}
+      - trigger: OverflowError
+        snippet: OverflowError${1:(\"${2:error}\")}
+      - trigger: PendingDeprecationWarning
+        snippet: PendingDeprecationWarning${1:(\"${2:error}\")}
+      - trigger: ReferenceError
+        snippet: ReferenceError${1:(\"${2:error}\")}
+      - trigger: RuntimeError
+        snippet: RuntimeError${1:(\"${2:error}\")}
+      - trigger: RuntimeWarning
+        snippet: RuntimeWarning${1:(\"${2:error}\")}
+      - trigger: StandardError
+        snippet: StandardError${1:(\"${2:error}\")}
+      - trigger: StopIteration
+        snippet: StopIteration${1:(\"${2:error}\")}
+      - trigger: SyntaxError
+        snippet: SyntaxError${1:(\"${2:error}\")}
+      - trigger: SyntaxWarning
+        snippet: SyntaxWarning${1:(\"${2:error}\")}
+      - trigger: SystemError
+        snippet: SystemError${1:(\"${2:error}\")}
+      - trigger: SystemExit
+        snippet: SystemExit${1:(\"${2:error}\")}
+      - trigger: TabError
+        snippet: TabError${1:(\"${2:error}\")}
+      - trigger: TypeError
+        snippet: TypeError${1:(\"${2:error}\")}
+      - trigger: UnboundLocalError
+        snippet: UnboundLocalError${1:(\"${2:error}\")}
+      - trigger: UnicodeDecodeError
+        snippet: UnicodeDecodeError${1:(\"${2:error}\")}
+      - trigger: UnicodeEncodeError
+        snippet: UnicodeEncodeError${1:(\"${2:error}\")}
+      - trigger: UnicodeTranslateError
+        snippet: UnicodeTranslateError${1:(\"${2:error}\")}
+      - trigger: UnicodeWarning
+        snippet: UnicodeWarning${1:(\"${2:error}\")}
+      - trigger: UserWarning
+        snippet: UserWarning${1:(\"${2:error}\")}
+      - trigger: ValueError
+        snippet: ValueError${1:(\"${2:error}\")}
+      - trigger: VMSError
+        snippet: VMSError${1:(\"${2:error}\")}
+      - trigger: WindowsError
+        snippet: WindowsError${1:(\"${2:error}\")}
+      - trigger: ZeroDivision
+        snippet: ZeroDivision${1:(\"${2:error}\")}
+
+    builtin:
+      - trigger: abs
+        snippet: abs(${1:x})
+      - trigger: callable
+        snippet: callable(${1:object})
+      - trigger: chr
+        snippet: chr(${1:i})
+      - trigger: cmp
+        snippet: cmp(${1:x}, ${2:y})
+      - trigger: compile
+        snippet: compile(${1:source}, ${2:filename}, ${3:mode}, ${4:flags, ${5:dont_inherit}})
+      - trigger: delattr
+        snippet: delattr(${1:object}, ${2:name})
+      - trigger: dict
+        snippet: dict(**kwarg)
+      - trigger: dir
+        snippet: dir(${1:object})
+      - trigger: divmod
+        snippet: divmod(${1:a}, ${2:b})
+      - trigger: globals
+        snippet: globals()
+      - trigger: hasattr
+        snippet: hasattr(${1:object}, ${2:name})
+      - trigger: hash
+        snippet: hash(${1:object})
+      - trigger: help
+        snippet: help(${1:object})
+      - trigger: id
+        snippet: id(${1:object})
+      - trigger: input
+        snippet: input(${1:prompt})
+      - trigger: isinstance
+        snippet: isinstance(${1:object}, ${2:classinfo})
+      - trigger: issubclass
+        snippet: issubclass(${1:class}, ${2:classinfo})
+      - trigger: len
+        snippet: len(${1:s})
+      - trigger: locals
+        snippet: locals()
+      - trigger: ord
+        snippet: ord(${1:c})
+      - trigger: print
+        snippet: print(*objects, sep=' ', end='\\n', file=sys.stdout)
+      - trigger: raw_input
+        snippet: raw_input(${1:prompt})
+      - trigger: reload
+        snippet: reload(${1:module})
+      - trigger: repr
+        snippet: repr(${1:object})
+      - trigger: reversed
+        snippet: reversed(${1:seq})
+      - trigger: setattr
+        snippet: setattr(${1:object}, ${2:name}, ${3:value})
+      - trigger: type
+        snippet: type(${1:object})
+      - trigger: vars
+        snippet: vars(${1:object})
+
+
+    decorator:
+      - classmethod
+      - staticmethod
+      - trigger: property
+        snippet: property
+        desc: keyword
+      - trigger: property
+        snippet: property(${1:fget}${2:, ${3:fset}${4:, ${5:fdel}${6:, ${7:doc}}}})
+
+
+    functional:
+      - trigger: all
+        snippet: all(${1:iterable})
+      - trigger: any
+        snippet: any(${1:iterable})
+      - trigger: enumerate
+        snippet: enumerate(${1:sequence}, start=0)
+      - trigger: filter
+        snippet: filter(${1:function}, ${2:iterable})
+      - trigger: map
+        snippet: map(${1:function}, ${2:iterable}, ${3:...})
+      - trigger: max
+        snippet: max(${1:iterable}${2:, ${3:key}})
+      - trigger: min
+        snippet: min(${1:iterable}${2:, ${3:key}})
+      - trigger: range
+        snippet: range(${1:stop})
+      - trigger: reduce
+        snippet: reduce(${1:function}, ${2:iterable}${3:, ${4:initializer}})
+      - trigger: slice
+        snippet: slice(${1:start}${2:, ${3:stop}}${4:, ${5:step}})
+      - trigger: sum
+        snippet: sum(${1:iterable}${2:, ${3:start}})
+      - trigger: xrange
+        snippet: xrange(${1:start}${2:, ${3:stop}}${4:, ${5:step}})
+      - trigger: zip
+        snippet: zip(${1:*iterables})
+
+
+        # Variable length args
+      - trigger: bytearray
+        snippet: bytearray(${1:source${2:, ${3:encoding}${4:, ${5:errors}}}})
+      - trigger: complex
+        snippet: complex(${1:real}${2:, ${3:imag}})
+      - trigger: eval
+        snippet: eval(${1:expression}${2:, ${3:globals}${4:, ${5:locals}}})
+      - trigger: execfile
+        snippet: execfile(${1:filename}${2:, ${3:globals}${4:, ${5:locals}}})
+      - trigger: file
+        snippet: file(${1:name}${2:, ${3:mode}${4:, ${5:buffering}}})
+      - trigger: format
+        snippet: format(${1:value}${2:, ${3:format_spec}})
+      - trigger: getattr
+        snippet: "getattr(${1:object}, ${2: name}${3:, ${4:default}})"
+      - trigger: iter
+        snippet: iter(${1:o}${2:, ${3:sentinel}})
+      - trigger: next
+        snippet: next(${1:iterator}${2:, ${3:default}})
+      - trigger: open
+        snippet: open(${1:name}${2:, ${3:mode}${4:, ${5:buffering}}})
+      - trigger: pow
+        snippet: "pow(${1:x}, ${2: y${3:, ${4:z}}})"
+      - trigger: round
+        snippet: round(${1:number}${2:, ${3:ndigits}})
+      - trigger: sorted
+        snippet: sorted(${1:iterable}${2:, ${3:key}${4:, ${5:reverse}${6:, ${7:cmp}}}})
+
+        # Special
+      - trigger: __import__
+        snippet: __import__(${1:name}${2:, ${3:globals}${4:, ${5:locals}${6:, ${7:fromlist}${8:, ${9:level}}}}})
+      - trigger: super
+        snippet: super(${1:type}, ${2:object-or-type})
+
+    itertools:
+      - trigger: cycle
+        snippet: cycle(${1:iterable})
+      - trigger: repeat
+        snippet: repeat(${1:elem}${2:, ${3:n}})
+      - trigger: accumulate
+        snippet: accumulate(${1:iterable}${2:, ${3:func}})
+      - trigger: chain
+        snippet: chain(${1:*iterables})
+      - trigger: dropwhile
+        snippet: dropwhile(${1:function}, ${2:iterable})
+      - trigger: takewhile
+        snippet: takewhile(${1:function}, ${2:iterable})
+      - trigger: filterfalse
+        snippet: filterfalse(${1:function}, ${2:iterable})
+      - trigger: groupby
+        snippet: groupby(${1:iterable}, ${2:key_func})
+      - trigger: islice
+        snippet: islice(${1:start}${2:, ${3:stop}}${4:, ${5:step}})
+      - trigger: starmap
+        snippet: starmap(${1:func}, ${2:iterable})
+      - trigger: tee
+        snippet: tee(${1:*iterables})
+      - trigger: product
+        snippet: product(${1:*iterables})
+
+
+
+    debug:
+      - trigger: breakpoint
+        snippet: breakpoint()
+      - trigger: trace
+        snippet: import pdb; pdb.set_trace()
+
+    lib:
+      - trigger: dedent
+        snippet: textwrap.dedent
+
+
+    type:
+      - trigger: namedtuple
+        snippet: namedtuple
+        desc: keyword
+      - trigger: namedtuple
+        snippet: ${1:TypeName} = namedtuple('$1', ['${2:field}', ${3:...}])
+      - trigger: defaultdict
+        snippet: defaultdict(${1:constructor})
+
+      - trigger: basestring
+        snippet: basestring()
+      - trigger: bin
+        snippet: bin(${1:x})
+      - trigger: bool
+        snippet: bool(${1:x})
+      - trigger: float
+        snippet: float(${1:x})
+      - trigger: frozenset
+        snippet: frozenset(${1:iterable})
+      - trigger: hex
+        snippet: hex(${1:x})
+      - trigger: int
+        snippet: int(${1:x=0})
+      - trigger: list
+        snippet: list(${1:iterable})
+      - trigger: long
+        snippet: long(${1:x})
+      - trigger: memoryview
+        snippet: memoryview(${1:obj})
+      - trigger: object
+        snippet: object()
+      - trigger: oct
+        snippet: oct(${1:x})
+      - trigger: set
+        snippet: set(${1:iterable})
+      - trigger: str
+        snippet: str(${1:object=''})
+      - trigger: tuple
+        snippet: tuple(${1:iterable})
+      - trigger: unichr
+        snippet: unichr(${1:i})
+      - trigger: unicode
+        snippet: unicode(object='')
+
+
+    dunder:
+      - __abs__
+      - __add__
+      - __and__
+      - __bases__
+      - __call__
+      - __class__
+      - __cmp__
+      - __coerce__
+      - __complex__
+      - __contains__
+      - __del__
+      - __delattr__
+      - __delete__
+      - __delitem__
+      - __delslice__
+      - __dict__
+      - __div__
+      - __divmod__
+      - __doc__
+      - __enter__
+      - __eq__
+      - __exit__
+      - __file__
+      - __float__
+      - __floordiv__
+      - __func__
+      - __future__
+      - __ge__
+      - __get__
+      - __getattr__
+      - __getattribute__
+      - __getitem__
+      - __getslice__
+      - __gt__
+      - __hash__
+      - __hex__
+      - __iadd__
+      - __iand__
+      - __idiv__
+      - __ifloordiv__
+      - __ilshift__
+      - __imod__
+      - __imul__
+      - __index__
+      - __init__
+      - __instancecheck__
+      - __int__
+      - __invert__
+      - __iop__
+      - __ior__
+      - __ipow__
+      - __irshift__
+      - __isub__
+      - __iter__
+      - __itruediv__
+      - __ixor__
+      - __le__
+      - __len__
+      - __long__
+      - __lshift__
+      - __lt__
+      - __metaclass__
+      - __mod__
+      - __module__
+      - __mro__
+      - __mul__
+      - __name__
+      - __ne__
+      - __neg__
+      - __new__
+      - __nonzero__
+      - __oct__
+      - __op__
+      - __or__
+      - __pos__
+      - __pow__
+      - __radd__
+      - __rand__
+      - __rcmp__
+      - __rdiv__
+      - __rdivmod__
+      - __repr__
+      - __reversed__
+      - __rfloordiv__
+      - __rlshift__
+      - __rmod__
+      - __rmul__
+      - __rop__
+      - __ror__
+      - __rpow__
+      - __rrshift__
+      - __rshift__
+      - __rsub__
+      - __rtruediv__
+      - __rxor__
+      - __self__
+      - __set__
+      - __setattr__
+      - __setitem__
+      - __setslice__
+      - __slots__
+      - __str__
+      - __sub__
+      - __subclasscheck__
+      - __truediv__
+      - __unicode__
+      - __weakref__
+      - __xor__
+
+    module:
+      - 2to3
+      - __builtin__
+      - __future__
+      - __main__
+      - _dummy_thread
+      - _thread
+      - _winreg
+      - abc
+      - aepack
+      - aetools
+      - aetypes
+      - aifc
+      - al
+      - AL
+      - anydbm
+      - argparse
+      - array
+      - ascii
+      - ast
+      - asynchat
+      - asyncore
+      - atexit
+      - audioop
+      - autoGIL
+      - base64
+      - BaseHTTPServer
+      - Bastion
+      - bdb
+      - binascii
+      - binhex
+      - bisect
+      - bsddb
+      - builtins
+      - bz2
+      - calendar
+      - cd
+      - cgi
+      - CGIHTTPServer
+      - cgitb
+      - chunk
+      - client
+      - cmath
+      - cmd
+      - code
+      - codecs
+      - codeop
+      - collections
+      - ColorPicker
+      - colorsys
+      - commands
+      - compileall
+      - config
+      - ConfigParser
+      - configparser
+      - contextlib
+      - Cookie
+      - cookiejar
+      - cookielib
+      - cookies
+      - copy
+      - copy_reg
+      - copyreg
+      - cPickle
+      - crypt
+      - cStringIO
+      - csv
+      - ctypes
+      - curses
+      - datetime
+      - dbhash
+      - dbm
+      - decimal
+      - DEVICE
+      - difflib
+      - dircache
+      - dis
+      - distutils
+      - dl
+      - doctest
+      - DocXMLRPCServer
+      - dom
+      - dumbdbm
+      - dummy_thread
+      - dummy_threading
+      - EasyDialogs
+      - ElementTree
+      - email
+      - entities
+      - errno
+      - error
+      - expat
+      - faulthandler
+      - fcntl
+      - filecmp
+      - fileinput
+      - findertools
+      - fl
+      - FL
+      - flp
+      - fm
+      - fnmatch
+      - formatter
+      - fpectl
+      - fpformat
+      - fractions
+      - FrameWork
+      - ftplib
+      - functools
+      - futures
+      - gc
+      - gdbm
+      - gensuitemodule
+      - getopt
+      - getpass
+      - gettext
+      - gl
+      - GL
+      - glob
+      - grp
+      - gzip
+      - handler
+      - handlers
+      - hashlib
+      - heapq
+      - hmac
+      - hotshot
+      - html
+      - htmlentitydefs
+      - htmllib
+      - HTMLParser
+      - http
+      - httplib
+      - ic
+      - imageop
+      - imaplib
+      - imgfile
+      - imghdr
+      - imp
+      - importlib
+      - imputil
+      - inspect
+      - io
+      - ipaddress
+      - itertools
+      - jpeg
+      - json
+      - keyword
+      - linecache
+      - locale
+      - logging
+      - lzma
+      - MacOS
+      - macostools
+      - macpath
+      - mailbox
+      - mailcap
+      - marshal
+      - math
+      - md5
+      - mhlib
+      - mimetools
+      - mimetypes
+      - MimeWriter
+      - mimify
+      - MiniAEFrame
+      - minidom
+      - mmap
+      - mock
+      - modulefinder
+      - msilib
+      - msvcrt
+      - multifile
+      - multiprocessing
+      - mutex
+      - netrc
+      - new
+      - nis
+      - nntplib
+      - numbers
+      - operator
+      - optparse
+      - os
+      - ossaudiodev
+      - panel
+      - parse
+      - parser
+      - path
+      - pdb
+      - pickle
+      - pickletools
+      - pipes
+      - pkgutil
+      - platform
+      - plistlib
+      - popen2
+      - poplib
+      - posix
+      - posixfile
+      - pprint
+      - pty
+      - pulldom
+      - pwd
+      - py_compile
+      - pyclbr
+      - pydoc
+      - Queue
+      - queue
+      - quopri
+      - random
+      - re
+      - readline
+      - repr
+      - reprlib
+      - request
+      - resource
+      - response
+      - rexec
+      - rfc822
+      - rlcompleter
+      - robotparser
+      - runpy
+      - sax
+      - saxutils
+      - sched
+      - ScrolledText
+      - scrolledtext
+      - select
+      - server
+      - sets
+      - sgmllib
+      - sha
+      - shelve
+      - shlex
+      - shutil
+      - signal
+      - SimpleHTTPServer
+      - SimpleXMLRPCServer
+      - site
+      - smtpd
+      - smtplib
+      - sndhdr
+      - socket
+      - socketserver
+      - spwd
+      - sqlite3
+      - ssl
+      - stat
+      - statvfs
+      - string
+      - StringIO
+      - stringprep
+      - struct
+      - subprocess
+      - sunau
+      - support
+      - symbol
+      - symtable
+      - sys
+      - sysconfig
+      - syslog
+      - tabnanny
+      - tarfile
+      - telnetlib
+      - tempfile
+      - termios
+      - test
+      - test_support
+      - textpad
+      - textwrap
+      - thread
+      - threading
+      - time
+      - timeit
+      - Tix
+      - tix
+      - Tkinter
+      - tkinter
+      - token
+      - tokenize
+      - trace
+      - traceback
+      - ttk
+      - tty
+      - turtle
+      - types
+      - unicodedata
+      - unittest
+      - urllib
+      - urllib2
+      - urlparse
+      - user
+      - UserDict
+      - UserList
+      - UserString
+      - uu
+      - uuid
+      - venv
+      - warnings
+      - wave
+      - weakref
+      - webbrowser
+      - whichdb
+      - winreg
+      - winsound
+      - wsgiref
+      - xdrlib
+      - xmlreader
+      - xmlrpc
+      - xmlrpclib
+      - zipfile
+      - zipimport
+      - zlib
+
+    http:
+      - trigger: 400 BadRequest
+        snippet: BadRequest(${1:''})
+      - trigger: 401 Unauthorized
+        snippet: Unauthorized(${1:''})
+      - trigger: 403 Forbidden
+        snippet: Forbidden(${1:''})
+      - trigger: 404 NotFound
+        snippet: NotFound(${1:''})
+      - trigger: 405 MethodNotAllowed
+        snippet: MethodNotAllowed(${1:''})
+      - trigger: 406 NotAcceptable
+        snippet: NotAcceptable(${1:''})
+      - trigger: 408 RequestTimeout
+        snippet: RequestTimeout(${1:''})
+      - trigger: 409 Conflict
+        snippet: Conflict(${1:''})
+      - trigger: 410 Gone
+        snippet: Gone(${1:''})
+      - trigger: 411 LengthRequired
+        snippet: LengthRequired(${1:''})
+      - trigger: 412 PreconditionFailed
+        snippet: PreconditionFailed(${1:''})
+      - trigger: 413 RequestEntityTooLarge
+        snippet: RequestEntityTooLarge(${1:''})
+      - trigger: 414 RequestURITooLarge
+        snippet: RequestURITooLarge(${1:''})
+      - trigger: 415 UnsupportedMediaType
+        snippet: UnsupportedMediaType(${1:''})
+      - trigger: 416 RequestedRangeNotSatisfiable
+        snippet: RequestedRangeNotSatisfiable(${1:''})
+      - trigger: 417 ExpectationFailed
+        snippet: ExpectationFailed(${1:''})
+      - trigger: 418 ImATeapot
+        snippet: ImATeapot(${1:''})
+      - trigger: 422 UnprocessableEntity
+        snippet: UnprocessableEntity(${1:''})
+      - trigger: 423 Locked
+        snippet: Locked(${1:''})
+      - trigger: 428 PreconditionRequired
+        snippet: PreconditionRequired(${1:''})
+      - trigger: 429 TooManyRequests
+        snippet: TooManyRequests(${1:''})
+      - trigger: 431 RequestHeaderFieldsTooLarge
+        snippet: RequestHeaderFieldsTooLarge(${1:''})
+      - trigger: 451 UnavailableForLegalReasons
+        snippet: UnavailableForLegalReasons(${1:''})
+      - trigger: 500 InternalServerError
+        snippet: InternalServerError(${1:''})
+      - trigger: 501 NotImplemented
+        snippet: NotImplemented(${1:''})
+      - trigger: 502 BadGateway
+        snippet: BadGateway(${1:''})
+      - trigger: 503 ServiceUnavailable
+        snippet: ServiceUnavailable(${1:''})
+

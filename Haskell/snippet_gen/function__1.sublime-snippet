@@ -1,0 +1,11 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[${1:name'} :: ${2:Int -> Int -> Int}
+${1} ${3:var1 var2} = ${4:var1 + var2}
+]]></content>
+    <tabTrigger>function</tabTrigger>
+
+    <scope>source.haskell</scope>
+    <description>synonym:function</description>
+</snippet>

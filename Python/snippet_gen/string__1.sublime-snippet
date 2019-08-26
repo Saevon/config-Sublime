@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[string]]></content>
+    <tabTrigger>string</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:string</description>
+</snippet>

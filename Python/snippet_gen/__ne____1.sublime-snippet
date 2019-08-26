@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__ne__]]></content>
+    <tabTrigger>__ne__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__ne__</description>
+</snippet>

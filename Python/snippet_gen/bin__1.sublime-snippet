@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[bin(${1:x})]]></content>
+    <tabTrigger>bin</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>type:bin</description>
+</snippet>

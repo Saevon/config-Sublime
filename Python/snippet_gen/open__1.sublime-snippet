@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[open(${1:name}${2:, ${3:mode}${4:, ${5:buffering}}})]]></content>
+    <tabTrigger>open</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>functional:open</description>
+</snippet>

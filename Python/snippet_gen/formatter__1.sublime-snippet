@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[formatter]]></content>
+    <tabTrigger>formatter</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:formatter</description>
+</snippet>

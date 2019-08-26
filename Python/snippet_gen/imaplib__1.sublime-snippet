@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[imaplib]]></content>
+    <tabTrigger>imaplib</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:imaplib</description>
+</snippet>

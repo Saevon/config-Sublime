@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[tempfile]]></content>
+    <tabTrigger>tempfile</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:tempfile</description>
+</snippet>

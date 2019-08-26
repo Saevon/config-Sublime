@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[syslog]]></content>
+    <tabTrigger>syslog</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:syslog</description>
+</snippet>

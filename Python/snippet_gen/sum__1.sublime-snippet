@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[sum(${1:iterable}${2:, ${3:start}})]]></content>
+    <tabTrigger>sum</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>functional:sum</description>
+</snippet>

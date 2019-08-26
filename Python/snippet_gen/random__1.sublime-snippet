@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[random]]></content>
+    <tabTrigger>random</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:random</description>
+</snippet>

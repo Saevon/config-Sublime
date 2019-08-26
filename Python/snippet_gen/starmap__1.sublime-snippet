@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[starmap(${1:func}, ${2:iterable})]]></content>
+    <tabTrigger>starmap</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>itertools:starmap</description>
+</snippet>

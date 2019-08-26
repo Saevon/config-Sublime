@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__future__]]></content>
+    <tabTrigger>__future__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__future__</description>
+</snippet>

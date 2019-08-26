@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[property(${1:fget}${2:, ${3:fset}${4:, ${5:fdel}${6:, ${7:doc}}}})]]></content>
+    <tabTrigger>property</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>decorator:property</description>
+</snippet>

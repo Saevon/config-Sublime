@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__import__(${1:name}${2:, ${3:globals}${4:, ${5:locals}${6:, ${7:fromlist}${8:, ${9:level}}}}})]]></content>
+    <tabTrigger>__import__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>functional:__import__</description>
+</snippet>

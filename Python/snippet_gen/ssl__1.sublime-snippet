@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[ssl]]></content>
+    <tabTrigger>ssl</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:ssl</description>
+</snippet>

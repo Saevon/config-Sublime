@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[float(${1:x})]]></content>
+    <tabTrigger>float</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>type:float</description>
+</snippet>

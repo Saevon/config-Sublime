@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[codecs]]></content>
+    <tabTrigger>codecs</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:codecs</description>
+</snippet>

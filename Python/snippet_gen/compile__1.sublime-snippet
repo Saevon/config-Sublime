@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[compile(${1:source}, ${2:filename}, ${3:mode}, ${4:flags, ${5:dont_inherit}})]]></content>
+    <tabTrigger>compile</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>builtin:compile</description>
+</snippet>

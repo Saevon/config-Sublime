@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[delattr(${1:object}, ${2:name})]]></content>
+    <tabTrigger>delattr</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>builtin:delattr</description>
+</snippet>

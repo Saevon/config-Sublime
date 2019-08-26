@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[smtpd]]></content>
+    <tabTrigger>smtpd</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:smtpd</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__complex__]]></content>
+    <tabTrigger>__complex__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__complex__</description>
+</snippet>

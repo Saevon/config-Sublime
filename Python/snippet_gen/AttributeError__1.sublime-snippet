@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[AttributeError${1:(\"${2:error}\")}]]></content>
+    <tabTrigger>AttributeError</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>error:AttributeError</description>
+</snippet>

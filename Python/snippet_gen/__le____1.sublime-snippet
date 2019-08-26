@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__le__]]></content>
+    <tabTrigger>__le__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__le__</description>
+</snippet>

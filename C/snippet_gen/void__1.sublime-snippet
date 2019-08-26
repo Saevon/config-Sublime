@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[void]]></content>
+    <tabTrigger>void</tabTrigger>
+
+    <scope>source.c++</scope>
+    <description>type:void</description>
+</snippet>

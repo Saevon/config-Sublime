@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[__mul__]]></content>
+    <tabTrigger>__mul__</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>dunder:__mul__</description>
+</snippet>

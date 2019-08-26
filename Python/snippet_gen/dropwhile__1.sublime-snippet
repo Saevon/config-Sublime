@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[dropwhile(${1:function}, ${2:iterable})]]></content>
+    <tabTrigger>dropwhile</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>itertools:dropwhile</description>
+</snippet>
