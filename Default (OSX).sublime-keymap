@@ -1,6 +1,7 @@
 [
     { "keys": ["super+."], "command": "indent" },
     { "keys": ["super+,"], "command": "unindent" },
+    { "keys": ["shift+tab"], "command": "unindent" },
 
     // Disable auto-completions with Enter
     {
@@ -10,6 +11,18 @@
             { "key": "setting.auto_complete_commit_on_tab", "operand": false }
         ],
         "args": {"characters": "\n"},
+    },
+    // Disable Ctrl+Space selecting a completion
+    { "keys": ["shift+tab"], "command": "insert_best_completion", "args": {"exact": true},
+        "context": [{"key": "auto_complete_visible"}],
+     },
+
+    { "keys": ["ctrl+space"], "command": "noop", "context":
+        [
+            { "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
+            { "key": "auto_complete_visible", "operator": "equal", "operand": false },
+            { "key": "setting.tab_completion", "operator": "equal", "operand": true }
+        ]
     },
 
 
@@ -625,7 +638,7 @@
 
 
     // Code Intel
-    { "keys": ["ctrl+shift+space"], "command": "code_intel_auto_complete" },
+    { "keys": ["ctrl+alt+space"], "command": "code_intel_auto_complete" },
     // { "keys": ["ctrl+shift+j"], "command": "back_to_python_definition" },
     // { "keys": ["ctrl+shift+k"], "command": "goto_python_definition" },
 
