@@ -464,7 +464,7 @@
 			<key>name</key>
 			<string>Function Call</string>
 			<key>scope</key>
-			<string>variable.function</string>
+			<string>variable.function, entity.name.constructor</string>
 			<key>settings</key>
 			<dict>
 				<!-- Function Call Style -->
@@ -830,7 +830,8 @@
 				variable.source.logo, config.vimrc variable,
 				source.yaml.sublime.syntax punctuation.definition.variable,
 				variable.other.sublime-syntax,
-				meta.identifier.applescript, variable.other.readwrite.set.applescript, variable.other.property.applescript, variable.other.readwrite.global.applescript
+				meta.identifier.applescript, variable.other.readwrite.set.applescript, variable.other.property.applescript, variable.other.readwrite.global.applescript,
+				variable.other.haskell
 			</string>
 			<key>settings</key>
 			<dict>
