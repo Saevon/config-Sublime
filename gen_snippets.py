@@ -96,7 +96,7 @@ def generate_snippets(in_file, out_path):
         assert snippet["trigger"], "Need a trigger: {}".format(snippet)
 
 
-        key = snippet['trigger']
+        key = snippet['trigger'].lower()
 
         dups[key] += 1
         idx = dups[key]

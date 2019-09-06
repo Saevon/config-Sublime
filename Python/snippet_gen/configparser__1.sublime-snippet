@@ -1,9 +1,9 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[configparser]]></content>
-    <tabTrigger>configparser</tabTrigger>
+    <content><![CDATA[ConfigParser]]></content>
+    <tabTrigger>ConfigParser</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:configparser</description>
+    <description>module:ConfigParser</description>
 </snippet>

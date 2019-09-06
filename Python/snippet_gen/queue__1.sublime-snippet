@@ -1,9 +1,9 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[queue]]></content>
-    <tabTrigger>queue</tabTrigger>
+    <content><![CDATA[Queue]]></content>
+    <tabTrigger>Queue</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:queue</description>
+    <description>module:Queue</description>
 </snippet>
