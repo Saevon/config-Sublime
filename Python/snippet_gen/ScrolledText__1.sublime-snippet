@@ -1,9 +1,9 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[scrolledtext]]></content>
-    <tabTrigger>scrolledtext</tabTrigger>
+    <content><![CDATA[ScrolledText]]></content>
+    <tabTrigger>ScrolledText</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:scrolledtext</description>
+    <description>module:ScrolledText</description>
 </snippet>

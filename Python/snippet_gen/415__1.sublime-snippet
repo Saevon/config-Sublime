@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[UnsupportedMediaType(${1:''})]]></content>
+    <tabTrigger>415</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http UnsupportedMediaType:415</description>
+</snippet>

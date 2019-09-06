@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[Locked(${1:''})]]></content>
+    <tabTrigger>Locked</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http 423:Locked</description>
+</snippet>

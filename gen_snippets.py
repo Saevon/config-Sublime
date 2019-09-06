@@ -8,9 +8,14 @@ import os
 import re
 
 import yaml
+try:
+    from jinja2 import Template
+except ImportError:
+    pass
 
 
 SNIPPET_RAW = None
+
 
 def init_jinja():
     '''
@@ -20,7 +25,6 @@ def init_jinja():
     Warning! files in the sublime folders get auto-run as plugins
     ... but this is not a plugin?
     '''
-    from jinja2 import Template
 
     # Init Jinja2
     #   (with autoescape)
@@ -38,7 +42,6 @@ def init_jinja():
         """),
         autoescape=True,
     )
-
 
 
 def generate_snippets(in_file, out_path):
@@ -64,7 +67,7 @@ def generate_snippets(in_file, out_path):
             if group is not None:
                 if 'desc' not in entry:
                     entry['desc'] = group
-                else:
+                elif group not in entry['desc']:
                     entry['desc'] = "{}:{}".format(group, entry['desc'])
 
             entry['scope'] = scope
@@ -72,7 +75,20 @@ def generate_snippets(in_file, out_path):
             if ']]>' in entry['snippet']:
                 raise Exception("Illegal Chars for CDATA Section ']]>'")
 
-            snippets.append(entry)
+            if isinstance(entry['trigger'], list):
+                for trigger in entry['trigger']:
+                    tags = [
+                        tag for tag in entry.get('tags', [])
+                        if (tag not in entry['desc']) and (tag not in trigger)
+                    ]
+
+                    snippets.append({
+                        **entry,
+                        'trigger': trigger,
+                        'desc': entry['desc'] + ' ' + ' '.join(tags),
+                    })
+            else:
+                snippets.append(entry)
 
     dups = defaultdict(int)
 
@@ -140,6 +156,7 @@ def main(path):
             in_file=file,
             out_path=out_path,
         )
+
 
 if __name__ == '__main__':
     init_jinja()

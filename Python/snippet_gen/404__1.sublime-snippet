@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[NotFound(${1:''})]]></content>
+    <tabTrigger>404</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http NotFound:404</description>
+</snippet>

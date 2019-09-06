@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[UnprocessableEntity(${1:''})]]></content>
+    <tabTrigger>UnprocessableEntity</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http 422:UnprocessableEntity</description>
+</snippet>

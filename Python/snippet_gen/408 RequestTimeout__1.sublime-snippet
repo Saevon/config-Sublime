@@ -1,9 +1,0 @@
-
-<!-- Auto Generated, See the related .yaml file -->
-<snippet>
-    <content><![CDATA[RequestTimeout(${1:''})]]></content>
-    <tabTrigger>408 RequestTimeout</tabTrigger>
-
-    <scope>source.python</scope>
-    <description>http:408 RequestTimeout</description>
-</snippet>

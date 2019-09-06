@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[Gone(${1:''})]]></content>
+    <tabTrigger>410</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http Gone:410</description>
+</snippet>

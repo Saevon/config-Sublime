@@ -1,9 +1,0 @@
-
-<!-- Auto Generated, See the related .yaml file -->
-<snippet>
-    <content><![CDATA[fpformat]]></content>
-    <tabTrigger>fpformat</tabTrigger>
-
-    <scope>source.python</scope>
-    <description>module:fpformat</description>
-</snippet>

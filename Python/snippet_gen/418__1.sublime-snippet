@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[ImATeapot(${1:''})]]></content>
+    <tabTrigger>418</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http ImATeapot:418</description>
+</snippet>

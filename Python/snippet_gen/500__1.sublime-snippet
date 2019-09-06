@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[InternalServerError(${1:''})]]></content>
+    <tabTrigger>500</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http InternalServerError:500</description>
+</snippet>

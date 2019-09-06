@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA['OK\n', 200]]></content>
+    <tabTrigger>200</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http OK:200</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA['Created\n', 201]]></content>
+    <tabTrigger>Created</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http 201:Created</description>
+</snippet>

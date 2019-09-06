@@ -1,9 +1,0 @@
-
-<!-- Auto Generated, See the related .yaml file -->
-<snippet>
-    <content><![CDATA[RequestHeaderFieldsTooLarge(${1:''})]]></content>
-    <tabTrigger>431 RequestHeaderFieldsTooLarge</tabTrigger>
-
-    <scope>source.python</scope>
-    <description>http:431 RequestHeaderFieldsTooLarge</description>
-</snippet>

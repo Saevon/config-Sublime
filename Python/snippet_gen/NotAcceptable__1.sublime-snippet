@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[NotAcceptable(${1:''})]]></content>
+    <tabTrigger>NotAcceptable</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http 406:NotAcceptable</description>
+</snippet>

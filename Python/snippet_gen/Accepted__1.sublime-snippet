@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA['Accepted (In-Progress)\n', 202]]></content>
+    <tabTrigger>Accepted</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http 202 InProgress:Accepted</description>
+</snippet>

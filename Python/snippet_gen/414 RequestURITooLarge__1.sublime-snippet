@@ -1,9 +1,0 @@
-
-<!-- Auto Generated, See the related .yaml file -->
-<snippet>
-    <content><![CDATA[RequestURITooLarge(${1:''})]]></content>
-    <tabTrigger>414 RequestURITooLarge</tabTrigger>
-
-    <scope>source.python</scope>
-    <description>http:414 RequestURITooLarge</description>
-</snippet>

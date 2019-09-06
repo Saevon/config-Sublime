@@ -1,9 +1,0 @@
-
-<!-- Auto Generated, See the related .yaml file -->
-<snippet>
-    <content><![CDATA[RequestedRangeNotSatisfiable(${1:''})]]></content>
-    <tabTrigger>416 RequestedRangeNotSatisfiable</tabTrigger>
-
-    <scope>source.python</scope>
-    <description>http:416 RequestedRangeNotSatisfiable</description>
-</snippet>

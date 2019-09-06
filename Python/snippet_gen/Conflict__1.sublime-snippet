@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[Conflict(${1:''})]]></content>
+    <tabTrigger>Conflict</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http 409:Conflict</description>
+</snippet>

@@ -1,9 +1,9 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[tix]]></content>
-    <tabTrigger>tix</tabTrigger>
+    <content><![CDATA[Tix]]></content>
+    <tabTrigger>Tix</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:tix</description>
+    <description>module:Tix</description>
 </snippet>

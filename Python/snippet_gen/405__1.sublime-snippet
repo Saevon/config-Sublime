@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[MethodNotAllowed(${1:''})]]></content>
+    <tabTrigger>405</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http MethodNotAllowed:405</description>
+</snippet>

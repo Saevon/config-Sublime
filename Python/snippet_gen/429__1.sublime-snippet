@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[TooManyRequests(${1:''})]]></content>
+    <tabTrigger>429</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http TooManyRequests:429</description>
+</snippet>

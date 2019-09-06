@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[RequestEntityTooLarge(${1:''})]]></content>
+    <tabTrigger>RequestEntityTooLarge</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http 413:RequestEntityTooLarge</description>
+</snippet>

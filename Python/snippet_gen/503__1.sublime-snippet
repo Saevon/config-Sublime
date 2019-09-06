@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[ServiceUnavailable(${1:''})]]></content>
+    <tabTrigger>503</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http ServiceUnavailable:503</description>
+</snippet>

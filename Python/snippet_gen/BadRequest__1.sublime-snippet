@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[BadRequest(${1:''})]]></content>
+    <tabTrigger>BadRequest</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http 400:BadRequest</description>
+</snippet>

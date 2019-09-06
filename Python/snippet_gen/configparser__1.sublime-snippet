@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[configparser]]></content>
+    <tabTrigger>configparser</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>module:configparser</description>
+</snippet>

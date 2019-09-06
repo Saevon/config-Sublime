@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[LengthRequired(${1:''})]]></content>
+    <tabTrigger>411</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http LengthRequired:411</description>
+</snippet>

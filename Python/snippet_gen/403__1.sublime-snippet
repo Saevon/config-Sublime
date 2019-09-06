@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[Forbidden(${1:''})]]></content>
+    <tabTrigger>403</tabTrigger>
+
+    <scope>source.python</scope>
+    <description>http Forbidden:403</description>
+</snippet>

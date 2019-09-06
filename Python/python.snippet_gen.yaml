@@ -46,6 +46,7 @@ snippets:
         snippet: |
             else:
             	${1:pass}
+
       - trigger: __main__
         snippet: |
             if __name__ == '__main__':
@@ -324,6 +325,8 @@ snippets:
     lib:
       - trigger: dedent
         snippet: textwrap.dedent
+      - startswith
+      - endswith
 
 
     type:
@@ -585,7 +588,7 @@ snippets:
       - fnmatch
       - formatter
       - fpectl
-      - fpformat
+      # - fpformat   # Deprecated since 2.6
       - fractions
       - FrameWork
       - ftplib
@@ -796,58 +799,99 @@ snippets:
       - zlib
 
     http:
-      - trigger: 400 BadRequest
+      - trigger: ['200', 'OK']
+        snippet: "'OK\\n', 200"
+        tags: ['200', 'OK']
+      - trigger: ['201', 'Created']
+        snippet: "'Created\\n', 201"
+        tags: ['201', 'Created']
+      - trigger: ['202', 'Accepted']
+        snippet: "'Accepted (In-Progress)\\n', 202"
+        tags: ['202', 'InProgress', 'Accepted']
+
+      - trigger: ['400', 'BadRequest']
         snippet: BadRequest(${1:''})
-      - trigger: 401 Unauthorized
+        tags: ['400', 'BadRequest']
+      - trigger: ['401', 'Unauthorized']
         snippet: Unauthorized(${1:''})
-      - trigger: 403 Forbidden
+        tags: ['401', 'Unauthorized']
+      - trigger: ['403', 'Forbidden']
         snippet: Forbidden(${1:''})
-      - trigger: 404 NotFound
+        tags: ['403', 'Forbidden']
+      - trigger: ['404', 'NotFound']
         snippet: NotFound(${1:''})
-      - trigger: 405 MethodNotAllowed
+        tags: ['404', 'NotFound']
+      - trigger: ['405', 'MethodNotAllowed']
         snippet: MethodNotAllowed(${1:''})
-      - trigger: 406 NotAcceptable
+        tags: ['405', 'MethodNotAllowed']
+      - trigger: ['406', 'NotAcceptable']
         snippet: NotAcceptable(${1:''})
-      - trigger: 408 RequestTimeout
+        tags: ['406', 'NotAcceptable']
+      - trigger: ['408', 'RequestTimeout']
         snippet: RequestTimeout(${1:''})
-      - trigger: 409 Conflict
+        tags: ['408', 'RequestTimeout']
+      - trigger: ['409', 'Conflict']
         snippet: Conflict(${1:''})
-      - trigger: 410 Gone
+        tags: ['409', 'Conflict']
+      - trigger: ['410', 'Gone']
         snippet: Gone(${1:''})
-      - trigger: 411 LengthRequired
+        tags: ['410', 'Gone']
+      - trigger: ['411', 'LengthRequired']
         snippet: LengthRequired(${1:''})
-      - trigger: 412 PreconditionFailed
+        tags: ['411', 'LengthRequired']
+      - trigger: ['412', 'PreconditionFailed']
         snippet: PreconditionFailed(${1:''})
-      - trigger: 413 RequestEntityTooLarge
+        tags: ['412', 'PreconditionFailed']
+      - trigger: ['413', 'RequestEntityTooLarge']
         snippet: RequestEntityTooLarge(${1:''})
-      - trigger: 414 RequestURITooLarge
+        tags: ['413', 'RequestEntityTooLarge']
+      - trigger: ['414', 'RequestURITooLarge']
         snippet: RequestURITooLarge(${1:''})
-      - trigger: 415 UnsupportedMediaType
+        tags: ['414', 'RequestURITooLarge']
+      - trigger: ['415', 'UnsupportedMediaType']
         snippet: UnsupportedMediaType(${1:''})
-      - trigger: 416 RequestedRangeNotSatisfiable
+        tags: ['415', 'UnsupportedMediaType']
+      - trigger: ['416', 'RequestedRangeNotSatisfiable']
         snippet: RequestedRangeNotSatisfiable(${1:''})
-      - trigger: 417 ExpectationFailed
+        tags: ['416', 'RequestedRangeNotSatisfiable']
+      - trigger: ['417', 'ExpectationFailed']
         snippet: ExpectationFailed(${1:''})
-      - trigger: 418 ImATeapot
+        tags: ['417', 'ExpectationFailed']
+      - trigger: ['418', 'ImATeapot']
         snippet: ImATeapot(${1:''})
-      - trigger: 422 UnprocessableEntity
+        tags: ['418', 'ImATeapot']
+      - trigger: ['422', 'UnprocessableEntity']
         snippet: UnprocessableEntity(${1:''})
-      - trigger: 423 Locked
+        tags: ['422', 'UnprocessableEntity']
+      - trigger: ['423', 'Locked']
         snippet: Locked(${1:''})
-      - trigger: 428 PreconditionRequired
+        tags: ['423', 'Locked']
+      - trigger: ['428', 'PreconditionRequired']
         snippet: PreconditionRequired(${1:''})
-      - trigger: 429 TooManyRequests
+        tags: ['428', 'PreconditionRequired']
+      - trigger: ['429', 'TooManyRequests']
         snippet: TooManyRequests(${1:''})
-      - trigger: 431 RequestHeaderFieldsTooLarge
+        tags: ['429', 'TooManyRequests']
+      - trigger: ['431', 'RequestHeaderFieldsTooLarge']
         snippet: RequestHeaderFieldsTooLarge(${1:''})
-      - trigger: 451 UnavailableForLegalReasons
+        tags: ['431', 'RequestHeaderFieldsTooLarge']
+      - trigger: ['451', 'UnavailableForLegalReasons']
         snippet: UnavailableForLegalReasons(${1:''})
-      - trigger: 500 InternalServerError
+        tags: ['451', 'UnavailableForLegalReasons']
+
+      - trigger: ['500', 'InternalServerError']
         snippet: InternalServerError(${1:''})
-      - trigger: 501 NotImplemented
+        tags: ['500', 'InternalServerError']
+      - trigger: ['501', 'NotImplemented']
         snippet: NotImplemented(${1:''})
-      - trigger: 502 BadGateway
+        tags: ['501', 'NotImplemented']
+      - trigger: ['502', 'BadGateway']
         snippet: BadGateway(${1:''})
-      - trigger: 503 ServiceUnavailable
+        tags: ['502', 'BadGateway']
+      - trigger: ['503', 'ServiceUnavailable']
         snippet: ServiceUnavailable(${1:''})
+        tags: ['503', 'ServiceUnavailable']
+      - trigger: ['504', 'GatewayTimeout']
+        snippet: "'GatewayTimeout\\n', 504"
+        tags: ['504', 'GatewayTimeout']
 
