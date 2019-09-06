@@ -1,7 +1,9 @@
 [
     { "keys": ["super+."], "command": "indent" },
     { "keys": ["super+,"], "command": "unindent" },
-    { "keys": ["shift+tab"], "command": "unindent" },
+
+    // Bad Idea, this moves right when we're adding a snippet
+    // { "keys": ["shift+tab"], "command": "unindent" },
 
     // Disable auto-completions with Enter
     {
