@@ -46,6 +46,7 @@
 		"SublimeLinter-luacheck",
 		"SublimeLinter-pycodestyle",
 		"SublimeLinter-pylint",
+		"SublimeLinter-shellcheck",
 		"Table Editor",
 		"VAlign",
 		"Vintage YankStack",

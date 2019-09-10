@@ -101,6 +101,12 @@
             // "disable": true,
             "filter_errors": "regex.*unapproved|legal/copyright|header guard has wrong style|endif line should be .*header_guard|Missing username in TODO"
         },
+
+        // -------------------------------------------
+        // Bash
+        "shellcheck": {
+
+        },
     },
     "paths": {
         "linux": [],
