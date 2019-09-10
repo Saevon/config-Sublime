@@ -1,7 +1,7 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[	if __name__ == '__main__':
+    <content><![CDATA[if __name__ == '__main__':
 	${1:pass}
 ]]></content>
     <tabTrigger>__name__</tabTrigger>

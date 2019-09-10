@@ -53,8 +53,8 @@ snippets:
             	${1:pass}
       - trigger: __name__
         snippet: |
-          	if __name__ == '__main__':
-          	${1:pass}
+            if __name__ == '__main__':
+            	${1:pass}
 
     error:
       - trigger: ArithmeticError
