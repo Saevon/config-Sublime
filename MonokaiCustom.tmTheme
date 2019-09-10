@@ -905,20 +905,6 @@
 				<string>#F92672</string>
 			</dict>
 		</dict>
-		<dict>
-			<key>name</key>
-			<string>C++ Includes</string>
-			<key>scope</key>
-			<string>meta.preprocessor.c.include string.quoted.other.lt-gt.include</string>
-			<key>settings</key>
-			<dict>
-				<!-- Library Module Style -->
-				<key>fontStyle</key>
-				<string>italic</string>
-				<key>foreground</key>
-				<string>#3690C0</string>
-			</dict>
-		</dict>
 
 
 
