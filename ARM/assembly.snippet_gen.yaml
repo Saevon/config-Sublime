@@ -1,0 +1,32 @@
+scope: source.asm.arm
+snippets:
+    blocks:
+      - trigger: func
+        snippet: |
+            @-----------------------------------------------------------
+            .text
+            .align  2
+            .global ${1:foo}
+            .type   ${1:foo}, %function
+            ${1:foo}:
+            	@ args = ${2:1}, pretend = 0, frame = 0
+            	@ frame_needed = 0, uses_anonymous_args = 0
+
+            		${3:; body}
+            .size   ${1:foo}, .-${1:foo}
+            @-----------------------------------------------------------
+
+
+    register:
+      - trigger: ['ip', 'intra-procedure']
+        snippet: ip
+        tags: ['ip', 'intra-procedure']
+      - trigger: ['sp', 'stack']
+        snippet: sp
+        tags: ['sp', 'stack']
+      - trigger: ['lr', 'link-register']
+        snippet: lr
+        tags: ['lr', 'link-register']
+      - trigger: ['pc', 'program-counter']
+        snippet: pc
+        tags: ['pc', 'program-counter']

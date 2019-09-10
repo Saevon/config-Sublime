@@ -1,0 +1,21 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[@-----------------------------------------------------------
+.text
+.align  2
+.global ${1:foo}
+.type   ${1:foo}, %function
+${1:foo}:
+	@ args = ${2:1}, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+
+		${3:; body}
+.size   ${1:foo}, .-${1:foo}
+@-----------------------------------------------------------
+]]></content>
+    <tabTrigger>func</tabTrigger>
+
+    <scope>source.asm.arm</scope>
+    <description>blocks:func</description>
+</snippet>
