@@ -1,0 +1,10 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[readonly PROG_DIR=\$( ( readlink -f "\${BASH_SOURCE[0]}" || greadlink -f "\${BASH_SOURCE[0]}" ) 2>/dev/null )
+]]></content>
+    <tabTrigger>script_path</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>subroutine:script_path</description>
+</snippet>

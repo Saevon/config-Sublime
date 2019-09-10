@@ -1,0 +1,10 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[else
+]]></content>
+    <tabTrigger>else</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>block:else</description>
+</snippet>

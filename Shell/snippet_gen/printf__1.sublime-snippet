@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[printf]]></content>
+    <tabTrigger>printf</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>keyword:printf</description>
+</snippet>

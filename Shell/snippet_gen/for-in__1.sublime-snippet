@@ -1,0 +1,12 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[for ${1:i} in ${2:{1..10}}; do
+	${3::  # statements}
+done
+]]></content>
+    <tabTrigger>for-in</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>block:for-in</description>
+</snippet>

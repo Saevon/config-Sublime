@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[echo]]></content>
+    <tabTrigger>echo</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>keyword:echo</description>
+</snippet>

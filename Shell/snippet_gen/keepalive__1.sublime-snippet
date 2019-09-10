@@ -1,0 +1,14 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[# Keep retrying if we get an error return
+# DO NOT retry on signals (e.g. SIGINT)
+function keep_alive() (
+	main || keep_alive;
+)
+]]></content>
+    <tabTrigger>keepalive</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>subroutine:keepalive</description>
+</snippet>

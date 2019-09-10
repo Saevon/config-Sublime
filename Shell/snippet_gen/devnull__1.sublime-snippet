@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[/dev/null]]></content>
+    <tabTrigger>devnull</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>file:devnull</description>
+</snippet>

@@ -1,0 +1,43 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[#!/usr/bin/env bash
+#
+
+readonly PROG_NAME=\$(basename "\$0")
+readonly PROG_DIR=\$( ( readlink -f "\${BASH_SOURCE[0]}" || greadlink -f "\${BASH_SOURCE[0]}" ) 2>/dev/null )
+
+function cleanup() (
+  :  # Your cleanup code here
+)
+
+function main() (
+	# Abort on failure
+	set -e
+	# Abort on unset variables
+	set -u
+	# If a glob fails to expand, error out (instead of leaving the *)
+	shopt -s failglob
+	# Abort if any pipe command fails
+	#    Warning! this makes handling with \$? harder
+	set -o pipefail
+	# Prevent spaces from breaking up "word" inputs in loops
+	IFS=\$'\n\t'
+
+	# Prepare crash/finish cleanup
+	trap cleanup EXIT SIGINT SIGTERM
+
+
+	${1:# statements}
+
+	return 0;
+)
+
+# If you're running directly call main (but not when sourced from elsewhere)
+[[ "\$0" == "\${BASH_SOURCE[0]}" ]] && main "\$@"
+]]></content>
+    <tabTrigger>__main__</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>block :__main__</description>
+</snippet>

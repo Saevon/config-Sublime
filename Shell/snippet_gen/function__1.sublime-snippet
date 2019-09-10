@@ -1,0 +1,14 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[function ${1:foo}() {
+	local ${2:param}=\$1;
+
+	${3:# statements}
+}
+]]></content>
+    <tabTrigger>function</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>block:function</description>
+</snippet>

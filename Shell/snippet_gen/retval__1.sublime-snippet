@@ -1,0 +1,11 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[local retval=0;
+${1:cmd} || retval=\$?;
+]]></content>
+    <tabTrigger>retval</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>subroutine:retval</description>
+</snippet>

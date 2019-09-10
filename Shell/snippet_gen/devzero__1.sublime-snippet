@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[/dev/zero]]></content>
+    <tabTrigger>devzero</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>file:devzero</description>
+</snippet>

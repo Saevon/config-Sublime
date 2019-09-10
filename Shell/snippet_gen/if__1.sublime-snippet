@@ -1,0 +1,12 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[if [[ ${1:condition} ]]; then
+	${2::  # statements}
+fi
+]]></content>
+    <tabTrigger>if</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>block:if</description>
+</snippet>

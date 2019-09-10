@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[/dev/random]]></content>
+    <tabTrigger>devrandom</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>file:devrandom</description>
+</snippet>

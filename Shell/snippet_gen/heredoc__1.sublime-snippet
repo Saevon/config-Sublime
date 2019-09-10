@@ -1,0 +1,12 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[<<EOF
+${1}
+EOF
+]]></content>
+    <tabTrigger>heredoc</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>block :heredoc</description>
+</snippet>

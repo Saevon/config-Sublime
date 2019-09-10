@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[/dev/urandom]]></content>
+    <tabTrigger>devurandom</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>file:devurandom</description>
+</snippet>

@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[=\$(( ${1:i + 1} ))]]></content>
+    <tabTrigger>math</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>synonym:math</description>
+</snippet>

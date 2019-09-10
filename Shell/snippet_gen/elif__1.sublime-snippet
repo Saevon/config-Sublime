@@ -1,0 +1,11 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[elif [[ ${1:condition} ]]; then
+	${2::  # statements}
+]]></content>
+    <tabTrigger>elif</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>block:elif</description>
+</snippet>

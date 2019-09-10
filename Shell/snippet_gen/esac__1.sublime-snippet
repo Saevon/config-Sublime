@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[esac]]></content>
+    <tabTrigger>esac</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>keyword:esac</description>
+</snippet>

@@ -1,0 +1,12 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[while [[ ${1:condition} ]]; do
+	${2::  # statements}
+done
+]]></content>
+    <tabTrigger>while</tabTrigger>
+
+    <scope>source.shell</scope>
+    <description>block:while</description>
+</snippet>
