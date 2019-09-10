@@ -24,7 +24,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>\b([a-zA-Z_]*_t)\b</string>
+			<string>\b([a-zA-Z_][a-zA-Z0-9_]*_t)\b</string>
 			<key>name</key>
 			<string>storage.type.c</string>
 		</dict>
@@ -96,6 +96,14 @@
 			<string>\bk[A-Z]\w*\b</string>
 			<key>name</key>
 			<string>constant.other.variable.mac-classic.c</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Caps Constant</string>
+			<key>match</key>
+			<string>\b[A-Z]\w*\b</string>
+			<key>name</key>
+			<string>variable.other.constant.c</string>
 		</dict>
 		<dict>
 			<key>match</key>
