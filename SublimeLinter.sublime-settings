@@ -94,6 +94,13 @@
         // C++
         "cppcheck": {
         },
+        "cpplint": {
+            "args": [
+                "--linelength=100",
+            ],
+            // "disable": true,
+            "filter_errors": "regex.*unapproved|legal/copyright|header guard has wrong style|endif line should be .*header_guard|Missing username in TODO"
+        },
     },
     "paths": {
         "linux": [],

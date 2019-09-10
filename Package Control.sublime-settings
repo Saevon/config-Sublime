@@ -37,6 +37,7 @@
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint_d",
 		"SublimeLinter-cppcheck",
+		"SublimeLinter-cpplint",
 		"SublimeLinter-csslint",
 		"SublimeLinter-flake8",
 		"SublimeLinter-ghc",
