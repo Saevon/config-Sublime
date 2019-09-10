@@ -140,6 +140,8 @@ snippets:
         snippet: /dev/random
       - trigger: devurandom
         snippet: /dev/urandom
+      - trigger: ["tty", "devtty"]
+        snippet: /dev/tty
 
     synonym:
       - trigger: print
