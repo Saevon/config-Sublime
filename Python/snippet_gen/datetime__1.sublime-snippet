@@ -5,5 +5,5 @@
     <tabTrigger>datetime</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:datetime</description>
+    <description>module</description>
 </snippet>

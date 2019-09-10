@@ -5,5 +5,5 @@
     <tabTrigger>sets</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:sets</description>
+    <description>module</description>
 </snippet>

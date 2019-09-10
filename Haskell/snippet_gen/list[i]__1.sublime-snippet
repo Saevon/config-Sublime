@@ -5,5 +5,5 @@
     <tabTrigger>list[i]</tabTrigger>
 
     <scope>source.haskell</scope>
-    <description>synonym:index:list[i]</description>
+    <description>index:synonym</description>
 </snippet>

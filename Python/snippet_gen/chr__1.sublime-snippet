@@ -5,5 +5,5 @@
     <tabTrigger>chr</tabTrigger>
 
     <scope>source.python</scope>
-    <description>builtin:chr</description>
+    <description>builtin</description>
 </snippet>

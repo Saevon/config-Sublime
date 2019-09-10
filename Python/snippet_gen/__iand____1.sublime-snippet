@@ -5,5 +5,5 @@
     <tabTrigger>__iand__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__iand__</description>
+    <description>dunder</description>
 </snippet>

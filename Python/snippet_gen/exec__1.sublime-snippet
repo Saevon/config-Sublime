@@ -5,5 +5,5 @@
     <tabTrigger>exec</tabTrigger>
 
     <scope>source.python</scope>
-    <description>keyword:exec</description>
+    <description>keyword</description>
 </snippet>

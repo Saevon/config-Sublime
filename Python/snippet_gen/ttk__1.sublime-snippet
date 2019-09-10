@@ -5,5 +5,5 @@
     <tabTrigger>ttk</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:ttk</description>
+    <description>module</description>
 </snippet>

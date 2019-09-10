@@ -5,5 +5,5 @@
     <tabTrigger>break</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>keyword:break</description>
+    <description>keyword</description>
 </snippet>

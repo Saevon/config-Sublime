@@ -5,5 +5,5 @@
     <tabTrigger>public</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>access:public</description>
+    <description>access</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>mmap</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:mmap</description>
+    <description>module</description>
 </snippet>

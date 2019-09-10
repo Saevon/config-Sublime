@@ -8,5 +8,5 @@ done ${3:< ${4: /path/to/file}}
     <tabTrigger>while-read</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>block:while-read</description>
+    <description>block</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>aetypes</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:aetypes</description>
+    <description>module</description>
 </snippet>

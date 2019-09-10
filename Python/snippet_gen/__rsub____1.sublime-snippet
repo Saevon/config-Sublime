@@ -5,5 +5,5 @@
     <tabTrigger>__rsub__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__rsub__</description>
+    <description>dunder</description>
 </snippet>

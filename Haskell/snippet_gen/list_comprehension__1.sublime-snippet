@@ -5,5 +5,5 @@
     <tabTrigger>list_comprehension</tabTrigger>
 
     <scope>source.haskell</scope>
-    <description>synonym:list_comprehension</description>
+    <description>synonym</description>
 </snippet>

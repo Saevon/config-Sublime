@@ -5,5 +5,5 @@
     <tabTrigger>Tix</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:Tix</description>
+    <description>module</description>
 </snippet>

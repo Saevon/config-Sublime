@@ -5,5 +5,5 @@
     <tabTrigger>response</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:response</description>
+    <description>module</description>
 </snippet>

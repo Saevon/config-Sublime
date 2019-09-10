@@ -5,5 +5,5 @@
     <tabTrigger>include&lt;</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>block:include&lt;</description>
+    <description>block</description>
 </snippet>

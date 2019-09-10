@@ -5,5 +5,5 @@
     <tabTrigger>bdb</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:bdb</description>
+    <description>module</description>
 </snippet>

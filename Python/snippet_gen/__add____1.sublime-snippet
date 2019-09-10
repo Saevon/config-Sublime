@@ -5,5 +5,5 @@
     <tabTrigger>__add__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__add__</description>
+    <description>dunder</description>
 </snippet>

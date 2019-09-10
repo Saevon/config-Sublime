@@ -5,5 +5,5 @@
     <tabTrigger>decimal</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:decimal</description>
+    <description>module</description>
 </snippet>

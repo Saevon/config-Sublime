@@ -5,5 +5,5 @@
     <tabTrigger>union</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>type:union</description>
+    <description>type</description>
 </snippet>

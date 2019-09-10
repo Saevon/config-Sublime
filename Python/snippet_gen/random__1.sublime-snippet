@@ -5,5 +5,5 @@
     <tabTrigger>random</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:random</description>
+    <description>module</description>
 </snippet>

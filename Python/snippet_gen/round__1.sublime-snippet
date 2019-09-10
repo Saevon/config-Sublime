@@ -5,5 +5,5 @@
     <tabTrigger>round</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:round</description>
+    <description>functional</description>
 </snippet>

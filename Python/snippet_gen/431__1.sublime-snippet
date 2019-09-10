@@ -5,5 +5,5 @@
     <tabTrigger>431</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http RequestHeaderFieldsTooLarge:431</description>
+    <description>RequestHeaderFieldsTooLarge:http</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>struct</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:struct</description>
+    <description>module</description>
 </snippet>

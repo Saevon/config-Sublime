@@ -5,5 +5,5 @@
     <tabTrigger>minidom</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:minidom</description>
+    <description>module</description>
 </snippet>

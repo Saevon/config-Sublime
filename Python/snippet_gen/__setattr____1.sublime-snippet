@@ -5,5 +5,5 @@
     <tabTrigger>__setattr__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__setattr__</description>
+    <description>dunder</description>
 </snippet>

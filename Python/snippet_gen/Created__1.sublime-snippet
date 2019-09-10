@@ -5,5 +5,5 @@
     <tabTrigger>Created</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http 201:Created</description>
+    <description>201:http</description>
 </snippet>

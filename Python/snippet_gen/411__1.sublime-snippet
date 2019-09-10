@@ -5,5 +5,5 @@
     <tabTrigger>411</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http LengthRequired:411</description>
+    <description>LengthRequired:http</description>
 </snippet>

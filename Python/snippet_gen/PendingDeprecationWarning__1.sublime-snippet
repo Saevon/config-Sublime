@@ -1,9 +1,9 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[PendingDeprecationWarning${1:(\"${2:error}\")}]]></content>
+    <content><![CDATA[PendingDeprecationWarning${1:("${2:error}")}]]></content>
     <tabTrigger>PendingDeprecationWarning</tabTrigger>
 
     <scope>source.python</scope>
-    <description>error:PendingDeprecationWarning</description>
+    <description>error</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>dbm</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:dbm</description>
+    <description>module</description>
 </snippet>

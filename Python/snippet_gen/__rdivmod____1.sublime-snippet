@@ -5,5 +5,5 @@
     <tabTrigger>__rdivmod__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__rdivmod__</description>
+    <description>dunder</description>
 </snippet>

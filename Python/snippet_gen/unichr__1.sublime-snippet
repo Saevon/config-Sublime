@@ -5,5 +5,5 @@
     <tabTrigger>unichr</tabTrigger>
 
     <scope>source.python</scope>
-    <description>type:unichr</description>
+    <description>type</description>
 </snippet>

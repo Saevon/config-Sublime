@@ -5,5 +5,5 @@
     <tabTrigger>__ne__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__ne__</description>
+    <description>dunder</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>sorted</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:sorted</description>
+    <description>functional</description>
 </snippet>

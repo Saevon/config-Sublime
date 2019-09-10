@@ -5,5 +5,5 @@
     <tabTrigger>getopt</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:getopt</description>
+    <description>module</description>
 </snippet>

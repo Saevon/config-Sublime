@@ -5,5 +5,5 @@
     <tabTrigger>bisect</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:bisect</description>
+    <description>module</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>__future__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__future__</description>
+    <description>dunder</description>
 </snippet>

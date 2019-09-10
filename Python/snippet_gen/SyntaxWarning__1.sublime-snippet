@@ -1,9 +1,9 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[SyntaxWarning${1:(\"${2:error}\")}]]></content>
+    <content><![CDATA[SyntaxWarning${1:("${2:error}")}]]></content>
     <tabTrigger>SyntaxWarning</tabTrigger>
 
     <scope>source.python</scope>
-    <description>error:SyntaxWarning</description>
+    <description>error</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>sp</tabTrigger>
 
     <scope>source.asm.arm</scope>
-    <description>register stack:sp</description>
+    <description>stack:register</description>
 </snippet>

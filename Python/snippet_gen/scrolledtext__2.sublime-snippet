@@ -5,5 +5,5 @@
     <tabTrigger>scrolledtext</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:scrolledtext</description>
+    <description>module</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>sum</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:sum</description>
+    <description>functional</description>
 </snippet>

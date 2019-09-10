@@ -8,5 +8,5 @@ EOF
     <tabTrigger>heredoc</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>block :heredoc</description>
+    <description>block</description>
 </snippet>

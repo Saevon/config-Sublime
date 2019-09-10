@@ -5,5 +5,5 @@
     <tabTrigger>callable</tabTrigger>
 
     <scope>source.python</scope>
-    <description>builtin:callable</description>
+    <description>builtin</description>
 </snippet>

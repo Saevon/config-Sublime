@@ -5,5 +5,5 @@
     <tabTrigger>defaultdict</tabTrigger>
 
     <scope>source.python</scope>
-    <description>type:defaultdict</description>
+    <description>type</description>
 </snippet>

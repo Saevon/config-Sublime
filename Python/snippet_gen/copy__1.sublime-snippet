@@ -5,5 +5,5 @@
     <tabTrigger>copy</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:copy</description>
+    <description>module</description>
 </snippet>

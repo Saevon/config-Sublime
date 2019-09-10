@@ -5,5 +5,5 @@
     <tabTrigger>shell-group</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>subroutine:shell-group</description>
+    <description>subroutine</description>
 </snippet>

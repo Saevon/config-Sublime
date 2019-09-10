@@ -5,5 +5,5 @@
     <tabTrigger>__mul__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__mul__</description>
+    <description>dunder</description>
 </snippet>

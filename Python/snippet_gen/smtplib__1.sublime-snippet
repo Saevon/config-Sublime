@@ -5,5 +5,5 @@
     <tabTrigger>smtplib</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:smtplib</description>
+    <description>module</description>
 </snippet>

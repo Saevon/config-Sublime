@@ -5,5 +5,5 @@
     <tabTrigger>asynchat</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:asynchat</description>
+    <description>module</description>
 </snippet>

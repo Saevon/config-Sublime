@@ -5,5 +5,5 @@
     <tabTrigger>429</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http TooManyRequests:429</description>
+    <description>TooManyRequests:http</description>
 </snippet>

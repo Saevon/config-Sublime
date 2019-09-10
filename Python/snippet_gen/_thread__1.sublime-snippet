@@ -5,5 +5,5 @@
     <tabTrigger>_thread</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:_thread</description>
+    <description>module</description>
 </snippet>

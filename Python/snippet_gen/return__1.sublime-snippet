@@ -5,5 +5,5 @@
     <tabTrigger>return</tabTrigger>
 
     <scope>source.python</scope>
-    <description>keyword:return</description>
+    <description>keyword</description>
 </snippet>

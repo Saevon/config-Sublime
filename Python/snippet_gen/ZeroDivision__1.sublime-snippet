@@ -1,9 +1,9 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[ZeroDivision${1:(\"${2:error}\")}]]></content>
+    <content><![CDATA[ZeroDivision${1:("${2:error}")}]]></content>
     <tabTrigger>ZeroDivision</tabTrigger>
 
     <scope>source.python</scope>
-    <description>error:ZeroDivision</description>
+    <description>error</description>
 </snippet>

@@ -8,5 +8,5 @@ fi
     <tabTrigger>if</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>block:if</description>
+    <description>block</description>
 </snippet>

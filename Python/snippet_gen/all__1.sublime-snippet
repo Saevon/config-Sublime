@@ -5,5 +5,5 @@
     <tabTrigger>all</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:all</description>
+    <description>functional</description>
 </snippet>

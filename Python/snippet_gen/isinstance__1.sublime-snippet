@@ -5,5 +5,5 @@
     <tabTrigger>isinstance</tabTrigger>
 
     <scope>source.python</scope>
-    <description>builtin:isinstance</description>
+    <description>builtin</description>
 </snippet>

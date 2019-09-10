@@ -5,5 +5,5 @@
     <tabTrigger>__delattr__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__delattr__</description>
+    <description>dunder</description>
 </snippet>

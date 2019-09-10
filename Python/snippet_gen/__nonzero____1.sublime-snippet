@@ -5,5 +5,5 @@
     <tabTrigger>__nonzero__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__nonzero__</description>
+    <description>dunder</description>
 </snippet>

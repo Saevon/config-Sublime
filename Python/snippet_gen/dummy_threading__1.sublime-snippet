@@ -5,5 +5,5 @@
     <tabTrigger>dummy_threading</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:dummy_threading</description>
+    <description>module</description>
 </snippet>

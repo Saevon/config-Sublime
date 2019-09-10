@@ -5,5 +5,5 @@
     <tabTrigger>__irshift__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__irshift__</description>
+    <description>dunder</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>del</tabTrigger>
 
     <scope>source.python</scope>
-    <description>keyword:del</description>
+    <description>keyword</description>
 </snippet>

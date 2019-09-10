@@ -5,5 +5,5 @@
     <tabTrigger>__metaclass__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__metaclass__</description>
+    <description>dunder</description>
 </snippet>

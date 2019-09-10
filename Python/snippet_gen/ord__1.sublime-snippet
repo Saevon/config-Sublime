@@ -5,5 +5,5 @@
     <tabTrigger>ord</tabTrigger>
 
     <scope>source.python</scope>
-    <description>builtin:ord</description>
+    <description>builtin</description>
 </snippet>

@@ -8,5 +8,5 @@ done
     <tabTrigger>while</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>block:while</description>
+    <description>block</description>
 </snippet>

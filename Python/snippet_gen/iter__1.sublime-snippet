@@ -5,5 +5,5 @@
     <tabTrigger>iter</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:iter</description>
+    <description>functional</description>
 </snippet>

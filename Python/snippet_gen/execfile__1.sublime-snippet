@@ -5,5 +5,5 @@
     <tabTrigger>execfile</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:execfile</description>
+    <description>functional</description>
 </snippet>

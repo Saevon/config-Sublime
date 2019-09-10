@@ -5,5 +5,5 @@
     <tabTrigger>mimify</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:mimify</description>
+    <description>module</description>
 </snippet>

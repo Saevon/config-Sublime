@@ -5,5 +5,5 @@
     <tabTrigger>hash</tabTrigger>
 
     <scope>source.python</scope>
-    <description>builtin:hash</description>
+    <description>builtin</description>
 </snippet>

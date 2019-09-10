@@ -5,5 +5,5 @@
     <tabTrigger>max</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:max</description>
+    <description>functional</description>
 </snippet>

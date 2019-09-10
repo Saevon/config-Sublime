@@ -1,9 +1,9 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[RuntimeWarning${1:(\"${2:error}\")}]]></content>
+    <content><![CDATA[RuntimeWarning${1:("${2:error}")}]]></content>
     <tabTrigger>RuntimeWarning</tabTrigger>
 
     <scope>source.python</scope>
-    <description>error:RuntimeWarning</description>
+    <description>error</description>
 </snippet>

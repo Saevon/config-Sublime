@@ -5,5 +5,5 @@
     <tabTrigger>tix</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:tix</description>
+    <description>module</description>
 </snippet>

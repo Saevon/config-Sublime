@@ -10,5 +10,5 @@ function keep_alive() (
     <tabTrigger>keepalive</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>subroutine:keepalive</description>
+    <description>subroutine</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>subshell</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>subroutine :subshell</description>
+    <description>subroutine</description>
 </snippet>

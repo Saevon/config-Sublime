@@ -5,5 +5,5 @@
     <tabTrigger>http</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:http</description>
+    <description>module</description>
 </snippet>

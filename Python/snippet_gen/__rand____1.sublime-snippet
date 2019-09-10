@@ -5,5 +5,5 @@
     <tabTrigger>__rand__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__rand__</description>
+    <description>dunder</description>
 </snippet>

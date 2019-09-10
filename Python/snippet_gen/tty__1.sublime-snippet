@@ -5,5 +5,5 @@
     <tabTrigger>tty</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:tty</description>
+    <description>module</description>
 </snippet>

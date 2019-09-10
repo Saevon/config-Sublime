@@ -5,5 +5,5 @@
     <tabTrigger>done</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>keyword:done</description>
+    <description>keyword</description>
 </snippet>

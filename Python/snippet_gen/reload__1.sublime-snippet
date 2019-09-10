@@ -5,5 +5,5 @@
     <tabTrigger>reload</tabTrigger>
 
     <scope>source.python</scope>
-    <description>builtin:reload</description>
+    <description>builtin</description>
 </snippet>

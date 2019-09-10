@@ -5,5 +5,5 @@
     <tabTrigger>pulldom</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:pulldom</description>
+    <description>module</description>
 </snippet>

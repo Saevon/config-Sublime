@@ -1,9 +1,9 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[IndentationError${1:(\"${2:error}\")}]]></content>
+    <content><![CDATA[IndentationError${1:("${2:error}")}]]></content>
     <tabTrigger>IndentationError</tabTrigger>
 
     <scope>source.python</scope>
-    <description>error:IndentationError</description>
+    <description>error</description>
 </snippet>

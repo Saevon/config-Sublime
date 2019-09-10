@@ -5,5 +5,5 @@
     <tabTrigger>continue</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>keyword:continue</description>
+    <description>keyword</description>
 </snippet>

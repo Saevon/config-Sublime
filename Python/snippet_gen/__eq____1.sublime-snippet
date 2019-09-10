@@ -5,5 +5,5 @@
     <tabTrigger>__eq__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__eq__</description>
+    <description>dunder</description>
 </snippet>

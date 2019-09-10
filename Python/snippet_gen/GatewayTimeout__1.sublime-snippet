@@ -5,5 +5,5 @@
     <tabTrigger>GatewayTimeout</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http 504:GatewayTimeout</description>
+    <description>504:http</description>
 </snippet>

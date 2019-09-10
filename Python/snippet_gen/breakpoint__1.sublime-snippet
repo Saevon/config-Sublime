@@ -5,5 +5,5 @@
     <tabTrigger>breakpoint</tabTrigger>
 
     <scope>source.python</scope>
-    <description>debug:breakpoint</description>
+    <description>debug</description>
 </snippet>

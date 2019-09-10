@@ -5,5 +5,5 @@
     <tabTrigger>int</tabTrigger>
 
     <scope>source.python</scope>
-    <description>type:int</description>
+    <description>type</description>
 </snippet>

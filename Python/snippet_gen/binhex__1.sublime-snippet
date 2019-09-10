@@ -5,5 +5,5 @@
     <tabTrigger>binhex</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:binhex</description>
+    <description>module</description>
 </snippet>

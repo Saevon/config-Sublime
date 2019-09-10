@@ -5,5 +5,5 @@
     <tabTrigger>cgi</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:cgi</description>
+    <description>module</description>
 </snippet>

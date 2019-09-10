@@ -5,5 +5,5 @@
     <tabTrigger>__getslice__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__getslice__</description>
+    <description>dunder</description>
 </snippet>

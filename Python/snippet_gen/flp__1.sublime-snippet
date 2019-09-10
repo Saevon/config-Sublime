@@ -5,5 +5,5 @@
     <tabTrigger>flp</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:flp</description>
+    <description>module</description>
 </snippet>

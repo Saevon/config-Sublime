@@ -5,5 +5,5 @@
     <tabTrigger>413</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http RequestEntityTooLarge:413</description>
+    <description>RequestEntityTooLarge:http</description>
 </snippet>

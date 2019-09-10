@@ -5,5 +5,5 @@
     <tabTrigger>super</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:super</description>
+    <description>functional</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>difflib</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:difflib</description>
+    <description>module</description>
 </snippet>

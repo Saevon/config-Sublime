@@ -5,5 +5,5 @@
     <tabTrigger>atexit</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:atexit</description>
+    <description>module</description>
 </snippet>

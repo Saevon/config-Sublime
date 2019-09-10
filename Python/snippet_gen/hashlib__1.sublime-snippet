@@ -5,5 +5,5 @@
     <tabTrigger>hashlib</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:hashlib</description>
+    <description>module</description>
 </snippet>

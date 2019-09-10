@@ -5,5 +5,5 @@
     <tabTrigger>409</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http Conflict:409</description>
+    <description>Conflict:http</description>
 </snippet>

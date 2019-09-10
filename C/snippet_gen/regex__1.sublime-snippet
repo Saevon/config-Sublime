@@ -5,5 +5,5 @@
     <tabTrigger>regex</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>type:regex</description>
+    <description>type</description>
 </snippet>

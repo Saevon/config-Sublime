@@ -5,5 +5,5 @@
     <tabTrigger>__isub__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__isub__</description>
+    <description>dunder</description>
 </snippet>

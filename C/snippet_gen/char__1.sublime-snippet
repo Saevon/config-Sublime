@@ -5,5 +5,5 @@
     <tabTrigger>char</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>type:char</description>
+    <description>type</description>
 </snippet>

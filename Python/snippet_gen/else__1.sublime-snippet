@@ -7,5 +7,5 @@
     <tabTrigger>else</tabTrigger>
 
     <scope>source.python</scope>
-    <description>block:else</description>
+    <description>block</description>
 </snippet>

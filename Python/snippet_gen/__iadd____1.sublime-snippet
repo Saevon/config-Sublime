@@ -5,5 +5,5 @@
     <tabTrigger>__iadd__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__iadd__</description>
+    <description>dunder</description>
 </snippet>

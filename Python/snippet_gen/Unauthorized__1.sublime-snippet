@@ -5,5 +5,5 @@
     <tabTrigger>Unauthorized</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http 401:Unauthorized</description>
+    <description>401:http</description>
 </snippet>

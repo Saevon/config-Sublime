@@ -5,5 +5,5 @@
     <tabTrigger>Forbidden</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http 403:Forbidden</description>
+    <description>403:http</description>
 </snippet>

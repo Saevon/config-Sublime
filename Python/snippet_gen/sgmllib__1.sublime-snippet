@@ -5,5 +5,5 @@
     <tabTrigger>sgmllib</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:sgmllib</description>
+    <description>module</description>
 </snippet>

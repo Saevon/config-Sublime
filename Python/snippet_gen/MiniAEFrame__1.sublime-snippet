@@ -5,5 +5,5 @@
     <tabTrigger>MiniAEFrame</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:MiniAEFrame</description>
+    <description>module</description>
 </snippet>

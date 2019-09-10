@@ -5,5 +5,5 @@
     <tabTrigger>ast</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:ast</description>
+    <description>module</description>
 </snippet>

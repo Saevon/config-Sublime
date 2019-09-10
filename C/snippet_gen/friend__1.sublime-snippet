@@ -5,5 +5,5 @@
     <tabTrigger>friend</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>access:friend</description>
+    <description>access</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>expat</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:expat</description>
+    <description>module</description>
 </snippet>

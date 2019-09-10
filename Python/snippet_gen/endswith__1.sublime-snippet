@@ -5,5 +5,5 @@
     <tabTrigger>endswith</tabTrigger>
 
     <scope>source.python</scope>
-    <description>lib:endswith</description>
+    <description>lib</description>
 </snippet>

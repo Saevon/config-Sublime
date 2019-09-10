@@ -5,5 +5,5 @@
     <tabTrigger>setattr</tabTrigger>
 
     <scope>source.python</scope>
-    <description>builtin:setattr</description>
+    <description>builtin</description>
 </snippet>

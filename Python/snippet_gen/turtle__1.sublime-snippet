@@ -5,5 +5,5 @@
     <tabTrigger>turtle</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:turtle</description>
+    <description>module</description>
 </snippet>

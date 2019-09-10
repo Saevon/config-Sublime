@@ -5,5 +5,5 @@
     <tabTrigger>config</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:config</description>
+    <description>module</description>
 </snippet>

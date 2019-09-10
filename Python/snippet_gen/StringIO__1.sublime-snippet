@@ -5,5 +5,5 @@
     <tabTrigger>StringIO</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:StringIO</description>
+    <description>module</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>EasyDialogs</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:EasyDialogs</description>
+    <description>module</description>
 </snippet>

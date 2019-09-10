@@ -5,5 +5,5 @@
     <tabTrigger>__cmp__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__cmp__</description>
+    <description>dunder</description>
 </snippet>

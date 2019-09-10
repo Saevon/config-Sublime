@@ -5,5 +5,5 @@
     <tabTrigger>set</tabTrigger>
 
     <scope>source.python</scope>
-    <description>type:set</description>
+    <description>type</description>
 </snippet>

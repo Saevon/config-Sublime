@@ -5,5 +5,5 @@
     <tabTrigger>pydoc</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:pydoc</description>
+    <description>module</description>
 </snippet>

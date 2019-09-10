@@ -5,5 +5,5 @@
     <tabTrigger>__iter__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__iter__</description>
+    <description>dunder</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>RequestEntityTooLarge</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http 413:RequestEntityTooLarge</description>
+    <description>413:http</description>
 </snippet>

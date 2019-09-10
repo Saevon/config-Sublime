@@ -5,5 +5,5 @@
     <tabTrigger>curses</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:curses</description>
+    <description>module</description>
 </snippet>

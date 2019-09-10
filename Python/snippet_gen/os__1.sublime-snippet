@@ -5,5 +5,5 @@
     <tabTrigger>os</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:os</description>
+    <description>module</description>
 </snippet>

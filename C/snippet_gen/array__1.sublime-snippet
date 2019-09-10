@@ -5,5 +5,5 @@
     <tabTrigger>array</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>container:array</description>
+    <description>container</description>
 </snippet>

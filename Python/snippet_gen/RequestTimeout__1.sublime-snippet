@@ -5,5 +5,5 @@
     <tabTrigger>RequestTimeout</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http 408:RequestTimeout</description>
+    <description>408:http</description>
 </snippet>

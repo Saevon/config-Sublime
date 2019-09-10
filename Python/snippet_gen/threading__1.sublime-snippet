@@ -5,5 +5,5 @@
     <tabTrigger>threading</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:threading</description>
+    <description>module</description>
 </snippet>

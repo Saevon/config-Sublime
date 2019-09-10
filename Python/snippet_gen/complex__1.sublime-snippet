@@ -5,5 +5,5 @@
     <tabTrigger>complex</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:complex</description>
+    <description>functional</description>
 </snippet>

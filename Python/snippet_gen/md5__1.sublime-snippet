@@ -5,5 +5,5 @@
     <tabTrigger>md5</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:md5</description>
+    <description>module</description>
 </snippet>

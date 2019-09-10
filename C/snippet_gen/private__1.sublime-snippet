@@ -5,5 +5,5 @@
     <tabTrigger>private</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>access:private</description>
+    <description>access</description>
 </snippet>

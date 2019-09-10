@@ -5,5 +5,5 @@
     <tabTrigger>OK</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http 200:OK</description>
+    <description>200:http</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>calendar</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:calendar</description>
+    <description>module</description>
 </snippet>

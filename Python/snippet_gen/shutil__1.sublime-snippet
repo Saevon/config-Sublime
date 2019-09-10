@@ -5,5 +5,5 @@
     <tabTrigger>shutil</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:shutil</description>
+    <description>module</description>
 </snippet>

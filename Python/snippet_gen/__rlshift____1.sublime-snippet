@@ -5,5 +5,5 @@
     <tabTrigger>__rlshift__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__rlshift__</description>
+    <description>dunder</description>
 </snippet>

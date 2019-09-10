@@ -5,5 +5,5 @@
     <tabTrigger>chunk</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:chunk</description>
+    <description>module</description>
 </snippet>

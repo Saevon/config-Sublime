@@ -5,5 +5,5 @@
     <tabTrigger>__index__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__index__</description>
+    <description>dunder</description>
 </snippet>

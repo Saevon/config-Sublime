@@ -5,5 +5,5 @@
     <tabTrigger>__exit__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__exit__</description>
+    <description>dunder</description>
 </snippet>

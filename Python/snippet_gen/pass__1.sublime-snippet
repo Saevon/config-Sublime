@@ -5,5 +5,5 @@
     <tabTrigger>pass</tabTrigger>
 
     <scope>source.python</scope>
-    <description>keyword:pass</description>
+    <description>keyword</description>
 </snippet>

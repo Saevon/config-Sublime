@@ -5,5 +5,5 @@
     <tabTrigger>shared_ptr</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>pointer:shared_ptr</description>
+    <description>pointer</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>pickletools</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:pickletools</description>
+    <description>module</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>repeat</tabTrigger>
 
     <scope>source.python</scope>
-    <description>itertools:repeat</description>
+    <description>itertools</description>
 </snippet>

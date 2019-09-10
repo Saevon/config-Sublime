@@ -5,5 +5,5 @@
     <tabTrigger>anydbm</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:anydbm</description>
+    <description>module</description>
 </snippet>

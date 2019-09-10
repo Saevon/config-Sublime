@@ -5,5 +5,5 @@
     <tabTrigger>printf</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>keyword:printf</description>
+    <description>keyword</description>
 </snippet>

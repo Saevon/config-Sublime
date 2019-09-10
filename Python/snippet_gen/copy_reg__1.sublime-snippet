@@ -5,5 +5,5 @@
     <tabTrigger>copy_reg</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:copy_reg</description>
+    <description>module</description>
 </snippet>

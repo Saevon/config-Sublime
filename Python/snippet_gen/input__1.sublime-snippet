@@ -5,5 +5,5 @@
     <tabTrigger>input</tabTrigger>
 
     <scope>source.python</scope>
-    <description>builtin:input</description>
+    <description>builtin</description>
 </snippet>

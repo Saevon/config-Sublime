@@ -5,5 +5,5 @@
     <tabTrigger>raise</tabTrigger>
 
     <scope>source.python</scope>
-    <description>keyword:raise</description>
+    <description>keyword</description>
 </snippet>

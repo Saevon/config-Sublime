@@ -5,5 +5,5 @@
     <tabTrigger>unique_ptr</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>pointer:unique_ptr</description>
+    <description>pointer</description>
 </snippet>

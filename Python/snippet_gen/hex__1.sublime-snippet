@@ -5,5 +5,5 @@
     <tabTrigger>hex</tabTrigger>
 
     <scope>source.python</scope>
-    <description>type:hex</description>
+    <description>type</description>
 </snippet>

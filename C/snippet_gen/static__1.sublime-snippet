@@ -5,5 +5,5 @@
     <tabTrigger>static</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>type:static</description>
+    <description>type</description>
 </snippet>

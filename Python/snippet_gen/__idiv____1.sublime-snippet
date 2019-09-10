@@ -5,5 +5,5 @@
     <tabTrigger>__idiv__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__idiv__</description>
+    <description>dunder</description>
 </snippet>

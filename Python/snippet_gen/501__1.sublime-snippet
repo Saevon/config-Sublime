@@ -5,5 +5,5 @@
     <tabTrigger>501</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http NotImplemented:501</description>
+    <description>NotImplemented:http</description>
 </snippet>

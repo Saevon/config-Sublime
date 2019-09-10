@@ -5,5 +5,5 @@
     <tabTrigger>cgitb</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:cgitb</description>
+    <description>module</description>
 </snippet>

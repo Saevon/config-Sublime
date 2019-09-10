@@ -3,9 +3,11 @@
 2. Use \t to indicate indentation (sublime auto-converts)
 '''
 from collections import defaultdict
+import itertools
 import textwrap
 import os
 import re
+from collections import abc
 
 import yaml
 try:
@@ -37,7 +39,7 @@ def init_jinja():
                 <tabTrigger>{{ trigger }}</tabTrigger>
 
                 <scope>{{ scope }}</scope>
-                <description>{{ desc }}:{{trigger}}</description>
+                <description>{{ desc }}</description>
             </snippet>
         """),
         autoescape=True,
@@ -66,35 +68,42 @@ def generate_snippets(in_file, out_path):
             # Use the groupname as the default description
             if group is not None:
                 if 'desc' not in entry:
-                    entry['desc'] = group
-                elif group not in entry['desc']:
-                    entry['desc'] = "{}:{}".format(group, entry['desc'])
+                    entry['desc'] = []
+                elif isinstance(entry['desc'], str):
+                    entry['desc'] = [entry['desc']]
+
+                if group not in entry['desc']:
+                    entry['desc'].append(group)
 
             entry['scope'] = scope
 
             if ']]>' in entry['snippet']:
                 raise Exception("Illegal Chars for CDATA Section ']]>'")
 
-            if isinstance(entry['trigger'], list):
-                for trigger in entry['trigger']:
-                    tags = [
-                        tag for tag in entry.get('tags', [])
-                        if (tag not in entry['desc']) and (tag not in trigger)
-                    ]
+            if isinstance(entry.get('trigger', None), str):
+                entry['triggers'] = [entry['trigger']]
+            elif isinstance(entry.get('trigger', None), abc.Sequence):
+                entry['triggers'] = entry['trigger']
 
-                    snippets.append({
-                        **entry,
-                        'trigger': trigger,
-                        'desc': entry['desc'] + ' ' + ' '.join(tags),
-                    })
-            else:
-                snippets.append(entry)
+            for trigger in entry['triggers']:
+                tags = [
+                    tag for tag in entry.get('tags', [])
+                    if (tag not in entry['desc']) and (tag not in trigger)
+                ]
+
+                snippets.append({
+                    **entry,
+                    'trigger': trigger,
+                    # Warning! this purposely doesn't include the "trigger"
+                    #    since it clutters the dropdown
+                    #  However, this means the Command-Palette isn't searchable...
+                    'desc': ':'.join(itertools.chain(tags, entry['desc'])),
+                })
 
     dups = defaultdict(int)
 
     for snippet in snippets:
         assert snippet["trigger"], "Need a trigger: {}".format(snippet)
-
 
         key = snippet['trigger'].lower()
 

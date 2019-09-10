@@ -5,5 +5,5 @@
     <tabTrigger>is</tabTrigger>
 
     <scope>source.python</scope>
-    <description>keyword:is</description>
+    <description>keyword</description>
 </snippet>

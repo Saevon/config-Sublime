@@ -5,5 +5,5 @@
     <tabTrigger>428</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http PreconditionRequired:428</description>
+    <description>PreconditionRequired:http</description>
 </snippet>

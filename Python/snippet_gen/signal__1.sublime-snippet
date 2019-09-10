@@ -5,5 +5,5 @@
     <tabTrigger>signal</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:signal</description>
+    <description>module</description>
 </snippet>

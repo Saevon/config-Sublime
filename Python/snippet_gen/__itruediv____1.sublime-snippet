@@ -5,5 +5,5 @@
     <tabTrigger>__itruediv__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__itruediv__</description>
+    <description>dunder</description>
 </snippet>

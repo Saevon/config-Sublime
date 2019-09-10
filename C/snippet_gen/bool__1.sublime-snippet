@@ -5,5 +5,5 @@
     <tabTrigger>bool</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>type:bool</description>
+    <description>type</description>
 </snippet>

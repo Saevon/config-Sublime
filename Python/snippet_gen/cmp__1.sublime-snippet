@@ -5,5 +5,5 @@
     <tabTrigger>cmp</tabTrigger>
 
     <scope>source.python</scope>
-    <description>builtin:cmp</description>
+    <description>builtin</description>
 </snippet>

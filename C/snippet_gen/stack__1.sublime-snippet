@@ -5,5 +5,5 @@
     <tabTrigger>stack</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>container:stack</description>
+    <description>container</description>
 </snippet>

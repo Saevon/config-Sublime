@@ -5,5 +5,5 @@
     <tabTrigger>dir</tabTrigger>
 
     <scope>source.python</scope>
-    <description>builtin:dir</description>
+    <description>builtin</description>
 </snippet>

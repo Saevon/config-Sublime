@@ -5,5 +5,5 @@
     <tabTrigger>posix</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:posix</description>
+    <description>module</description>
 </snippet>

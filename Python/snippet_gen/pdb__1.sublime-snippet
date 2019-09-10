@@ -5,5 +5,5 @@
     <tabTrigger>pdb</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:pdb</description>
+    <description>module</description>
 </snippet>

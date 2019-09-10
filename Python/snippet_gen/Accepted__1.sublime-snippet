@@ -5,5 +5,5 @@
     <tabTrigger>Accepted</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http 202 InProgress:Accepted</description>
+    <description>202:InProgress:http</description>
 </snippet>

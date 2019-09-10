@@ -5,5 +5,5 @@
     <tabTrigger>crypt</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:crypt</description>
+    <description>module</description>
 </snippet>

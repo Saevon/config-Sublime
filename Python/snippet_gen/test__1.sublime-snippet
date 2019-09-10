@@ -5,5 +5,5 @@
     <tabTrigger>test</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:test</description>
+    <description>module</description>
 </snippet>

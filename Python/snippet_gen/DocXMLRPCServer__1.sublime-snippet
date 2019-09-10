@@ -5,5 +5,5 @@
     <tabTrigger>DocXMLRPCServer</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:DocXMLRPCServer</description>
+    <description>module</description>
 </snippet>

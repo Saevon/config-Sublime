@@ -5,5 +5,5 @@
     <tabTrigger>404</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http NotFound:404</description>
+    <description>NotFound:http</description>
 </snippet>

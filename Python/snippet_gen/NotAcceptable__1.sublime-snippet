@@ -5,5 +5,5 @@
     <tabTrigger>NotAcceptable</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http 406:NotAcceptable</description>
+    <description>406:http</description>
 </snippet>

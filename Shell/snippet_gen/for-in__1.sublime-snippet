@@ -8,5 +8,5 @@ done
     <tabTrigger>for-in</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>block:for-in</description>
+    <description>block</description>
 </snippet>

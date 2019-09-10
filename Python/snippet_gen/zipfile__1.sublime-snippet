@@ -5,5 +5,5 @@
     <tabTrigger>zipfile</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:zipfile</description>
+    <description>module</description>
 </snippet>

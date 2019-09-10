@@ -5,5 +5,5 @@
     <tabTrigger>__pos__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__pos__</description>
+    <description>dunder</description>
 </snippet>

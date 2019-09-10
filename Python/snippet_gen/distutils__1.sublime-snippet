@@ -5,5 +5,5 @@
     <tabTrigger>distutils</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:distutils</description>
+    <description>module</description>
 </snippet>

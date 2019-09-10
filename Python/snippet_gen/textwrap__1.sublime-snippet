@@ -5,5 +5,5 @@
     <tabTrigger>textwrap</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:textwrap</description>
+    <description>module</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>405</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http MethodNotAllowed:405</description>
+    <description>MethodNotAllowed:http</description>
 </snippet>

@@ -6,5 +6,5 @@
     <tabTrigger>script_path</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>subroutine:script_path</description>
+    <description>subroutine</description>
 </snippet>

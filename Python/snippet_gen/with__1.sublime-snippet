@@ -5,5 +5,5 @@
     <tabTrigger>with</tabTrigger>
 
     <scope>source.python</scope>
-    <description>keyword:with</description>
+    <description>keyword</description>
 </snippet>

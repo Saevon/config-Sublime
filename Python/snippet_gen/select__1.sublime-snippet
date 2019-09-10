@@ -5,5 +5,5 @@
     <tabTrigger>select</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:select</description>
+    <description>module</description>
 </snippet>

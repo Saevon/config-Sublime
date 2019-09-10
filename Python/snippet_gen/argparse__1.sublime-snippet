@@ -5,5 +5,5 @@
     <tabTrigger>argparse</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:argparse</description>
+    <description>module</description>
 </snippet>

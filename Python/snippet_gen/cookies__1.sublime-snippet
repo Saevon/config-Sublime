@@ -5,5 +5,5 @@
     <tabTrigger>cookies</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:cookies</description>
+    <description>module</description>
 </snippet>

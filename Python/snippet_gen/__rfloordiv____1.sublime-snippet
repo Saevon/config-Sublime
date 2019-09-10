@@ -5,5 +5,5 @@
     <tabTrigger>__rfloordiv__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__rfloordiv__</description>
+    <description>dunder</description>
 </snippet>

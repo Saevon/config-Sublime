@@ -5,5 +5,5 @@
     <tabTrigger>aetools</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:aetools</description>
+    <description>module</description>
 </snippet>

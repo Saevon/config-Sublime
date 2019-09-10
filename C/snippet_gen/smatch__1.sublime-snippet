@@ -5,5 +5,5 @@
     <tabTrigger>smatch</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>type:smatch</description>
+    <description>type</description>
 </snippet>

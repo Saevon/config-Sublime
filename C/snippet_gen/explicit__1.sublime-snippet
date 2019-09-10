@@ -5,5 +5,5 @@
     <tabTrigger>explicit</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>attribute:explicit</description>
+    <description>attribute</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>grp</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:grp</description>
+    <description>module</description>
 </snippet>

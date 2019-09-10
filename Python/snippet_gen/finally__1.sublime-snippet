@@ -5,5 +5,5 @@
     <tabTrigger>finally</tabTrigger>
 
     <scope>source.python</scope>
-    <description>keyword:finally</description>
+    <description>keyword</description>
 </snippet>

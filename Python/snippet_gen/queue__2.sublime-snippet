@@ -5,5 +5,5 @@
     <tabTrigger>queue</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:queue</description>
+    <description>module</description>
 </snippet>

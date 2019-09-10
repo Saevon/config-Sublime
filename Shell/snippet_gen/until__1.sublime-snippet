@@ -8,5 +8,5 @@ done
     <tabTrigger>until</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>block:until</description>
+    <description>block</description>
 </snippet>

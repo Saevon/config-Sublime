@@ -5,5 +5,5 @@
     <tabTrigger>handler</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:handler</description>
+    <description>module</description>
 </snippet>

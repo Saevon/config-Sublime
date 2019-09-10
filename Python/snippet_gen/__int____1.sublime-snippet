@@ -5,5 +5,5 @@
     <tabTrigger>__int__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__int__</description>
+    <description>dunder</description>
 </snippet>

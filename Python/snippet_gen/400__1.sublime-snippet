@@ -5,5 +5,5 @@
     <tabTrigger>400</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http BadRequest:400</description>
+    <description>BadRequest:http</description>
 </snippet>

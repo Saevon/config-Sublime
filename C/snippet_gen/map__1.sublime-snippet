@@ -5,5 +5,5 @@
     <tabTrigger>map</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>container:map</description>
+    <description>container</description>
 </snippet>

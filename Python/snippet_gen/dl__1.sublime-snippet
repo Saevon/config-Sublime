@@ -5,5 +5,5 @@
     <tabTrigger>dl</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:dl</description>
+    <description>module</description>
 </snippet>

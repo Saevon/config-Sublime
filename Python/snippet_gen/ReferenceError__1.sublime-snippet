@@ -1,9 +1,9 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[ReferenceError${1:(\"${2:error}\")}]]></content>
+    <content><![CDATA[ReferenceError${1:("${2:error}")}]]></content>
     <tabTrigger>ReferenceError</tabTrigger>
 
     <scope>source.python</scope>
-    <description>error:ReferenceError</description>
+    <description>error</description>
 </snippet>

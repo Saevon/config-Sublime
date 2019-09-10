@@ -5,5 +5,5 @@
     <tabTrigger>410</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http Gone:410</description>
+    <description>Gone:http</description>
 </snippet>

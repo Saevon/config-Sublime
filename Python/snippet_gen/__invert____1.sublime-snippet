@@ -5,5 +5,5 @@
     <tabTrigger>__invert__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__invert__</description>
+    <description>dunder</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>delattr</tabTrigger>
 
     <scope>source.python</scope>
-    <description>builtin:delattr</description>
+    <description>builtin</description>
 </snippet>

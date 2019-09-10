@@ -5,5 +5,5 @@
     <tabTrigger>enumerate</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:enumerate</description>
+    <description>functional</description>
 </snippet>

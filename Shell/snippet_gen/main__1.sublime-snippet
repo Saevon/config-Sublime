@@ -39,5 +39,5 @@ function main() (
     <tabTrigger>main</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>block :main</description>
+    <description>block</description>
 </snippet>

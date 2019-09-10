@@ -5,5 +5,5 @@
     <tabTrigger>namedtuple</tabTrigger>
 
     <scope>source.python</scope>
-    <description>type:namedtuple</description>
+    <description>type</description>
 </snippet>

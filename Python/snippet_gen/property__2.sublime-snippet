@@ -5,5 +5,5 @@
     <tabTrigger>property</tabTrigger>
 
     <scope>source.python</scope>
-    <description>decorator:property</description>
+    <description>decorator</description>
 </snippet>

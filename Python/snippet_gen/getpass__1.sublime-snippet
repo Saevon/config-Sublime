@@ -5,5 +5,5 @@
     <tabTrigger>getpass</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:getpass</description>
+    <description>module</description>
 </snippet>

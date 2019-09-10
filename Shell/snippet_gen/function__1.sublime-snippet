@@ -10,5 +10,5 @@
     <tabTrigger>function</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>block:function</description>
+    <description>block</description>
 </snippet>

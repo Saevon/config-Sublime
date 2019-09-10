@@ -5,5 +5,5 @@
     <tabTrigger>__radd__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__radd__</description>
+    <description>dunder</description>
 </snippet>

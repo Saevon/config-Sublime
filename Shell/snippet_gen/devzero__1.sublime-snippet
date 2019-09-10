@@ -5,5 +5,5 @@
     <tabTrigger>devzero</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>file:devzero</description>
+    <description>file</description>
 </snippet>

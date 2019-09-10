@@ -5,5 +5,5 @@
     <tabTrigger>sqlite3</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:sqlite3</description>
+    <description>module</description>
 </snippet>

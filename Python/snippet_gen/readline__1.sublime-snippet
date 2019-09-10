@@ -5,5 +5,5 @@
     <tabTrigger>readline</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:readline</description>
+    <description>module</description>
 </snippet>

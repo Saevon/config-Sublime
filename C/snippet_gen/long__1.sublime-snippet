@@ -5,5 +5,5 @@
     <tabTrigger>long</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>type:long</description>
+    <description>type</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>tempfile</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:tempfile</description>
+    <description>module</description>
 </snippet>

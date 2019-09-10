@@ -5,5 +5,5 @@
     <tabTrigger>__rcmp__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__rcmp__</description>
+    <description>dunder</description>
 </snippet>

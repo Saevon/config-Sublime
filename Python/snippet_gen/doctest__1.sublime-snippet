@@ -5,5 +5,5 @@
     <tabTrigger>doctest</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:doctest</description>
+    <description>module</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>__rtruediv__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__rtruediv__</description>
+    <description>dunder</description>
 </snippet>

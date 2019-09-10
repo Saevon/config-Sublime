@@ -5,5 +5,5 @@
     <tabTrigger>virtual</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>attribute:virtual</description>
+    <description>attribute</description>
 </snippet>

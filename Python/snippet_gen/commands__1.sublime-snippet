@@ -5,5 +5,5 @@
     <tabTrigger>commands</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:commands</description>
+    <description>module</description>
 </snippet>

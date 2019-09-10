@@ -5,5 +5,5 @@
     <tabTrigger>importlib</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:importlib</description>
+    <description>module</description>
 </snippet>

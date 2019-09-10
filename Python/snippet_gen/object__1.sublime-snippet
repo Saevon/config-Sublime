@@ -5,5 +5,5 @@
     <tabTrigger>object</tabTrigger>
 
     <scope>source.python</scope>
-    <description>type:object</description>
+    <description>type</description>
 </snippet>

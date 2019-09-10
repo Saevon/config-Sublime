@@ -1,9 +1,9 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[LookupError${1:(\"${2:error}\")}]]></content>
+    <content><![CDATA[LookupError${1:("${2:error}")}]]></content>
     <tabTrigger>LookupError</tabTrigger>
 
     <scope>source.python</scope>
-    <description>error:LookupError</description>
+    <description>error</description>
 </snippet>

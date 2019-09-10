@@ -5,5 +5,5 @@
     <tabTrigger>417</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http ExpectationFailed:417</description>
+    <description>ExpectationFailed:http</description>
 </snippet>

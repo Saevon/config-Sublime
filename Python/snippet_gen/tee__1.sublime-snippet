@@ -5,5 +5,5 @@
     <tabTrigger>tee</tabTrigger>
 
     <scope>source.python</scope>
-    <description>itertools:tee</description>
+    <description>itertools</description>
 </snippet>

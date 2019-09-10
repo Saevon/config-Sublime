@@ -5,5 +5,5 @@
     <tabTrigger>pipes</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:pipes</description>
+    <description>module</description>
 </snippet>

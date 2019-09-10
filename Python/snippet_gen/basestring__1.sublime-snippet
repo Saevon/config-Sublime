@@ -5,5 +5,5 @@
     <tabTrigger>basestring</tabTrigger>
 
     <scope>source.python</scope>
-    <description>type:basestring</description>
+    <description>type</description>
 </snippet>

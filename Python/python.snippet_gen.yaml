@@ -58,103 +58,103 @@ snippets:
 
     error:
       - trigger: ArithmeticError
-        snippet: ArithmeticError${1:(\"${2:error}\")}
+        snippet: ArithmeticError${1:("${2:error}")}
       - trigger: AssertionError
-        snippet: AssertionError${1:(\"${2:error}\")}
+        snippet: AssertionError${1:("${2:error}")}
       - trigger: AttributeError
-        snippet: AttributeError${1:(\"${2:error}\")}
+        snippet: AttributeError${1:("${2:error}")}
       - trigger: BaseException
-        snippet: BaseException${1:(\"${2:error}\")}
+        snippet: BaseException${1:("${2:error}")}
       - trigger: BufferError
-        snippet: BufferError${1:(\"${2:error}\")}
+        snippet: BufferError${1:("${2:error}")}
       - trigger: BytesWarning
-        snippet: BytesWarning${1:(\"${2:error}\")}
+        snippet: BytesWarning${1:("${2:error}")}
       - trigger: DeprecationWarning
-        snippet: DeprecationWarning${1:(\"${2:error}\")}
+        snippet: DeprecationWarning${1:("${2:error}")}
       - trigger: EnvironmentError
-        snippet: EnvironmentError${1:(\"${2:error}\")}
+        snippet: EnvironmentError${1:("${2:error}")}
       - trigger: EOFError
-        snippet: EOFError${1:(\"${2:error}\")}
+        snippet: EOFError${1:("${2:error}")}
       - trigger: Exception
-        snippet: Exception${1:(\"${2:error}\")}
+        snippet: Exception${1:("${2:error}")}
       - trigger: FloatingPointError
-        snippet: FloatingPointError${1:(\"${2:error}\")}
+        snippet: FloatingPointError${1:("${2:error}")}
       - trigger: FutureWarning
-        snippet: FutureWarning${1:(\"${2:error}\")}
+        snippet: FutureWarning${1:("${2:error}")}
       - trigger: GeneratorExit
-        snippet: GeneratorExit${1:(\"${2:error}\")}
+        snippet: GeneratorExit${1:("${2:error}")}
       - trigger: ImportError
-        snippet: ImportError${1:(\"${2:error}\")}
+        snippet: ImportError${1:("${2:error}")}
       - trigger: ImportWarning
-        snippet: ImportWarning${1:(\"${2:error}\")}
+        snippet: ImportWarning${1:("${2:error}")}
       - trigger: IndentationError
-        snippet: IndentationError${1:(\"${2:error}\")}
+        snippet: IndentationError${1:("${2:error}")}
       - trigger: IndexError
-        snippet: IndexError${1:(\"${2:error}\")}
+        snippet: IndexError${1:("${2:error}")}
       - trigger: IOError
-        snippet: IOError${1:(\"${2:error}\")}
+        snippet: IOError${1:("${2:error}")}
       - trigger: KeyboardInterrupt
-        snippet: KeyboardInterrupt${1:(\"${2:error}\")}
+        snippet: KeyboardInterrupt${1:("${2:error}")}
       - trigger: KeyError
-        snippet: KeyError${1:(\"${2:error}\")}
+        snippet: KeyError${1:("${2:error}")}
       - trigger: LookupError
-        snippet: LookupError${1:(\"${2:error}\")}
+        snippet: LookupError${1:("${2:error}")}
       - trigger: MemoryError
-        snippet: MemoryError${1:(\"${2:error}\")}
+        snippet: MemoryError${1:("${2:error}")}
       - trigger: NameError
-        snippet: NameError${1:(\"${2:error}\")}
+        snippet: NameError${1:("${2:error}")}
       - trigger: NotImplemented
-        snippet: NotImplemented${1:(\"${2:error}\")}
+        snippet: NotImplemented${1:("${2:error}")}
       - trigger: NotImplementedError
-        snippet: NotImplementedError${1:(\"${2:error}\")}
+        snippet: NotImplementedError${1:("${2:error}")}
       - trigger: OSError
-        snippet: OSError${1:(\"${2:error}\")}
+        snippet: OSError${1:("${2:error}")}
       - trigger: OverflowError
-        snippet: OverflowError${1:(\"${2:error}\")}
+        snippet: OverflowError${1:("${2:error}")}
       - trigger: PendingDeprecationWarning
-        snippet: PendingDeprecationWarning${1:(\"${2:error}\")}
+        snippet: PendingDeprecationWarning${1:("${2:error}")}
       - trigger: ReferenceError
-        snippet: ReferenceError${1:(\"${2:error}\")}
+        snippet: ReferenceError${1:("${2:error}")}
       - trigger: RuntimeError
-        snippet: RuntimeError${1:(\"${2:error}\")}
+        snippet: RuntimeError${1:("${2:error}")}
       - trigger: RuntimeWarning
-        snippet: RuntimeWarning${1:(\"${2:error}\")}
+        snippet: RuntimeWarning${1:("${2:error}")}
       - trigger: StandardError
-        snippet: StandardError${1:(\"${2:error}\")}
+        snippet: StandardError${1:("${2:error}")}
       - trigger: StopIteration
-        snippet: StopIteration${1:(\"${2:error}\")}
+        snippet: StopIteration${1:("${2:error}")}
       - trigger: SyntaxError
-        snippet: SyntaxError${1:(\"${2:error}\")}
+        snippet: SyntaxError${1:("${2:error}")}
       - trigger: SyntaxWarning
-        snippet: SyntaxWarning${1:(\"${2:error}\")}
+        snippet: SyntaxWarning${1:("${2:error}")}
       - trigger: SystemError
-        snippet: SystemError${1:(\"${2:error}\")}
+        snippet: SystemError${1:("${2:error}")}
       - trigger: SystemExit
-        snippet: SystemExit${1:(\"${2:error}\")}
+        snippet: SystemExit${1:("${2:error}")}
       - trigger: TabError
-        snippet: TabError${1:(\"${2:error}\")}
+        snippet: TabError${1:("${2:error}")}
       - trigger: TypeError
-        snippet: TypeError${1:(\"${2:error}\")}
+        snippet: TypeError${1:("${2:error}")}
       - trigger: UnboundLocalError
-        snippet: UnboundLocalError${1:(\"${2:error}\")}
+        snippet: UnboundLocalError${1:("${2:error}")}
       - trigger: UnicodeDecodeError
-        snippet: UnicodeDecodeError${1:(\"${2:error}\")}
+        snippet: UnicodeDecodeError${1:("${2:error}")}
       - trigger: UnicodeEncodeError
-        snippet: UnicodeEncodeError${1:(\"${2:error}\")}
+        snippet: UnicodeEncodeError${1:("${2:error}")}
       - trigger: UnicodeTranslateError
-        snippet: UnicodeTranslateError${1:(\"${2:error}\")}
+        snippet: UnicodeTranslateError${1:("${2:error}")}
       - trigger: UnicodeWarning
-        snippet: UnicodeWarning${1:(\"${2:error}\")}
+        snippet: UnicodeWarning${1:("${2:error}")}
       - trigger: UserWarning
-        snippet: UserWarning${1:(\"${2:error}\")}
+        snippet: UserWarning${1:("${2:error}")}
       - trigger: ValueError
-        snippet: ValueError${1:(\"${2:error}\")}
+        snippet: ValueError${1:("${2:error}")}
       - trigger: VMSError
-        snippet: VMSError${1:(\"${2:error}\")}
+        snippet: VMSError${1:("${2:error}")}
       - trigger: WindowsError
-        snippet: WindowsError${1:(\"${2:error}\")}
+        snippet: WindowsError${1:("${2:error}")}
       - trigger: ZeroDivision
-        snippet: ZeroDivision${1:(\"${2:error}\")}
+        snippet: ZeroDivision${1:("${2:error}")}
 
     builtin:
       - trigger: abs
@@ -198,7 +198,7 @@ snippets:
       - trigger: ord
         snippet: ord(${1:c})
       - trigger: print
-        snippet: print(*objects, sep=' ', end='\\n', file=sys.stdout)
+        snippet: print(${1:*objects}${2:, sep=' ', end='\\n', file=sys.stdout})
       - trigger: raw_input
         snippet: raw_input(${1:prompt})
       - trigger: reload
@@ -394,9 +394,7 @@ snippets:
       - __div__
       - __divmod__
       - __doc__
-      - __enter__
       - __eq__
-      - __exit__
       - __file__
       - __float__
       - __floordiv__
@@ -444,7 +442,6 @@ snippets:
       - __name__
       - __ne__
       - __neg__
-      - __new__
       - __nonzero__
       - __oct__
       - __op__
@@ -483,6 +480,20 @@ snippets:
       - __unicode__
       - __weakref__
       - __xor__
+
+      - __enter__
+      - __exit__
+      - trigger: __exit__
+        snippet: "__exit__(self, exc_type, exc_val, exc_tb):"
+        desc: 'method'
+
+      - trigger: __new__
+        snippet: |
+          __new__(cls, *args, **kwargs):
+          	self = super().__new__(cls)
+          	self.__init__(*args, **kwargs)
+
+          	return self
 
     module:
       - 2to3

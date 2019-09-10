@@ -5,5 +5,5 @@
     <tabTrigger>socketserver</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:socketserver</description>
+    <description>module</description>
 </snippet>

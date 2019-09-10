@@ -5,5 +5,5 @@
     <tabTrigger>hotshot</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:hotshot</description>
+    <description>module</description>
 </snippet>

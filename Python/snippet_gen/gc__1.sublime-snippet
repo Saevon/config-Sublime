@@ -5,5 +5,5 @@
     <tabTrigger>gc</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:gc</description>
+    <description>module</description>
 </snippet>

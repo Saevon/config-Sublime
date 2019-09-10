@@ -5,5 +5,5 @@
     <tabTrigger>range</tabTrigger>
 
     <scope>source.haskell</scope>
-    <description>synonym:range</description>
+    <description>synonym</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>sndhdr</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:sndhdr</description>
+    <description>module</description>
 </snippet>

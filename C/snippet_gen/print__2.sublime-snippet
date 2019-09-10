@@ -5,5 +5,5 @@
     <tabTrigger>print</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>keyword:print</description>
+    <description>keyword</description>
 </snippet>

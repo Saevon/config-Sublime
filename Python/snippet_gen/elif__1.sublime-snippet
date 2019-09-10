@@ -7,5 +7,5 @@
     <tabTrigger>elif</tabTrigger>
 
     <scope>source.python</scope>
-    <description>block:elif</description>
+    <description>block</description>
 </snippet>

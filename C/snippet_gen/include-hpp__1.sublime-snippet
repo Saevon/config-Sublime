@@ -5,5 +5,5 @@
     <tabTrigger>include-hpp</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>block:include-hpp</description>
+    <description>block</description>
 </snippet>

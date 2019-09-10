@@ -5,5 +5,5 @@
     <tabTrigger>format</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:format</description>
+    <description>functional</description>
 </snippet>

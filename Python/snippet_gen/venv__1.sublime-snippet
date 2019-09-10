@@ -5,5 +5,5 @@
     <tabTrigger>venv</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:venv</description>
+    <description>module</description>
 </snippet>

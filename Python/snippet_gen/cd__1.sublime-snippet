@@ -5,5 +5,5 @@
     <tabTrigger>cd</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:cd</description>
+    <description>module</description>
 </snippet>

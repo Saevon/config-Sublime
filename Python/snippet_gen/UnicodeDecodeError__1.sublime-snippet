@@ -1,9 +1,9 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[UnicodeDecodeError${1:(\"${2:error}\")}]]></content>
+    <content><![CDATA[UnicodeDecodeError${1:("${2:error}")}]]></content>
     <tabTrigger>UnicodeDecodeError</tabTrigger>
 
     <scope>source.python</scope>
-    <description>error:UnicodeDecodeError</description>
+    <description>error</description>
 </snippet>

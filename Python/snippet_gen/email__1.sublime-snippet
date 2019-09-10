@@ -5,5 +5,5 @@
     <tabTrigger>email</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:email</description>
+    <description>module</description>
 </snippet>

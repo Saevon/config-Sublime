@@ -5,5 +5,5 @@
     <tabTrigger>reduce</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:reduce</description>
+    <description>functional</description>
 </snippet>

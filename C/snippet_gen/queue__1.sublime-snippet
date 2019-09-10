@@ -5,5 +5,5 @@
     <tabTrigger>queue</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>container:queue</description>
+    <description>container</description>
 </snippet>

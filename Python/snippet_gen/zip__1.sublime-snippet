@@ -5,5 +5,5 @@
     <tabTrigger>zip</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:zip</description>
+    <description>functional</description>
 </snippet>

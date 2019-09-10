@@ -5,5 +5,5 @@
     <tabTrigger>__hash__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__hash__</description>
+    <description>dunder</description>
 </snippet>

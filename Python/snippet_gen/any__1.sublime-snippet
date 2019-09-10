@@ -5,5 +5,5 @@
     <tabTrigger>any</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:any</description>
+    <description>functional</description>
 </snippet>

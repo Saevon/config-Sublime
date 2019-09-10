@@ -5,5 +5,5 @@
     <tabTrigger>xrange</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:xrange</description>
+    <description>functional</description>
 </snippet>

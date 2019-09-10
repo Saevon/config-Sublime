@@ -5,5 +5,5 @@
     <tabTrigger>noexcept</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>attribute:noexcept</description>
+    <description>attribute</description>
 </snippet>

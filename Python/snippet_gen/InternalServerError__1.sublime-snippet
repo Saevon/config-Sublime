@@ -5,5 +5,5 @@
     <tabTrigger>InternalServerError</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http 500:InternalServerError</description>
+    <description>500:http</description>
 </snippet>

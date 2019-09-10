@@ -1,9 +1,14 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[__new__]]></content>
+    <content><![CDATA[__new__(cls, *args, **kwargs):
+	self = super().__new__(cls)
+	self.__init__(*args, **kwargs)
+
+	return self
+]]></content>
     <tabTrigger>__new__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__new__</description>
+    <description>dunder</description>
 </snippet>

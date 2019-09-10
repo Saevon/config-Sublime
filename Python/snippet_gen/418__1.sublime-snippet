@@ -5,5 +5,5 @@
     <tabTrigger>418</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http ImATeapot:418</description>
+    <description>ImATeapot:http</description>
 </snippet>

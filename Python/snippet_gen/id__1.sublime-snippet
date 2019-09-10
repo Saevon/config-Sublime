@@ -5,5 +5,5 @@
     <tabTrigger>id</tabTrigger>
 
     <scope>source.python</scope>
-    <description>builtin:id</description>
+    <description>builtin</description>
 </snippet>

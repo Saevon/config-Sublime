@@ -5,5 +5,5 @@
     <tabTrigger>ServiceUnavailable</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http 503:ServiceUnavailable</description>
+    <description>503:http</description>
 </snippet>

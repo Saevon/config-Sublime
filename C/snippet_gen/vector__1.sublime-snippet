@@ -5,5 +5,5 @@
     <tabTrigger>vector</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>container:vector</description>
+    <description>container</description>
 </snippet>

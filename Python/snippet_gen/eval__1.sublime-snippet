@@ -5,5 +5,5 @@
     <tabTrigger>eval</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:eval</description>
+    <description>functional</description>
 </snippet>

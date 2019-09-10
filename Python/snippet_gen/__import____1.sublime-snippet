@@ -5,5 +5,5 @@
     <tabTrigger>__import__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:__import__</description>
+    <description>functional</description>
 </snippet>

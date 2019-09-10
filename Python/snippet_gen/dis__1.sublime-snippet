@@ -5,5 +5,5 @@
     <tabTrigger>dis</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:dis</description>
+    <description>module</description>
 </snippet>

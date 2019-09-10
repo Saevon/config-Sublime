@@ -5,5 +5,5 @@
     <tabTrigger>list</tabTrigger>
 
     <scope>source.python</scope>
-    <description>type:list</description>
+    <description>type</description>
 </snippet>

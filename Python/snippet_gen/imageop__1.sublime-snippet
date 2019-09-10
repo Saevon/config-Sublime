@@ -5,5 +5,5 @@
     <tabTrigger>imageop</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:imageop</description>
+    <description>module</description>
 </snippet>

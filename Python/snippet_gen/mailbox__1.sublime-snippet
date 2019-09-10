@@ -5,5 +5,5 @@
     <tabTrigger>mailbox</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:mailbox</description>
+    <description>module</description>
 </snippet>

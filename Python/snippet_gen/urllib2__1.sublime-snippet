@@ -5,5 +5,5 @@
     <tabTrigger>urllib2</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:urllib2</description>
+    <description>module</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>415</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http UnsupportedMediaType:415</description>
+    <description>UnsupportedMediaType:http</description>
 </snippet>

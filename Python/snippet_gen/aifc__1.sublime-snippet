@@ -5,5 +5,5 @@
     <tabTrigger>aifc</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:aifc</description>
+    <description>module</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>divmod</tabTrigger>
 
     <scope>source.python</scope>
-    <description>builtin:divmod</description>
+    <description>builtin</description>
 </snippet>

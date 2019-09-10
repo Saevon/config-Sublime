@@ -5,5 +5,5 @@
     <tabTrigger>pprint</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:pprint</description>
+    <description>module</description>
 </snippet>

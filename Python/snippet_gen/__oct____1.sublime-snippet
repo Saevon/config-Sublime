@@ -5,5 +5,5 @@
     <tabTrigger>__oct__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__oct__</description>
+    <description>dunder</description>
 </snippet>

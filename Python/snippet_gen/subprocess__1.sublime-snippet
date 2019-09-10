@@ -5,5 +5,5 @@
     <tabTrigger>subprocess</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:subprocess</description>
+    <description>module</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>mock</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:mock</description>
+    <description>module</description>
 </snippet>

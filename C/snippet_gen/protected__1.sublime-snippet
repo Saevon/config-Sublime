@@ -5,5 +5,5 @@
     <tabTrigger>protected</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>access:protected</description>
+    <description>access</description>
 </snippet>

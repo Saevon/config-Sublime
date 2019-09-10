@@ -5,5 +5,5 @@
     <tabTrigger>memoryview</tabTrigger>
 
     <scope>source.python</scope>
-    <description>type:memoryview</description>
+    <description>type</description>
 </snippet>

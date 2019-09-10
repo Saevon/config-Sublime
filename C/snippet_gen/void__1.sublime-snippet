@@ -5,5 +5,5 @@
     <tabTrigger>void</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>type:void</description>
+    <description>type</description>
 </snippet>

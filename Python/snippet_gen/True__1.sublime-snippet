@@ -5,5 +5,5 @@
     <tabTrigger>True</tabTrigger>
 
     <scope>source.python</scope>
-    <description>keyword:True</description>
+    <description>keyword</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>ftplib</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:ftplib</description>
+    <description>module</description>
 </snippet>

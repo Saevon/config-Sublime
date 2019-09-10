@@ -5,5 +5,5 @@
     <tabTrigger>syslog</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:syslog</description>
+    <description>module</description>
 </snippet>

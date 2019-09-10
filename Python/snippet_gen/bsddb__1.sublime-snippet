@@ -5,5 +5,5 @@
     <tabTrigger>bsddb</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:bsddb</description>
+    <description>module</description>
 </snippet>

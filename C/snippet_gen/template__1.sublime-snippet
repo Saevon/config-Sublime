@@ -5,5 +5,5 @@
     <tabTrigger>template</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>block:template</description>
+    <description>block</description>
 </snippet>

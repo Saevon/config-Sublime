@@ -5,5 +5,5 @@
     <tabTrigger>staticmethod</tabTrigger>
 
     <scope>source.python</scope>
-    <description>decorator:staticmethod</description>
+    <description>decorator</description>
 </snippet>

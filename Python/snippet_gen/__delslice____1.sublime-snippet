@@ -5,5 +5,5 @@
     <tabTrigger>__delslice__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__delslice__</description>
+    <description>dunder</description>
 </snippet>

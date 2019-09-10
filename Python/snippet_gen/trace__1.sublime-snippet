@@ -5,5 +5,5 @@
     <tabTrigger>trace</tabTrigger>
 
     <scope>source.python</scope>
-    <description>debug:trace</description>
+    <description>debug</description>
 </snippet>

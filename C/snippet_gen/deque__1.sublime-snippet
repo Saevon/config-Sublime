@@ -5,5 +5,5 @@
     <tabTrigger>deque</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>container:deque</description>
+    <description>container</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>gzip</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:gzip</description>
+    <description>module</description>
 </snippet>

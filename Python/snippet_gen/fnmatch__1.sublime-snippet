@@ -5,5 +5,5 @@
     <tabTrigger>fnmatch</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:fnmatch</description>
+    <description>module</description>
 </snippet>

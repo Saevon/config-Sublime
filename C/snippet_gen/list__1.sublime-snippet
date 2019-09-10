@@ -5,5 +5,5 @@
     <tabTrigger>list</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>container:list</description>
+    <description>container</description>
 </snippet>

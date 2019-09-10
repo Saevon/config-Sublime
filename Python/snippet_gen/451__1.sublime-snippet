@@ -5,5 +5,5 @@
     <tabTrigger>451</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http UnavailableForLegalReasons:451</description>
+    <description>UnavailableForLegalReasons:http</description>
 </snippet>

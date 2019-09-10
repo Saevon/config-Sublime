@@ -5,5 +5,5 @@
     <tabTrigger>volatile</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>type:volatile</description>
+    <description>type</description>
 </snippet>

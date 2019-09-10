@@ -9,5 +9,5 @@ esac
     <tabTrigger>case</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>block:case</description>
+    <description>block</description>
 </snippet>

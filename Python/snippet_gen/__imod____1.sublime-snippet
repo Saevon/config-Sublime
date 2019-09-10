@@ -5,5 +5,5 @@
     <tabTrigger>__imod__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__imod__</description>
+    <description>dunder</description>
 </snippet>

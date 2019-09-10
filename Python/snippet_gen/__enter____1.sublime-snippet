@@ -5,5 +5,5 @@
     <tabTrigger>__enter__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__enter__</description>
+    <description>dunder</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>takewhile</tabTrigger>
 
     <scope>source.python</scope>
-    <description>itertools:takewhile</description>
+    <description>itertools</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>_winreg</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:_winreg</description>
+    <description>module</description>
 </snippet>

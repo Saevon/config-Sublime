@@ -5,5 +5,5 @@
     <tabTrigger>AL</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:AL</description>
+    <description>module</description>
 </snippet>

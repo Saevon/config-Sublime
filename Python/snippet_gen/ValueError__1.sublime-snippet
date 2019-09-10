@@ -1,9 +1,9 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[ValueError${1:(\"${2:error}\")}]]></content>
+    <content><![CDATA[ValueError${1:("${2:error}")}]]></content>
     <tabTrigger>ValueError</tabTrigger>
 
     <scope>source.python</scope>
-    <description>error:ValueError</description>
+    <description>error</description>
 </snippet>

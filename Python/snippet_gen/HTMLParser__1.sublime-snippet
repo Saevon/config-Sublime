@@ -5,5 +5,5 @@
     <tabTrigger>HTMLParser</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:HTMLParser</description>
+    <description>module</description>
 </snippet>

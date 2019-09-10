@@ -5,5 +5,5 @@
     <tabTrigger>__slots__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__slots__</description>
+    <description>dunder</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>devurandom</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>file:devurandom</description>
+    <description>file</description>
 </snippet>

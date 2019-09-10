@@ -5,5 +5,5 @@
     <tabTrigger>__future__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:__future__</description>
+    <description>module</description>
 </snippet>

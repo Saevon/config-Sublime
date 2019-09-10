@@ -5,5 +5,5 @@
     <tabTrigger>weakref</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:weakref</description>
+    <description>module</description>
 </snippet>

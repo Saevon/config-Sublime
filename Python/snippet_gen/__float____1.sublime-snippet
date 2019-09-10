@@ -5,5 +5,5 @@
     <tabTrigger>__float__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__float__</description>
+    <description>dunder</description>
 </snippet>

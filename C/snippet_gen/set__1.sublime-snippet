@@ -5,5 +5,5 @@
     <tabTrigger>set</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>container:set</description>
+    <description>container</description>
 </snippet>

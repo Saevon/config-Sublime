@@ -5,5 +5,5 @@
     <tabTrigger>linecache</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:linecache</description>
+    <description>module</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>gettext</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:gettext</description>
+    <description>module</description>
 </snippet>

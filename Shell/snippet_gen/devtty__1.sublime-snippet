@@ -5,5 +5,5 @@
     <tabTrigger>devtty</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>file :devtty</description>
+    <description>file</description>
 </snippet>

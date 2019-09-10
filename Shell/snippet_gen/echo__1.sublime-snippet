@@ -5,5 +5,5 @@
     <tabTrigger>echo</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>keyword:echo</description>
+    <description>keyword</description>
 </snippet>

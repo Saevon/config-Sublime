@@ -5,5 +5,5 @@
     <tabTrigger>not</tabTrigger>
 
     <scope>source.python</scope>
-    <description>keyword:not</description>
+    <description>keyword</description>
 </snippet>

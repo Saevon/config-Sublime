@@ -5,5 +5,5 @@
     <tabTrigger>unsigned</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>type:unsigned</description>
+    <description>type</description>
 </snippet>

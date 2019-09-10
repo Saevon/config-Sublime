@@ -5,5 +5,5 @@
     <tabTrigger>whichdb</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:whichdb</description>
+    <description>module</description>
 </snippet>

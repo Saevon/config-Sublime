@@ -5,5 +5,5 @@
     <tabTrigger>stringprep</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:stringprep</description>
+    <description>module</description>
 </snippet>

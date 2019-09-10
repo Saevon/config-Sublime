@@ -5,5 +5,5 @@
     <tabTrigger>dedent</tabTrigger>
 
     <scope>source.python</scope>
-    <description>lib:dedent</description>
+    <description>lib</description>
 </snippet>

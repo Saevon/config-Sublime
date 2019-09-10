@@ -5,5 +5,5 @@
     <tabTrigger>tty</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>file :tty</description>
+    <description>file</description>
 </snippet>

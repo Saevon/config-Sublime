@@ -5,5 +5,5 @@
     <tabTrigger>dumbdbm</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:dumbdbm</description>
+    <description>module</description>
 </snippet>

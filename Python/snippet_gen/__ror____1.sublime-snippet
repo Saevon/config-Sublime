@@ -5,5 +5,5 @@
     <tabTrigger>__ror__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__ror__</description>
+    <description>dunder</description>
 </snippet>

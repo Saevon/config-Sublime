@@ -5,5 +5,5 @@
     <tabTrigger>smtpd</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:smtpd</description>
+    <description>module</description>
 </snippet>

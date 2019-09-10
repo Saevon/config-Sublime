@@ -5,5 +5,5 @@
     <tabTrigger>ctypes</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:ctypes</description>
+    <description>module</description>
 </snippet>

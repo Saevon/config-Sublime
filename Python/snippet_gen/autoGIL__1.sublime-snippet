@@ -5,5 +5,5 @@
     <tabTrigger>autoGIL</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:autoGIL</description>
+    <description>module</description>
 </snippet>

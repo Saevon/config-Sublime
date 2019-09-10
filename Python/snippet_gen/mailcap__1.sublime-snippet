@@ -5,5 +5,5 @@
     <tabTrigger>mailcap</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:mailcap</description>
+    <description>module</description>
 </snippet>

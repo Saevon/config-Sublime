@@ -5,5 +5,5 @@
     <tabTrigger>__rmul__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>dunder:__rmul__</description>
+    <description>dunder</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>imaplib</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:imaplib</description>
+    <description>module</description>
 </snippet>

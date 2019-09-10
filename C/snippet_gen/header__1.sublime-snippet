@@ -12,5 +12,5 @@ ${2}
     <tabTrigger>header</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>block:header</description>
+    <description>block</description>
 </snippet>

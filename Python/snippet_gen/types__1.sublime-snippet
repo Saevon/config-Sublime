@@ -5,5 +5,5 @@
     <tabTrigger>types</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:types</description>
+    <description>module</description>
 </snippet>

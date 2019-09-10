@@ -5,5 +5,5 @@
     <tabTrigger>nullptr_t</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>type:nullptr_t</description>
+    <description>type</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>pwd</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:pwd</description>
+    <description>module</description>
 </snippet>

@@ -8,5 +8,5 @@ EOF
     <tabTrigger>multiline</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>block heredoc:multiline</description>
+    <description>heredoc:block</description>
 </snippet>

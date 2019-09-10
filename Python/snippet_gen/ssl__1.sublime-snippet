@@ -5,5 +5,5 @@
     <tabTrigger>ssl</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:ssl</description>
+    <description>module</description>
 </snippet>

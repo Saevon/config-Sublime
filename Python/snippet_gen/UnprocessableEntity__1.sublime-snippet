@@ -5,5 +5,5 @@
     <tabTrigger>UnprocessableEntity</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http 422:UnprocessableEntity</description>
+    <description>422:http</description>
 </snippet>

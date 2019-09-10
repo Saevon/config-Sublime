@@ -5,5 +5,5 @@
     <tabTrigger>pow</tabTrigger>
 
     <scope>source.python</scope>
-    <description>functional:pow</description>
+    <description>functional</description>
 </snippet>

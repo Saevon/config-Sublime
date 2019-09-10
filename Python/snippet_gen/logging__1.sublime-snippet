@@ -5,5 +5,5 @@
     <tabTrigger>logging</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:logging</description>
+    <description>module</description>
 </snippet>

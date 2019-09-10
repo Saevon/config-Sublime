@@ -5,5 +5,5 @@
     <tabTrigger>wave</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:wave</description>
+    <description>module</description>
 </snippet>

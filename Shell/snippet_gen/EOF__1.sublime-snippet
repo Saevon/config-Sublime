@@ -5,5 +5,5 @@
     <tabTrigger>EOF</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>keyword:EOF</description>
+    <description>keyword</description>
 </snippet>

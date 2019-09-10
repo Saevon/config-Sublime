@@ -5,5 +5,5 @@
     <tabTrigger>struct</tabTrigger>
 
     <scope>source.c++</scope>
-    <description>type:struct</description>
+    <description>type</description>
 </snippet>

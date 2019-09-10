@@ -5,5 +5,5 @@
     <tabTrigger>502</tabTrigger>
 
     <scope>source.python</scope>
-    <description>http BadGateway:502</description>
+    <description>BadGateway:http</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>globals</tabTrigger>
 
     <scope>source.python</scope>
-    <description>builtin:globals</description>
+    <description>builtin</description>
 </snippet>

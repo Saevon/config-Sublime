@@ -17,5 +17,5 @@ ${1:foo}:
     <tabTrigger>func</tabTrigger>
 
     <scope>source.asm.arm</scope>
-    <description>blocks:func</description>
+    <description>blocks</description>
 </snippet>

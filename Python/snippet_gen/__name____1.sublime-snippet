@@ -7,5 +7,5 @@
     <tabTrigger>__name__</tabTrigger>
 
     <scope>source.python</scope>
-    <description>block:__name__</description>
+    <description>block</description>
 </snippet>

@@ -5,5 +5,5 @@
     <tabTrigger>dict</tabTrigger>
 
     <scope>source.python</scope>
-    <description>builtin:dict</description>
+    <description>builtin</description>
 </snippet>

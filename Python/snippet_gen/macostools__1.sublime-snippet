@@ -5,5 +5,5 @@
     <tabTrigger>macostools</tabTrigger>
 
     <scope>source.python</scope>
-    <description>module:macostools</description>
+    <description>module</description>
 </snippet>

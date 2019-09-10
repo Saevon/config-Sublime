@@ -5,5 +5,5 @@
     <tabTrigger>devnull</tabTrigger>
 
     <scope>source.shell</scope>
-    <description>file:devnull</description>
+    <description>file</description>
 </snippet>
