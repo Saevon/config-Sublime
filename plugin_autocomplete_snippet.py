@@ -33,6 +33,7 @@ MODULE_WHITELIST = {
     'struct',
     'tempfile',
     'traceback',
+    'pdb',
 
     # Common
     'datetime',
@@ -69,7 +70,7 @@ def format_attr(attr, module):
         pretty_attr = 'class {}()'.format(attr)
     elif callable(obj):
         pretty_attr = '{}()'.format(attr)
-        snippet_attr = '{}($1)'.format(attr)
+        snippet_attr = '{}'.format(attr)
 
     return (
         pretty_attr + '\t' + module_name,
