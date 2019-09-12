@@ -4,6 +4,9 @@
 name: Python Requirements
 scope: config.python-req
 file_extensions: [requirements.txt]
+variables:
+  # Copied from bash Shell
+  flag_start: '(?: |^|=)'
 contexts:
   main:
     # - match:
@@ -16,9 +19,69 @@ contexts:
     # Notes:
     #  * Case Insensitive
 
-    # First pass at version
-    - match: '\b[0-9]+(\.[0-9]+)*\b'
-      scope: constant.numeric.python-req
+    # Version parsing from:
+    # https://www.python.org/dev/peps/pep-0440/#appendix-b-parsing-version-strings-with-regular-expressions
+    - match: '(?xi)
+        (v)?
+        (?:
+            (?:([0-9]+)(!))?
+            (?:([0-9]+)(?:(\\.)([0-9]+))*)
+            (?:
+                ([-_\\.])?
+                (?:(a|b|c|rc|alpha|beta|pre|preview))
+                ([-_\\.])?
+                ([0-9]+)?
+            )?
+            (?:
+                (?:(-)([0-9]+))
+                |
+                (?:
+                    ([-_\\.])?
+                    (post|rev|r)
+                    ([-_\\.])?
+                    ([0-9]+)?
+                )
+            )?
+            (?:
+                ([-_\\.])?
+                (dev)
+                ([-_\\.])?
+                ([0-9]+)?
+            )?
+        )
+        (?:(\+)
+            ([a-z0-9]+(?:[-_\\.][a-z0-9]+)*)
+        )?
+      '
+      captures:
+        1: keyword.other.python-req
+        # Epoch
+        2: constant.numeric.python-req
+        3: variable.function.python-req
+        # Release
+        4: constant.numeric.python-reqaaa
+        # 5: keyword.operator.other.python-req
+        6: constant.numeric.python-reqa
+        # Pre Release
+        7: variable.function.python-req
+        8: variable.function.python-req
+        9: variable.function.python-req
+        10: constant.numeric.python-req
+        # Post Release
+        11: variable.function.python-req
+        12: constant.numeric.python-req
+        13: variable.function.python-req
+        14: variable.function.python-req
+        15: variable.function.python-req
+        16: constant.numeric.python-req
+        # Dev Release
+        17: variable.function.python-req
+        18: variable.function.python-req
+        19: variable.function.python-req
+        20: constant.numeric.python-req
+        # Local Version
+        21: variable.function.python-req
+        22: variable.other.python-req
 
 #     Pre-release separators
 # Pre-releases should allow a ., -, or _ separator between the release segment and the pre-release segment. The normal form for this is without a separator. This allows versions such as 1.1.a1 or 1.1-a1 which would be normalized to 1.1a1. It should also allow a separator to be used between the pre-release signifier and the numeral. This allows versions such as 1.0a.1 which would be normalized to 1.0a1.
@@ -34,25 +97,43 @@ contexts:
 
 # Development release separators
 # Development releases allow a ., -, or a _ separator as well as omitting the separator all together. The normal form of this is with the . separator. This allows versions such as 1.2-dev2 or 1.2dev2 which normalize to 1.2.dev2.
-    - match: '-=|===?|!=|\<=?|>=?'
+    - match: '-=|===?|!=|\<=?|>=?|~='
       scope: keyword.operator.comparison.python-req
-
     # - match: ^([a-zA-Z_][a-zA-Z0-9_-]*)
     #   scope: string.unquoted.python-req
 
-# Allow "v" prefix
+    # Known Flags
+    - match: '(?x)
+        (?<={{flag_start}})(
+            -e|--edit|--src
+            |--pre
+
+            |-c|--constraint
+            |--hash
+            |-I|--ignore-installed
+            |--no-deps
 
 
-    # Version: see PEP440: https://www.python.org/dev/peps/pep-0440/
-    # (?P<epoch>N!)?
-    # (?P<release>N(.N)*)
-    # (?P<prerelease>(a|b|rc)N?)?
-    # (?<postrelease>.postN?)?
-    # (?<dev>.devN?)?
+            |-i|--index-url|--extra-index-url|--no-index
+            |-f|--find-links
+            |--install-option
 
-    #   Starts ends with ascii letter/digit (Also segmented by .)
-    # Allows segmentation by - _
-    # (?P<local>+[a-zA-Z0-9]  ...)?
+            |--no-binary|--only-binary
+            |--require-hashes
+
+            |--platform|--target
+
+        )
+      '
+      scope: support.function.python-req
+
+    # Copied from bash shell
+    - match: (?i)(?<={{flag_start}})--[a-z0-9]+([-_]+[a-z0-9]+)*
+      scope: support.flag.shell
+    - match: (?i)(?<={{flag_start}})--
+      scope: support.flag.shell
+    - match: (?i)(?<={{flag_start}})(-|\+)[a-z0-9@]+
+      scope: support.flag.shell
 
     # Flags
     # -e <VCS Project URL>
