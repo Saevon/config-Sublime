@@ -138,7 +138,12 @@
 		".git",
 		".svn",
 		".hg",
-		"CVS"
+		"CVS",
+
+		// Python
+		"dist",
+		"*.egg-info",
+		"*.dist-info",
 	],
 
 	"ignored_packages":
