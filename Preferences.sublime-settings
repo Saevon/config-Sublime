@@ -91,6 +91,8 @@
 		120,
 	],
 
+	// Show the file encoding
+	"show_encoding": true,
 
 	///////////////////////////////////
 	// Vintage Mode
