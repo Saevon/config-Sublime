@@ -479,7 +479,7 @@
 			<key>name</key>
 			<string>Flags</string>
 			<key>scope</key>
-			<string>support.flag</string>
+			<string>support.flag, variable.flag</string>
 			<key>settings</key>
 			<dict>
 				<!-- Flag Style -->

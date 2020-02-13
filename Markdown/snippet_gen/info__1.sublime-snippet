@@ -1,0 +1,9 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[\$(info "${1:message}")]]></content>
+    <tabTrigger>info</tabTrigger>
+
+    <scope>source.makefile</scope>
+    <description>error</description>
+</snippet>

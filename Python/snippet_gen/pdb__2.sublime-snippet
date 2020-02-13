@@ -1,8 +1,8 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[Tkinter]]></content>
-    <tabTrigger>Tkinter</tabTrigger>
+    <content><![CDATA[pdb]]></content>
+    <tabTrigger>pdb</tabTrigger>
 
     <scope>source.python</scope>
     <description>module</description>

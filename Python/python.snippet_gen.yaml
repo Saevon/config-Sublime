@@ -286,7 +286,11 @@ snippets:
       - trigger: __import__
         snippet: __import__(${1:name}${2:, ${3:globals}${4:, ${5:locals}${6:, ${7:fromlist}${8:, ${9:level}}}}})
       - trigger: super
-        snippet: super(${1:type}, ${2:object-or-type})
+        snippet: super(${1:type}, ${2:self})
+        desc: py2
+      - trigger: super
+        snippet: super()
+        desc: py3
 
     itertools:
       - trigger: cycle
@@ -319,7 +323,7 @@ snippets:
     debug:
       - trigger: breakpoint
         snippet: breakpoint()
-      - trigger: trace
+      - trigger: ['trace', 'pdb', 'breakpoint']
         snippet: import pdb; pdb.set_trace()
 
     lib:

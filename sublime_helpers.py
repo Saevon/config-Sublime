@@ -120,6 +120,11 @@ class QuickPanelFinder(metaclass=MetaWindowFactory):
 
         self.listener = callback
 
+    def cancel(self, callback):
+        ''' Removes a listener in case something went wrong '''
+        if self.listener is callback:
+            self.listener = None
+
     def on_open(self, view):
         ''' Event: called when a quickpanel opens '''
         if not self.listener:
@@ -129,6 +134,7 @@ class QuickPanelFinder(metaclass=MetaWindowFactory):
             self.listener(view)
         finally:
             self.listener = None
+
 
 
 class QuickPanelListener(sublime_plugin.EventListener):

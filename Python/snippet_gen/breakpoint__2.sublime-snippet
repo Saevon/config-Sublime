@@ -2,7 +2,7 @@
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
     <content><![CDATA[import pdb; pdb.set_trace()]]></content>
-    <tabTrigger>pdb</tabTrigger>
+    <tabTrigger>breakpoint</tabTrigger>
 
     <scope>source.python</scope>
     <description>debug</description>

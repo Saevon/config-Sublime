@@ -396,12 +396,12 @@
             {"key": "setting.command_mode"},
         ]
     },
-    { "keys": [",", "j"], "command": "vie_push_bookmark",
+    { "keys": [",", "j"], "command": "vie_push_definition",
         "context": [
             {"key": "setting.command_mode"},
         ]
     },
-    { "keys": [",", "l"], "command": "vie_push_definition",
+    { "keys": [",", "l"], "command": "vie_push_bookmark",
         "context": [
             {"key": "setting.command_mode"},
         ]
@@ -655,6 +655,10 @@
             // { "key": "setting.is_widget", "operand": false }
         // ]
     // },
+
+    // Moving by Indent (Jump Along Indent)
+    { "keys": ["alt+j"], "command": "jump_next_indent" },
+    { "keys": ["alt+k"], "command": "jump_prev_indent" },
 
     // Move text left/right
     // requires: Move Text

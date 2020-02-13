@@ -144,18 +144,21 @@ class VieMarkPanel(metaclass=MetaViewFactory):
         self.current_selection = 0
 
         QuickPanelFinder(view=self.view).listen(self.on_open_panel)
-        self.view.window().show_quick_panel(  # pylint: disable=no-member
-            # items
-            [mark.pretty(full_line=self.line_preview) for mark in self.choices],
-            # on_done
-            self.on_done,
-            # flags
-            sublime.MONOSPACE_FONT | sublime.KEEP_OPEN_ON_FOCUS_LOST,
-            # selected_index
-            0,
-            # on_highlighted
-            self.on_highlighted,
-        )
+        try:
+            self.view.window().show_quick_panel(  # pylint: disable=no-member
+                # items
+                [mark.pretty(full_line=self.line_preview) for mark in self.choices],
+                # on_done
+                self.on_done,
+                # flags
+                sublime.MONOSPACE_FONT | sublime.KEEP_OPEN_ON_FOCUS_LOST,
+                # selected_index
+                0,
+                # on_highlighted
+                self.on_highlighted,
+            )
+        finally:
+            QuickPanelFinder(view=self.view).cancel(self.on_open_panel)
 
     def on_open_panel(self, view):
         ''' When the quickpanel is finally opened '''
@@ -209,8 +212,9 @@ class VieMarkPanel(metaclass=MetaViewFactory):
         self.bookmarker.go_to_mark(mark=mark, select=False, full_line=self.line_preview)
 
         # Since this is a preview, we need to refocus the quickpanel
-        self.panel.window().focus_view(self.panel)
-
+        if not self.panel:
+            # Rarely this can happen out of order, ensure this doesn't fuck things up
+            self.panel.window().focus_view(self.panel)
 
 
 #
