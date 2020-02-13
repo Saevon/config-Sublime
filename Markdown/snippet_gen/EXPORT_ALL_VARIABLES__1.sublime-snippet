@@ -1,0 +1,11 @@
+
+<!-- Auto Generated, See the related .yaml file -->
+<snippet>
+    <content><![CDATA[.EXPORT_ALL_VARIABLES: ${1:cmd}
+${1}:
+]]></content>
+    <tabTrigger>EXPORT_ALL_VARIABLES</tabTrigger>
+
+    <scope>source.makefile</scope>
+    <description>block</description>
+</snippet>

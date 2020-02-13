@@ -1,0 +1,73 @@
+scope: source.makefile
+snippets:
+    block:
+      - trigger: PHONY
+        snippet: |
+            .PHONY: ${1:cmd}
+            ${1}:
+      - trigger: PRECIOUS
+        snippet: |
+            .PRECIOUS: ${1:cmd}
+            ${1}:
+      - trigger: SECONDARY
+        snippet: |
+            .SECONDARY: ${1:cmd}
+            ${1}:
+      - trigger: INTERMEDIATE
+        snippet: |
+            .INTERMEDIATE: ${1:cmd}
+            ${1}:
+      - trigger: DEFAULT
+        snippet: |
+            .DEFAULT: ${1:cmd}
+            ${1}:
+      - trigger: SUFFIXES
+        snippet: |
+            .SUFFIXES: ${1:cmd}
+            ${1}:
+      - trigger: DELETE_ON_ERROR
+        snippet: |
+            .DELETE_ON_ERROR: ${1:cmd}
+            ${1}:
+      - trigger: IGNORE
+        snippet: |
+            .IGNORE: ${1:cmd}
+            ${1}:
+      - trigger: SILENT
+        snippet: |
+            .SILENT: ${1:cmd}
+            ${1}:
+      - trigger: ONESHELL
+        snippet: |
+            .ONESHELL: ${1:cmd}
+            ${1}:
+      - trigger: SECONDEXPANSION
+        snippet: |
+            .SECONDEXPANSION: ${1:cmd}
+            ${1}:
+      - trigger: LOW_RESOLUTION_TIME
+        snippet: |
+            .LOW_RESOLUTION_TIME: ${1:cmd}
+            ${1}:
+      - trigger: EXPORT_ALL_VARIABLES
+        snippet: |
+            .EXPORT_ALL_VARIABLES: ${1:cmd}
+            ${1}:
+      - trigger: NOTPARALLEL
+        snippet: |
+            .NOTPARALLEL: ${1:cmd}
+            ${1}:
+      - trigger: POSIX
+        snippet: |
+            .POSIX: ${1:cmd}
+            ${1}:
+    error:
+      - trigger: ['error', 'raise', 'throw']
+        snippet: "\\$(error \"${1:message}\")"
+      - trigger: warning
+        snippet: "\\$(warning \"${1:message}\")"
+      - trigger: info
+        snippet: "\\$(info \"${1:message}\")"
+
+    keyword:
+      - include
