@@ -558,9 +558,65 @@
             { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false }
         ],
         "args": {
+            "expand": true,
+        }
+    },
+
+
+
+
+
+    /**************************************/
+    /* Markdown */
+    {
+        "keys": ["super+b"],
+        "command": "surround_with",
+        "context": [
+            {"key": "selector", "operator": "equal", "operand": "text.html.markdown"},
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
+        ],
+        "args": {
+            "character": "**",
+        }
+    },
+    {
+        "keys": ["super+b"],
+        "command": "surround_with",
+        "context": [
+            {"key": "selector", "operator": "equal", "operand": "text.html.markdown"},
+            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false }
+        ],
+        "args": {
+            "character": "**",
             "expand": true
         }
     },
+        {
+        "keys": ["super+i"],
+        "command": "surround_with",
+        "context": [
+            {"key": "selector", "operator": "equal", "operand": "text.html.markdown"},
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
+        ],
+        "args": {
+            "character": "*",
+        }
+    },
+    {
+        "keys": ["super+i"],
+        "command": "surround_with",
+        "context": [
+            {"key": "selector", "operator": "equal", "operand": "text.html.markdown"},
+            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false }
+        ],
+        "args": {
+            "character": "*",
+            "expand": true
+        }
+    },
+
+
+
 
 
     /**************************************/

@@ -25,6 +25,9 @@ class SurroundWith(sublime_plugin.TextCommand):
         elif character in "<>":
             start = ">"
             end = ">"
+        elif character == "**":
+            # Allow double star for markdown
+            start = end = character
         elif character in "'\"`":
             start = end = character
         elif character in "*-+_%$|/\\ ":
@@ -41,7 +44,7 @@ class SurroundWith(sublime_plugin.TextCommand):
 
         for sel in self.view.sel():
             self.view.insert(edit, sel.begin(), start)
-            self.view.insert(edit, sel.end() + 1, end)
+            self.view.insert(edit, sel.end() + len(character), end)
 
         # Reset each selection in order, adding the resulting offset for each change
         offset = 0
