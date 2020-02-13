@@ -501,13 +501,12 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Preprocessor Command</string>
+			<string>Preprocessor Macro Function</string>
 			<key>scope</key>
 			<string>meta.preprocessor entity.name.function</string>
 			<key>settings</key>
 			<dict>
-				<!-- Preprocessor Style -->
-				<!-- (Based on Function Def Style) -->
+				<!-- Function Style -->
 				<key>foreground</key>
 				<string>#A6E22E</string>
 			</dict>
@@ -1198,7 +1197,7 @@
 		<!-- Haskell -->
 		<dict>
 			<key>name</key>
-			<string>Markdown Bold</string>
+			<string>Haskell Bold</string>
 			<key>scope</key>
 			<string>pragma.support.language</string>
 			<key>settings</key>
