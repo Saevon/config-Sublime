@@ -31,8 +31,10 @@
 	"move_to_limit_on_up_down": true,
 	"scroll_past_end": false,
 	"draw_white_space": "selection",
-	"ensure_newline_at_eof_on_save": true,
 	"trim_trailing_white_space_on_save": true,
+
+	// We don't always want the last char to be a newline...
+	"ensure_newline_at_eof_on_save": false,
 
 
 	///////////////////////////////
