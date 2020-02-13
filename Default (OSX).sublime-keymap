@@ -600,6 +600,10 @@
         // ]
     // },
 
+    // Moving by Indent (Jump Along Indent)
+    { "keys": ["alt+j"], "command": "jump_next_indent" },
+    { "keys": ["alt+k"], "command": "jump_prev_indent" },
+
     // Move text left/right
     // requires: Move Text
     { "keys": ["super+ctrl+left"], "command": "move_text_left" },
