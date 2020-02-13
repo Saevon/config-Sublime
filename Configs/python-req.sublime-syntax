@@ -135,6 +135,25 @@ contexts:
     - match: (?i)(?<={{flag_start}})(-|\+)[a-z0-9@]+
       scope: support.flag.shell
 
+    # Extras
+    - match: |
+        (?xi)
+        (\[)
+            ([(a-z_][a-z_0-9]+)
+            (?:
+                (,)\s*
+                ([a-z_][a-z_0-9])
+            )*
+        (\])
+      captures:
+        1: keyword.operator.extras_require.python-req punctuation.section.brackets.begin.python-req
+        2: variable.flag.python-req
+        3: punctuation.separator.sequence.python-req
+        4: variable.flag.python-req
+        5: keyword.operator.extras_require.python-req punctuation.section.brackets.end.python-req
+
+
+
     # Flags
     # -e <VCS Project URL>
     # -e <Local Path>
