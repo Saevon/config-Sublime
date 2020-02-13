@@ -20,6 +20,7 @@ MODULE_WHITELIST = {
     'shlex',
     'subprocess',
     'unittest',
+    'resource',
 
     # Debug
     'sys',
