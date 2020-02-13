@@ -1,9 +1,9 @@
 
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
-    <content><![CDATA[super(${1:type}, ${2:self})]]></content>
+    <content><![CDATA[super()]]></content>
     <tabTrigger>super</tabTrigger>
 
     <scope>source.python</scope>
-    <description>py2:functional</description>
+    <description>py3:functional</description>
 </snippet>
