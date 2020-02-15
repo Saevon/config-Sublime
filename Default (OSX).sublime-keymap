@@ -469,6 +469,14 @@
     },
 
 
+    // Hyperlinks
+    {
+        "keys": ["ctrl+enter"], "command": "open_hyper_link",
+        "context": [
+            {"key": "selector", "operator": "not_equal", "operand": "text.find-in-files"},
+        ],
+    },
+
 
 
     // Inside and Around < >
