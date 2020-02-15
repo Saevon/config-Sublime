@@ -64,7 +64,7 @@
 			<key>name</key>
 			<string>Documentation Comment</string>
 			<key>scope</key>
-			<string>comment.block.documentation</string>
+			<string>comment.block.documentation, source markup source comment</string>
 			<key>settings</key>
 			<dict>
 				<!-- Light Comment Style -->
@@ -711,7 +711,7 @@
 
 		<dict>
 			<key>name</key>
-			<string>Common Variable</string>
+			<string>Error</string>
 			<key>scope</key>
 			<string>entity.name.exception.python</string>
 			<key>settings</key>
@@ -724,8 +724,6 @@
 
 			</dict>
 		</dict>
-
-
 
 
 
@@ -1242,7 +1240,7 @@
 			<key>name</key>
 			<string>Markdown RAW</string>
 			<key>scope</key>
-			<string>markup.raw.inline, markup.underline.link, markup.raw.block</string>
+			<string>markup.raw.inline, markup.raw.block.fenced</string>
 			<key>settings</key>
 			<dict>
 				<!-- Almost Normal Style -->
