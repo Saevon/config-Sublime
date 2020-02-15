@@ -2,7 +2,7 @@
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
     <content><![CDATA[BytesWarning${1:("${2:error}")}]]></content>
-    <tabTrigger>BytesWarning</tabTrigger>
+    <tabTrigger>Warning</tabTrigger>
 
     <scope>source.python</scope>
     <description>BytesWarning:warning</description>

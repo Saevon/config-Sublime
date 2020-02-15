@@ -2,7 +2,7 @@
 <!-- Auto Generated, See the related .yaml file -->
 <snippet>
     <content><![CDATA[RuntimeWarning${1:("${2:error}")}]]></content>
-    <tabTrigger>RuntimeWarning</tabTrigger>
+    <tabTrigger>Warning</tabTrigger>
 
     <scope>source.python</scope>
     <description>RuntimeWarning:warning</description>

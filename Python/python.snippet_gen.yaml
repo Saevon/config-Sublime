@@ -67,10 +67,6 @@ snippets:
         snippet: BaseException${1:("${2:error}")}
       - trigger: BufferError
         snippet: BufferError${1:("${2:error}")}
-      - trigger: BytesWarning
-        snippet: BytesWarning${1:("${2:error}")}
-      - trigger: DeprecationWarning
-        snippet: DeprecationWarning${1:("${2:error}")}
       - trigger: EnvironmentError
         snippet: EnvironmentError${1:("${2:error}")}
       - trigger: EOFError
@@ -79,14 +75,10 @@ snippets:
         snippet: Exception${1:("${2:error}")}
       - trigger: FloatingPointError
         snippet: FloatingPointError${1:("${2:error}")}
-      - trigger: FutureWarning
-        snippet: FutureWarning${1:("${2:error}")}
       - trigger: GeneratorExit
         snippet: GeneratorExit${1:("${2:error}")}
       - trigger: ImportError
         snippet: ImportError${1:("${2:error}")}
-      - trigger: ImportWarning
-        snippet: ImportWarning${1:("${2:error}")}
       - trigger: IndentationError
         snippet: IndentationError${1:("${2:error}")}
       - trigger: IndexError
@@ -111,22 +103,16 @@ snippets:
         snippet: OSError${1:("${2:error}")}
       - trigger: OverflowError
         snippet: OverflowError${1:("${2:error}")}
-      - trigger: PendingDeprecationWarning
-        snippet: PendingDeprecationWarning${1:("${2:error}")}
       - trigger: ReferenceError
         snippet: ReferenceError${1:("${2:error}")}
       - trigger: RuntimeError
         snippet: RuntimeError${1:("${2:error}")}
-      - trigger: RuntimeWarning
-        snippet: RuntimeWarning${1:("${2:error}")}
       - trigger: StandardError
         snippet: StandardError${1:("${2:error}")}
       - trigger: StopIteration
         snippet: StopIteration${1:("${2:error}")}
       - trigger: SyntaxError
         snippet: SyntaxError${1:("${2:error}")}
-      - trigger: SyntaxWarning
-        snippet: SyntaxWarning${1:("${2:error}")}
       - trigger: SystemError
         snippet: SystemError${1:("${2:error}")}
       - trigger: SystemExit
@@ -143,10 +129,6 @@ snippets:
         snippet: UnicodeEncodeError${1:("${2:error}")}
       - trigger: UnicodeTranslateError
         snippet: UnicodeTranslateError${1:("${2:error}")}
-      - trigger: UnicodeWarning
-        snippet: UnicodeWarning${1:("${2:error}")}
-      - trigger: UserWarning
-        snippet: UserWarning${1:("${2:error}")}
       - trigger: ValueError
         snippet: ValueError${1:("${2:error}")}
       - trigger: VMSError
@@ -155,6 +137,35 @@ snippets:
         snippet: WindowsError${1:("${2:error}")}
       - trigger: ZeroDivision
         snippet: ZeroDivision${1:("${2:error}")}
+
+    warning:
+      - trigger: ['Warning', 'BytesWarning']
+        desc: BytesWarning
+        snippet: BytesWarning${1:("${2:error}")}
+      - trigger: ['Warning', 'DeprecationWarning']
+        desc: DeprecationWarning
+        snippet: DeprecationWarning${1:("${2:error}")}
+      - trigger: ['Warning', 'FutureWarning']
+        desc: FutureWarning
+        snippet: FutureWarning${1:("${2:error}")}
+      - trigger: ['Warning', 'ImportWarning']
+        desc: ImportWarning
+        snippet: ImportWarning${1:("${2:error}")}
+      - trigger: ['Warning', 'PendingDeprecationWarning']
+        desc: PendingDeprecationWarning
+        snippet: PendingDeprecationWarning${1:("${2:error}")}
+      - trigger: ['Warning', 'RuntimeWarning']
+        desc: RuntimeWarning
+        snippet: RuntimeWarning${1:("${2:error}")}
+      - trigger: ['Warning', 'SyntaxWarning']
+        desc: SyntaxWarning
+        snippet: SyntaxWarning${1:("${2:error}")}
+      - trigger: ['Warning', 'UnicodeWarning']
+        desc: UnicodeWarning
+        snippet: UnicodeWarning${1:("${2:error}")}
+      - trigger: ['Warning', 'UserWarning']
+        desc: UserWarning
+        snippet: UserWarning${1:("${2:error}")}
 
     builtin:
       - trigger: abs
