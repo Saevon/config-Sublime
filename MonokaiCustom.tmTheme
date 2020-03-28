@@ -1543,7 +1543,7 @@
 			<key>name</key>
 			<string>Template Base</string>
 			<key>scope</key>
-			<string>embedding.underscore source.js, storage.type.templatetag.django, storage.type.variable.django, meta.scope.jinja2.tag, meta.scope.jinja2.variable, entity.other.jinja2.delimiter.variable, source.python source.sql</string>
+			<string>embedding.underscore source.js, storage.type.templatetag.django, storage.type.variable.django, meta.scope.jinja2.tag, meta.scope.jinja2.variable, entity.other.jinja2.delimiter.variable, source.python source.sql, meta.jsx.js</string>
 			<key>settings</key>
 			<dict>
 				<!-- Embedded Language Style -->
