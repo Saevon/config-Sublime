@@ -55,6 +55,11 @@ snippets:
         snippet: |
             if __name__ == '__main__':
             	${1:pass}
+      - trigger: "python"
+        snippet: "#!/usr/bin/env python"
+        desc: "#!/python"
+      - trigger: utf-8
+        snippet: "# -*- coding: UTF-8 -*-"
 
     error:
       - trigger: ArithmeticError
