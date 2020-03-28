@@ -113,13 +113,17 @@ def generate_snippets(in_file, out_path):
         snippet_file = os.path.join(
             out_path,
             "{}__{}.sublime-snippet".format(
-                snippet['trigger'],
+                slugify(snippet['trigger']),
                 idx,
             ),
         )
 
         with open(snippet_file, 'w') as out_fd:
             out_fd.write(SNIPPET_RAW.render(snippet))
+
+
+def slugify(filename):
+    return re.sub(r'[^\w\-. ]+', r'_', filename)
 
 
 def walk_files(path):
