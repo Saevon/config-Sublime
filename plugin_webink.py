@@ -1,11 +1,24 @@
+'''
+Allows you to treat links in text as hyperlinks
+
+
+# TODO
+
+ * Find In files makes the Link-Icons flicker
+   (Since the page keeps being "modified")
+
+
+'''
 import re
+import itertools
 import webbrowser
+import html
 
 import sublime
 import sublime_plugin
 
-from User.sublime_helpers import sublime_is_visual
 
+from User.sublime_helpers import sublime_is_visual
 
 # Warning! `sublime.find_all` doesn't like named groups...
 HYPERLINK_RE = (
@@ -27,33 +40,59 @@ MD_HYPERLINK_RE = (
 
 
 class OpenHyperLinkCommand(sublime_plugin.TextCommand):
-    ''' Opens the Link under the cursor/cursors '''
+    '''
+    Opens the Link under the cursor/cursors
+
+    If you're in visual mode (Have something selected) then it tried to go to that exact address
+    (Unless you've selected an invalid link) Ignoring any prefix/suffix characters
+    '''
 
     def run(self, edit):
+        ''' Opens any links '''
         is_visual = sublime_is_visual(self.view)
 
         selection = self.view.sel()
 
         for cursor in selection:
             if is_visual:
-                word = self.view.substr(cursor)
+                url = self.exact_link(cursor)
             else:
-                word_region = self.view.word(cursor)
-                row, col = self.view.rowcol(word_region.begin())
-                line = self.view.substr(self.view.full_line(word_region))
+                url = next(self.selected_links(cursor), None)
 
-                left = re.search(r'((\[[^\]]+\]\())?\S*$', line[:col]).group()
-                right = re.search(r'^\S*', line[col+1:]).group()
-
-                word = left + line[col] + right
-
-            match = re.match(MD_HYPERLINK_RE, word)
-            if not match:
-                match = re.match(HYPERLINK_RE, word)
-
-            if match:
-                url = match.group(1)
+            if url:
                 webbrowser.open_new_tab(url)
+
+    def exact_link(self, cursor):
+        ''' Finds the link exactly selected by the cursor '''
+        word = self.view.substr(cursor)
+
+        match = re.match(MD_HYPERLINK_RE, word)
+        if not match:
+            match = re.match(HYPERLINK_RE, word)
+
+        if match:
+            return match.group(1)
+
+        return None
+
+    def selected_links(self, cursor):
+        ''' Finds all links the cursor is on '''
+        lines = self.view.full_line(cursor)
+        line = self.view.substr(lines)
+
+        # Find all links in the selection
+        links = itertools.chain(
+            re.finditer(MD_HYPERLINK_RE, line),
+            re.finditer(HYPERLINK_RE, line),
+        )
+
+        for link in links:
+            # Offset the link by the document position
+            start = link.start() + lines.begin()
+            end = link.end() + lines.begin()
+
+            if start <= cursor.begin() and cursor.end() <= end:
+                yield link.group(1)
 
 
 class HyperLinkAnnotator(sublime_plugin.ViewEventListener):
@@ -68,9 +107,9 @@ class HyperLinkAnnotator(sublime_plugin.ViewEventListener):
         # Also add the underline
         # current = view.get_regions('saevon-weblink')
         view.add_regions('saevon-weblink', links, 'markup.underline.link', flags=(
-            sublime.DRAW_NO_FILL |
-            sublime.DRAW_NO_OUTLINE
-            # sublime.DRAW_SQUIGGLY_UNDERLINE
+            sublime.DRAW_NO_FILL
+            | sublime.DRAW_NO_OUTLINE
+            # | sublime.DRAW_SQUIGGLY_UNDERLINE
         ))
 
     def on_navigate(self, url):
@@ -89,8 +128,8 @@ class HyperLinkAnnotator(sublime_plugin.ViewEventListener):
         content = """
             <span class="label label-success"><a href="{link}">{content}</a></span>
         """.format(
-            link=url,
-            content='↪',
+            link=html.escape(url),
+            content=html.escape('↪'),
         )
         view.add_phantom(
             'saevon-weblink-icon',
@@ -101,10 +140,11 @@ class HyperLinkAnnotator(sublime_plugin.ViewEventListener):
         )
 
     def on_load_async(self):
+        ''' On page loaded '''
         self.render(self.view)
 
     def on_modified_async(self):
-        ''' Adds all links '''
+        ''' On page edit '''
         self.view.erase_phantoms('saevon-weblink-icon')
         self.view.erase_regions('saevon-weblink')
 
