@@ -5,6 +5,7 @@
         // Python
 
         "pylint": {
+            "python": "/usr/local/bin/python3",
             "args": [
                 "--disable", "logging-too-many-args,superfluous-parens,len-as-condition,line-too-long,trailing-newlines,too-few-public-methods,C0326,no-else-return,no-else-raise",
                 // Line-length is handled by flake8
@@ -12,6 +13,7 @@
             ]
         },
         "pycodestyle": {
+            "python": "/usr/local/bin/python3",
             "args": [
                 "--select",
                 "E123,E226,E241,E242"
@@ -20,6 +22,7 @@
             // E501: Line too long
         },
         "flake8": {
+            "python": "/usr/local/bin/python3",
             "args": [
                 // Use the config in the project folder (if there is one)
                 "--config", "${folder}/.flake8",
