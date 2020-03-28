@@ -40,6 +40,7 @@
     },
 
     { "caption": "Center on Visible", "command": "center_on_visible" },
+    { "caption": "Follow Link", "command": "open_hyper_link" },
 
 
     // Indentation
