@@ -10,6 +10,7 @@ file_extensions:
   - reg
   - REG
   - lng
+  - conf
   - cfg
   - CFG
   - url
@@ -65,7 +66,7 @@ contexts:
   constants:
     - match: '[0-9]+'
       scope: constant.numeric.ini
-    - match: 'true|false'
+    - match: '\b(true|false)\b'
       scope: constant.language.ini
   comments:
     - match: (;|#).*$\n?
@@ -74,23 +75,22 @@ contexts:
         1: punctuation.definition.comment.ini
 
   strings:
-    - match: '(")'
+    - match: (")
       scope: punctuation.definition.string.begin.ini
       push:
         - meta_scope: string.quoted.double.ini
         - include: string_internals
-        - match: '"'
+        - match: (")
           scope: punctuation.definition.string.end.ini
           pop: true
-    - match: "'"
+    - match: (')
       scope: punctuation.definition.string.begin.ini
       push:
-        - meta_scope: string.quoted.double.ini
-        - include: string_internals
-        - match: "'"
+        - meta_scope: string.quoted.single.ini
+        - match: (')
           scope: punctuation.definition.string.end.ini
           pop: true
-        - match: '.*'
+        - include: string_internals
   string_unquoted:
     - match: ''
       push:
