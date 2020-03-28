@@ -269,7 +269,7 @@
 			<key>name</key>
 			<string>Storage type</string>
 			<key>scope</key>
-			<string>storage.type</string>
+			<string>storage.type, storage.modifier</string>
 			<key>settings</key>
 			<dict>
 				<!-- Library Style -->
@@ -1390,7 +1390,7 @@
 			<key>name</key>
 			<string>Regex Groups</string>
 			<key>scope</key>
-			<string>punctuation.definition.group</string>
+			<string>source.regexp punctuation.definition.group</string>
 			<key>settings</key>
 			<dict>
 				<!-- Operator Style -->
